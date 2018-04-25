@@ -1,5 +1,13 @@
 ACSF CardinalD7
 
+Version 0.0.12                                                       2018-04-25
+-------------------------------------------------------------------------------
+- Critical security update to drupal-7.59.
+- Enforces that the paranoia is always enabled.
+- Updates modules entity-7.x-1.0 and ds-7.x-2.15.
+- Adds the honeypot module for spam filtering.
+- Updates simplesamlphp library to 1.15.4.
+
 Version 0.0.11                                                       2018-03-29
 -------------------------------------------------------------------------------
 - Critical security update to drupal-7.58
