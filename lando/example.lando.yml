@@ -10,6 +10,7 @@ services:
     ssl: true
     via: apache
   database:
+    type: mysql:5.7
     creds:
       user: drupal
       password: drupal
@@ -42,7 +43,6 @@ events:
   # Run some commands before `lando si`
   pre-si:
     - echo "Beginning site install."
-    - appserver: sh $LANDO_MOUNT/scripts/lando/db-settings.sh
     - appserver: cd $LANDO_WEBROOT
   # Run some commands after `lando si`
   post-si:
