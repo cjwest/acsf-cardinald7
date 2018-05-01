@@ -81,7 +81,6 @@ desktop.ini
 # Running files. #
 #######################
 .lando.yml
-composer.lock
 .env
 
 # Package Managers #

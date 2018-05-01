@@ -34,7 +34,7 @@ tooling:
   si:
     description: "Install an installation profile"
     service: appserver
-    cmd: drush si
+    cmd: drush si stanford_sites_jumpstart_academic install_configure_form.itasks_extra_tasks=local -y
 events:
   # Run some commands after `lando db-import`
   post-db-import:
