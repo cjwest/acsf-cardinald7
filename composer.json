@@ -108,7 +108,9 @@
       },
       "drupal/drupal": {
         "Force Paranoia always to be enabled":
-        "patches/enforce-paranoia.patch"
+        "patches/enforce-paranoia.patch",
+        "Reverse the importance of modules in profiles as more":
+        "patches/core-profile-module-importance-max.patch"
       }
     },
     "merge-plugin": {
