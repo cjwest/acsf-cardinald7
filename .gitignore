@@ -62,6 +62,7 @@ docroot/sites/all/libraries/jquery
 .metadata
 *.iml
 *.ipr
+*.rej
 
 # OS generated files #
 ######################

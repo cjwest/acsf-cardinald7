@@ -60,10 +60,12 @@
       "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
     ],
     "post-install-cmd": [
-      "@composer clean-gits"
+      "@composer clean-gits",
+      "sh scripts/updates/apply-patches.sh"
     ],
     "post-update-cmd": [
-      "@composer clean-gits"
+      "@composer clean-gits",
+      "sh scripts/updates/apply-patches.sh"
     ],
     "post-create-project-cmd": [
       "DrupalProject\\composer\\ScriptHandler::removeInternalFiles"
@@ -105,12 +107,6 @@
       "drupal/paranoia": {
         "block some import foo boxes that use php arrays as a data structure":
         "https://www.drupal.org/files/issues/2018-03-28/paranoia-block_additional_forms-2313945-33.patch"
-      },
-      "drupal/drupal": {
-        "Force Paranoia always to be enabled":
-        "patches/enforce-paranoia.patch",
-        "Reverse the importance of modules in profiles as more":
-        "patches/core-profile-module-importance-max.patch"
       }
     },
     "merge-plugin": {
@@ -121,7 +117,7 @@
         "docroot/profiles/stanford_sites_jumpstart_vpsa/composer.json",
         "docroot/profiles/stanford_sites_jumpstart_lab/composer.json",
         "docroot/profiles/stanford_sites_jumpstart/composer.json",
-        "docroot/profiles/Stanford-Drupal-Profile/composer.json"
+        "docroot/profiles/stanford/composer.json"
       ],
       "merge-extra": true,
       "merge-extra-deep": true,
