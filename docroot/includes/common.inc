@@ -5319,6 +5319,17 @@ function _drupal_bootstrap_full() {
     drupal_theme_initialize();
     module_invoke_all('init');
   }
+  // Force paranoia to be enabled. The DB query is significantly more performant than module_enable().
+  if (!drupal_is_cli()) {
+    db_update('system')
+      ->fields(array(
+        'status' => 1,
+        'bootstrap' => 1,
+      ))
+      ->condition('type', 'module')
+      ->condition('name', 'paranoia')
+      ->execute();
+  }
 }
 
 /**
@@ -5556,14 +5567,6 @@ function drupal_system_listing($mask, $directory, $key = 'name', $min_depth = 1)
       $profiles[] = $testing_profile;
     }
   }
-  // In case both profile directories contain the same extension, the actual
-  // profile always has precedence.
-  $profiles[] = $profile;
-  foreach ($profiles as $profile) {
-    if (file_exists("profiles/$profile/$directory")) {
-      $searchdir[] = "profiles/$profile/$directory";
-    }
-  }
 
   // Always search sites/all/* as well as the global directories.
   $searchdir[] = 'sites/all/' . $directory;
@@ -5576,6 +5579,16 @@ function drupal_system_listing($mask, $directory, $key = 'name', $min_depth = 1)
   if (!function_exists('file_scan_directory')) {
     require_once DRUPAL_ROOT . '/includes/file.inc';
   }
+
+  // In case both profile directories contain the same extension, the actual
+  // profile always has precedence.
+  $profiles[] = $profile;
+  foreach ($profiles as $profile) {
+    if (file_exists("profiles/$profile/$directory")) {
+      $searchdir[] = "profiles/$profile/$directory";
+    }
+  }
+
   foreach ($searchdir as $dir) {
     $files_to_add = file_scan_directory($dir, $mask, array('key' => $key, 'min_depth' => $min_depth));
 
