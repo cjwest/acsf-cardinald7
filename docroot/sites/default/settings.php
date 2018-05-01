@@ -621,6 +621,6 @@ $conf['404_fast_html'] = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
  */
 # $conf['theme_debug'] = TRUE;
 
-if (file_exists("local.settings.php")) {
-  include_once "local.settings.php";
+if (file_exists(dirname(__FILE__) . "/local.settings.php")) {
+  include_once dirname(__FILE__) . "/local.settings.php";
 }

@@ -60,6 +60,7 @@
  */
 
 $options['uri'] = "http://cardinald7.sws";
+$options['include'][] = '/app/docroot/sites/all/drush';
 
 if (getenv('PROBO_ENVIRONMENT') && getenv('BUILD_DOMAIN')) {
   $options['uri'] = $_ENV['BUILD_DOMAIN'];
