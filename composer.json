@@ -76,10 +76,10 @@
       "@composer install --ansi"
     ],
     "clean-gits": [
-      "find docroot/sites/all/modules/contrib | grep /.git | xargs rm -rf",
-      "find docroot/sites/all/themes/contrib | grep /.git | xargs rm -rf",
-      "find docroot/sites/all/libraries | grep /.git | xargs rm -rf",
-      "find docroot/sites/all/drush | grep /.git | xargs rm -rf"
+      "find docroot/sites/all/modules/contrib -name \".git\" -type d | xargs rm -rf",
+      "find docroot/sites/all/themes/contrib -name \".git\" -type d | xargs rm -rf",
+      "find docroot/sites/all/libraries -name \".git\" -type d | xargs rm -rf",
+      "find docroot/sites/all/drush -name \".git\" -type d | xargs rm -rf"
     ],
     "init-lando": [
       "cp lando/example.env .env",
