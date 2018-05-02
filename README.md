@@ -91,10 +91,8 @@ Check out this article for more help: https://stackoverflow.com/questions/166410
 ## Does composer figure out what is in the 'stack'
  - Each profile defines their own set of dependencies in a composer.json file. This project includes and merges all of those dependencies in to one big composer.json file and then executes the update or install.
  - When a conflict comes up between versions in the profiles composer will complain and give the developer a chance to adjust versions in the correct place.
-## Does RA fit in to this mess?
+## Does RA fit in to this?
  Because RA will only commit directly to Acquia infrastructure they will create new commits directly on their remote. If that commit is valid and you want to pull those updates in to this project you can. If RA changes a major version or changes a version of a module in a profile, the developer will have to push the code back upstream to the subtree.
-## Does composer figure out what to put in to sites/all?
- - TBD
 ## Do I get my working changes back up to the installation profiles?
  - Commit the changes with a good commit message to this repository and then push up using `git subtree push`
  - eg: `git subtree push --prefix=docroot/profiles/stanford_sites_jumpstart --squash git@github.com:SU-SWS/stanford_sites_jumpstart.git 7.x-6.x`
@@ -110,6 +108,8 @@ Check out this article for more help: https://stackoverflow.com/questions/166410
  - You can do so through the Factory UI.
  - You can do so through the Drupal UI at install.php
  - You can do so through drush using `drush si`
+## Do I install diseval.so on ACSF?
+ - TBD
 
 # Notable items: READ THESE!
 
@@ -117,3 +117,4 @@ Check out this article for more help: https://stackoverflow.com/questions/166410
 - Patched core to alter the importance of profile modules and themes. Instead of being less important than the stuff in sites/all a patch alters this behaviour and makes them more prominent. This allows for opt-out of stack behaviour
 - Composer uses a mix of patches, preserve path, and merge plugins to accomplish what is in this repo. Please get familiar with them.
 - Unlike other build systems, Acquia requires that all items be tracked in the repository and that is why you see both composer and have the items tracked.
+- Diseval is installed on ACSF and to be conscious of the repurcussions of that on your development.
