@@ -1,0 +1,28 @@
+[subtree "stanford"]
+    url = git://github.com/SU-SWS/Stanford-Drupal-Profile.git
+    path = docroot/profiles/stanford
+    branch = 7.x-3.x
+[subtree "stanford_sites_jumpstart"]
+    url = git://github.com/SU-SWS/stanford_sites_jumpstart.git
+    path = docroot/profiles/stanford_sites_jumpstart
+    branch = 7.x-6.x
+[subtree "stanford_sites_jumpstart_vpsa"]
+    url = git://github.com/SU-SWS/stanford_sites_jumpstart_vpsa.git
+    path = docroot/profiles/stanford_sites_jumpstart_vpsa
+    branch = 7.x-6.x
+[subtree "stanford_sites_jumpstart_plus"]
+    url = git://github.com/SU-SWS/stanford_sites_jumpstart_plus.git
+    path = docroot/profiles/stanford_sites_jumpstart_plus
+    branch = 7.x-6.x
+[subtree "stanford_sites_jumpstart_academic"]
+    url = git://github.com/SU-SWS/stanford_sites_jumpstart_academic.git
+    path = docroot/profiles/stanford_sites_jumpstart_academic
+    branch = 7.x-6.x
+[subtree "stanford_sites_jumpstart_lab"]
+    url = git://github.com/SU-SWS/stanford_sites_jumpstart_academic.git
+    path = docroot/profiles/stanford_sites_jumpstart_lab
+    branch = 7.x-6.x
+[subtree "stanford_sites_jumpstart_engineering"]
+    url = git://github.com/SU-SOE/stanford_sites_jumpstart_engineering.git
+    path = docroot/profiles/stanford_sites_jumpstart_engineering
+    branch = 7.x-6.x
