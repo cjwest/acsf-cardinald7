@@ -97,6 +97,9 @@ task[anchorage][install][] = Environment\Anchoarge\Install\EnableModules
 ; LOCAL
 task[local][install][] = Environment\Local\Install\ImageAllowInsecureDerivatives
 
+; ACSF
+task[acsf][install][] = Environment\ACSF\Install\EnableModules
+
 ; Update Tasks
 ; ------------------------------------------------------------------------------
 

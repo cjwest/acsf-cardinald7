@@ -11,6 +11,10 @@
     {
       "type": "composer",
       "url": "https://asset-packagist.org"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/SU-SWS/stanford_ssp"
     }
   ],
   "require": {
@@ -40,7 +44,8 @@
     "drupal/newrelic_appname": "~1.0-alpha1",
     "drupal/paranoia": "dev-1.x",
     "drupal/node_revision_delete": "~3.0",
-    "drupal/honeypot": "~1.24"
+    "drupal/honeypot": "~1.24",
+    "SU-SWS/stanford_ssp": "dev-7.x-2.x"
   },
   "conflict": {
     "drupal/core": "8.*"
