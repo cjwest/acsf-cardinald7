@@ -86,7 +86,28 @@ class TaskEngine {
       $extras = $install_state["forms"]["install_configure_form"]["itasks_extra_tasks"];
       $this->setExtraTasksName($extras);
     }
+    // If the environment hasn't been explicitly set check some environment
+    // variables for known environments.
+    else {
+      // Check for ACQUIA environment var.
+      $is_ah = getenv('AH_SITE_ENVIRONMENT');
+      if (!empty($is_ah)) {
+        $this->setExtraTasksName('acsf');
+      }
 
+      // Check for sites environment
+      // This directory only should exist on the sites-* servers.
+      $dir = "/etc/drupal-service";
+      // Check if it exists and is a directory.
+      if (file_exists($dir) && is_dir($dir)) {
+        $this->setExtraTasksName('sites');
+      }
+
+      // Check for anchorage IDP.
+      if (getenv('ENV_IDP') == "https://idpproxy.anchorage.stanford.edu/idp") {
+        $this->setExtraTasksName('anchorage');
+      }
+    }
   }
 
   // Methods
