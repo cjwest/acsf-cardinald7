@@ -92,6 +92,24 @@
       "cp lando/config/local.settings.php docroot/sites/default/local.settings.php",
       "cp lando/config/drushrc.php docroot/sites/default/drushrc.php",
       "echo You may now edit the above files or simply run lando start"
+    ],
+    "push-subtrees": [
+      "git subtree push --prefix=docroot/profiles/stanford_sites_jumpstart_engineering --squash git@github.com:SU-SOE/stanford_sites_jumpstart_engineering.git 7.x-6.x",
+      "git subtree push --prefix=docroot/profiles/stanford_sites_jumpstart_academic --squash git@github.com:SU-SWS/stanford_sites_jumpstart_academic.git 7.x-6.x",
+      "git subtree push --prefix=docroot/profiles/stanford_sites_jumpstart_plus --squash git@github.com:SU-SWS/stanford_sites_jumpstart_plus.git 7.x-6.x",
+      "git subtree push --prefix=docroot/profiles/stanford_sites_jumpstart_lab --squash git@github.com:SU-SWS/stanford_sites_jumpstart_lab.git 7.x-6.x",
+      "git subtree push --prefix=docroot/profiles/stanford_sites_jumpstart_vpsa --squash git@github.com:SU-SWS/stanford_sites_jumpstart_vpsa.git 7.x-6.x",
+      "git subtree push --prefix=docroot/profiles/stanford_sites_jumpstart --squash git@github.com:SU-SWS/stanford_sites_jumpstart.git 7.x-6.x",
+      "git subtree push --prefix=docroot/profiles/stanford --squash git@github.com:SU-SWS/Stanford-Drupal-Profile.git 7.x-3.x"
+    ],
+    "pull-subtrees": [
+      "git subtree pull --prefix=docroot/profiles/stanford_sites_jumpstart_engineering --squash git@github.com:SU-SOE/stanford_sites_jumpstart_engineering.git 7.x-6.x",
+      "git subtree pull --prefix=docroot/profiles/stanford_sites_jumpstart_academic --squash git@github.com:SU-SWS/stanford_sites_jumpstart_academic.git 7.x-6.x",
+      "git subtree pull --prefix=docroot/profiles/stanford_sites_jumpstart_plus --squash git@github.com:SU-SWS/stanford_sites_jumpstart_plus.git 7.x-6.x",
+      "git subtree pull --prefix=docroot/profiles/stanford_sites_jumpstart_lab --squash git@github.com:SU-SWS/stanford_sites_jumpstart_lab.git 7.x-6.x",
+      "git subtree pull --prefix=docroot/profiles/stanford_sites_jumpstart_vpsa --squash git@github.com:SU-SWS/stanford_sites_jumpstart_vpsa.git 7.x-6.x",
+      "git subtree pull --prefix=docroot/profiles/stanford_sites_jumpstart --squash git@github.com:SU-SWS/stanford_sites_jumpstart.git 7.x-6.x",
+      "git subtree pull --prefix=docroot/profiles/stanford --squash git@github.com:SU-SWS/Stanford-Drupal-Profile.git 7.x-3.x"
     ]
   },
   "extra": {
