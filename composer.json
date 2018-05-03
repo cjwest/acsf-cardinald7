@@ -65,12 +65,12 @@
       "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
     ],
     "post-install-cmd": [
-      "@composer clean-gits",
-      "sh scripts/updates/apply-patches.sh"
+      "@composer clean-gits"
     ],
     "post-update-cmd": [
       "@composer clean-gits",
-      "sh scripts/updates/apply-patches.sh"
+      "sh scripts/updates/apply-patches.sh",
+      "echo \"Don't forget to run acsf-init if core was updated.\""
     ],
     "post-create-project-cmd": [
       "DrupalProject\\composer\\ScriptHandler::removeInternalFiles"
