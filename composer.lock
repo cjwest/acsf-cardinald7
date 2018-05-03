@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "35dcb97657923ed8740086736ebde9bf",
+    "content-hash": "a055eabc2b83ca11b93069bb33c49f8d",
     "packages": [
         {
             "name": "components/chosen",
@@ -1268,7 +1268,8 @@
             "homepage": "https://www.drupal.org/project/auto_nodetitle",
             "support": {
                 "source": "http://cgit.drupalcode.org/auto_nodetitle"
-            }
+            },
+            "time": "2011-09-08 16:07:46"
         },
         {
             "name": "drupal/backup_migrate",
@@ -2615,7 +2616,8 @@
             "homepage": "https://www.drupal.org/project/context_list",
             "support": {
                 "source": "http://cgit.drupalcode.org/context_list"
-            }
+            },
+            "time": "2014-07-08 19:51:59"
         },
         {
             "name": "drupal/context_list_active",
@@ -2977,7 +2979,8 @@
             "homepage": "https://www.drupal.org/project/css_injector",
             "support": {
                 "source": "http://cgit.drupalcode.org/css_injector"
-            }
+            },
+            "time": "2013-12-23 06:52:25"
         },
         {
             "name": "drupal/ctools",
@@ -5038,17 +5041,17 @@
         },
         {
             "name": "drupal/file_entity",
-            "version": "2.20.0",
+            "version": "2.21.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/file_entity",
-                "reference": "7.x-2.20"
+                "reference": "7.x-2.21"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/file_entity-7.x-2.20.zip",
-                "reference": "7.x-2.20",
-                "shasum": "d6cdfb164996f444328a6949b2174bddc55872fc"
+                "url": "https://ftp.drupal.org/files/projects/file_entity-7.x-2.21.zip",
+                "reference": "7.x-2.21",
+                "shasum": "6c785f67ab0b0043c0f65fb0ef57cc6b667d93bd"
             },
             "require": {
                 "drupal/ctools": "*",
@@ -5064,8 +5067,8 @@
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "7.x-2.20",
-                    "datestamp": "1523461680",
+                    "version": "7.x-2.21",
+                    "datestamp": "1525293784",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -11142,12 +11145,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_install_tasks.git",
-                "reference": "f05175b99bea5a2fdad19a6cd17777acf1f95ac3"
+                "reference": "8a416abebb16a4a05496382326efe06bb6999531"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_install_tasks/zipball/f05175b99bea5a2fdad19a6cd17777acf1f95ac3",
-                "reference": "f05175b99bea5a2fdad19a6cd17777acf1f95ac3",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_install_tasks/zipball/8a416abebb16a4a05496382326efe06bb6999531",
+                "reference": "8a416abebb16a4a05496382326efe06bb6999531",
                 "shasum": ""
             },
             "require": {
@@ -11162,7 +11165,7 @@
                 "source": "https://github.com/SU-SWS/stanford_install_tasks/tree/7.x-1.x",
                 "issues": "https://github.com/SU-SWS/stanford_install_tasks/issues"
             },
-            "time": "2018-02-16T07:32:04+00:00"
+            "time": "2018-05-03T04:26:47+00:00"
         },
         {
             "name": "su-sws/stanford_jordan",
@@ -11753,6 +11756,34 @@
                 "issues": "https://github.com/SU-SWS/stanford_slides/issues"
             },
             "time": "2018-02-12T23:24:04+00:00"
+        },
+        {
+            "name": "su-sws/stanford_ssp",
+            "version": "dev-7.x-2.x",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SU-SWS/stanford_ssp.git",
+                "reference": "eb84758d045795f9fe1da0884f63dc8296c2aa36"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_ssp/zipball/eb84758d045795f9fe1da0884f63dc8296c2aa36",
+                "reference": "eb84758d045795f9fe1da0884f63dc8296c2aa36",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "^1.2"
+            },
+            "type": "drupal-custom-module",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "A Drupal Authentication Module.",
+            "support": {
+                "source": "https://github.com/SU-SWS/stanford_ssp/tree/7.x-2.x",
+                "issues": "https://github.com/SU-SWS/stanford_ssp/issues"
+            },
+            "time": "2018-02-09T18:05:02+00:00"
         },
         {
             "name": "su-sws/stanford_story_page",
@@ -12595,6 +12626,7 @@
     "stability-flags": {
         "omega8cc/drush-registry-rebuild": 20,
         "drupal/paranoia": 20,
+        "su-sws/stanford_ssp": 20,
         "drupal/always_visible": 20,
         "drupal/context_list": 20,
         "drupal/context_useragent": 20,
