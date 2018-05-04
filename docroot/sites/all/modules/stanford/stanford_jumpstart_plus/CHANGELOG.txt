@@ -1,0 +1,32 @@
+Stanford Sites Jumpstart x.x-x.x xxxx-xx-xx
+-------------------------------------------
+
+7.x-6.0                          2018-03-15
+-------------------------------------------
+- Added composer.json
+
+7.x-5.0                          2015-05-30
+-------------------------------------------
+- 5.0 Initial release. No changes.
+
+7.x-4.6                          2016-08-12
+-------------------------------------------
+- Updated permissions
+
+7.x-4.5.1                        2015-11-10
+-------------------------------------------
+- Added permissions for stanford_gallery
+
+7.x-4.5                          2015-03-19
+-------------------------------------------
+- Stub release
+
+7.x-4.4                          2015-03-19
+-------------------------------------------
+- Remove webauth login block from layouts module
+- 7.x-4.x-BASIC-852 | Update to past events context (new layout!)
+- Allow Howard to create news and event items
+
+Stanford Sites Jumpstart 7.x-4.3 2014-11-05
+-------------------------------------------
+  - Initial release

@@ -1,0 +1,16 @@
+<?php
+/**
+ * @file
+ * For all things custom with the stanford jumpstart lab product.
+ */
+
+/**
+ * Implements hook_help().
+ */
+function stanford_jumpstart_lab_help($path, $arg) {
+  switch ($path) {
+    // Main module help for the block module.
+    case 'jumpstart_lab':
+      return '<p>' . t('Needs Work %email', array('%email' => l(t('SWS'), 'mailto:sitesjumpstart-help@lists.stanford.edu'))) . '</p>';
+  }
+}

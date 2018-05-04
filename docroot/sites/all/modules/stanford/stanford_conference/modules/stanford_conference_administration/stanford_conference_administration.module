@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Stanford Conference Administration feature.
+ */
+
+include_once 'stanford_conference_administration.features.inc';

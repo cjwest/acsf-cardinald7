@@ -10866,12 +10866,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_feeds_helper.git",
-                "reference": "30cde2ae15c2ae400c7ba8f36ec1c10bd84bf565"
+                "reference": "e6ecc8bcb4d6adc38c8089360fc6c47c36d5bc1c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_feeds_helper/zipball/30cde2ae15c2ae400c7ba8f36ec1c10bd84bf565",
-                "reference": "30cde2ae15c2ae400c7ba8f36ec1c10bd84bf565",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_feeds_helper/zipball/e6ecc8bcb4d6adc38c8089360fc6c47c36d5bc1c",
+                "reference": "e6ecc8bcb4d6adc38c8089360fc6c47c36d5bc1c",
                 "shasum": ""
             },
             "require": {
@@ -10886,7 +10886,7 @@
                 "source": "https://github.com/SU-SWS/stanford_feeds_helper/tree/7.x-1.x",
                 "issues": "https://github.com/SU-SWS/stanford_feeds_helper/issues"
             },
-            "time": "2018-02-14T05:27:20+00:00"
+            "time": "2018-05-03T20:45:59+00:00"
         },
         {
             "name": "su-sws/stanford_fellowship",
@@ -11145,12 +11145,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_install_tasks.git",
-                "reference": "8a416abebb16a4a05496382326efe06bb6999531"
+                "reference": "9be42f14bbd20de167484c88170fc31a30b3835f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_install_tasks/zipball/8a416abebb16a4a05496382326efe06bb6999531",
-                "reference": "8a416abebb16a4a05496382326efe06bb6999531",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_install_tasks/zipball/9be42f14bbd20de167484c88170fc31a30b3835f",
+                "reference": "9be42f14bbd20de167484c88170fc31a30b3835f",
                 "shasum": ""
             },
             "require": {
@@ -11165,7 +11165,7 @@
                 "source": "https://github.com/SU-SWS/stanford_install_tasks/tree/7.x-1.x",
                 "issues": "https://github.com/SU-SWS/stanford_install_tasks/issues"
             },
-            "time": "2018-05-03T04:26:47+00:00"
+            "time": "2018-05-03T05:53:15+00:00"
         },
         {
             "name": "su-sws/stanford_jordan",
@@ -11791,12 +11791,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_story_page.git",
-                "reference": "a3cc3bf35fdabd09d8590f35bfd166852562f7f7"
+                "reference": "4e98b7443f93e046a23d91257feb41eb0761da31"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_story_page/zipball/a3cc3bf35fdabd09d8590f35bfd166852562f7f7",
-                "reference": "a3cc3bf35fdabd09d8590f35bfd166852562f7f7",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_story_page/zipball/4e98b7443f93e046a23d91257feb41eb0761da31",
+                "reference": "4e98b7443f93e046a23d91257feb41eb0761da31",
                 "shasum": ""
             },
             "require": {
@@ -11811,7 +11811,7 @@
                 "source": "https://github.com/SU-SWS/stanford_story_page/tree/7.x-1.x",
                 "issues": "https://github.com/SU-SWS/stanford_story_page/issues"
             },
-            "time": "2018-04-16T18:01:48+00:00"
+            "time": "2018-05-03T16:36:24+00:00"
         },
         {
             "name": "su-sws/stanford_subsites",

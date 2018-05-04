@@ -1,0 +1,41 @@
+<?php
+/**
+ * @file
+ * Code for the Stanford Sites Jumpstart Plus module.
+ */
+
+/**
+ * Implements hook_help().
+ */
+function stanford_jumpstart_plus_help($path, $arg) {
+  switch ($path) {
+    case 'admin/help#jsplus':
+      return '<p>' . t('If you have any questions please email %email.', array('%email' => 'helpsu@stanford.edu')) . '</p>';
+  }
+}
+
+/**
+ * Implements hook_menu().
+ */
+function stanford_jumpstart_plus_menu() {
+  // $items['admin/stanford-jumpstart/plus'] = array(
+  //   'title' => 'Plus Config',
+  //   'page callback' => 'stanford_jumpstart_plus_something_something',
+  //   'access arguments' => array('access jumpstart plus'),
+  //   'type' => MENU_LOCAL_TASK,
+  // );
+  // return $items;
+}
+
+/**
+ * Implements hook_permission().
+ */
+function stanford_jumpstart_plus_permission() {
+  return array(
+    'access jumpstart plus' => array(
+      'title' => t('Access Jumpstart Plus'),
+      'description' => t('View the Jumpstart Plus pages.'),
+    ),
+  );
+}
+

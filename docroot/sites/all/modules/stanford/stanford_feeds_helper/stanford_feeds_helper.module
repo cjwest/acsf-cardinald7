@@ -103,7 +103,12 @@ function stanford_feeds_helper_feeds_set_target($source, &$entity, $target, $val
 
   // Iterate over all values.
   $delta = 0;
-  $field = isset($entity->$target) ? $entity->$target : array();
+  // Set the field to an empty array because when we're importing a field
+  // collection. If we leave the original field values, we can get some orphaned
+  // data that we dont want. For example, if the first of 4 field collections is
+  // deleted from the feed source, we we want to start fresh so that the outcome
+  // leaves only 3 entities, not 4.
+  $field = array();
   try {
 
     while (isset($value[$delta])) {

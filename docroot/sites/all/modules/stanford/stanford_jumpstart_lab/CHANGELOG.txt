@@ -1,0 +1,10 @@
+Stanford Sites Jumpstart Lab x.x-x.x xxxx-xx-xx
+-------------------------------------------
+7.x-5.0-alpha2                             2017-12-07
+-----------------------------------------------------
+- HSDO-1063 HSDO-1061 Removed advanced search and admin menu permissions
+
+
+7.x-5.0-alpha1                             2017-01-24
+-----------------------------------------------------
+- Initial release

@@ -1,0 +1,12 @@
+name = Stanford Jumpstart Plus
+description = Provides custom functionality for the Stanford Jumpstart Plus product.
+core = 7.x
+package = Stanford Sites Jumpstart Plus
+version = 7.x-6.0-dev
+
+project = stanford_jumpstart_plus
+project status url = https://github.com/SU-SWS/stanford_jumpstart_plus
+
+# stylesheets[all][] = css/jumpstart-plus.css
+# scripts[] = js/jumpstart-plus.js
+files[] = stanford_jumpstart_plus.install

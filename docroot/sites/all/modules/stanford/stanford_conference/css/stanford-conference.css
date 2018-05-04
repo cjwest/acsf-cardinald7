@@ -1,0 +1,100 @@
+.page-node .content-body .field.field-name-field-s-conference-date {
+  margin-bottom: .5em;
+}
+
+.field-name-field-s-conference-map-link a {
+  background-image: url("../img/small-red-map-icon.png");
+  background-position: 0 center;
+  background-repeat: no-repeat;
+  padding: 3px 0 0 12px;
+}
+
+.style-custom-styles-dark .field-name-field-s-conference-map-link a {
+  background-image: url("../img/small-white-map-icon.png");
+}
+
+.style-custom-styles-vivid .field-name-field-s-conference-map-link a {
+  background-image: url("../img/small-dark-map-icon.png");
+}
+
+.field-name-field-s-sponsor-name {
+  font-weight: 600;
+}
+
+.view-conference-sponsors img {
+  margin-bottom: .25em;
+}
+
+.view-conference-sponsors .views-row {
+  margin-bottom: 1em;
+}
+
+.page-node .content-body .field.field-name-field-s-speaker-topic {
+  margin-bottom: 0.2em;
+  font-weight: 600;
+}
+
+.page-node .content-body .field.field-name-field-s-speaker-name {
+  font-size: 1.1em;
+  margin-bottom: 0.2em;
+  font-weight: 600;
+}
+
+.view-conference-session-agenda .view-content h2 {
+  font-size: 1.7em;
+  font-weight: 600;
+  padding: 10px 0 5px 0;
+  background: #e9e6df;
+  margin-top: 1em;
+  text-align: center;
+  line-height: 30px;
+}
+
+.view-conference-session-agenda .view-content h3 {
+  margin-top: 1.5em;
+}
+
+.views-field-field-s-session-speaker {
+  border-top: 1px solid #F0F0F0;
+}
+
+.node-type-stanford-conference-session .field-collection-view,
+.views-field-field-s-session-speaker .field-collection-view {
+  border-bottom: 1px solid #F0F0F0;
+  padding-top: 1em;
+  padding-bottom: 0;
+}
+
+.page-node .content-body .field.field-name-field-s-speaker-file-upload {
+  margin-bottom: 0;
+}
+
+.page-node .content-body .field.field-name-field-s-speaker-description p {
+  margin-bottom: 0;
+}
+
+.page-node .content-body .field.field-name-field-s-speaker-description {
+  margin-bottom: 0.2em;
+}
+
+.edit-link {
+  margin-top: 1em;
+}
+
+.view-conference-link-to-overview img {
+  margin-bottom: .25em;
+}
+
+.view-conference-link-to-overview .views-row {
+  margin-bottom: 0;
+}
+
+.style-custom-styles-dark .view-conference-session-agenda .view-content h2 {
+  background: #fbfbf9;
+  color: #2e2d29;
+}
+
+.style-custom-styles-vivid .view-conference-session-agenda .view-content h2 {
+  background: #f2f3f4;
+  color: #0f6c91;
+}
