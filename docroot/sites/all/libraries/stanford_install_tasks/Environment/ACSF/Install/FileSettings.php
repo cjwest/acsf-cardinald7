@@ -39,7 +39,7 @@ class FileSettings extends AbstractInstallTask {
   public function installTaskAlter(&$tasks) {
     // As ACSF has a crazy name for the public file path we need to remove the
     // default settings of sites/default/files
-    unset($tasks['StanfordDrupalProfileFileSettings']);
+    unset($tasks['StanfordDrupalProfileInstallFileSettings']);
  }
 
 }
