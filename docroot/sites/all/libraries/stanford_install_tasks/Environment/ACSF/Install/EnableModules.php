@@ -19,7 +19,10 @@ class EnableModules extends AbstractInstallTask {
    *   Installation arguments.
    */
   public function execute(&$args = array()) {
-    // Nothing to see here.
+    // Remove this dependency because it conflicts with our login.
+    $modules = array('acsf_openid');
+    module_disable($modules, FALSE);
+    drupal_uninstall_modules($modules, FALSE);
   }
 
   /**
