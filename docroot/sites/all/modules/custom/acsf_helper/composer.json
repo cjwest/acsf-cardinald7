@@ -1,0 +1,10 @@
+{
+  "name": "su-sws/acsf_helper",
+  "description": "Acquia site factory helper module.",
+  "type": "drupal-custom-module",
+  "license": "GPL-2.0+",
+  "minimum-stability": "dev",
+  "require": {
+      "composer/installers": "^1.2"
+  }
+}

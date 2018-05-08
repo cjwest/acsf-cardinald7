@@ -1,0 +1,7 @@
+name = ACSF Helper Module
+description = A module for altering or adjusting items for the ACSF
+core = 7.x
+package = Stanford - ACSF
+version = 7.x-1.0-dev
+project = acsf_helper
+dependencies[] = paranoia

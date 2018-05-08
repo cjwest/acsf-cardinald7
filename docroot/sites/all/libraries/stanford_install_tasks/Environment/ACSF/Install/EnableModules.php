@@ -20,7 +20,7 @@ class EnableModules extends AbstractInstallTask {
    */
   public function execute(&$args = array()) {
     // Remove this dependency because it conflicts with our login.
-    $modules = array('acsf_openid');
+    $modules = array('acsf_openid', 'openid');
     module_disable($modules, FALSE);
     drupal_uninstall_modules($modules, FALSE);
   }
@@ -31,6 +31,7 @@ class EnableModules extends AbstractInstallTask {
   public function requirements() {
     return array(
       'acsf',
+      'acsf_helper',
       'paranoia',
       'newrelic_appname',
       'stanford_ssp',

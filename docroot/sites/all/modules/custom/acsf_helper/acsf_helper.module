@@ -1,0 +1,18 @@
+<?php
+/**
+ * @file
+ * File description
+ *
+ * Long description
+ */
+
+function acsf_helper_system_info_alter(&$info, $file, $type) {
+  // Remove the dependency on the ACSF_OPENID module.
+  if (isset($info['project']) && $info['project'] == "acsf") {
+    $search = array_search("acsf_openid", $info['dependencies']);
+    if ($search !== FALSE && $info['dependencies'][$search] == "acsf_openid") {
+      unset($info['dependencies'][$search]);
+    }
+  }
+
+}
