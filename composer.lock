@@ -1268,7 +1268,8 @@
             "homepage": "https://www.drupal.org/project/auto_nodetitle",
             "support": {
                 "source": "http://cgit.drupalcode.org/auto_nodetitle"
-            }
+            },
+            "time": "2011-09-08 16:07:46"
         },
         {
             "name": "drupal/backup_migrate",
@@ -2615,7 +2616,8 @@
             "homepage": "https://www.drupal.org/project/context_list",
             "support": {
                 "source": "http://cgit.drupalcode.org/context_list"
-            }
+            },
+            "time": "2014-07-08 19:51:59"
         },
         {
             "name": "drupal/context_list_active",
@@ -2977,7 +2979,8 @@
             "homepage": "https://www.drupal.org/project/css_injector",
             "support": {
                 "source": "http://cgit.drupalcode.org/css_injector"
-            }
+            },
+            "time": "2013-12-23 06:52:25"
         },
         {
             "name": "drupal/ctools",
@@ -8653,17 +8656,17 @@
         },
         {
             "name": "drupal/views_bulk_operations",
-            "version": "3.4.0",
+            "version": "3.5.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/views_bulk_operations",
-                "reference": "7.x-3.4"
+                "reference": "7.x-3.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/views_bulk_operations-7.x-3.4.zip",
-                "reference": "7.x-3.4",
-                "shasum": "350a860f34165255bfb6d1c8dadbe558aa5b79e2"
+                "url": "https://ftp.drupal.org/files/projects/views_bulk_operations-7.x-3.5.zip",
+                "reference": "7.x-3.5",
+                "shasum": "cfef0de25ec73020fe631b6c94cc0df3dec3a353"
             },
             "require": {
                 "drupal/drupal": "~7.0",
@@ -8676,8 +8679,8 @@
                     "dev-3.x": "3.x-dev"
                 },
                 "drupal": {
-                    "version": "7.x-3.4",
-                    "datestamp": "1487698683",
+                    "version": "7.x-3.5",
+                    "datestamp": "1525821480",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -10462,6 +10465,34 @@
             "time": "2018-03-03T00:26:25+00:00"
         },
         {
+            "name": "su-sws/SU-IT-Services",
+            "version": "dev-7.x-2.x",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SU-SWS/SU-IT-Services.git",
+                "reference": "0f4955539dda823bed75e9a1811c1845e6c4f2d3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SU-SWS/SU-IT-Services/zipball/0f4955539dda823bed75e9a1811c1845e6c4f2d3",
+                "reference": "0f4955539dda823bed75e9a1811c1845e6c4f2d3",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "^1.2"
+            },
+            "type": "drupal-custom-module",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "A Drupal feature.",
+            "support": {
+                "source": "https://github.com/SU-SWS/SU-IT-Services/tree/7.x-1.x",
+                "issues": "https://github.com/SU-SWS/SU-IT-Services/issues"
+            },
+            "time": "2018-02-09T18:14:49+00:00"
+        },
+        {
             "name": "su-sws/erus",
             "version": "dev-7.x-1.x-dev",
             "source": {
@@ -10607,12 +10638,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_capx.git",
-                "reference": "6927156b8d1c8dfb06aa37f3ea4233632e7ba7e7"
+                "reference": "4941080015c45bdccecffced4aef64730cc6d549"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_capx/zipball/6927156b8d1c8dfb06aa37f3ea4233632e7ba7e7",
-                "reference": "6927156b8d1c8dfb06aa37f3ea4233632e7ba7e7",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_capx/zipball/4941080015c45bdccecffced4aef64730cc6d549",
+                "reference": "4941080015c45bdccecffced4aef64730cc6d549",
                 "shasum": ""
             },
             "type": "drupal-custom-module",
@@ -10631,7 +10662,7 @@
                 "source": "https://github.com/SU-SWS/stanford_capx/tree/7.x-3.x",
                 "issues": "https://github.com/SU-SWS/stanford_capx/issues"
             },
-            "time": "2018-02-09T06:55:12+00:00"
+            "time": "2018-05-07T22:23:44+00:00"
         },
         {
             "name": "su-sws/stanford_carousel",
@@ -11142,12 +11173,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_install_tasks.git",
-                "reference": "4c98f912f51238fc0d36e098e9dd71098b2dcbd8"
+                "reference": "5a869526ce0dc20f6b3bf8ac35140ff35fdc2f92"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_install_tasks/zipball/4c98f912f51238fc0d36e098e9dd71098b2dcbd8",
-                "reference": "4c98f912f51238fc0d36e098e9dd71098b2dcbd8",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_install_tasks/zipball/5a869526ce0dc20f6b3bf8ac35140ff35fdc2f92",
+                "reference": "5a869526ce0dc20f6b3bf8ac35140ff35fdc2f92",
                 "shasum": ""
             },
             "require": {
@@ -11162,7 +11193,7 @@
                 "source": "https://github.com/SU-SWS/stanford_install_tasks/tree/7.x-1.x",
                 "issues": "https://github.com/SU-SWS/stanford_install_tasks/issues"
             },
-            "time": "2018-05-04T06:07:33+00:00"
+            "time": "2018-05-07T23:39:32+00:00"
         },
         {
             "name": "su-sws/stanford_jordan",
@@ -11725,6 +11756,34 @@
                 "issues": "https://github.com/SU-SWS/stanford_sites_content_importer/issues"
             },
             "time": "2018-02-09T07:20:10+00:00"
+        },
+        {
+            "name": "su-sws/stanford_sites_helper",
+            "version": "dev-7.x-2.x",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SU-SWS/stanford_sites_helper.git",
+                "reference": "b40a43faa6733a577026d97dc89fec2e73bde57b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_sites_helper/zipball/b40a43faa6733a577026d97dc89fec2e73bde57b",
+                "reference": "b40a43faa6733a577026d97dc89fec2e73bde57b",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "^1.2"
+            },
+            "type": "drupal-custom-module",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "A Drupal feature.",
+            "support": {
+                "source": "https://github.com/SU-SWS/stanford_sites_helper/tree/7.x-1.x",
+                "issues": "https://github.com/SU-SWS/stanford_sites_helper/issues"
+            },
+            "time": "2018-02-09T18:10:52+00:00"
         },
         {
             "name": "su-sws/stanford_slides",
@@ -12682,6 +12741,8 @@
         "su-sws/stanford_conference": 20,
         "su-sws/stanford_video": 20,
         "su-sws/stanford_jumpstart_lab": 20,
+        "su-sws/stanford_sites_helper": 20,
+        "su-sws/su-it-services": 20,
         "su-sws/stanford_light": 20
     },
     "prefer-stable": true,
