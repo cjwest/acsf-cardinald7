@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "a055eabc2b83ca11b93069bb33c49f8d",
+    "content-hash": "7c79c0c86f0ed19736c1d8b1303b00cc",
     "packages": [
         {
             "name": "components/chosen",
@@ -1268,8 +1268,7 @@
             "homepage": "https://www.drupal.org/project/auto_nodetitle",
             "support": {
                 "source": "http://cgit.drupalcode.org/auto_nodetitle"
-            },
-            "time": "2011-09-08 16:07:46"
+            }
         },
         {
             "name": "drupal/backup_migrate",
@@ -2616,8 +2615,7 @@
             "homepage": "https://www.drupal.org/project/context_list",
             "support": {
                 "source": "http://cgit.drupalcode.org/context_list"
-            },
-            "time": "2014-07-08 19:51:59"
+            }
         },
         {
             "name": "drupal/context_list_active",
@@ -2979,8 +2977,7 @@
             "homepage": "https://www.drupal.org/project/css_injector",
             "support": {
                 "source": "http://cgit.drupalcode.org/css_injector"
-            },
-            "time": "2013-12-23 06:52:25"
+            }
         },
         {
             "name": "drupal/ctools",
