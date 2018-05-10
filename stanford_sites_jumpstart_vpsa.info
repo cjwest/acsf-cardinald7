@@ -5,7 +5,7 @@ core = 7.x
 version = 7.x-6.0-alpha1
 
 ; ITasks Config
-taskdir = sites/all/libraries/tasks
+taskdir = sites/all/libraries/stanford_install_tasks
 
 ; Install Tasks                          Install in the order they appear below.
 ; ------------------------------------------------------------------------------
@@ -116,6 +116,9 @@ task[anchorage][install][] = Environment\Anchorage\Install\SAMLSettings
 ; LOCAL
 task[local][install][] = Environment\Local\Install\ImageAllowInsecureDerivatives
 
+; ACSF
+task[acsf][install][] = Environment\ACSF\Install\EnableModules
+task[acsf][install][] = Environment\ACSF\Install\FileSettings
 
 ; Update Tasks
 ; ------------------------------------------------------------------------------
