@@ -11173,12 +11173,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_install_tasks.git",
-                "reference": "5a869526ce0dc20f6b3bf8ac35140ff35fdc2f92"
+                "reference": "0b3868cc3980c30da925c73803eadffb67f9e29b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_install_tasks/zipball/5a869526ce0dc20f6b3bf8ac35140ff35fdc2f92",
-                "reference": "5a869526ce0dc20f6b3bf8ac35140ff35fdc2f92",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_install_tasks/zipball/0b3868cc3980c30da925c73803eadffb67f9e29b",
+                "reference": "0b3868cc3980c30da925c73803eadffb67f9e29b",
                 "shasum": ""
             },
             "require": {
@@ -11193,7 +11193,7 @@
                 "source": "https://github.com/SU-SWS/stanford_install_tasks/tree/7.x-1.x",
                 "issues": "https://github.com/SU-SWS/stanford_install_tasks/issues"
             },
-            "time": "2018-05-07T23:39:32+00:00"
+            "time": "2018-05-10T00:14:20+00:00"
         },
         {
             "name": "su-sws/stanford_jordan",
