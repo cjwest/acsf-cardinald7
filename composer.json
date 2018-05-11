@@ -15,6 +15,14 @@
     {
       "type": "vcs",
       "url": "https://github.com/SU-SWS/stanford_ssp"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/Stanford/WMD"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/Stanford/webauth_extras"
     }
   ],
   "require": {
@@ -45,7 +53,9 @@
     "drupal/paranoia": "dev-1.x",
     "drupal/node_revision_delete": "~3.0",
     "drupal/honeypot": "~1.24",
-    "SU-SWS/stanford_ssp": "dev-7.x-2.x"
+    "SU-SWS/stanford_ssp": "dev-7.x-2.x",
+    "Stanford/WMD": "dev-master",
+    "Stanford/webauth_extras": "dev-master"
   },
   "conflict": {
     "drupal/core": "8.*"
