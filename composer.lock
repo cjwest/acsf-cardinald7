@@ -4,8 +4,64 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "7c79c0c86f0ed19736c1d8b1303b00cc",
+    "content-hash": "3b3e8cccde37ef5caddbefe647407c28",
     "packages": [
+        {
+            "name": "Stanford/WMD",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Stanford/WMD.git",
+                "reference": "7894e24736471773ab19f27698fafed5f7830079"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Stanford/WMD/zipball/7894e24736471773ab19f27698fafed5f7830079",
+                "reference": "7894e24736471773ab19f27698fafed5f7830079",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "^1.2"
+            },
+            "type": "drupal-custom-module",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Webauth authentication module for Drupal.",
+            "support": {
+                "source": "https://github.com/Stanford/WMD/tree/master",
+                "issues": "https://github.com/Stanford/WMD/issues"
+            },
+            "time": "2018-05-10T23:12:42+00:00"
+        },
+        {
+            "name": "Stanford/webauth_extras",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Stanford/webauth_extras.git",
+                "reference": "b306323ace858935f260e9c2e45492ca1b906ec4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Stanford/webauth_extras/zipball/b306323ace858935f260e9c2e45492ca1b906ec4",
+                "reference": "b306323ace858935f260e9c2e45492ca1b906ec4",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "^1.2"
+            },
+            "type": "drupal-custom-module",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "A support module for the WMD Webauth Drupal authentication mdoule.",
+            "support": {
+                "source": "https://github.com/Stanford/webauth_extras/tree/master",
+                "issues": "https://github.com/Stanford/webauth_extras/issues"
+            },
+            "time": "2018-05-10T23:09:54+00:00"
+        },
         {
             "name": "components/chosen",
             "version": "1.8.2",
@@ -11229,12 +11285,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:SU-SWS/stanford_jumpstart.git",
-                "reference": "c58768bc57a0d9d92504158a15591af78de0a6c1"
+                "reference": "2aa38646455a6ddf9d8db08ad1a64cadef8bd9db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_jumpstart/zipball/c58768bc57a0d9d92504158a15591af78de0a6c1",
-                "reference": "c58768bc57a0d9d92504158a15591af78de0a6c1",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_jumpstart/zipball/2aa38646455a6ddf9d8db08ad1a64cadef8bd9db",
+                "reference": "2aa38646455a6ddf9d8db08ad1a64cadef8bd9db",
                 "shasum": ""
             },
             "require": {
@@ -11249,7 +11305,7 @@
                 "source": "https://github.com/SU-SWS/stanford_jumpstart/tree/7.x-5.x",
                 "issues": "https://github.com/SU-SWS/stanford_jumpstart/issues"
             },
-            "time": "2018-03-21T19:18:07+00:00"
+            "time": "2018-05-11T06:26:47+00:00"
         },
         {
             "name": "su-sws/stanford_jumpstart_academic",
@@ -12683,6 +12739,8 @@
         "omega8cc/drush-registry-rebuild": 20,
         "drupal/paranoia": 20,
         "su-sws/stanford_ssp": 20,
+        "stanford/wmd": 20,
+        "stanford/webauth_extras": 20,
         "drupal/always_visible": 20,
         "drupal/context_list": 20,
         "drupal/context_useragent": 20,
