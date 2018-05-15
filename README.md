@@ -18,7 +18,7 @@ TLDR; Local Installation
 - `composer install`
 - `composer init-lando`
 - `lando start`
-- `lando si` or `lando drush si [install profile name]``
+- `lando si` or `lando drush si [install profile name]`
 - `lando drush uli`
 
 Open the browser to your Lando localhost port or if you have the .sws domain set up: http://cardinald7.sws/
