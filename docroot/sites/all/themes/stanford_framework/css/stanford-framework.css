@@ -174,19 +174,20 @@
   margin: 0;
 }
 
-/* line 152, ../sass/includes/_module-brand-bars.scss */
-#copyright {
-  margin-top: -20px;
+/* line 151, ../sass/includes/_module-brand-bars.scss */
+#bottom-menu .top-links a {
+  font-size: 17px !important;
 }
-
-/* line 156, ../sass/includes/_module-brand-bars.scss */
-#copyright .copyright-links {
-  margin-left: 17px;
+/* line 154, ../sass/includes/_module-brand-bars.scss */
+#bottom-menu .bottom-links a {
+  font-weight: 300 !important;
 }
 
 /* line 160, ../sass/includes/_module-brand-bars.scss */
 p.vcard {
-  font-size: 13px;
+  font-size: 15px;
+  font-weight: 300;
+  margin-top: 8px;
 }
 
 /* ----- Sticky Global Footer --------------- */

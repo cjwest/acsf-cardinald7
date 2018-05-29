@@ -1,6 +1,10 @@
-Version 7.x-3.4
-------------------------------
-josephknox: /user page styles
+Version 7.x-3.6        2018-05-24
+---------------------------------
+- Changed footer link text per guidance from University Communications
+
+Version 7.x-3.5        2018-05-23
+---------------------------------
+- Updated and reorganized footer links (GDPR compliance)
 
 7.x-3.5-alpha1              2017-10-11
 --------------------------------------
@@ -11,6 +15,10 @@ josephknox: /user page styles
 - HSDO-1031 footer btn link color
 - HSDO-1031 fixed footer button hover state
 - Added template with modified meta tag to prevent user zoom in mobile
+
+Version 7.x-3.4
+------------------------------
+josephknox: /user page styles
 
 Version 7.x-3.3
 ------------------------------

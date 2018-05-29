@@ -80,7 +80,8 @@
     "post-update-cmd": [
       "@composer clean-gits",
       "sh scripts/updates/apply-patches.sh",
-      "echo \"Don't forget to run acsf-init if core was updated.\""
+      "echo \"Don't forget to run acsf-init if core was updated.\"",
+      "cp docroot/sites/all/libraries/jsonpath/jsonpath-0.8.1.php docroot/sites/all/libraries/jsonpath/jsonpath.php"
     ],
     "post-create-project-cmd": [
       "DrupalProject\\composer\\ScriptHandler::removeInternalFiles"
@@ -136,10 +137,6 @@
       "drupal/context": {
         "Remove usage of deprecated create_function() calls for PHP 7.2+ future proofing":
         "https://www.drupal.org/files/issues/context-support_php_72-2946595-3.patch"
-      },
-      "drupal/paranoia": {
-        "block some import foo boxes that use php arrays as a data structure":
-        "https://www.drupal.org/files/issues/2018-03-28/paranoia-block_additional_forms-2313945-33.patch"
       }
     },
     "merge-plugin": {
@@ -171,7 +168,10 @@
         "type:component",
         "type:drupal-library"
       ],
-      "docroot/sites/all/libraries/jquery.cycle/": ["library/jquery_cycle"]
+      "docroot/sites/all/libraries/jquery.cycle/": ["library/jquery_cycle"],
+      "docroot/sites/all/libraries/iCalcreator/": ["kigkonsult/icalcreator"],
+      "docroot/sites/all/libraries/Spyc/Spyc.php": ["mustangostang/spyc"],
+      "docroot/sites/all/libraries/jsonpath/": ["library/jsonpath"]
     },
     "custom-installer": {
       "docroot/sites/all/modules/stanford/{$name}/": [
@@ -187,7 +187,10 @@
         "type:component",
         "type:drupal-library"
       ],
-      "docroot/sites/all/libraries/jquery.cycle/": ["library/jquery_cycle"]
+      "docroot/sites/all/libraries/jquery.cycle/": ["library/jquery_cycle"],
+      "docroot/sites/all/libraries/iCalcreator/": ["kigkonsult/icalcreator"],
+      "docroot/sites/all/libraries/Spyc/Spyc.php": ["mustangostang/spyc"],
+      "docroot/sites/all/libraries/jsonpath/": ["library/jsonpath"]
     },
     "preserve-paths": [
       "docroot/profiles",

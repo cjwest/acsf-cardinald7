@@ -126,7 +126,7 @@ function drush_paranoia_reset_stale_accounts() {
     ->condition('login', $offset, '<')
     ->condition('pass', 'ZZZ%', 'NOT LIKE');
   if ($limit !== FALSE) {
-    $query->range($limit);
+    $query->range(0, $limit);
   }
   $result = $query->execute();
 

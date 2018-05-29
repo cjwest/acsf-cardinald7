@@ -144,21 +144,23 @@
     margin: 0 17px 0 0;
     padding: 0;
 }
-
-#bottom-menu ul li:last-child {
-    margin: 0;
+#bottom-menu {
+    ul li:last-child {
+        margin: 0;
+    }
+    .top-links a {
+        font-size: 17px !important;
+    }
+    .bottom-links a {
+        font-weight: 300 !important;
+    }
 }
 
-#copyright {
-    margin-top: -20px;
-}
-
-#copyright .copyright-links {
-    margin-left: 17px;
-}
 
 p.vcard {
-    font-size: 13px;
+    font-size: 15px;
+    font-weight: 300;
+    margin-top: 8px;
 }
 
 
@@ -248,14 +250,6 @@ body.admin-menu {
     }
     #bottom-menu ul li {
         float: none;
-    }
-    #copyright {
-        margin-top: 0;
-        margin-bottom: 15px;
-    }
-    #copyright .copyright-links {
-        display: block;
-        margin-left: 0;
     }
     p.vcard {
         margin: 0;

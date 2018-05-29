@@ -153,12 +153,20 @@ function stanford_framework_preprocess_page(&$vars) {
   $vars['styles'] = drupal_get_css();
 
   $vars['stanford_links'] = array(
-    'su_home' => variable_get('stanford_framework_links_su_home', 'http://www.stanford.edu"'),
-    'maps' => variable_get('stanford_framework_links_maps', 'http://visit.stanford.edu/plan/maps.html'),
-    'su_search' => variable_get('stanford_framework_links_su_search', 'http://www.stanford.edu/search/'),
-    'terms' => variable_get('stanford_framework_links_terms', 'http://www.stanford.edu/site/terms.html'),
-    'emergency' => variable_get('stanford_framework_links_emergency', 'http://emergency.stanford.edu/'),
-    'copyright' => variable_get('stanford_framework_links_copyright','https://uit.stanford.edu/security/copyright-infringement'),
+    'top-links' => array(
+      'su_home' => l('Stanford Home', variable_get('stanford_framework_links_su_home', 'https://www.stanford.edu')),
+      'maps' => l('Maps & Directions', variable_get('stanford_framework_links_maps', 'https://visit.stanford.edu/plan/')),
+      'su_search' => l('Search Stanford', variable_get('stanford_framework_links_su_search', 'https://www.stanford.edu/search/')),
+      'emergency' => l('Emergency Info', variable_get('stanford_framework_links_emergency', 'https://emergency.stanford.edu/')),
+    ),
+    'bottom-links' => array(
+      'terms' => l('Terms of Use', variable_get('stanford_framework_links_terms', 'https://www.stanford.edu/site/terms/'), array('attributes' => array('title' => t('Terms of use for sites')))),
+      'privacy_policy' => l('Privacy', variable_get('stanford_framework_links_privacy_policy', 'https://www.stanford.edu/site/privacy'), array('attributes' => array('title' => t('Privacy and cookie policy')))),
+      'copyright' => l('Copyright', variable_get('stanford_framework_links_copyright', 'https://uit.stanford.edu/security/copyright-infringement'), array('attributes' => array('title' => t('Report alleged copyright infringement')))),
+      'trademark' => l('Trademarks', variable_get('stanford_framework_links_trademark', 'https://adminguide.stanford.edu/chapter-1/subchapter-5/policy-1-5-4'), array('attributes' => array('title' => t('Report alleged copyright infringement')))),
+      'non_discrimination' => l('Non-Discrimination', variable_get('stanford_framework_links_non_discrimination', 'http://exploredegrees.stanford.edu/nonacademicregulations/nondiscrimination/'), array('attributes' => array('title' => t('Report alleged copyright infringement')))),
+      'accessibility' => l('Accessibility', variable_get('stanford_framework_links_accessibility', 'https://www.stanford.edu/site/accessibility/'), array('attributes' => array('title' => t('Report alleged copyright infringement')))),
+    ),
   );
 }
 

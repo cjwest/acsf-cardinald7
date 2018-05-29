@@ -281,16 +281,16 @@
     <div class="row">
       <div id="bottom-logo" class="span2"><a href="http://www.stanford.edu"><img src="<?php print base_path() . path_to_theme(); ?>/images/footer-stanford-logo@2x.png" alt="Stanford University"></a></div>
       <div id="bottom-menu" class="span10">
-        <ul>
-          <li><a href="<?php print $stanford_links['su_home']; ?>">SU Home</a></li>
-          <li><a href="<?php print $stanford_links['maps']; ?>">Maps &amp; Directions</a></li>
-          <li><a href="<?php print $stanford_links['su_search']; ?>">Search Stanford</a></li>
-          <li><a href="<?php print $stanford_links['terms']; ?>">Terms of Use</a></li>
-          <li><a href="<?php print $stanford_links['emergency']; ?>">Emergency Info</a></li>
-        </ul>
-      </div>
-      <div id="copyright" class="span10 offset2">
-        <p class="vcard">&copy; <span class="fn org">Stanford University</span>, <span class="adr"><span class="locality">Stanford</span>, <span class="region">California</span> <span class="postal-code">94305</span></span>. <span class="copyright-links"><a href="<?php print $stanford_links['copyright']; ?>">Copyright Complaints</a></span></p>
+
+        <?php foreach ($stanford_links as $class => $link_group): ?>
+          <ul class="<?php print $class; ?> clearfix">
+            <?php foreach ($link_group as $link): ?>
+              <li><?php print $link; ?></li>
+            <?php endforeach ?>
+          </ul>
+        <?php endforeach ?>
+
+        <p class="vcard">&copy; <span class="fn org">Stanford University</span>, <span class="adr"><span class="locality">Stanford</span>, <span class="region">California</span> <span class="postal-code">94305</span></span>.</p>
       </div>
     </div>
   </div>

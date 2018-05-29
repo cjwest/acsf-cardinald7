@@ -273,25 +273,6 @@ function acsf_openid_page_alter(&$page) {
 }
 
 /**
- * Implements hook_admin_paths().
- */
-function acsf_openid_admin_paths() {
-  return array(
-    'acsf-openid-factory/*' => (bool) variable_get('acsf_openid_overlay_for_login', 1),
-    'openid/authenticate' => (bool) variable_get('acsf_openid_overlay_for_login', 1),
-    'acsf-openid-login' => (bool) variable_get('acsf_openid_overlay_for_login', 1),
-    'user/register' => acsf_openid_overlay_for_registration(),
-  );
-}
-
-/**
- * Decides if the OpenID registration should happen in the overlay.
- */
-function acsf_openid_overlay_for_registration() {
-  return acsf_openid_user_registration_response() && module_exists('overlay') && variable_get('acsf_openid_overlay_for_registration', 1);
-}
-
-/**
  * Implements hook_openid().
  */
 function acsf_openid_openid($op, $request = array()) {
@@ -1066,10 +1047,6 @@ function acsf_openid_tokens($type, $tokens, array $data = array(), array $option
 
           if (acsf_openid_force_openid()) {
             $register_link = 'acsf-openid-factory/register';
-            if (module_exists('overlay') && variable_get('acsf_openid_overlay_for_login', 1)) {
-              $url_options['fragment'] = 'overlay=' . $register_link;
-              $register_link = '<front>';
-            }
           }
           else {
             $register_link = 'user/register';

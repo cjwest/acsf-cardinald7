@@ -226,20 +226,6 @@ function acsf_openid_admin_settings_form($form, $form_state) {
       '!service_name_long' => $factory_name,
     ));
   }
-  $form['overlay_status']['acsf_openid_overlay_for_registration'] = array(
-    '#type' => 'checkbox',
-    '#title' => $title,
-    '#description' => $description,
-    '#default_value' => variable_get('acsf_openid_overlay_for_registration', 1),
-    '#disabled' => !module_exists('overlay'),
-  );
-
-  $form['overlay_status']['acsf_openid_overlay_for_login'] = array(
-    '#type' => 'checkbox',
-    '#title' => t('Use the overlay for OpenID sign-in pages'),
-    '#default_value' => variable_get('acsf_openid_overlay_for_login', 1),
-    '#disabled' => !module_exists('overlay'),
-  );
 
   $form['overlay_status']['acsf_openid_overlay_for_admin'] = array(
     '#type' => 'checkbox',

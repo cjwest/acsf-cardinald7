@@ -193,16 +193,7 @@ function acsf_openid_user_register_page() {
     // it on in general if local user logins are allowed.)
     $GLOBALS['conf']['user_email_verification'] = FALSE;
 
-    // Set a custom page title. We use a different title depending on whether
-    // we are inside or outside the overlay, since inside the overlay the user
-    // is not "inside" the site yet so it makes sense to refer to it in the
-    // third person, but outside the overlay it doesn't.
-    if (module_exists('overlay') && variable_get('acsf_openid_overlay_for_registration', 1)) {
-      drupal_set_title(t('The site %site-name wants to know more about you.', array('%site-name' => acsf_openid_site_name_or_domain())), PASS_THROUGH);
-    }
-    else {
-      drupal_set_title(t('Complete your registration'));
-    }
+    drupal_set_title(t('Complete your registration'));
 
     // Remove breadcrumb.
     drupal_set_breadcrumb(array());
@@ -218,11 +209,6 @@ function acsf_openid_user_register_page() {
     // Hide user name, password and OpenID URL info.
     $form['account']['#access'] = FALSE;
     $form['openid_display']['#access'] = FALSE;
-
-    // Add CSS to make the page content look more like the pages from Factory.
-    if (module_exists('overlay') && variable_get('acsf_openid_overlay_for_registration', 1)) {
-      $form['#attached']['css'][] = drupal_get_path('module', 'acsf_openid') . '/acsf_openid.register.css';
-    }
 
     return $form;
   }
@@ -257,13 +243,6 @@ function acsf_openid_factory_login_page($user_operation = 'login') {
       // tab. Close the overlay now.
       acsf_openid_close_overlay('<front>');
       return '';
-    }
-    if (module_exists('overlay') && variable_get('acsf_openid_overlay_for_login', 1)) {
-      $query = array(
-        'render' => 'overlay',
-        'destination' => $destination . '?render=overlay',
-      );
-      $is_overlay = TRUE;
     }
   }
   else {

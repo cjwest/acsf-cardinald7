@@ -118,3 +118,4 @@ Check out this article for more help: https://stackoverflow.com/questions/166410
 - Composer uses a mix of patches, preserve path, and merge plugins to accomplish what is in this repo. Please get familiar with them.
 - Unlike other build systems, Acquia requires that all items be tracked in the repository and that is why you see both composer and have the items tracked.
 - Diseval is installed on ACSF and to be conscious of the repurcussions of that on your development.
+- Libraries use the 'package' type and this has repurcussions. Please see the highlighted notes at: https://getcomposer.org/doc/05-repositories.md#package-2
