@@ -69,6 +69,30 @@ $config = array(
     ),*/
   ),
 
+  // An authentication source which can authenticate against both SAML 2.0
+  // and Shibboleth 1.3 IdPs.
+  'cardinald7' => array(
+    'saml:SP',
+
+    // The entity ID of this SP.
+    // Can be NULL/unset, in which case an entity ID is generated based on the metadata URL.
+    'entityID' => 'https://cardinald7.sws/',
+
+    // The entity ID of the IdP this should SP should contact.
+    // Can be NULL/unset, in which case the user will be shown a list of available IdPs.
+    'idp' => "https://idp.stanford.edu/",
+
+    // The URL to the discovery service.
+    // Can be NULL/unset, in which case a builtin discovery service will be used.
+    'discoURL' => null,
+
+    // These are the certs from `/cert` directory.
+    'privatekey'           => 'saml.pem',
+    'certificate'          => 'saml.crt',
+    // Defaults to SHA1 (http://www.w3.org/2000/09/xmldsig#rsa-sha1)
+    'signature.algorithm'  => 'http://www.w3.org/2001/04/xmldsig-more#rsa-sha256',
+  ),
+
 
   /*
   'example-sql' => array(

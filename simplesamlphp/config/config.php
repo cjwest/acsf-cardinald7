@@ -48,12 +48,12 @@ $config['authproc.sp'] = array(
     'oid2name',
   ),
   // convert : and / in group names to _
-  50 => array(
-    'class'       => 'core:AttributeAlter',
-    'subject'     => 'eduPersonEntitlement',
-    'pattern'     => '/[\/\:]/',
-    'replacement' => '_',
-  ),
+  // 50 => array(
+  //   'class'       => 'core:AttributeAlter',
+  //   'subject'     => 'eduPersonEntitlement',
+  //   'pattern'     => '/[\/\:]/',
+  //   'replacement' => '_',
+  // ),
 
   90 => 'core:LanguageAdaptor',
 );
