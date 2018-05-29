@@ -81,7 +81,10 @@
       "@composer clean-gits",
       "sh scripts/updates/apply-patches.sh",
       "echo \"Don't forget to run acsf-init if core was updated.\"",
-      "cp docroot/sites/all/libraries/jsonpath/jsonpath-0.8.1.php docroot/sites/all/libraries/jsonpath/jsonpath.php"
+      "cp docroot/sites/all/libraries/jsonpath/jsonpath-0.8.1.php docroot/sites/all/libraries/jsonpath/jsonpath.php",
+      "cp -R vendor/kigkonsult/icalcreator docroot/sites/all/libraries/iCalcreator/",
+      "cp -R vendor/mustangostang/spyc docroot/sites/all/libraries/Spyc/",
+      "cp -R vendor/trentrichardson/jquery-timepicker-addon/src docroot/sites/all/libraries/jquery-ui-timepicker/"
     ],
     "post-create-project-cmd": [
       "DrupalProject\\composer\\ScriptHandler::removeInternalFiles"
@@ -167,11 +170,7 @@
       "docroot/sites/all/libraries/{$name}/": [
         "type:component",
         "type:drupal-library"
-      ],
-      "docroot/sites/all/libraries/jquery.cycle/": ["library/jquery_cycle"],
-      "docroot/sites/all/libraries/iCalcreator/": ["kigkonsult/icalcreator"],
-      "docroot/sites/all/libraries/Spyc/Spyc.php": ["mustangostang/spyc"],
-      "docroot/sites/all/libraries/jsonpath/": ["library/jsonpath"]
+      ]
     },
     "custom-installer": {
       "docroot/sites/all/modules/stanford/{$name}/": [
@@ -189,7 +188,7 @@
       ],
       "docroot/sites/all/libraries/jquery.cycle/": ["library/jquery_cycle"],
       "docroot/sites/all/libraries/iCalcreator/": ["kigkonsult/icalcreator"],
-      "docroot/sites/all/libraries/Spyc/Spyc.php": ["mustangostang/spyc"],
+      "docroot/sites/all/libraries/Spyc/": ["mustangostang/spyc"],
       "docroot/sites/all/libraries/jsonpath/": ["library/jsonpath"]
     },
     "preserve-paths": [

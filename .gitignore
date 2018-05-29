@@ -52,6 +52,7 @@ docroot/sites/all/libraries/jquery
 *.log
 *.sql
 *.sqlite
+auth.json
 
 # Misc *
 ########
