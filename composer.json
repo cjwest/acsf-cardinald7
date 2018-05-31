@@ -134,8 +134,8 @@
         "https://github.com/SebCorbin/composer-patches/commit/1cb9bacba51f8bba0c5f3f322c3bb61e4ceae974.patch"
       },
       "drupal/features": {
-        "Features replace eval().":
-        "https://www.drupal.org/files/issues/2018-03-29/features-replace_eval_anonymous_functions.patch"
+        "2957125: Features replace eval().":
+        "https://www.drupal.org/files/issues/2018-05-31/features-replace_eval_anonymous_functions-4.patch"
       },
       "drupal/context": {
         "Remove usage of deprecated create_function() calls for PHP 7.2+ future proofing":
