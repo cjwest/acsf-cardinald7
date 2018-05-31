@@ -8,13 +8,20 @@ $databases = array(
   array(
     'default' =>
     array(
-      'database' => getenv('DB_NAME') ?? 'drupal',
-      'username' => getenv('DB_USER') ?? 'drupal',
-      'password' => getenv('DB_PASSWORD') ?? 'drupal',
-      'host' => getenv('DB_HOST') ?? 'database',
-      'port' => getenv('DB_PORT') ?? 3306,
+      'database' => !empty(getenv('DB_NAME')) ? getenv('DB_NAME') : 'drupal',
+      'username' => !empty(getenv('DB_USER')) ? getenv('DB_USER') : 'drupal',
+      'password' => !empty(getenv('DB_PASSWORD')) ? getenv('DB_PASSWORD') : 'drupal',
+      'host' => !empty(getenv('DB_HOST')) ? getenv('DB_HOST') : 'database',
+      'port' => !empty(getenv('DB_PORT')) ? getenv('DB_PORT') : 3306,
       'driver' => 'mysql',
       'prefix' => '',
     ),
   ),
 );
+
+// Local path to simpesamlphp.
+$conf['stanford_simplesamlphp_auth_installdir'] = "/app/simplesamlphp";
+// The SP for local development.
+$conf['stanford_simplesamlphp_auth_authsource'] = "cardinald7";
+// Force https for the sake of SAML auth.
+$conf['stanford_ssp_force_https'] = TRUE;
