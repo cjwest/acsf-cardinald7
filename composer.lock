@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "c4da356ea895faba91ead3726618f347",
+    "content-hash": "2a0d8278f9127c3a0e17d3e5d81cfbaa",
     "packages": [
         {
             "name": "Stanford/WMD",

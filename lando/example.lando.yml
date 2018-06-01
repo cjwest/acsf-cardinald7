@@ -9,6 +9,8 @@ services:
   appserver:
     ssl: true
     via: apache
+    config:
+      conf: lando/config/php.ini
   database:
     type: mysql:5.7
     creds:

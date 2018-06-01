@@ -189,7 +189,9 @@
       "docroot/sites/all/libraries/jquery.cycle/": ["library/jquery_cycle"],
       "docroot/sites/all/libraries/iCalcreator/": ["kigkonsult/icalcreator"],
       "docroot/sites/all/libraries/Spyc/": ["mustangostang/spyc"],
-      "docroot/sites/all/libraries/jsonpath/": ["library/jsonpath"]
+      "docroot/sites/all/libraries/jsonpath/": ["library/jsonpath"],
+      "docroot/sites/all/modules/stanford/webauth/": ["Stanford/WMD"],
+      "docroot/sites/all/modules/stanford/stanford_sites_systemtools/": ["SU-SWS/SU-IT-Services"]
     },
     "preserve-paths": [
       "docroot/profiles",
