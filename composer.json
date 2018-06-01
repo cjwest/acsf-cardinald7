@@ -23,6 +23,10 @@
     {
       "type": "vcs",
       "url": "https://github.com/Stanford/webauth_extras"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/SU-SWS/SU-IT-Services"
     }
   ],
   "require": {
@@ -55,7 +59,8 @@
     "drupal/honeypot": "~1.24",
     "SU-SWS/stanford_ssp": "dev-7.x-2.x",
     "Stanford/WMD": "dev-master",
-    "Stanford/webauth_extras": "dev-master"
+    "Stanford/webauth_extras": "dev-master",
+    "su-sws/SU-IT-Services": "dev-7.x-2.x"
   },
   "conflict": {
     "drupal/core": "8.*"
@@ -191,7 +196,7 @@
       "docroot/sites/all/libraries/Spyc/": ["mustangostang/spyc"],
       "docroot/sites/all/libraries/jsonpath/": ["library/jsonpath"],
       "docroot/sites/all/modules/stanford/webauth/": ["Stanford/WMD"],
-      "docroot/sites/all/modules/stanford/stanford_sites_systemtools/": ["SU-SWS/SU-IT-Services"]
+      "docroot/sites/all/modules/stanford/stanford_sites_systemtools/": ["su-sws/SU-IT-Services"]
     },
     "preserve-paths": [
       "docroot/profiles",

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "2a0d8278f9127c3a0e17d3e5d81cfbaa",
+    "content-hash": "362fe8451c1d589ee081c71a43ed9d56",
     "packages": [
         {
             "name": "Stanford/WMD",
@@ -12848,6 +12848,7 @@
         "su-sws/stanford_ssp": 20,
         "stanford/wmd": 20,
         "stanford/webauth_extras": 20,
+        "su-sws/su-it-services": 20,
         "drupal/always_visible": 20,
         "drupal/context_list": 20,
         "drupal/context_useragent": 20,
@@ -12907,7 +12908,6 @@
         "su-sws/stanford_video": 20,
         "su-sws/stanford_jumpstart_lab": 20,
         "su-sws/stanford_sites_helper": 20,
-        "su-sws/su-it-services": 20,
         "su-sws/stanford_light": 20
     },
     "prefer-stable": true,
