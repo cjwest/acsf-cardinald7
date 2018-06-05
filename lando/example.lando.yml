@@ -5,38 +5,78 @@ config:
   xdebug: false
   php: '7.1'
   drush: composer
+# Uncomment for behat testing
+# proxy:
+#   testresults:
+#     - tests.cardinald7.sws
 services:
   appserver:
     ssl: true
     via: apache
     config:
       conf: lando/config/php.ini
+    # Uncomment for behat testing
+    # overrides:
+    #   services:
+    #     environment:
+    #         BEHAT_PARAMS: >-
+    #           {
+    #             "extensions" : {
+    #               "Behat\\MinkExtension" : {
+    #                 "base_url" : "https://appserver/"
+    #               }
+    #             }
+    #           }
   database:
     type: mysql:5.7
     creds:
       user: drupal
       password: drupal
       database: drupal
+  # Uncomment the below for behat testing.
+  # chromedriver:
+  #   type: compose
+  #   services:
+  #     image: robcherry/docker-chromedriver:latest
+  #     expose:
+  #       - "4444"
+  #     environment:
+  #       CHROMEDRIVER_WHITELISTED_IPS: ""
+  #       CHROMEDRIVER_URL_BASE: "/wd/hub"
+  #     security_opt:
+  #       - seccomp:unconfined
+  #     command: ["/usr/local/bin/supervisord", "-c", "/etc/supervisord.conf"]
+  # testresults:
+  #   type: nginx
+  #   webroot: tests
 tooling:
+  # You can call this but it is probably faster to use local composer.
   composer:
     service: appserver
     description: Run composer commands
     cmd:
       - composer
       - --ansi
+  # Just in case you want it.
   php:
     service: appserver
+  # Handy mysql shell
   mysql:
     user: root
     service: database
     description: Drop into a MySQL shell
+  # This is needed for composer to work.
   git:
     service: appserver
-# Site install command
+  # Site install command
   si:
     description: "Install an installation profile"
     service: appserver
     cmd: drush si stanford_sites_jumpstart_academic install_configure_form.itasks_extra_tasks=acsf -y
+  # Add behat to the available commands.
+  behat:
+    service: appserver
+    cmd: /app/vendor/bin/behat
 events:
   # Run some commands after `lando db-import`
   post-db-import:

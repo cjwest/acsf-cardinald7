@@ -1,0 +1,30 @@
+## Default Profile Settings (Sites)
+default:
+  extensions:
+    Behat\MinkExtension:
+      base_url: https://appserver/
+      browser_name: chrome
+      files_path: "."
+      sessions:
+        default:
+          goutte:
+            guzzle_parameters:
+              verify: false
+        javascript:
+          selenium2:
+            wd_host: http://chromedriver:4444/wd/hub
+            browser: chrome
+    Drupal\DrupalExtension:
+      drush:
+        alias: '@self'
+    emuse\BehatHTMLFormatter\BehatHTMLFormatterExtension:
+      name: html
+      renderer: Twig,Behat2
+      file_name: index
+      print_args: true
+      print_outp: true
+      loop_break: true
+  formatters:
+    html:
+      output_path: %paths.base%
+    pretty: true
