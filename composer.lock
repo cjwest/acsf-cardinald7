@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
     "content-hash": "b3cbeecd049c65f35e8672093a05be78",
@@ -2234,7 +2234,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/auto_nodetitle"
             },
-            "time": "2011-09-08 16:07:46"
+            "time": "2011-09-08T16:07:46+00:00"
         },
         {
             "name": "drupal/backup_migrate",
@@ -3582,7 +3582,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/context_list"
             },
-            "time": "2014-07-08 19:51:59"
+            "time": "2014-07-08T19:51:59+00:00"
         },
         {
             "name": "drupal/context_list_active",
@@ -4016,7 +4016,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/css_injector"
             },
-            "time": "2013-12-23 06:52:25"
+            "time": "2013-12-23T06:52:25+00:00"
         },
         {
             "name": "drupal/ctools",
@@ -13591,12 +13591,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_ssp.git",
-                "reference": "7e8308c2e16a6d5f9b4ae042506cc06daeecbdcf"
+                "reference": "1e300b082a9b3d9970b0a792ea4ccfdaa1758662"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_ssp/zipball/7e8308c2e16a6d5f9b4ae042506cc06daeecbdcf",
-                "reference": "7e8308c2e16a6d5f9b4ae042506cc06daeecbdcf",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_ssp/zipball/1e300b082a9b3d9970b0a792ea4ccfdaa1758662",
+                "reference": "1e300b082a9b3d9970b0a792ea4ccfdaa1758662",
                 "shasum": ""
             },
             "require": {
@@ -13611,7 +13611,7 @@
                 "source": "https://github.com/SU-SWS/stanford_ssp/tree/7.x-2.x",
                 "issues": "https://github.com/SU-SWS/stanford_ssp/issues"
             },
-            "time": "2018-05-28T15:47:56+00:00"
+            "time": "2018-06-05T17:44:46+00:00"
         },
         {
             "name": "su-sws/stanford_story_page",
