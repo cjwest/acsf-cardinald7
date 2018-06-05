@@ -77,6 +77,12 @@ tooling:
   behat:
     service: appserver
     cmd: /app/vendor/bin/behat
+  behat-jsv:
+    service: appserver
+    cmd: /app/vendor/bin/behat --config=/app/tests/behat/jsv/behat.yml -s all
+  behat-jsa:
+    service: appserver
+    cmd: /app/vendor/bin/behat --config=/app/tests/behat/jsa/behat.yml -s all
 events:
   # Run some commands after `lando db-import`
   post-db-import:

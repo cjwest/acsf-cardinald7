@@ -25,6 +25,10 @@ docroot/sites/*/private
 # Ignore some extra items we don't really want due to composer dependencies.
 docroot/sites/all/libraries/jquery
 
+# Ignore test output
+tests/behat/*/index.html
+tests/behat/*/assets
+
 # Compiled source #
 ###################
 *.com
