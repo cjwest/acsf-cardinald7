@@ -64,7 +64,9 @@
     "SU-SWS/stanford_ssp": "dev-7.x-2.x",
     "Stanford/WMD": "dev-master",
     "Stanford/webauth_extras": "dev-master",
-    "SU-SWS/SU-IT-Services": "dev-7.x-2.x",
+    "SU-SWS/SU-IT-Services": "dev-7.x-2.x"
+  },
+  "require-dev": {
     "SU-SWS/linky_clicky": "5.x-dev"
   },
   "conflict": {
