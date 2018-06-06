@@ -14,6 +14,7 @@ default:
       paths:
         - %paths.base%/features
         - %paths.base%/custom_features
+        - /app/vendor/su-sws/linky_clicky/includes/features
     default:
       filters:
         tags: "safe&&~destructive"
@@ -29,6 +30,7 @@ default:
       paths:
         - %paths.base%/features
         - %paths.base%/custom_features
+        - /app/vendor/su-sws/linky_clicky/includes/features
     # --- Lifecyle Phases Suites ---
     # Tests that are meant for development sites and can make changes.
     dev:
@@ -47,6 +49,7 @@ default:
       paths:
         - %paths.base%/features
         - %paths.base%/custom_features
+        - /app/vendor/su-sws/linky_clicky/includes/features
     # Did the site deploy correctly? Are all the pages & placeholder content in place?
     deploy:
       filters:
@@ -63,6 +66,7 @@ default:
       paths:
         - %paths.base%/features
         - %paths.base%/custom_features
+        - /app/vendor/su-sws/linky_clicky/includes/features
     # Is the site ready for launch? Any placeholder content?
     launch:
       filters:
@@ -79,6 +83,7 @@ default:
       paths:
         - %paths.base%/features
         - %paths.base%/custom_features
+        - /app/vendor/su-sws/linky_clicky/includes/features
     # Did the site launch okay? URLs, robots.txt, are correct?
     live:
       filters:
@@ -95,3 +100,4 @@ default:
       paths:
         - %paths.base%/features
         - %paths.base%/custom_features
+        - /app/vendor/su-sws/linky_clicky/includes/features

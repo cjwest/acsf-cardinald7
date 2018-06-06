@@ -171,6 +171,8 @@ dependencies[] = wysiwyg
 
 dependencies[] = stanford_bean_types
 dependencies[] = stanford_bean_types_permissions
+dependencies[] = stanford_bean_types_hero
+dependencies[] = stanford_bean_types_icon_grid
 dependencies[] = ds_bean_fields
 dependencies[] = stanford_date_formats
 dependencies[] = stanford_date_timepicker
