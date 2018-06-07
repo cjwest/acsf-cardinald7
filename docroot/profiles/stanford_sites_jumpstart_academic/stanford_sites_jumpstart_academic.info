@@ -192,6 +192,8 @@ dependencies[] = block_class
 
 ; Stanford Stuff
 dependencies[] = stanford_bean_types
+dependencies[] = stanford_bean_types_hero
+dependencies[] = stanford_bean_types_icon_grid
 dependencies[] = stanford_icon_grid
 dependencies[] = stanford_bean_types_permissions
 dependencies[] = stanford_courses
