@@ -146,7 +146,7 @@
       },
       "drupal/features": {
         "2957125: Features replace eval().":
-        "https://www.drupal.org/files/issues/2018-05-31/features-replace_eval_anonymous_functions-4.patch"
+        "https://www.drupal.org/files/issues/2018-05-31/features-replace_eval_anonymous_functions-4_0.patch"
       },
       "drupal/context": {
         "Remove usage of deprecated create_function() calls for PHP 7.2+ future proofing":
@@ -198,11 +198,11 @@
         "type:drupal-library"
       ],
       "docroot/sites/all/libraries/jquery.cycle/": ["library/jquery_cycle"],
-      "docroot/sites/all/libraries/iCalcreator/": ["kigkonsult/icalcreator"],
       "docroot/sites/all/libraries/Spyc/": ["mustangostang/spyc"],
       "docroot/sites/all/libraries/jsonpath/": ["library/jsonpath"],
       "docroot/sites/all/modules/stanford/webauth/": ["Stanford/WMD"],
-      "docroot/sites/all/modules/stanford/stanford_sites_systemtools/": ["su-sws/SU-IT-Services"]
+      "docroot/sites/all/modules/stanford/stanford_sites_systemtools/": ["su-sws/SU-IT-Services"],
+      "docroot/sites/all/libraries/iCalcreator/": ["iCalcreator/iCalcreator"]
     },
     "preserve-paths": [
       "docroot/profiles",
