@@ -97,6 +97,12 @@ function paranoia_drush_command() {
         'limit' => dt('Limit the number of accounts to queue in one run.'),
       ),
     ),
+    'paranoia-list-projects-to-delete' => array(
+      'description' => 'Prints out unused project (module and theme) directories so they can be deleted.',
+      'options' => array(
+        'remove-lots-risky-htaccess' => 'Remove a lot of extra files including some that might be important like the .htacccess.',
+      ),
+    )
   );
 }
 
@@ -137,4 +143,100 @@ function drush_paranoia_reset_stale_accounts() {
   }
   drush_log(dt('Queued @count users to have their password reset', array('@count' => $count)), 'ok');
   watchdog('paranoia', 'Queued @count users to have their password reset', array('@count' => $count));
+}
+
+/**
+ * Callback for paranoia-list-projects-to-delete.
+ *
+ * Deletes directories and files for unused projects.
+ */
+function drush_paranoia_list_projects_to_delete() {
+  // TODO: also handle profiles?
+  // Get a list of all projects that are not profiles.
+  $all_projects = db_query("SELECT name, filename, status, type FROM {system} WHERE filename not like '%.profile' ORDER BY filename ASC")->fetchAllAssoc('name');
+  $enabled_parent_dirs = $disabled_projects = array();
+  $themes = list_themes();
+
+  // Allow a site to declare modules to keep. Handy if the site disables
+  // modules in a backup process.
+  $modules_to_keep = module_invoke_all('paranoia_get_required_modules');
+
+  // Get a list of directories that are the parent for enabled projects.
+  foreach ($all_projects as $project) {
+    // Themes list their .info file.
+    $file_type = $project->type == 'module' ? 'module' : 'info';
+    $project->directory = str_replace($project->name . '.' . $file_type, '', $project->filename);
+    if ($project->status
+      || ($project->type == 'theme' && drupal_theme_access($project->name))
+      || in_array($project->name, $modules_to_keep)) {
+      $enabled_parent_dirs[$project->name] = $project->directory;
+    }
+    else {
+      $disabled_projects[$project->name] = $project->directory;
+    }
+  }
+
+  // Include base themes on enabled themes in list dirs in use.
+  foreach ($all_projects as $project) {
+    if ($project->type == 'theme' && isset($themes[$project->name]) && drupal_theme_access($project->name) && !empty($themes[$project->name]->base_theme)) {
+      // Mark it enabled for sure.
+      $enabled_parent_dirs[$themes[$project->name]->base_theme] = $all_projects[$themes[$project->name]->base_theme]->directory;
+      // Unset it from disabled in case it is.
+      unset($disabled_projects[$themes[$project->name]->base_theme]);
+    }
+  }
+
+  $dirs_to_delete = array();
+  $common_types = array('inc', 'admin.inc', 'module', 'info', 'install');
+
+  foreach ($disabled_projects as $disabled_project_name => $disabled_project_dir) {
+    // Only remove a directory if it's not the beginning (strpos) of an enabled dir.
+    if (!_paranoia_dir_is_beginning_of_dirs($disabled_project_dir, $enabled_parent_dirs)) {
+      // Make a list. Use the dir as key to remove dups.
+      $dirs_to_delete[$disabled_project_dir] = $disabled_project_dir;
+    }
+    else {
+      // For disabled projects that *do* match the parent directory, at least
+      // some files can be deleted. Print those.
+      foreach ($common_types as $type) {
+        if (file_exists("$disabled_project_dir$disabled_project_name.$type")) {
+          echo "rm -f $disabled_project_dir$disabled_project_name.$type" . PHP_EOL;
+        }
+      }
+    }
+  }
+
+  // Print an 'rm -rf' for the parent directory of disabled projects.
+  foreach ($dirs_to_delete as $dir_to_delete) {
+    echo 'rm -rf ' . $dir_to_delete . PHP_EOL;
+  }
+
+  // A few bonus things that might break a site.
+  $risky = drush_get_option('remove-lots-risky-htaccess', FALSE);
+  if ($risky) {
+    echo "rm -f scripts/" . PHP_EOL;
+    echo "rm -f profiles/testing" . PHP_EOL;
+    echo "rm CHANGELOG.txt COPYRIGHT.txt INSTALL.mysql.txt INSTALL.pgsql.txt INSTALL.sqlite.txt INSTALL.txt LICENSE.txt MAINTAINERS.txt README.txt UPGRADE.txt authorize.php cron.php install.php update.php web.config xmlrpc.php .htaccess .gitignore" . PHP_EOL;
+  }
+
+}
+
+/**
+ * Checks to see which dirs are the beginning of an enabled dir.
+ *
+ * @param string $disabled_project_dir
+ *   The disabled project directory.
+ * @param array $enabled_parent_dirs
+ *   An array of strings listing directories with enabled projects.
+ *
+ * @return bool
+ *   True if the disabled dir is the beginning of any of the enabled dirs.
+ */
+function _paranoia_dir_is_beginning_of_dirs($disabled_project_dir, $enabled_parent_dirs) {
+  foreach ($enabled_parent_dirs as $enabled_parent_dir) {
+    if (strpos($enabled_parent_dir, $disabled_project_dir) === 0) {
+      return TRUE;
+    }
+  }
+  return FALSE;
 }

@@ -94,7 +94,6 @@
       "sh scripts/updates/apply-patches.sh",
       "echo \"Don't forget to run acsf-init if core was updated.\"",
       "cp docroot/sites/all/libraries/jsonpath/jsonpath-0.8.1.php docroot/sites/all/libraries/jsonpath/jsonpath.php",
-      "cp -R vendor/kigkonsult/icalcreator docroot/sites/all/libraries/iCalcreator/",
       "cp -R vendor/mustangostang/spyc docroot/sites/all/libraries/Spyc/",
       "cp -R vendor/trentrichardson/jquery-timepicker-addon/src docroot/sites/all/libraries/jquery-ui-timepicker/"
     ],
