@@ -2021,6 +2021,10 @@ var requirejs, require, define;
 var components = {
     "packages": [
         {
+            "name": "jquery",
+            "main": "jquery-built.js"
+        },
+        {
             "name": "jquery-ui",
             "main": "jquery-ui-built.js"
         },

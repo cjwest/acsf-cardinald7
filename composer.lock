@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "66fd10ad1d6082c022894de95bdeec8f",
+    "content-hash": "8bc306d3fe7c2b90cdaec8fa723a9f3c",
     "packages": [
         {
             "name": "Stanford/WMD",
@@ -449,7 +449,10 @@
             },
             "type": "composer-plugin",
             "extra": {
-                "class": "cweagans\\Composer\\Patches"
+                "class": "cweagans\\Composer\\Patches",
+                "patches_applied": {
+                    "Call the preserve paths hooks": "https://github.com/SebCorbin/composer-patches/commit/1cb9bacba51f8bba0c5f3f322c3bb61e4ceae974.patch"
+                }
             },
             "autoload": {
                 "psr-4": {
@@ -1671,8 +1674,7 @@
             "homepage": "https://www.drupal.org/project/always_visible",
             "support": {
                 "source": "http://cgit.drupalcode.org/always_visible"
-            },
-            "time": "2013-11-24 01:49:17"
+            }
         },
         {
             "name": "drupal/auto_nodetitle",
@@ -3322,8 +3324,7 @@
             "homepage": "https://www.drupal.org/project/context_useragent",
             "support": {
                 "source": "http://cgit.drupalcode.org/context_useragent"
-            },
-            "time": "2017-05-05 20:11:18"
+            }
         },
         {
             "name": "drupal/contextual_view_modes",
@@ -4936,7 +4937,8 @@
                     }
                 },
                 "patches_applied": {
-                    "https://drupal.org/node/927566": "https://drupal.org/files/issues/features-parent_identifier-927566-79.patch"
+                    "https://drupal.org/node/927566": "https://drupal.org/files/issues/features-parent_identifier-927566-79.patch",
+                    "2957125: Features replace eval().": "https://www.drupal.org/files/issues/2018-05-31/features-replace_eval_anonymous_functions-4_0.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/7/downloads",
@@ -8437,8 +8439,7 @@
             "homepage": "https://www.drupal.org/project/stanford_date_timepicker",
             "support": {
                 "source": "http://cgit.drupalcode.org/stanford_date_timepicker"
-            },
-            "time": "2014-12-18 22:04:19"
+            }
         },
         {
             "name": "drupal/strongarm",
@@ -8788,8 +8789,7 @@
             "homepage": "https://www.drupal.org/project/token_tweaks",
             "support": {
                 "source": "http://cgit.drupalcode.org/token_tweaks"
-            },
-            "time": "2014-01-27 20:41:49"
+            }
         },
         {
             "name": "drupal/transliteration",
@@ -11760,7 +11760,7 @@
                 "source": "https://github.com/SU-SWS/stanford_install_tasks/tree/7.x-1.x",
                 "issues": "https://github.com/SU-SWS/stanford_install_tasks/issues"
             },
-            "time": "2018-05-10 00:14:20"
+            "time": "2018-05-10T00:14:20+00:00"
         },
         {
             "name": "su-sws/stanford_jordan",
@@ -12322,7 +12322,7 @@
                 "source": "https://github.com/SU-SWS/stanford_sites_content_importer/tree/7.x-2.x",
                 "issues": "https://github.com/SU-SWS/stanford_sites_content_importer/issues"
             },
-            "time": "2018-02-09 07:20:10"
+            "time": "2018-02-09T07:20:10+00:00"
         },
         {
             "name": "su-sws/stanford_sites_helper",
