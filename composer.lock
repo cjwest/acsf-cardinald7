@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "8bc306d3fe7c2b90cdaec8fa723a9f3c",
+    "content-hash": "cf35239f733e1057905109e589bcf260",
     "packages": [
         {
             "name": "Stanford/WMD",
@@ -5616,17 +5616,11 @@
         },
         {
             "name": "drupal/filefield_paths",
-            "version": "1.0.0",
+            "version": "dev-1.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/filefield_paths",
-                "reference": "7.x-1.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/filefield_paths-7.x-1.0.zip",
-                "reference": "7.x-1.0",
-                "shasum": "decc3d985f541e9faad139bbd3a792eba992fab3"
+                "reference": "e016a2edd0221250b03d4ec9538109e94ef8bc0d"
             },
             "require": {
                 "drupal/drupal": "~7.0"
@@ -5643,12 +5637,15 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "7.x-1.0",
-                    "datestamp": "1447729441",
+                    "version": "7.x-1.0+1-dev",
+                    "datestamp": "1451898839",
                     "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
+                },
+                "patches_applied": {
+                    "https://www.drupal.org/project/filefield_paths/issues/2946648": "https://www.drupal.org/files/issues/filefield_paths-support_php_72-2946648-3.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/7/downloads",
@@ -5665,7 +5662,8 @@
             "homepage": "https://www.drupal.org/project/filefield_paths",
             "support": {
                 "source": "http://cgit.drupalcode.org/filefield_paths"
-            }
+            },
+            "time": "2016-01-04 09:05:19"
         },
         {
             "name": "drupal/flag",
@@ -14771,6 +14769,7 @@
         "drupal/context_useragent": 20,
         "drupal/css_injector": 20,
         "drupal/stanford_date_timepicker": 20,
+        "drupal/filefield_paths": 20,
         "drupal/auto_nodetitle": 20,
         "drupal/token_tweaks": 20,
         "su-sws/stanford_install_tasks": 20,

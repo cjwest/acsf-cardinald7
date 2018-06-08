@@ -148,6 +148,10 @@
         "2957125: Features replace eval().":
         "https://www.drupal.org/files/issues/2018-05-31/features-replace_eval_anonymous_functions-4_0.patch"
       },
+      "drupal/filefield_paths": {
+        "https://www.drupal.org/project/filefield_paths/issues/2946648": 
+        "https://www.drupal.org/files/issues/filefield_paths-support_php_72-2946648-3.patch"
+      },
       "drupal/context": {
         "Remove usage of deprecated create_function() calls for PHP 7.2+ future proofing":
         "https://www.drupal.org/files/issues/context-support_php_72-2946595-3.patch"

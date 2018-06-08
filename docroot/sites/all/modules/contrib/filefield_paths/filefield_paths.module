@@ -444,9 +444,6 @@ function _filefield_paths_replace_path($old, $new, $entity) {
   // Build regular expression pattern.
   $pattern = "/({$prefixes})({$styles})*({$paths}){$itok}/";
 
-  // Create an anonymous function for the replacement via preg_replace_callback.
-  $callback = create_function('$matches', "return filefield_paths_replace_path_callback(\$matches, '{$new}', '{$old}');");
-
   $fields = field_info_fields();
   foreach ($fields as $name => $field) {
     if ($field['module'] == 'text' && isset($entity->{$field['field_name']}) && is_array($entity->{$field['field_name']})) {
@@ -454,7 +451,13 @@ function _filefield_paths_replace_path($old, $new, $entity) {
         foreach ($language as &$item) {
           foreach (array('value', 'summary') as $column) {
             if (isset($item[$column])) {
-              $item[$column] = preg_replace_callback($pattern, $callback, $item[$column]);
+              $item[$column] = preg_replace_callback(
+                $pattern,
+                function ($matches) use ($new, $old) {
+                  return filefield_paths_replace_path_callback($matches, $new, $old);
+                },
+                $item[$column]
+              );
             }
           }
         }
