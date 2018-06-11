@@ -17,6 +17,7 @@ TLDR; Local Installation
 - `cd acsf-cardinald7`
 - `composer install`
 - `composer init-lando`
+- (Uncomment the lines related to Behat testing in `lando.yml` if you wish to run Behat tests with Lando)
 - `lando start`
 - `lando si` or `lando drush si [install profile name]`
 - `lando drush uli`
