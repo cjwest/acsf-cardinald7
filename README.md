@@ -15,6 +15,9 @@ TLDR; Local Installation
 
 - `git clone git@github.com:SU-SWS/acsf-cardinald7.git`
 - `cd acsf-cardinald7`
+- `cp lando/example.env .env`
+- `cp lando/example.lando.yml .lando.yml`
+- (Uncomment the lines related to Behat testing in `lando.yml` if you wish to run Behat tests with Lando)
 - `composer install`
 - `composer init-lando`
 - `lando start`
