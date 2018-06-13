@@ -88,6 +88,9 @@
     ],
     "post-install-cmd": [
       "@composer clean-gits"
+      "cp docroot/sites/all/libraries/jsonpath/jsonpath-0.8.1.php docroot/sites/all/libraries/jsonpath/jsonpath.php",
+      "cp -R vendor/mustangostang/spyc docroot/sites/all/libraries/Spyc/",
+      "cp -R vendor/trentrichardson/jquery-timepicker-addon/src docroot/sites/all/libraries/jquery-ui-timepicker/"
     ],
     "post-update-cmd": [
       "@composer clean-gits",
@@ -149,7 +152,7 @@
         "https://www.drupal.org/files/issues/2018-05-31/features-replace_eval_anonymous_functions-4_0.patch"
       },
       "drupal/filefield_paths": {
-        "https://www.drupal.org/project/filefield_paths/issues/2946648": 
+        "https://www.drupal.org/project/filefield_paths/issues/2946648":
         "https://www.drupal.org/files/issues/filefield_paths-support_php_72-2946648-3.patch"
       },
       "drupal/context": {
