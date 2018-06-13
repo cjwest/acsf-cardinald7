@@ -73,16 +73,22 @@ tooling:
     description: "Install an installation profile"
     service: appserver
     cmd: drush si stanford_sites_jumpstart_academic install_configure_form.itasks_extra_tasks=acsf -y
-  # Add behat to the available commands.
-  behat:
-    service: appserver
-    cmd: /app/vendor/bin/behat
-  behat-jsv:
-    service: appserver
-    cmd: /app/vendor/bin/behat --config=/app/tests/behat/jsv/behat.yml -s all
-  behat-jsa:
-    service: appserver
-    cmd: /app/vendor/bin/behat --config=/app/tests/behat/jsa/behat.yml -s all
+  # Uncomment the below to add behat to the available commands.
+  # behat:
+  #   service: appserver
+  #   cmd: /app/vendor/bin/behat
+  # behat-jsv:
+  #   service: appserver
+  #   cmd: /app/vendor/bin/behat --config=/app/tests/behat/jsv/behat.yml -s all /app/tests/behat/jsv/features/
+  # behat-jsa:
+  #   service: appserver
+  #   cmd: /app/vendor/bin/behat --config=/app/tests/behat/jsa/behat.yml -s all /app/tests/behat/jsa/features/
+  # behat-jsplus:
+  #   service: appserver
+  #   cmd: /app/vendor/bin/behat --config=/app/tests/behat/jsplus/behat.yml -s all /app/tests/behat/jsplus/features/
+  # behat-jse:
+  #   service: appserver
+  #   cmd: /app/vendor/bin/behat --config=/app/tests/behat/jse/behat.yml -s all /app/tests/behat/jse/features/
 events:
   # Run some commands after `lando db-import`
   post-db-import:

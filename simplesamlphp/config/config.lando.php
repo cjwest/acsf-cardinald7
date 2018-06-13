@@ -21,6 +21,9 @@ $config['trusted.url.domains'] = array(
   'cardinald7.sws:443',
   'cardinald7.sws:80',
   'cardinald7.sws',
+  'cardinald7.lndo.site:443',
+  'cardinald7.lndo.site:80',
+  'cardinald7.lndo.site',
 );
 $config['database.dsn'] = 'mysql:host=' . $host . ';dbname=' . $database;
 $config['database.username'] = $username;
