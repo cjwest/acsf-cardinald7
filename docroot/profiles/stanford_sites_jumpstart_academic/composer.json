@@ -402,6 +402,7 @@
     "drupal/views_select_sort": "~1.0-alpha1",
     "drupal/views_selective_filters": "~1.5",
     "drupal/views_slideshow": "~3.1",
+    "drupal/views_matrix": "~1.0",
     "drupal/webform": "~4.14",
     "drupal/workbench": "~1.2",
     "drupal/workbench_access": "~1.4",
@@ -478,7 +479,7 @@
         "https://drupal.org/files/issues/features-parent_identifier-927566-79.patch"
       },
       "drupal/filefield_paths": {
-        "https://www.drupal.org/project/filefield_paths/issues/2946648": 
+        "https://www.drupal.org/project/filefield_paths/issues/2946648":
         "https://www.drupal.org/files/issues/filefield_paths-support_php_72-2946648-3.patch"
       },
       "drupal/jw_player": {
