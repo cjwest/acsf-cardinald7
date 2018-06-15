@@ -32,7 +32,7 @@
                 "source": "https://github.com/Stanford/WMD/tree/master",
                 "issues": "https://github.com/Stanford/WMD/issues"
             },
-            "time": "2018-05-10 23:12:42"
+            "time": "2018-05-10T23:12:42+00:00"
         },
         {
             "name": "Stanford/webauth_extras",
@@ -60,7 +60,7 @@
                 "source": "https://github.com/Stanford/webauth_extras/tree/master",
                 "issues": "https://github.com/Stanford/webauth_extras/issues"
             },
-            "time": "2018-05-10 23:09:54"
+            "time": "2018-05-10T23:09:54+00:00"
         },
         {
             "name": "components/chosen",
@@ -427,16 +427,16 @@
         },
         {
             "name": "cweagans/composer-patches",
-            "version": "1.6.4",
+            "version": "1.6.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cweagans/composer-patches.git",
-                "reference": "462e65061606dc6149349535d4322241515d1b16"
+                "reference": "2ec4f00ff5fb64de584c8c4aea53bf9053ecb0b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cweagans/composer-patches/zipball/462e65061606dc6149349535d4322241515d1b16",
-                "reference": "462e65061606dc6149349535d4322241515d1b16",
+                "url": "https://api.github.com/repos/cweagans/composer-patches/zipball/2ec4f00ff5fb64de584c8c4aea53bf9053ecb0b3",
+                "reference": "2ec4f00ff5fb64de584c8c4aea53bf9053ecb0b3",
                 "shasum": ""
             },
             "require": {
@@ -461,7 +461,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "BSD-2-Clause"
+                "BSD-3-Clause"
             ],
             "authors": [
                 {
@@ -470,7 +470,7 @@
                 }
             ],
             "description": "Provides a way to patch Composer packages.",
-            "time": "2017-12-07T16:16:31+00:00"
+            "time": "2018-05-11T18:00:16+00:00"
         },
         {
             "name": "davidbarratt/custom-installer",
@@ -1674,7 +1674,8 @@
             "homepage": "https://www.drupal.org/project/always_visible",
             "support": {
                 "source": "http://cgit.drupalcode.org/always_visible"
-            }
+            },
+            "time": "2013-11-24 01:49:17"
         },
         {
             "name": "drupal/auto_nodetitle",
@@ -3324,7 +3325,8 @@
             "homepage": "https://www.drupal.org/project/context_useragent",
             "support": {
                 "source": "http://cgit.drupalcode.org/context_useragent"
-            }
+            },
+            "time": "2017-05-05 20:11:18"
         },
         {
             "name": "drupal/contextual_view_modes",
@@ -5500,17 +5502,17 @@
         },
         {
             "name": "drupal/file_entity",
-            "version": "2.21.0",
+            "version": "2.22.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/file_entity",
-                "reference": "7.x-2.21"
+                "reference": "7.x-2.22"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/file_entity-7.x-2.21.zip",
-                "reference": "7.x-2.21",
-                "shasum": "6c785f67ab0b0043c0f65fb0ef57cc6b667d93bd"
+                "url": "https://ftp.drupal.org/files/projects/file_entity-7.x-2.22.zip",
+                "reference": "7.x-2.22",
+                "shasum": "9e467d5f16e834bf633ef530667a4f7c9a51ccc0"
             },
             "require": {
                 "drupal/ctools": "*",
@@ -5526,8 +5528,8 @@
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "7.x-2.21",
-                    "datestamp": "1525293784",
+                    "version": "7.x-2.22",
+                    "datestamp": "1528996424",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -5586,6 +5588,10 @@
                 {
                     "name": "dsnopek",
                     "homepage": "https://www.drupal.org/user/266527"
+                },
+                {
+                    "name": "dsutter",
+                    "homepage": "https://www.drupal.org/user/3357810"
                 },
                 {
                     "name": "effulgentsia",
@@ -7489,7 +7495,8 @@
             "homepage": "https://www.drupal.org/project/paranoia",
             "support": {
                 "source": "http://cgit.drupalcode.org/paranoia"
-            }
+            },
+            "time": "2018-06-06 15:45:43"
         },
         {
             "name": "drupal/path_redirect_import",
@@ -8437,7 +8444,8 @@
             "homepage": "https://www.drupal.org/project/stanford_date_timepicker",
             "support": {
                 "source": "http://cgit.drupalcode.org/stanford_date_timepicker"
-            }
+            },
+            "time": "2014-12-18 22:04:19"
         },
         {
             "name": "drupal/strongarm",
@@ -8787,7 +8795,8 @@
             "homepage": "https://www.drupal.org/project/token_tweaks",
             "support": {
                 "source": "http://cgit.drupalcode.org/token_tweaks"
-            }
+            },
+            "time": "2014-01-27 20:41:49"
         },
         {
             "name": "drupal/transliteration",
@@ -9381,6 +9390,58 @@
             "homepage": "https://www.drupal.org/project/views_field_view",
             "support": {
                 "source": "http://cgit.drupalcode.org/views_field_view"
+            }
+        },
+        {
+            "name": "drupal/views_matrix",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/views_matrix",
+                "reference": "7.x-1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/views_matrix-7.x-1.0.zip",
+                "reference": "7.x-1.0",
+                "shasum": "767a94620095731751713f542bbb8f0e8fcd3744"
+            },
+            "require": {
+                "drupal/drupal": "~7.0",
+                "drupal/views": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "7.x-1.0",
+                    "datestamp": "1504871045",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/7/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "drunken monkey",
+                    "homepage": "https://www.drupal.org/user/205582"
+                },
+                {
+                    "name": "mradcliffe",
+                    "homepage": "https://www.drupal.org/user/157079"
+                }
+            ],
+            "description": "Provides a views plugin that sorts a table by an X and Y criteria.",
+            "homepage": "https://www.drupal.org/project/views_matrix",
+            "support": {
+                "source": "http://cgit.drupalcode.org/views_matrix"
             }
         },
         {
@@ -10884,16 +10945,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.9.5",
+            "version": "v0.9.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "0951e91ac04ca28cf317f3997a0adfc319e80106"
+                "reference": "4a2ce86f199d51b6e2524214dc06835e872f4fce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/0951e91ac04ca28cf317f3997a0adfc319e80106",
-                "reference": "0951e91ac04ca28cf317f3997a0adfc319e80106",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/4a2ce86f199d51b6e2524214dc06835e872f4fce",
+                "reference": "4a2ce86f199d51b6e2524214dc06835e872f4fce",
                 "shasum": ""
             },
             "require": {
@@ -10952,7 +11013,7 @@
                 "interactive",
                 "shell"
             ],
-            "time": "2018-06-02T16:39:22+00:00"
+            "time": "2018-06-10T17:57:20+00:00"
         },
         {
             "name": "robloach/component-installer",
@@ -11027,7 +11088,7 @@
             "support": {
                 "source": "https://github.com/SU-SOE/stanford_jumpstart_engineering/tree/7.x-5.x"
             },
-            "time": "2018-03-03 00:26:25"
+            "time": "2018-03-03T00:26:25+00:00"
         },
         {
             "name": "su-sws/SU-IT-Services",
@@ -11055,7 +11116,7 @@
                 "source": "https://github.com/SU-SWS/SU-IT-Services/tree/7.x-1.x",
                 "issues": "https://github.com/SU-SWS/SU-IT-Services/issues"
             },
-            "time": "2018-02-09 18:14:49"
+            "time": "2018-02-09T18:14:49+00:00"
         },
         {
             "name": "su-sws/erus",
@@ -11083,7 +11144,7 @@
                 "source": "https://github.com/SU-SWS/erus/tree/7.x-1.x-dev",
                 "issues": "https://github.com/SU-SWS/erus/issues"
             },
-            "time": "2018-02-09 07:18:28"
+            "time": "2018-02-09T07:18:28+00:00"
         },
         {
             "name": "su-sws/open_framework",
@@ -11139,7 +11200,7 @@
                 "source": "https://github.com/SU-SWS/stanford_affiliate_organization/tree/7.x-1.x",
                 "issues": "https://github.com/SU-SWS/stanford_affiliate_organization/issues"
             },
-            "time": "2018-03-03 00:33:34"
+            "time": "2018-03-03T00:33:34+00:00"
         },
         {
             "name": "su-sws/stanford_alt_check",
@@ -11167,7 +11228,7 @@
                 "source": "https://github.com/SU-SWS/stanford_alt_check/tree/7.x-1.x",
                 "issues": "https://github.com/SU-SWS/stanford_alt_check/issues"
             },
-            "time": "2018-02-13 21:29:54"
+            "time": "2018-02-13T21:29:54+00:00"
         },
         {
             "name": "su-sws/stanford_bean_types",
@@ -11195,7 +11256,7 @@
                 "source": "https://github.com/SU-SWS/stanford_bean_types/tree/7.x-3.x",
                 "issues": "https://github.com/SU-SWS/stanford_bean_types/issues"
             },
-            "time": "2018-02-13 00:46:22"
+            "time": "2018-02-13T00:46:22+00:00"
         },
         {
             "name": "su-sws/stanford_capx",
@@ -11227,7 +11288,7 @@
                 "source": "https://github.com/SU-SWS/stanford_capx/tree/7.x-3.x",
                 "issues": "https://github.com/SU-SWS/stanford_capx/issues"
             },
-            "time": "2018-05-07 22:23:44"
+            "time": "2018-05-07T22:23:44+00:00"
         },
         {
             "name": "su-sws/stanford_carousel",
@@ -11255,7 +11316,7 @@
                 "source": "https://github.com/SU-SWS/stanford_carousel/tree/7.x-2.x",
                 "issues": "https://github.com/SU-SWS/stanford_carousel/issues"
             },
-            "time": "2018-04-16 18:18:29"
+            "time": "2018-04-16T18:18:29+00:00"
         },
         {
             "name": "su-sws/stanford_conference",
@@ -11283,7 +11344,7 @@
                 "source": "https://github.com/SU-SWS/stanford_conference/tree/7.x-1.x",
                 "issues": "https://github.com/SU-SWS/stanford_conference/issues"
             },
-            "time": "2018-02-14 05:25:01"
+            "time": "2018-02-14T05:25:01+00:00"
         },
         {
             "name": "su-sws/stanford_courses",
@@ -11291,12 +11352,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_courses.git",
-                "reference": "83d92171a60bf1b869dd2b62b85ef6fd683c4283"
+                "reference": "207e675a4a683f37801600d5a95fe0a2f634c1f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_courses/zipball/83d92171a60bf1b869dd2b62b85ef6fd683c4283",
-                "reference": "83d92171a60bf1b869dd2b62b85ef6fd683c4283",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_courses/zipball/207e675a4a683f37801600d5a95fe0a2f634c1f9",
+                "reference": "207e675a4a683f37801600d5a95fe0a2f634c1f9",
                 "shasum": ""
             },
             "require": {
@@ -11311,7 +11372,7 @@
                 "source": "https://github.com/SU-SWS/stanford_courses/tree/7.x-4.x",
                 "issues": "https://github.com/SU-SWS/stanford_courses/issues"
             },
-            "time": "2018-02-13 18:09:13"
+            "time": "2018-06-14T23:04:50+00:00"
         },
         {
             "name": "su-sws/stanford_date_formats",
@@ -11339,7 +11400,7 @@
                 "source": "https://github.com/SU-SWS/stanford_date_formats/tree/7.x-1.x-dev",
                 "issues": "https://github.com/SU-SWS/stanford_date_formats/issues"
             },
-            "time": "2018-02-09 06:58:36"
+            "time": "2018-02-09T06:58:36+00:00"
         },
         {
             "name": "su-sws/stanford_easy_wysiwyg_css",
@@ -11367,7 +11428,7 @@
                 "source": "https://github.com/SU-SWS/stanford_easy_wysiwyg_css/tree/7.x-1.x",
                 "issues": "https://github.com/SU-SWS/stanford_easy_wysiwyg_css/issues"
             },
-            "time": "2018-02-16 05:19:43"
+            "time": "2018-02-16T05:19:43+00:00"
         },
         {
             "name": "su-sws/stanford_event_series",
@@ -11395,7 +11456,7 @@
                 "source": "https://github.com/SU-SWS/stanford_event_series/tree/7.x-1.x",
                 "issues": "https://github.com/SU-SWS/stanford_event_series/issues"
             },
-            "time": "2018-02-14 05:22:15"
+            "time": "2018-02-14T05:22:15+00:00"
         },
         {
             "name": "su-sws/stanford_events_importer",
@@ -11423,7 +11484,7 @@
                 "source": "https://github.com/SU-SWS/stanford_events_importer/tree/7.x-3.x",
                 "issues": "https://github.com/SU-SWS/stanford_events_importer/issues"
             },
-            "time": "2018-04-16 17:55:20"
+            "time": "2018-04-16T17:55:20+00:00"
         },
         {
             "name": "su-sws/stanford_faq",
@@ -11451,7 +11512,7 @@
                 "source": "https://github.com/SU-SWS/stanford_faq/tree/7.x-4.x-dev",
                 "issues": "https://github.com/SU-SWS/stanford_faq/issues"
             },
-            "time": "2018-03-16 17:57:44"
+            "time": "2018-03-16T17:57:44+00:00"
         },
         {
             "name": "su-sws/stanford_feeds_helper",
@@ -11479,7 +11540,7 @@
                 "source": "https://github.com/SU-SWS/stanford_feeds_helper/tree/7.x-1.x",
                 "issues": "https://github.com/SU-SWS/stanford_feeds_helper/issues"
             },
-            "time": "2018-05-03 20:45:59"
+            "time": "2018-05-03T20:45:59+00:00"
         },
         {
             "name": "su-sws/stanford_fellowship",
@@ -11506,7 +11567,7 @@
             "support": {
                 "source": "https://github.com/SU-SWS/stanford_fellowship/tree/7.x-1.x"
             },
-            "time": "2018-03-16 17:58:38"
+            "time": "2018-03-16T17:58:38+00:00"
         },
         {
             "name": "su-sws/stanford_field_formatters",
@@ -11534,7 +11595,7 @@
                 "source": "https://github.com/SU-SWS/stanford_field_formatters/tree/7.x-1.x",
                 "issues": "https://github.com/SU-SWS/stanford_field_formatters/issues"
             },
-            "time": "2018-02-09 17:15:48"
+            "time": "2018-02-09T17:15:48+00:00"
         },
         {
             "name": "su-sws/stanford_framework",
@@ -11590,7 +11651,7 @@
                 "source": "https://github.com/SU-SWS/stanford_fwb/tree/7.x-1.x",
                 "issues": "https://github.com/SU-SWS/stanford_fwb/issues"
             },
-            "time": "2018-02-09 18:32:40"
+            "time": "2018-02-09T18:32:40+00:00"
         },
         {
             "name": "su-sws/stanford_gallery",
@@ -11618,7 +11679,7 @@
                 "source": "https://github.com/SU-SWS/stanford_gallery/tree/7.x-2.x",
                 "issues": "https://github.com/SU-SWS/stanford_gallery/issues"
             },
-            "time": "2018-02-13 22:32:22"
+            "time": "2018-02-13T22:32:22+00:00"
         },
         {
             "name": "su-sws/stanford_help",
@@ -11646,7 +11707,7 @@
                 "source": "https://github.com/SU-SWS/stanford_help/tree/7.x-1.x",
                 "issues": "https://github.com/SU-SWS/stanford_help/issues"
             },
-            "time": "2018-03-13 16:15:50"
+            "time": "2018-03-13T16:15:50+00:00"
         },
         {
             "name": "su-sws/stanford_helper",
@@ -11674,7 +11735,7 @@
                 "source": "https://github.com/SU-SWS/stanford_helper/tree/7.x-1.x",
                 "issues": "https://github.com/SU-SWS/stanford_helper/issues"
             },
-            "time": "2018-02-09 07:31:37"
+            "time": "2018-02-09T07:31:37+00:00"
         },
         {
             "name": "su-sws/stanford_image",
@@ -11702,7 +11763,7 @@
                 "source": "https://github.com/SU-SWS/stanford_image/tree/7.x-3.x-dev",
                 "issues": "https://github.com/SU-SWS/stanford_image/issues"
             },
-            "time": "2018-02-09 18:33:34"
+            "time": "2018-02-09T18:33:34+00:00"
         },
         {
             "name": "su-sws/stanford_image_styles",
@@ -11730,7 +11791,7 @@
                 "source": "https://github.com/SU-SWS/stanford_image_styles/tree/7.x-4.x",
                 "issues": "https://github.com/SU-SWS/stanford_image_styles/issues"
             },
-            "time": "2018-02-16 05:17:55"
+            "time": "2018-02-16T05:17:55+00:00"
         },
         {
             "name": "su-sws/stanford_install_tasks",
@@ -11738,12 +11799,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_install_tasks.git",
-                "reference": "0b3868cc3980c30da925c73803eadffb67f9e29b"
+                "reference": "1a1049b468a30703bf6964df53a5484b94cc04c3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_install_tasks/zipball/0b3868cc3980c30da925c73803eadffb67f9e29b",
-                "reference": "0b3868cc3980c30da925c73803eadffb67f9e29b",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_install_tasks/zipball/1a1049b468a30703bf6964df53a5484b94cc04c3",
+                "reference": "1a1049b468a30703bf6964df53a5484b94cc04c3",
                 "shasum": ""
             },
             "require": {
@@ -11758,7 +11819,7 @@
                 "source": "https://github.com/SU-SWS/stanford_install_tasks/tree/7.x-1.x",
                 "issues": "https://github.com/SU-SWS/stanford_install_tasks/issues"
             },
-            "time": "2018-05-10T00:14:20+00:00"
+            "time": "2018-06-13T15:50:41+00:00"
         },
         {
             "name": "su-sws/stanford_jordan",
@@ -11814,7 +11875,7 @@
                 "source": "https://github.com/SU-SWS/stanford_jumpstart/tree/7.x-5.x",
                 "issues": "https://github.com/SU-SWS/stanford_jumpstart/issues"
             },
-            "time": "2018-05-11 06:26:47"
+            "time": "2018-05-11T06:26:47+00:00"
         },
         {
             "name": "su-sws/stanford_jumpstart_academic",
@@ -11842,7 +11903,7 @@
                 "source": "https://github.com/SU-SWS/stanford_jumpstart_academic/tree/7.x-5.1-alpha5",
                 "issues": "https://github.com/SU-SWS/stanford_jumpstart_academic/issues"
             },
-            "time": "2018-04-16 19:49:23"
+            "time": "2018-04-16T19:49:23+00:00"
         },
         {
             "name": "su-sws/stanford_jumpstart_home",
@@ -11870,7 +11931,7 @@
                 "source": "https://github.com/SU-SWS/stanford_jumpstart_home/tree/7.x-1.x",
                 "issues": "https://github.com/SU-SWS/stanford_jumpstart_home/issues"
             },
-            "time": "2018-04-16 18:21:41"
+            "time": "2018-04-16T18:21:41+00:00"
         },
         {
             "name": "su-sws/stanford_jumpstart_lab",
@@ -11898,7 +11959,7 @@
                 "source": "https://github.com/SU-SWS/stanford_jumpstart_lab/tree/7.x-5.x",
                 "issues": "https://github.com/SU-SWS/stanford_jumpstart_lab/issues"
             },
-            "time": "2018-02-09 18:31:07"
+            "time": "2018-02-09T18:31:07+00:00"
         },
         {
             "name": "su-sws/stanford_jumpstart_plus",
@@ -11926,7 +11987,7 @@
                 "source": "https://github.com/SU-SWS/stanford_jumpstart_plus/tree/7.x-6.x",
                 "issues": "https://github.com/SU-SWS/stanford_jumpstart_plus/issues"
             },
-            "time": "2018-03-15 21:44:36"
+            "time": "2018-03-15T21:44:36+00:00"
         },
         {
             "name": "su-sws/stanford_jumpstart_vpsa",
@@ -11954,7 +12015,7 @@
                 "source": "https://github.com/SU-SWS/stanford_jumpstart_vpsa/tree/7.x-4.x",
                 "issues": "https://github.com/SU-SWS/stanford_jumpstart_vpsa/issues"
             },
-            "time": "2018-02-09 18:12:23"
+            "time": "2018-02-09T18:12:23+00:00"
         },
         {
             "name": "su-sws/stanford_landing_page",
@@ -11982,7 +12043,7 @@
                 "source": "https://github.com/SU-SWS/stanford_landing_page/tree/7.x-1.x",
                 "issues": "https://github.com/SU-SWS/stanford_landing_page/issues"
             },
-            "time": "2018-02-09 17:14:04"
+            "time": "2018-02-09T17:14:04+00:00"
         },
         {
             "name": "su-sws/stanford_light",
@@ -12038,7 +12099,7 @@
                 "source": "https://github.com/SU-SWS/stanford_manage_content/tree/7.x-3.x-dev",
                 "issues": "https://github.com/SU-SWS/stanford_manage_content/issues"
             },
-            "time": "2018-02-16 05:20:33"
+            "time": "2018-02-16T05:20:33+00:00"
         },
         {
             "name": "su-sws/stanford_metatag_nobots",
@@ -12068,7 +12129,7 @@
                 "issues": "https://github.com/SU-SWS/stanford_metatag_nobots/issues"
             },
             "abandoned": "drupal/nobots",
-            "time": "2018-02-20 06:04:14"
+            "time": "2018-02-20T06:04:14+00:00"
         },
         {
             "name": "su-sws/stanford_news",
@@ -12096,7 +12157,7 @@
                 "source": "https://github.com/SU-SWS/stanford_news/tree/7.x-3.x-dev",
                 "issues": "https://github.com/SU-SWS/stanford_news/issues"
             },
-            "time": "2018-04-16 20:09:18"
+            "time": "2018-04-16T20:09:18+00:00"
         },
         {
             "name": "su-sws/stanford_page",
@@ -12124,7 +12185,7 @@
                 "source": "https://github.com/SU-SWS/stanford_page/tree/7.x-2.x-dev",
                 "issues": "https://github.com/SU-SWS/stanford_page/issues"
             },
-            "time": "2018-02-09 06:58:15"
+            "time": "2018-02-09T06:58:15+00:00"
         },
         {
             "name": "su-sws/stanford_paragraph_types",
@@ -12152,7 +12213,7 @@
                 "source": "https://github.com/SU-SWS/stanford_paragraph_types/tree/7.x-1.x",
                 "issues": "https://github.com/SU-SWS/stanford_paragraph_types/issues"
             },
-            "time": "2018-04-19 17:39:00"
+            "time": "2018-04-19T17:39:00+00:00"
         },
         {
             "name": "su-sws/stanford_person",
@@ -12180,7 +12241,7 @@
                 "source": "https://github.com/SU-SWS/stanford_person/tree/7.x-5.x-dev",
                 "issues": "https://github.com/SU-SWS/stanford_person/issues"
             },
-            "time": "2018-02-14 04:24:40"
+            "time": "2018-02-14T04:24:40+00:00"
         },
         {
             "name": "su-sws/stanford_private_page",
@@ -12208,7 +12269,7 @@
                 "source": "https://github.com/SU-SWS/stanford_private_page/tree/7.x-2.x",
                 "issues": "https://github.com/SU-SWS/stanford_private_page/issues"
             },
-            "time": "2018-03-02 18:31:53"
+            "time": "2018-03-02T18:31:53+00:00"
         },
         {
             "name": "su-sws/stanford_publication",
@@ -12236,7 +12297,7 @@
                 "source": "https://github.com/SU-SWS/stanford_publication/tree/7.x-2.x-dev",
                 "issues": "https://github.com/SU-SWS/stanford_publication/issues"
             },
-            "time": "2018-02-14 05:13:51"
+            "time": "2018-02-14T05:13:51+00:00"
         },
         {
             "name": "su-sws/stanford_related_content",
@@ -12264,7 +12325,7 @@
                 "source": "https://github.com/SU-SWS/stanford_related_content/tree/7.x-1.x",
                 "issues": "https://github.com/SU-SWS/stanford_related_content/issues"
             },
-            "time": "2018-02-14 05:31:06"
+            "time": "2018-02-14T05:31:06+00:00"
         },
         {
             "name": "su-sws/stanford_seven",
@@ -12348,7 +12409,7 @@
                 "source": "https://github.com/SU-SWS/stanford_sites_helper/tree/7.x-1.x",
                 "issues": "https://github.com/SU-SWS/stanford_sites_helper/issues"
             },
-            "time": "2018-02-09 18:10:52"
+            "time": "2018-02-09T18:10:52+00:00"
         },
         {
             "name": "su-sws/stanford_slides",
@@ -12376,7 +12437,7 @@
                 "source": "https://github.com/SU-SWS/stanford_slides/tree/7.x-3.x-dev",
                 "issues": "https://github.com/SU-SWS/stanford_slides/issues"
             },
-            "time": "2018-02-12 23:24:04"
+            "time": "2018-02-12T23:24:04+00:00"
         },
         {
             "name": "su-sws/stanford_ssp",
@@ -12384,12 +12445,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_ssp.git",
-                "reference": "1e300b082a9b3d9970b0a792ea4ccfdaa1758662"
+                "reference": "8139701bfed31a7943428cc058f442d881060019"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_ssp/zipball/1e300b082a9b3d9970b0a792ea4ccfdaa1758662",
-                "reference": "1e300b082a9b3d9970b0a792ea4ccfdaa1758662",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_ssp/zipball/8139701bfed31a7943428cc058f442d881060019",
+                "reference": "8139701bfed31a7943428cc058f442d881060019",
                 "shasum": ""
             },
             "require": {
@@ -12404,7 +12465,7 @@
                 "source": "https://github.com/SU-SWS/stanford_ssp/tree/7.x-2.x",
                 "issues": "https://github.com/SU-SWS/stanford_ssp/issues"
             },
-            "time": "2018-06-05 17:44:46"
+            "time": "2018-06-15T16:35:50+00:00"
         },
         {
             "name": "su-sws/stanford_story_page",
@@ -12432,7 +12493,7 @@
                 "source": "https://github.com/SU-SWS/stanford_story_page/tree/7.x-1.x",
                 "issues": "https://github.com/SU-SWS/stanford_story_page/issues"
             },
-            "time": "2018-05-03 16:36:24"
+            "time": "2018-05-03T16:36:24+00:00"
         },
         {
             "name": "su-sws/stanford_subsites",
@@ -12460,7 +12521,7 @@
                 "source": "https://github.com/SU-SWS/stanford_subsites/tree/7.x-2.x",
                 "issues": "https://github.com/SU-SWS/stanford_subsites/issues"
             },
-            "time": "2018-05-24 23:37:39"
+            "time": "2018-05-24T23:37:39+00:00"
         },
         {
             "name": "su-sws/stanford_video",
@@ -12488,7 +12549,7 @@
                 "source": "https://github.com/SU-SWS/stanford_video/tree/7.x-3.x",
                 "issues": "https://github.com/SU-SWS/stanford_video/issues"
             },
-            "time": "2018-03-16 23:55:51"
+            "time": "2018-03-16T23:55:51+00:00"
         },
         {
             "name": "su-sws/stanford_wilbur",
@@ -12544,7 +12605,7 @@
                 "source": "https://github.com/SU-SWS/stanford_wysiwyg/tree/7.x-2.x-dev",
                 "issues": "https://github.com/SU-SWS/stanford_wysiwyg/issues"
             },
-            "time": "2018-02-09 18:15:46"
+            "time": "2018-02-09T18:15:46+00:00"
         },
         {
             "name": "symfony/polyfill-apcu",
