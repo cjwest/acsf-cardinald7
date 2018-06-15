@@ -67,7 +67,8 @@
     "SU-SWS/SU-IT-Services": "dev-7.x-2.x"
   },
   "require-dev": {
-    "SU-SWS/linky_clicky": "5.x-dev"
+    "SU-SWS/linky_clicky": "5.x-dev",
+    "drupal/drupal-extension": "~3.4"
   },
   "conflict": {
     "drupal/core": "8.*"
