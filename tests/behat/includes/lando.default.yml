@@ -24,11 +24,6 @@ default:
       print_args: true
       print_outp: true
       loop_break: true
-    Bex\Behat\ScreenshotExtension:
-      screenshot_taking_mode: failed_steps
-      image_drivers:
-        local:
-          screenshot_directory: %paths.base%/screenshots
   formatters:
     html:
       output_path: %paths.base%

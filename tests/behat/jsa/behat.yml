@@ -4,3 +4,12 @@ imports:
   - ../includes/lando.default.yml
 
 # Overrides
+default:
+  extensions:
+    Bex\Behat\ScreenshotExtension:
+      screenshot_taking_mode: failed_steps
+      image_drivers:
+        local:
+          # Full path because %paths.base% did not work.
+          screenshot_directory: /app/tests/behat/jsa/screenshots
+          clear_screenshot_directory: true
