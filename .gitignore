@@ -28,6 +28,7 @@ docroot/sites/all/libraries/jquery
 # Ignore test output
 tests/behat/*/index.html
 tests/behat/*/assets
+tests/behat/*/screenshots
 
 # Compiled source #
 ###################
