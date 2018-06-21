@@ -91,7 +91,7 @@
     {
       "type": "package",
       "package": {
-        "name": "library/feeds_jsonpath_parser",
+        "name": "library/jsonpath",
         "version": "0.8.1",
         "type": "drupal-library",
         "dist": {
@@ -127,6 +127,21 @@
         "dist": {
           "url": "http://download.osgeo.org/proj4js/proj4js-1.1.0.zip",
           "type": "zip"
+        },
+        "require": {
+          "composer/installers": "~1.0"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "iCalcreator/iCalcreator",
+        "version": "2.20.2",
+        "type": "drupal-library",
+        "dist": {
+          "url": "https://raw.githubusercontent.com/iCalcreator/iCalcreator/e3dbec2cb3bb91a8bde989e467567ae8831a4026/iCalcreator.class.php",
+          "type": "file"
         },
         "require": {
           "composer/installers": "~1.0"
@@ -288,13 +303,14 @@
     "components/chosen": "1.8.2",
     "library/simplepie": "1.3.1",
     "library/ckeditor": "3.6.6",
-    "kigkonsult/icalcreator": "~2.24",
     "library/jquery_cycle": "2.99",
     "trentrichardson/jquery-timepicker-addon": "1.6.3",
-    "library/feeds_jsonpath_parser": "0.8.1",
+    "library/jsonpath": "0.8.1",
     "library/jw_player": "5.0.0",
     "dompdf/dompdf": "0.6.2",
     "library/proj4js": "1.1.0",
+    "mustangostang/spyc": "~0.6",
+    "iCalcreator/iCalcreator": "2.20.2",
 
     "drupal/admin_menu": "~3.0-rc",
     "drupal/admin_views": "~1.6",
