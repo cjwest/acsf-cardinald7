@@ -217,7 +217,19 @@ function stanford_acsf_tasks() {
   );
   module_enable($enable);
 
+  // Remove this dependency because it conflicts with our login.
+  $modules = array('acsf_openid', 'openid');
+  module_disable($modules, FALSE);
+  drupal_uninstall_modules($modules, FALSE);
+
+  // Change some configuration in the saml paths:
+  $ah_stack = getenv('AH_SITE_GROUP') ?? 'cardinald7';
+  $ah_env = getenv('AH_SITE_ENVIRONMENT') ?? '02test';
+  $pathtosimplesaml = "/var/www/html/" . $ah_stack . "." . $ah_env . "/simplesamlphp";
+  variable_set('stanford_simplesamlphp_auth_installdir', $pathtosimplesaml);
+
   // Add an admin user so that stanford_ssp can pick it up.
+  module_load_include('inc', 'stanford_simplesamlphp_auth', 'stanford_simplesamlphp_auth');
   stanford_sites_add_admin_user(
     variable_get('stanford_sites_requester_sunetid'),
     variable_get('stanford_sites_requester_name'),
@@ -471,4 +483,58 @@ function _stanford_detect_environment() {
 
   // Default to local.
   return 'local';
+}
+
+/**
+ * Implements hook_system_info_alter().
+ *
+ * @param array $info
+ *   The .info file contents, passed by reference so that it can be altered.
+ * @param array $file
+ *   Full information about the module or theme, including $file->name, and
+ *   $file->filename.
+ * @param string $type
+ *   Either 'module' or 'theme', depending on the type of .info file that was
+ *   passed.
+ */
+function stanford_system_info_alter(&$info, $file, $type) {
+  // Disallow a few themes from being enabled by hiding them from the UI.
+  if (
+    isset($info['project']) &&
+    ($info['project'] == 'stanford_framework' ||
+    $info['project'] == 'stanford_jordan' ||
+    $info['project'] == 'stanford_wilbur' ||
+    $info['project'] == 'cube' ||
+    $info['project'] == 'rubik' ||
+    $info['project'] == 'tao')
+  ) {
+    $info['hidden'] = TRUE;
+    return;
+  }
+
+  // Disallow any jumpstart modules.
+  if (
+    isset($info['project']) &&
+    (preg_match("/^stanford_jumpstart/", $info['project']) ||
+    preg_match("/^stanford_jsl/", $info['project']) ||
+    preg_match("/^stanford_jse/", $info['project']) ||
+    preg_match("/^stanford_jsplus/", $info['project']) ||
+    preg_match("/^stanford_jsa/", $info['project']))
+  ) {
+    $info['hidden'] = TRUE;
+    return;
+  }
+
+  // Hide some items by name.
+  if (
+    isset($info['name']) &&
+    (preg_match("/Stanford Site/", $info['name']) ||
+    preg_match("/Stanford Jumpstart/", $info['name']) ||
+    preg_match("/VPSA/", $info['name']) ||
+    preg_match("/Stanford JSA/", $info['name']) ||
+    preg_match("/JSE/", $info['name']))
+  ) {
+    $info['hidden'] = TRUE;
+    return;
+  }
 }
