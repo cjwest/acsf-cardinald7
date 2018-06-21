@@ -98,6 +98,7 @@ task[local][install][] = Environment\Local\Install\ImageAllowInsecureDerivatives
 ; ACSF
 task[acsf][install][] = Environment\ACSF\Install\EnableModules
 task[acsf][install][] = Environment\ACSF\Install\FileSettings
+task[acsf][install][] = Environment\ACSF\Install\SAMLSettings
 
 ; Update Tasks
 ; ------------------------------------------------------------------------------
@@ -191,6 +192,8 @@ dependencies[] = block_class
 
 ; Stanford Stuff
 dependencies[] = stanford_bean_types
+dependencies[] = stanford_bean_types_hero
+dependencies[] = stanford_icon_grid
 dependencies[] = stanford_icon_grid
 dependencies[] = stanford_bean_types_permissions
 dependencies[] = stanford_courses
