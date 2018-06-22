@@ -8,7 +8,26 @@ include_once(DRUPAL_ROOT . '/profiles/stanford/stanford.profile');
 
 function stanford_dept_install_tasks($install_state) {
   $tasks = stanford_install_tasks($install_state);
+
+  // Any and all environment tasks go here.
+  $tasks['stanford_dept_profile_theme'] = array(
+    'display_name' => st('Do theme tasks for dept after stanford.'),
+    'display' => FALSE,
+    'type' => 'normal',
+    'run' => INSTALL_TASK_RUN_IF_NOT_COMPLETED,
+  );
+
   return $tasks;
+}
+
+/**
+ * Install the stanford_framework theme
+ * @param  [type] $install_state [description]
+ * @return [type]                [description]
+ */
+function stanford_dept_profile_theme(&$install_state) {
+  theme_enable(['stanford_framework']);
+  variable_set("theme_default", "stanford_framework");
 }
 
 /**
@@ -38,7 +57,7 @@ function stanford_dept_system_info_alter(&$info, $file, $type) {
     isset($info['project']) &&
     ($info['project'] == 'cube' ||
     $info['project'] == 'rubik' ||
-    $info['project'] == 'tao'
+    $info['project'] == 'tao')
   ) {
     $info['hidden'] = FALSE;
     return;

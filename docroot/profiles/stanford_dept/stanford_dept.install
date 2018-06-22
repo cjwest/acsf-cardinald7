@@ -11,8 +11,6 @@ function stanford_dept_install() {
   // Do all the install tasks from the stanford install profile
   // It's easier just to include this and then override the few things that we want to.
   stanford_install();
-  theme_enable('stanford_framework');
-  variable_set('theme_default', 'stanford_framework');
 }
 
 /**
