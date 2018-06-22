@@ -36,7 +36,7 @@ function stanford_dept_system_info_alter(&$info, $file, $type) {
   // Allow a few themes from being enabled by hiding them from the UI.
   if (
     isset($info['project']) &&
-    $info['project'] == 'cube' ||
+    ($info['project'] == 'cube' ||
     $info['project'] == 'rubik' ||
     $info['project'] == 'tao')
   ) {
