@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
     "content-hash": "a1c3e0dedb3b11de310a45e9aeec1c49",
@@ -1580,7 +1580,7 @@
                 },
                 "drupal": {
                     "version": "7.x-1.4",
-                    "datestamp": "1523697484",
+                    "datestamp": "1523697542",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1728,7 +1728,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/auto_nodetitle"
             },
-            "time": "2011-09-08T16:07:46+00:00"
+            "time": "2011-09-08 16:07:46"
         },
         {
             "name": "drupal/backup_migrate",
@@ -3076,7 +3076,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/context_list"
             },
-            "time": "2014-07-08T19:51:59+00:00"
+            "time": "2014-07-08 19:51:59"
         },
         {
             "name": "drupal/context_list_active",
@@ -3439,7 +3439,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/css_injector"
             },
-            "time": "2013-12-23T06:52:25+00:00"
+            "time": "2013-12-23 06:52:25"
         },
         {
             "name": "drupal/ctools",
@@ -4210,8 +4210,7 @@
             "homepage": "https://www.drupal.org/project/diff",
             "support": {
                 "source": "http://cgit.drupalcode.org/diff"
-            },
-            "time": "2017-04-23T12:14:31+00:00"
+            }
         },
         {
             "name": "drupal/drafty",
@@ -5661,8 +5660,7 @@
             "homepage": "https://www.drupal.org/project/filefield_paths",
             "support": {
                 "source": "http://cgit.drupalcode.org/filefield_paths"
-            },
-            "time": "2016-01-04T09:05:19+00:00"
+            }
         },
         {
             "name": "drupal/flag",
@@ -9624,7 +9622,7 @@
                 },
                 "drupal": {
                     "version": "7.x-4.17",
-                    "datestamp": "1524581885",
+                    "datestamp": "1525373073",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -10091,6 +10089,10 @@
                 {
                     "name": "paulmckibben",
                     "homepage": "https://www.drupal.org/user/279003"
+                },
+                {
+                    "name": "pifagor",
+                    "homepage": "https://www.drupal.org/user/2375692"
                 },
                 {
                     "name": "tadityar",
@@ -11158,7 +11160,7 @@
                 "source": "https://github.com/SU-SWS/open_framework/tree/7.x-2.x",
                 "issues": "https://github.com/SU-SWS/open_framework/issues"
             },
-            "time": "2018-03-20T18:11:50+00:00"
+            "time": "2018-03-20 18:11:50"
         },
         {
             "name": "su-sws/stanford_affiliate_organization",
@@ -11338,12 +11340,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_courses.git",
-                "reference": "207e675a4a683f37801600d5a95fe0a2f634c1f9"
+                "reference": "fdbaa57fbd983a8750f850d0fb1254e87c0943b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_courses/zipball/207e675a4a683f37801600d5a95fe0a2f634c1f9",
-                "reference": "207e675a4a683f37801600d5a95fe0a2f634c1f9",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_courses/zipball/fdbaa57fbd983a8750f850d0fb1254e87c0943b5",
+                "reference": "fdbaa57fbd983a8750f850d0fb1254e87c0943b5",
                 "shasum": ""
             },
             "require": {
@@ -11358,7 +11360,7 @@
                 "source": "https://github.com/SU-SWS/stanford_courses/tree/7.x-4.x",
                 "issues": "https://github.com/SU-SWS/stanford_courses/issues"
             },
-            "time": "2018-06-14T23:04:50+00:00"
+            "time": "2018-06-22T18:56:58+00:00"
         },
         {
             "name": "su-sws/stanford_date_formats",
@@ -11506,12 +11508,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_feeds_helper.git",
-                "reference": "e6ecc8bcb4d6adc38c8089360fc6c47c36d5bc1c"
+                "reference": "83c57fdf2c221e706654beea260e386c6cb2b966"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_feeds_helper/zipball/e6ecc8bcb4d6adc38c8089360fc6c47c36d5bc1c",
-                "reference": "e6ecc8bcb4d6adc38c8089360fc6c47c36d5bc1c",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_feeds_helper/zipball/83c57fdf2c221e706654beea260e386c6cb2b966",
+                "reference": "83c57fdf2c221e706654beea260e386c6cb2b966",
                 "shasum": ""
             },
             "require": {
@@ -11526,7 +11528,7 @@
                 "source": "https://github.com/SU-SWS/stanford_feeds_helper/tree/7.x-1.x",
                 "issues": "https://github.com/SU-SWS/stanford_feeds_helper/issues"
             },
-            "time": "2018-05-03T20:45:59+00:00"
+            "time": "2018-06-20T16:47:59+00:00"
         },
         {
             "name": "su-sws/stanford_fellowship",
@@ -11609,7 +11611,7 @@
                 "source": "https://github.com/SU-SWS/stanford_framework/tree/7.x-3.6",
                 "issues": "https://github.com/SU-SWS/stanford_framework/issues"
             },
-            "time": "2018-05-24T23:45:05+00:00"
+            "time": "2018-05-24 23:45:05"
         },
         {
             "name": "su-sws/stanford_fwb",
@@ -11833,7 +11835,7 @@
                 "source": "https://github.com/SU-SWS/stanford_jordan/tree/7.x-3.x",
                 "issues": "https://github.com/SU-SWS/stanford_jordan/issues"
             },
-            "time": "2018-02-09T18:01:14+00:00"
+            "time": "2018-02-09 18:01:14"
         },
         {
             "name": "su-sws/stanford_jumpstart",
@@ -12057,7 +12059,7 @@
                 "source": "https://github.com/SU-SWS/stanford_light/tree/master",
                 "issues": "https://github.com/SU-SWS/stanford_light/issues"
             },
-            "time": "2018-02-09T17:58:08+00:00"
+            "time": "2018-02-09 17:58:08"
         },
         {
             "name": "su-sws/stanford_manage_content",
@@ -12179,12 +12181,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_paragraph_types.git",
-                "reference": "b4ae315fcfc98e361fcd8e9c9553f37778fad0cf"
+                "reference": "28e9dc2514f49b469eeb12f804b8ce53abb97604"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_paragraph_types/zipball/b4ae315fcfc98e361fcd8e9c9553f37778fad0cf",
-                "reference": "b4ae315fcfc98e361fcd8e9c9553f37778fad0cf",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_paragraph_types/zipball/28e9dc2514f49b469eeb12f804b8ce53abb97604",
+                "reference": "28e9dc2514f49b469eeb12f804b8ce53abb97604",
                 "shasum": ""
             },
             "require": {
@@ -12199,7 +12201,7 @@
                 "source": "https://github.com/SU-SWS/stanford_paragraph_types/tree/7.x-1.x",
                 "issues": "https://github.com/SU-SWS/stanford_paragraph_types/issues"
             },
-            "time": "2018-04-19T17:39:00+00:00"
+            "time": "2018-06-20T22:21:19+00:00"
         },
         {
             "name": "su-sws/stanford_person",
@@ -12319,12 +12321,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_seven.git",
-                "reference": "3d5c564ffbb497c5fe1081fb4315f6e6e20853d9"
+                "reference": "53822c8a410c6e1ff5c4890021758954140cc862"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_seven/zipball/3d5c564ffbb497c5fe1081fb4315f6e6e20853d9",
-                "reference": "3d5c564ffbb497c5fe1081fb4315f6e6e20853d9",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_seven/zipball/53822c8a410c6e1ff5c4890021758954140cc862",
+                "reference": "53822c8a410c6e1ff5c4890021758954140cc862",
                 "shasum": ""
             },
             "require": {
@@ -12339,7 +12341,7 @@
                 "source": "https://github.com/SU-SWS/stanford_seven/tree/7.x-1.x",
                 "issues": "https://github.com/SU-SWS/stanford_seven/issues"
             },
-            "time": "2018-02-09T17:57:50+00:00"
+            "time": "2018-06-20 17:03:23"
         },
         {
             "name": "su-sws/stanford_sites_content_importer",
@@ -12459,12 +12461,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_story_page.git",
-                "reference": "4e98b7443f93e046a23d91257feb41eb0761da31"
+                "reference": "0fe38ae270bffaa7d58cc1cb7fb3a7b0cadd3494"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_story_page/zipball/4e98b7443f93e046a23d91257feb41eb0761da31",
-                "reference": "4e98b7443f93e046a23d91257feb41eb0761da31",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_story_page/zipball/0fe38ae270bffaa7d58cc1cb7fb3a7b0cadd3494",
+                "reference": "0fe38ae270bffaa7d58cc1cb7fb3a7b0cadd3494",
                 "shasum": ""
             },
             "require": {
@@ -12479,7 +12481,7 @@
                 "source": "https://github.com/SU-SWS/stanford_story_page/tree/7.x-1.x",
                 "issues": "https://github.com/SU-SWS/stanford_story_page/issues"
             },
-            "time": "2018-05-03T16:36:24+00:00"
+            "time": "2018-06-20T22:25:43+00:00"
         },
         {
             "name": "su-sws/stanford_subsites",
@@ -12563,7 +12565,7 @@
                 "source": "https://github.com/SU-SWS/stanford_wilbur/tree/7.x-3.x",
                 "issues": "https://github.com/SU-SWS/stanford_wilbur/issues"
             },
-            "time": "2018-02-09T18:01:01+00:00"
+            "time": "2018-02-09 18:01:01"
         },
         {
             "name": "su-sws/stanford_wysiwyg",
@@ -13165,16 +13167,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v2.8.41",
+            "version": "v2.8.42",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "24fc640d544a67869a4106de5fc303c597398629"
+                "reference": "0084ec5bb6614688f547ef80bf1ef8a900c4e350"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/24fc640d544a67869a4106de5fc303c597398629",
-                "reference": "24fc640d544a67869a4106de5fc303c597398629",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/0084ec5bb6614688f547ef80bf1ef8a900c4e350",
+                "reference": "0084ec5bb6614688f547ef80bf1ef8a900c4e350",
                 "shasum": ""
             },
             "require": {
@@ -13301,7 +13303,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2018-05-25T12:03:11+00:00"
+            "time": "2018-06-25T12:02:18+00:00"
         },
         {
             "name": "trentrichardson/jquery-timepicker-addon",
@@ -14887,7 +14889,7 @@
                 "source": "https://github.com/SU-SWS/linky_clicky/tree/5.x",
                 "issues": "https://github.com/SU-SWS/linky_clicky/issues"
             },
-            "time": "2018-06-15T18:04:45+00:00"
+            "time": "2018-06-15 18:04:45"
         },
         {
             "name": "weavora/mink-extra-context",
@@ -14923,7 +14925,7 @@
                 "Mink",
                 "feature"
             ],
-            "time": "2014-01-13T15:50:49+00:00"
+            "time": "2014-01-13 15:50:49"
         }
     ],
     "aliases": [],
@@ -14941,6 +14943,7 @@
         "drupal/context_useragent": 20,
         "drupal/css_injector": 20,
         "drupal/stanford_date_timepicker": 20,
+        "drupal/diff": 20,
         "drupal/filefield_paths": 20,
         "drupal/auto_nodetitle": 20,
         "drupal/token_tweaks": 20,
@@ -14995,7 +14998,6 @@
         "su-sws/stanford_conference": 20,
         "su-sws/stanford_video": 20,
         "su-sws/stanford_jumpstart_lab": 20,
-        "drupal/diff": 20,
         "su-sws/stanford_sites_helper": 20,
         "su-sws/stanford_light": 20
     },

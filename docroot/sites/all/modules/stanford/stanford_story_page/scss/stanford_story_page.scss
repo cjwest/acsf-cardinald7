@@ -33,4 +33,11 @@
   #content {
     margin: 0;
   }
+
+  @media (max-width: 1169px) {
+    h1#page-title.title {
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+  }
 }

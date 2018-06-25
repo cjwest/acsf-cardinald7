@@ -26,3 +26,9 @@
 .node-type-stanford-story-page #content {
   margin: 0;
 }
+@media (max-width: 1169px) {
+  .node-type-stanford-story-page h1#page-title.title {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
