@@ -6,6 +6,12 @@
  * Long description
  */
 
+/**
+ * Implements hook_system_info_alter().
+ * @param $info The .info file contents, passed by reference so that it can be altered.
+ * @param $file Full information about the module or theme, including $file->name, and $file->filename.
+ * @param $type Either 'module' or 'theme', depending on the type of .info file that was passed.
+ */
 function acsf_helper_system_info_alter(&$info, $file, $type) {
   // Remove the dependency on the ACSF_OPENID module.
   if (isset($info['project']) && $info['project'] == "acsf") {
@@ -14,5 +20,17 @@ function acsf_helper_system_info_alter(&$info, $file, $type) {
       unset($info['dependencies'][$search]);
     }
   }
+}
 
+/**
+ * Implements hook_form_FORM_ID_alter().
+ * @param $form Nested array of form elements that comprise the form.
+ * @param $form_state A keyed array containing the current state of the form. The arguments that drupal_get_form() was originally called with are available in the array $form_state['build_info']['args'].
+ * @param $form_id String representing the name of the form itself. Typically this is the name of the function that generated the form.
+ */
+function acsf_helper_form_system_modules_alter(&$form, &$form_state, $form_id) {
+  unset($form['modules']['Stanford']['webauth']);
+  unset($form['modules']['Stanford']['stanford_webauth_block']);
+  unset($form['modules']['Stanford']['webauth_extras']);
+  unset($form['modules']['Stanford']['capx_webauth']);
 }
