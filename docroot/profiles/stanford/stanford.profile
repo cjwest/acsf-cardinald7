@@ -246,6 +246,35 @@ function stanford_acsf_tasks() {
     variable_get('stanford_sites_requester_name'),
     variable_get('stanford_sites_requester_email')
   );
+
+  // Add saml block to sidebar.
+  $blocks = array(
+    array(
+      'module' => 'stanford_saml_block',
+      'delta' => 'stanford_saml_block_login_block',
+      'theme' => 'stanford_light',
+      'status' => 1,
+      'weight' => -1,
+      'region' => 'sidebar_first',
+      'pages' => '',
+      'cache' => -1,
+    ),
+  );
+  $query = db_insert('block')->fields([
+    'module',
+    'delta',
+    'theme',
+    'status',
+    'weight',
+    'region',
+    'pages',
+    'cache'
+  ]);
+  foreach ($blocks as $block) {
+    $query->values($block);
+  }
+
+  $query->execute();
 }
 
 /**
