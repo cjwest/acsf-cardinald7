@@ -4210,8 +4210,7 @@
             "homepage": "https://www.drupal.org/project/diff",
             "support": {
                 "source": "http://cgit.drupalcode.org/diff"
-            },
-            "time": "2017-04-23 12:14:31"
+            }
         },
         {
             "name": "drupal/drafty",
