@@ -2,7 +2,7 @@ name = Stanford Event Series
 description = Event series content type for creating collections of events
 core = 7.x
 package = Stanford
-version = 7.x-1.x
+version = 7.x-1.2
 project = stanford_event_series
 dependencies[] = ctools
 dependencies[] = entityreference
@@ -39,4 +39,3 @@ features[variable][] = pathauto_node_stanford_event_series_pattern
 features_exclude[field_base][body] = body
 mtime = 1426722347
 project status url = https://github.com/SU-SWS/stanford_event_series
-

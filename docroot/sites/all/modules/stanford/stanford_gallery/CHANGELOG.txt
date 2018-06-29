@@ -1,3 +1,7 @@
+stanford_gallery 7.x-2.4 2018-06-26
+-----------------------------------
+- Added composer.json
+
 stanford_gallery 7.x-2.3 2018-02-08
 -----------------------------------
 - Accessibility fix in colorbox captions during navigation

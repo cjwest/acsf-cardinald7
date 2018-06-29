@@ -1,3 +1,10 @@
+Version 7.x-1.2
+------------------------------
+- Added composer.json
+- Added codeclimate.yml
+- Major CSS changes. Too many to list.
+- Fixes to theme_setting function call that prohibited preprocess hooks.
+
 Version 7.x-1.1
 ------------------------------
 by hyperboy: Added https to google web font references

@@ -1,5 +1,5 @@
 #[Stanford Related Events](https://github.com/SU-SWS/stanford_related_content/tree/7.x-1.x/modules/stanford_related_news)
-##### Version: 7.x-1.0-dev
+##### Version: 7.x-1.1-alpha1
 
 Maintainers: [cynmij](https://github.com/cynmij), [cjwest](https://github.com/cjwest),
 [Changelog.txt](CHANGELOG.txt)

@@ -1,0 +1,9 @@
+Stanford FAQ
+-------------------------------------------------
+
+7.x-4.2                               2018-06-26
+------------------------------------------------
+- Added codeclimate.yml
+- Added composer.json
+- Added scss-lint.yml
+- Cleaned up FAQ css formatting

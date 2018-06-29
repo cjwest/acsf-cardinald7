@@ -1,6 +1,11 @@
 Stanford Slides x.x-x.x xxxx-xx-xx
 ----------------------------------
 
+Stanford Slides 7.x-3.2 2018-06-27
+-----------------------------------------
+- Added composer.json
+- Added codeclimate.yml
+
 Stanford Slides 7.x-3.1 2016-05-30
 -----------------------------------------
 - Removed duplicate manage slides view

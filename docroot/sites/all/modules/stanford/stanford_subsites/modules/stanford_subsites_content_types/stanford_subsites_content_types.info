@@ -2,7 +2,7 @@ name = Stanford Subsites Content Types And Fields
 description = The Sanford Subsites dependent content types and their fields
 core = 7.x
 package = Stanford
-version = 7.x-2.1
+version = 7.x-3.1-alpha1
 project = stanford_subsites_content_types
 dependencies[] = entityreference
 dependencies[] = features
@@ -44,4 +44,3 @@ features_exclude[variable][menu_options_stanford_subsite] = menu_options_stanfor
 features_exclude[variable][menu_parent_stanford_subsite] = menu_parent_stanford_subsite
 features_exclude[variable][node_options_stanford_subsite] = node_options_stanford_subsite
 features_exclude[variable][node_preview_stanford_subsite] = node_preview_stanford_subsite
-

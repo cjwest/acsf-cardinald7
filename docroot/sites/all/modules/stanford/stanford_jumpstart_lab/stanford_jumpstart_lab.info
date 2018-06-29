@@ -1,7 +1,7 @@
 name = Stanford Jumpstart Lab
 description = For All things custom with the Jumpstart Lab Product
 core = 7.x
-version = 7.x-5.0-alpha2
+version = 7.x-5.0-alpha3
 package = Stanford Jumpstart Lab
 project = stanford_jumpstart_lab
 project status url = https://github.com/SU-SWS/stanford_jumpstart_lab

@@ -1,6 +1,10 @@
 Stanford Related Content x.x-x.x, xxxx-xx-xx
 ------------------------------------
 
+Stanford Related Content 7.x-1.1-alpha1, 2018-06-27
+------------------------------------
+- Added composer.json
+
 Stanford Related Content 7.x-1.0+16-dev, 2017-01-19
 ------------------------------------
 - Updated for Code Climate coding standards

@@ -1,7 +1,7 @@
 name = Stanford Sites Jumpstart Lab Permissions
 core = 7.x
 package = Stanford Jumpstart Lab
-version = 7.x-5.0-alpha2
+version = 7.x-5.0-alpha3
 dependencies[] = filter
 dependencies[] = node
 dependencies[] = system

@@ -1,6 +1,12 @@
 Stanford Installation Tasks
 --------------------------------------
 
+7.x-1.1                            2018-06-27
+---------------------------------------------
+- Added composer.json
+- Added all new ACSF environment installation tasks.
+- Added new auto detect environment function for when an environment hasn't been explicitly set.
+
 7.x-1.0-alpha4                     2018-01-24
 ---------------------------------------------
 - Updated Get Help and Launch Checklist pages

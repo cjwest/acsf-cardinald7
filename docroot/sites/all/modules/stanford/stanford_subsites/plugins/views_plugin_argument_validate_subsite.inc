@@ -49,14 +49,17 @@ class views_plugin_argument_validate_subsite extends views_plugin_argument_valid
     $subsite = stanford_subsites_get_active_subsite();
 
     ob_start();
-    if (isset($subsite->nid)) {
-      $result = $subsite->nid;
+    if (!$subsite) {
+      return 0;
     }
-    else {
-      $result = 0;
+
+    $index = stanford_subsite_index_get("nid", $subsite->nid);
+    if (!isset($index->tid)) {
+      return 0;
     }
 
     ob_end_clean();
-    return $result;
+    return $index->tid;
+
   }
 }

@@ -44,7 +44,7 @@
     "ext-pdo_mysql": "*",
     "composer/installers": "^1.2",
     "drupal-composer/preserve-paths": "^0.1",
-    "davidbarratt/custom-installer": "~1.0",
+    "davidbarratt/custom-installer": "~1.0@alpha",
     "oomphinc/composer-installers-extender": "v1.1.2",
     "cweagans/composer-patches": "^1.6",
     "drupal/composer_autoloader": "^1.0",
@@ -59,12 +59,12 @@
     "drupal/acsf": "~1.43",
     "drupal/newrelic_appname": "~1.0-alpha1",
     "drupal/paranoia": "dev-1.x",
-    "drupal/node_revision_delete": "~3.0",
+    "drupal/node_revision_delete": "~3.0@alpha",
     "drupal/honeypot": "~1.24",
     "SU-SWS/stanford_ssp": "dev-7.x-2.x",
     "Stanford/WMD": "dev-master",
     "Stanford/webauth_extras": "dev-master",
-    "SU-SWS/SU-IT-Services": "dev-7.x-2.x"
+    "SU-SWS/SU-IT-Services": "~7.1"
   },
   "require-dev": {
     "SU-SWS/linky_clicky": "5.x-dev",
@@ -74,7 +74,7 @@
   "conflict": {
     "drupal/core": "8.*"
   },
-  "minimum-stability": "stable",
+  "minimum-stability": "dev",
   "prefer-stable": true,
   "autoload": {
     "classmap": [

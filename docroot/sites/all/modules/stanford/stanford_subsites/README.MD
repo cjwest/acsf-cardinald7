@@ -1,11 +1,11 @@
-#[Stanford Subsites](https://github.com/SU-SWS/stanford_subsites)
-##### Version 7.x-2.1
+# [Stanford Subsites](https://github.com/SU-SWS/stanford_subsites)
+##### Version 7.x-3.1-alpha1
 
 Maintainers: [Caryl Westerberg](https://github.com/cjwest), [Shea McKinney](https://github.com/sherakama)
 
 [Changelog.txt](CHANGELOG.txt)
 
-This module provides the ability to create a site in a site, sort of. This module is unlike other implementations of subsite like functionality. This subsite module allows content authors to create subsite nodes in which automatically have their own context and menu associated with it. Content editors can select a new logo, title, slogan, and/or theme to go with the subsite node and all other pages within a subsite. Other content types can be added to a subsite by placing them within the menu structure of the subsite or by tagging them with the subsite specific term. 
+This module provides the ability to create a site in a site, sort of. This module is unlike other implementations of subsite like functionality. This subsite module allows content authors to create subsite nodes in which automatically have their own context and menu associated with it. Content editors can select a new logo, title, slogan, and/or theme to go with the subsite node and all other pages within a subsite. Other content types can be added to a subsite by placing them within the menu structure of the subsite or by tagging them with the subsite specific term.
 
 This module does not provide any sort of editorial permission structure. You may add your own using a contrib module such as Taxonomy Access Control, or Content Access Control.
 
@@ -41,7 +41,7 @@ Run the following Drush command: % drush en stanford_subsites -y
 
 ####Building Views Using Contextual Arguments
 
-One of the strengths of Subsites is the ability to create a single view with a contextual filter for the given subsite and place it on all subsite nodes. This feature can be used to create mini-calendars, news blocks, or carousels for all Subsite homepages. 
+One of the strengths of Subsites is the ability to create a single view with a contextual filter for the given subsite and place it on all subsite nodes. This feature can be used to create mini-calendars, news blocks, or carousels for all Subsite homepages.
 
 Configure the contextual filter where content has taxonomy term ID based on the Subsites vocabulary then provide a default value of taxonomy term ID from URL.
 

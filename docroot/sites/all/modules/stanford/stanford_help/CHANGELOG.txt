@@ -1,6 +1,13 @@
 Stanford Help x.x-x.x, xxxx-xx-xx
 ---------------------------------
 
+7.x-1.2, 201-06-26
+---------------------------------
+- Updated codeclimate.yml settings
+- Added composer.json
+- Changed file storage from public to private
+- Added update hook to move public files private
+
 7.x-1.1, 2016-09-16
 ---------------------------------
 - When enabled, sets permissions for the site owner and editor
@@ -9,4 +16,3 @@ Stanford Help x.x-x.x, xxxx-xx-xx
 7.x-1.0, 2016-06-08
 ---------------------------------
  - Initial release
-

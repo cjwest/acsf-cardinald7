@@ -1,6 +1,11 @@
 Stanford Fellowship x.x-x.x xxxx-xx-xx
 --------------------------------
 
-Stanford Fellowship 7.x-2.0  2015-10-30
+Stanford Fellowship 7.x-1.1  2018-06-26
+---------------------------------------
+- Added codeclimate.yml
+- Added composer.json
+
+Stanford Fellowship 7.x-1.0  2015-10-30
 ---------------------------------------
 - Initial release

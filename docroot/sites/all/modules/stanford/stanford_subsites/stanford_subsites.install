@@ -33,7 +33,6 @@ function stanford_subsites_schema() {
         'description' => 'Subsite menu name',
         'type' => 'varchar',
         'length' => 255,
-        'not null' => TRUE,
         'default' => '',
       ),
       'context' => array(
@@ -59,7 +58,6 @@ function stanford_subsites_schema() {
     ),
     'unique keys' => array(
       'tid' => array('tid'),
-      'menu' => array('menu'),
       'machine_name' => array('machine_name'),
     ),
     'primary key' => array('nid'),
@@ -100,4 +98,29 @@ function stanford_subsites_update_7201(&$sandbox) {
     $name = str_replace("-", "_", $name);
     stanford_subsite_index_update($result->nid, NULL, NULL, NULL, $name);
   }
+}
+
+/**
+ * Updates database schema
+ */
+function stanford_subsites_update_7300(&$sandbox) {
+
+  // Allow menu to be null.
+  $table = "subsite_index";
+  $field = "menu";
+  $field_new = "menu";
+  $spec = array(
+    'description' => 'Subsite menu name',
+    'type' => 'varchar',
+    'length' => 255,
+    'default' => '',
+  );
+  $keys_new = array();
+
+  // Do eet!
+  db_change_field($table, $field, $field_new, $spec, $keys_new);
+
+  // Keys.
+  db_drop_unique_key("subsite_index", "menu");
+
 }

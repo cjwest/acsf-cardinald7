@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "a1c3e0dedb3b11de310a45e9aeec1c49",
+    "content-hash": "8f3d9e984a7a06274f1524d109d7b8b3",
     "packages": [
         {
             "name": "Stanford/WMD",
@@ -1580,7 +1580,7 @@
                 },
                 "drupal": {
                     "version": "7.x-1.4",
-                    "datestamp": "1523697484",
+                    "datestamp": "1523697542",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1728,7 +1728,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/auto_nodetitle"
             },
-            "time": "2011-09-08T16:07:46+00:00"
+            "time": "2011-09-08 16:07:46"
         },
         {
             "name": "drupal/backup_migrate",
@@ -3076,7 +3076,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/context_list"
             },
-            "time": "2014-07-08T19:51:59+00:00"
+            "time": "2014-07-08 19:51:59"
         },
         {
             "name": "drupal/context_list_active",
@@ -3439,7 +3439,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/css_injector"
             },
-            "time": "2013-12-23T06:52:25+00:00"
+            "time": "2013-12-23 06:52:25"
         },
         {
             "name": "drupal/ctools",
@@ -5660,8 +5660,7 @@
             "homepage": "https://www.drupal.org/project/filefield_paths",
             "support": {
                 "source": "http://cgit.drupalcode.org/filefield_paths"
-            },
-            "time": "2016-01-04T09:05:19+00:00"
+            }
         },
         {
             "name": "drupal/flag",
@@ -9623,7 +9622,7 @@
                 },
                 "drupal": {
                     "version": "7.x-4.17",
-                    "datestamp": "1524581885",
+                    "datestamp": "1525373073",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -10090,6 +10089,10 @@
                 {
                     "name": "paulmckibben",
                     "homepage": "https://www.drupal.org/user/279003"
+                },
+                {
+                    "name": "pifagor",
+                    "homepage": "https://www.drupal.org/user/2375692"
                 },
                 {
                     "name": "tadityar",
@@ -11077,16 +11080,16 @@
         },
         {
             "name": "su-sws/SU-IT-Services",
-            "version": "dev-7.x-2.x",
+            "version": "7.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/SU-IT-Services.git",
-                "reference": "0f4955539dda823bed75e9a1811c1845e6c4f2d3"
+                "reference": "6e12dd6077ea765e3806db7d3886521b15739575"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/SU-IT-Services/zipball/0f4955539dda823bed75e9a1811c1845e6c4f2d3",
-                "reference": "0f4955539dda823bed75e9a1811c1845e6c4f2d3",
+                "url": "https://api.github.com/repos/SU-SWS/SU-IT-Services/zipball/6e12dd6077ea765e3806db7d3886521b15739575",
+                "reference": "6e12dd6077ea765e3806db7d3886521b15739575",
                 "shasum": ""
             },
             "require": {
@@ -11098,23 +11101,23 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/SU-IT-Services/tree/7.x-1.x",
+                "source": "https://github.com/SU-SWS/SU-IT-Services/tree/7.1.4",
                 "issues": "https://github.com/SU-SWS/SU-IT-Services/issues"
             },
-            "time": "2018-02-09T18:14:49+00:00"
+            "time": "2018-06-27T23:03:58+00:00"
         },
         {
             "name": "su-sws/erus",
-            "version": "dev-7.x-1.x-dev",
+            "version": "7.1.2-alpha2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/erus.git",
-                "reference": "8e7784b110800167acdbc2efdb884f626989daf7"
+                "reference": "9e067ef808cad6ae02bb31fb81cdcd0f0e7be0e1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/erus/zipball/8e7784b110800167acdbc2efdb884f626989daf7",
-                "reference": "8e7784b110800167acdbc2efdb884f626989daf7",
+                "url": "https://api.github.com/repos/SU-SWS/erus/zipball/9e067ef808cad6ae02bb31fb81cdcd0f0e7be0e1",
+                "reference": "9e067ef808cad6ae02bb31fb81cdcd0f0e7be0e1",
                 "shasum": ""
             },
             "require": {
@@ -11126,23 +11129,23 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/erus/tree/7.x-1.x-dev",
+                "source": "https://github.com/SU-SWS/erus/tree/7.1.2-alpha2",
                 "issues": "https://github.com/SU-SWS/erus/issues"
             },
-            "time": "2018-02-09T07:18:28+00:00"
+            "time": "2018-06-26T22:38:20+00:00"
         },
         {
             "name": "su-sws/open_framework",
-            "version": "dev-7.x-2.x",
+            "version": "7.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/open_framework.git",
-                "reference": "441457ab0eb8d0c25c1a979400f0b4ea4ee7ecad"
+                "reference": "aa9b93d66d2bbac017274d81455eb5ead14e4d39"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/open_framework/zipball/441457ab0eb8d0c25c1a979400f0b4ea4ee7ecad",
-                "reference": "441457ab0eb8d0c25c1a979400f0b4ea4ee7ecad",
+                "url": "https://api.github.com/repos/SU-SWS/open_framework/zipball/aa9b93d66d2bbac017274d81455eb5ead14e4d39",
+                "reference": "aa9b93d66d2bbac017274d81455eb5ead14e4d39",
                 "shasum": ""
             },
             "require": {
@@ -11154,23 +11157,23 @@
             ],
             "description": "A Drupal Base Theme.",
             "support": {
-                "source": "https://github.com/SU-SWS/open_framework/tree/7.x-2.x",
+                "source": "https://github.com/SU-SWS/open_framework/tree/7.2.6",
                 "issues": "https://github.com/SU-SWS/open_framework/issues"
             },
-            "time": "2018-03-20T18:11:50+00:00"
+            "time": "2018-06-28T13:42:53+00:00"
         },
         {
             "name": "su-sws/stanford_affiliate_organization",
-            "version": "dev-7.x-1.x",
+            "version": "7.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_affiliate_organization.git",
-                "reference": "b96dfeec425bc09935a09947bf3e372807721e7b"
+                "reference": "c30932242a8b22b9fea50e4d98f1c9d1d5c53eff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_affiliate_organization/zipball/b96dfeec425bc09935a09947bf3e372807721e7b",
-                "reference": "b96dfeec425bc09935a09947bf3e372807721e7b",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_affiliate_organization/zipball/c30932242a8b22b9fea50e4d98f1c9d1d5c53eff",
+                "reference": "c30932242a8b22b9fea50e4d98f1c9d1d5c53eff",
                 "shasum": ""
             },
             "require": {
@@ -11182,23 +11185,23 @@
             ],
             "description": "Affiliate Organization Module.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_affiliate_organization/tree/7.x-1.x",
+                "source": "https://github.com/SU-SWS/stanford_affiliate_organization/tree/7.1.2",
                 "issues": "https://github.com/SU-SWS/stanford_affiliate_organization/issues"
             },
-            "time": "2018-03-03T00:33:34+00:00"
+            "time": "2018-06-26T23:52:48+00:00"
         },
         {
             "name": "su-sws/stanford_alt_check",
-            "version": "dev-7.x-1.x",
+            "version": "7.1.1-alpha2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_alt_check.git",
-                "reference": "86f9d85d64e947952e40fdbcb2ff79d09d6f11c7"
+                "reference": "d26386d8e6fd381939f98e81d086b2cbcf5a6555"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_alt_check/zipball/86f9d85d64e947952e40fdbcb2ff79d09d6f11c7",
-                "reference": "86f9d85d64e947952e40fdbcb2ff79d09d6f11c7",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_alt_check/zipball/d26386d8e6fd381939f98e81d086b2cbcf5a6555",
+                "reference": "d26386d8e6fd381939f98e81d086b2cbcf5a6555",
                 "shasum": ""
             },
             "require": {
@@ -11210,23 +11213,23 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_alt_check/tree/7.x-1.x",
+                "source": "https://github.com/SU-SWS/stanford_alt_check/tree/7.1.1-alpha2",
                 "issues": "https://github.com/SU-SWS/stanford_alt_check/issues"
             },
-            "time": "2018-02-13T21:29:54+00:00"
+            "time": "2018-06-27T00:09:18+00:00"
         },
         {
             "name": "su-sws/stanford_bean_types",
-            "version": "dev-7.x-3.x",
+            "version": "7.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_bean_types.git",
-                "reference": "14e1ea7a07826df0a30e5650fcf681d3d61a4272"
+                "reference": "269ba368bd362e8c66cdbcd9777f9eb9e301b416"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_bean_types/zipball/14e1ea7a07826df0a30e5650fcf681d3d61a4272",
-                "reference": "14e1ea7a07826df0a30e5650fcf681d3d61a4272",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_bean_types/zipball/269ba368bd362e8c66cdbcd9777f9eb9e301b416",
+                "reference": "269ba368bd362e8c66cdbcd9777f9eb9e301b416",
                 "shasum": ""
             },
             "require": {
@@ -11238,23 +11241,23 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_bean_types/tree/7.x-3.x",
+                "source": "https://github.com/SU-SWS/stanford_bean_types/tree/7.3.4",
                 "issues": "https://github.com/SU-SWS/stanford_bean_types/issues"
             },
-            "time": "2018-02-13T00:46:22+00:00"
+            "time": "2018-06-27T12:31:12+00:00"
         },
         {
             "name": "su-sws/stanford_capx",
-            "version": "dev-7.x-3.x",
+            "version": "7.3.0-beta8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_capx.git",
-                "reference": "4941080015c45bdccecffced4aef64730cc6d549"
+                "reference": "dc82d73b66876d8f1818f56bfb104387a78ec34a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_capx/zipball/4941080015c45bdccecffced4aef64730cc6d549",
-                "reference": "4941080015c45bdccecffced4aef64730cc6d549",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_capx/zipball/dc82d73b66876d8f1818f56bfb104387a78ec34a",
+                "reference": "dc82d73b66876d8f1818f56bfb104387a78ec34a",
                 "shasum": ""
             },
             "type": "drupal-custom-module",
@@ -11270,23 +11273,23 @@
             "description": "Stanford Career Academic Profiles API integration Module",
             "homepage": "https://github.com/SU-SWS/stanford_capx",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_capx/tree/7.x-3.x",
+                "source": "https://github.com/SU-SWS/stanford_capx/tree/7.3.0-beta8",
                 "issues": "https://github.com/SU-SWS/stanford_capx/issues"
             },
-            "time": "2018-05-07T22:23:44+00:00"
+            "time": "2018-06-28T17:10:27+00:00"
         },
         {
             "name": "su-sws/stanford_carousel",
-            "version": "dev-7.x-2.x",
+            "version": "7.2.4-alpha2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_carousel.git",
-                "reference": "be22babcde1798323e608508113375e9ccb19cda"
+                "reference": "9f923686424c1822dbb35b225721587c9e9a758b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_carousel/zipball/be22babcde1798323e608508113375e9ccb19cda",
-                "reference": "be22babcde1798323e608508113375e9ccb19cda",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_carousel/zipball/9f923686424c1822dbb35b225721587c9e9a758b",
+                "reference": "9f923686424c1822dbb35b225721587c9e9a758b",
                 "shasum": ""
             },
             "require": {
@@ -11298,23 +11301,23 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_carousel/tree/7.x-2.x",
+                "source": "https://github.com/SU-SWS/stanford_carousel/tree/7.2.4-alpha2",
                 "issues": "https://github.com/SU-SWS/stanford_carousel/issues"
             },
-            "time": "2018-04-16T18:18:29+00:00"
+            "time": "2018-04-16T18:17:29+00:00"
         },
         {
             "name": "su-sws/stanford_conference",
-            "version": "dev-7.x-1.x",
+            "version": "7.1.0-beta2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_conference.git",
-                "reference": "dbeec5e7346ac63707e16572c86a29414653f09b"
+                "reference": "c7b0788bc917dc0cd21b356f42d07fb93ce2522a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_conference/zipball/dbeec5e7346ac63707e16572c86a29414653f09b",
-                "reference": "dbeec5e7346ac63707e16572c86a29414653f09b",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_conference/zipball/c7b0788bc917dc0cd21b356f42d07fb93ce2522a",
+                "reference": "c7b0788bc917dc0cd21b356f42d07fb93ce2522a",
                 "shasum": ""
             },
             "require": {
@@ -11326,23 +11329,23 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_conference/tree/7.x-1.x",
+                "source": "https://github.com/SU-SWS/stanford_conference/tree/7.1.0-beta2",
                 "issues": "https://github.com/SU-SWS/stanford_conference/issues"
             },
-            "time": "2018-02-14T05:25:01+00:00"
+            "time": "2018-06-27T13:03:08+00:00"
         },
         {
             "name": "su-sws/stanford_courses",
-            "version": "dev-7.x-4.x",
+            "version": "7.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_courses.git",
-                "reference": "4bb22ef90406424a9354fc46be72fbd3a5149e07"
+                "reference": "09164ff367d23ddff19a91c7655602c4b4320b3f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_courses/zipball/4bb22ef90406424a9354fc46be72fbd3a5149e07",
-                "reference": "4bb22ef90406424a9354fc46be72fbd3a5149e07",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_courses/zipball/09164ff367d23ddff19a91c7655602c4b4320b3f",
+                "reference": "09164ff367d23ddff19a91c7655602c4b4320b3f",
                 "shasum": ""
             },
             "require": {
@@ -11354,23 +11357,23 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_courses/tree/7.x-4.x",
+                "source": "https://github.com/SU-SWS/stanford_courses/tree/7.4.4",
                 "issues": "https://github.com/SU-SWS/stanford_courses/issues"
             },
-            "time": "2018-06-25T19:34:19+00:00"
+            "time": "2018-06-27T13:11:45+00:00"
         },
         {
             "name": "su-sws/stanford_date_formats",
-            "version": "dev-7.x-1.x-dev",
+            "version": "7.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_date_formats.git",
-                "reference": "0e2405eacba335b61c4305511d0b04af43d6fc86"
+                "reference": "8dc7c5fb27bcf16b0428b7a419a001d2224cdfc7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_date_formats/zipball/0e2405eacba335b61c4305511d0b04af43d6fc86",
-                "reference": "0e2405eacba335b61c4305511d0b04af43d6fc86",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_date_formats/zipball/8dc7c5fb27bcf16b0428b7a419a001d2224cdfc7",
+                "reference": "8dc7c5fb27bcf16b0428b7a419a001d2224cdfc7",
                 "shasum": ""
             },
             "require": {
@@ -11382,23 +11385,23 @@
             ],
             "description": "A collection of date formats.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_date_formats/tree/7.x-1.x-dev",
+                "source": "https://github.com/SU-SWS/stanford_date_formats/tree/7.1.2",
                 "issues": "https://github.com/SU-SWS/stanford_date_formats/issues"
             },
-            "time": "2018-02-09T06:58:36+00:00"
+            "time": "2018-06-26T21:49:21+00:00"
         },
         {
             "name": "su-sws/stanford_easy_wysiwyg_css",
-            "version": "dev-7.x-1.x",
+            "version": "7.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_easy_wysiwyg_css.git",
-                "reference": "5e5b009c6f1708aeb4c5c947f7e1dac492785faa"
+                "reference": "527e4bb967a01ed02925e22ac55a57117ed84cac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_easy_wysiwyg_css/zipball/5e5b009c6f1708aeb4c5c947f7e1dac492785faa",
-                "reference": "5e5b009c6f1708aeb4c5c947f7e1dac492785faa",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_easy_wysiwyg_css/zipball/527e4bb967a01ed02925e22ac55a57117ed84cac",
+                "reference": "527e4bb967a01ed02925e22ac55a57117ed84cac",
                 "shasum": ""
             },
             "require": {
@@ -11410,23 +11413,23 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_easy_wysiwyg_css/tree/7.x-1.x",
+                "source": "https://github.com/SU-SWS/stanford_easy_wysiwyg_css/tree/7.1.3",
                 "issues": "https://github.com/SU-SWS/stanford_easy_wysiwyg_css/issues"
             },
-            "time": "2018-02-16T05:19:43+00:00"
+            "time": "2018-06-27T13:21:31+00:00"
         },
         {
             "name": "su-sws/stanford_event_series",
-            "version": "dev-7.x-1.x",
+            "version": "7.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_event_series.git",
-                "reference": "93bade95db41db5acb0b3073d4d3e32d8d0633b5"
+                "reference": "eb789416f30a9df2331fa0ac21fa785c32c6db09"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_event_series/zipball/93bade95db41db5acb0b3073d4d3e32d8d0633b5",
-                "reference": "93bade95db41db5acb0b3073d4d3e32d8d0633b5",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_event_series/zipball/eb789416f30a9df2331fa0ac21fa785c32c6db09",
+                "reference": "eb789416f30a9df2331fa0ac21fa785c32c6db09",
                 "shasum": ""
             },
             "require": {
@@ -11438,23 +11441,23 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_event_series/tree/7.x-1.x",
+                "source": "https://github.com/SU-SWS/stanford_event_series/tree/7.1.2",
                 "issues": "https://github.com/SU-SWS/stanford_event_series/issues"
             },
-            "time": "2018-02-14T05:22:15+00:00"
+            "time": "2018-06-27T13:28:18+00:00"
         },
         {
             "name": "su-sws/stanford_events_importer",
-            "version": "dev-7.x-3.x",
+            "version": "7.3.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_events_importer.git",
-                "reference": "3686e12ee4cef5e55d600bb6ac27410fd77f03ca"
+                "reference": "67de277e47ae42141f353b6a78e3f4357cd891a6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_events_importer/zipball/3686e12ee4cef5e55d600bb6ac27410fd77f03ca",
-                "reference": "3686e12ee4cef5e55d600bb6ac27410fd77f03ca",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_events_importer/zipball/67de277e47ae42141f353b6a78e3f4357cd891a6",
+                "reference": "67de277e47ae42141f353b6a78e3f4357cd891a6",
                 "shasum": ""
             },
             "require": {
@@ -11466,23 +11469,23 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_events_importer/tree/7.x-3.x",
+                "source": "https://github.com/SU-SWS/stanford_events_importer/tree/7.3.9",
                 "issues": "https://github.com/SU-SWS/stanford_events_importer/issues"
             },
-            "time": "2018-04-16T17:55:20+00:00"
+            "time": "2018-04-16T17:54:11+00:00"
         },
         {
             "name": "su-sws/stanford_faq",
-            "version": "dev-7.x-4.x-dev",
+            "version": "7.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_faq.git",
-                "reference": "33d538c003fb3e89b68edf41b2905d93f344b7f5"
+                "reference": "6e5856dc92fa8276ade7555185e10bbb64b83d73"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_faq/zipball/33d538c003fb3e89b68edf41b2905d93f344b7f5",
-                "reference": "33d538c003fb3e89b68edf41b2905d93f344b7f5",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_faq/zipball/6e5856dc92fa8276ade7555185e10bbb64b83d73",
+                "reference": "6e5856dc92fa8276ade7555185e10bbb64b83d73",
                 "shasum": ""
             },
             "require": {
@@ -11494,23 +11497,23 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_faq/tree/7.x-4.x-dev",
+                "source": "https://github.com/SU-SWS/stanford_faq/tree/7.4.2",
                 "issues": "https://github.com/SU-SWS/stanford_faq/issues"
             },
-            "time": "2018-03-16T17:57:44+00:00"
+            "time": "2018-06-27T13:41:48+00:00"
         },
         {
             "name": "su-sws/stanford_feeds_helper",
-            "version": "dev-7.x-1.x",
+            "version": "7.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_feeds_helper.git",
-                "reference": "83c57fdf2c221e706654beea260e386c6cb2b966"
+                "reference": "7ea4590a83e0a430ce8263cae711810509538de0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_feeds_helper/zipball/83c57fdf2c221e706654beea260e386c6cb2b966",
-                "reference": "83c57fdf2c221e706654beea260e386c6cb2b966",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_feeds_helper/zipball/7ea4590a83e0a430ce8263cae711810509538de0",
+                "reference": "7ea4590a83e0a430ce8263cae711810509538de0",
                 "shasum": ""
             },
             "require": {
@@ -11522,23 +11525,23 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_feeds_helper/tree/7.x-1.x",
+                "source": "https://github.com/SU-SWS/stanford_feeds_helper/tree/7.1.3",
                 "issues": "https://github.com/SU-SWS/stanford_feeds_helper/issues"
             },
-            "time": "2018-06-20T16:47:59+00:00"
+            "time": "2018-06-27T13:54:08+00:00"
         },
         {
             "name": "su-sws/stanford_fellowship",
-            "version": "dev-7.x-1.x",
+            "version": "7.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_fellowship.git",
-                "reference": "a07d279ca2a150673e84af221350d99eab719278"
+                "reference": "352bec8646ba5af7947dfd65e3756a10d454cc2f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_fellowship/zipball/a07d279ca2a150673e84af221350d99eab719278",
-                "reference": "a07d279ca2a150673e84af221350d99eab719278",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_fellowship/zipball/352bec8646ba5af7947dfd65e3756a10d454cc2f",
+                "reference": "352bec8646ba5af7947dfd65e3756a10d454cc2f",
                 "shasum": ""
             },
             "require": {
@@ -11550,22 +11553,22 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_fellowship/tree/7.x-1.x"
+                "source": "https://github.com/SU-SWS/stanford_fellowship/tree/7.1.1"
             },
-            "time": "2018-03-16T17:58:38+00:00"
+            "time": "2018-06-27T15:25:18+00:00"
         },
         {
             "name": "su-sws/stanford_field_formatters",
-            "version": "dev-7.x-1.x",
+            "version": "7.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_field_formatters.git",
-                "reference": "cd46f9bdfd278fe1c718f8da2edbcaeb98407ffa"
+                "reference": "721cebbae520713ca5419455a50fc302d14e9693"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_field_formatters/zipball/cd46f9bdfd278fe1c718f8da2edbcaeb98407ffa",
-                "reference": "cd46f9bdfd278fe1c718f8da2edbcaeb98407ffa",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_field_formatters/zipball/721cebbae520713ca5419455a50fc302d14e9693",
+                "reference": "721cebbae520713ca5419455a50fc302d14e9693",
                 "shasum": ""
             },
             "require": {
@@ -11577,23 +11580,23 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_field_formatters/tree/7.x-1.x",
+                "source": "https://github.com/SU-SWS/stanford_field_formatters/tree/7.1.3",
                 "issues": "https://github.com/SU-SWS/stanford_field_formatters/issues"
             },
-            "time": "2018-02-09T17:15:48+00:00"
+            "time": "2018-06-27T15:29:17+00:00"
         },
         {
             "name": "su-sws/stanford_framework",
-            "version": "dev-7.x-3.x",
+            "version": "7.3.6",
             "source": {
                 "type": "git",
                 "url": "git@github.com:SU-SWS/stanford_framework.git",
-                "reference": "22c0e04bd45f6fbf64e8acd15d7cd9ead4b36ddf"
+                "reference": "7cbec1bd01629cba95bd216c1894ac36a62eded0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_framework/zipball/22c0e04bd45f6fbf64e8acd15d7cd9ead4b36ddf",
-                "reference": "22c0e04bd45f6fbf64e8acd15d7cd9ead4b36ddf",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_framework/zipball/7cbec1bd01629cba95bd216c1894ac36a62eded0",
+                "reference": "7cbec1bd01629cba95bd216c1894ac36a62eded0",
                 "shasum": ""
             },
             "require": {
@@ -11605,23 +11608,23 @@
             ],
             "description": "A Drupal Theme.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_framework/tree/7.x-3.6",
+                "source": "https://github.com/SU-SWS/stanford_framework/tree/7.3.6",
                 "issues": "https://github.com/SU-SWS/stanford_framework/issues"
             },
-            "time": "2018-05-24T23:45:05+00:00"
+            "time": "2018-05-24T23:30:52+00:00"
         },
         {
             "name": "su-sws/stanford_fwb",
-            "version": "dev-7.x-1.x",
+            "version": "7.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_fwb.git",
-                "reference": "294c1e74c8871e314a6d6fb79926c7f9932ddd20"
+                "reference": "f41d5886f99bc3a5123ddd3142edbb2b51acb165"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_fwb/zipball/294c1e74c8871e314a6d6fb79926c7f9932ddd20",
-                "reference": "294c1e74c8871e314a6d6fb79926c7f9932ddd20",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_fwb/zipball/f41d5886f99bc3a5123ddd3142edbb2b51acb165",
+                "reference": "f41d5886f99bc3a5123ddd3142edbb2b51acb165",
                 "shasum": ""
             },
             "require": {
@@ -11633,23 +11636,23 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_fwb/tree/7.x-1.x",
+                "source": "https://github.com/SU-SWS/stanford_fwb/tree/7.1.2",
                 "issues": "https://github.com/SU-SWS/stanford_fwb/issues"
             },
-            "time": "2018-02-09T18:32:40+00:00"
+            "time": "2018-06-27T15:34:37+00:00"
         },
         {
             "name": "su-sws/stanford_gallery",
-            "version": "dev-7.x-2.x",
+            "version": "7.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_gallery.git",
-                "reference": "6ea762b854b7c53a39bc8b4da7c83112c76074e0"
+                "reference": "685fe7b639ec33113ced7d8eb0c4b4375528d610"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_gallery/zipball/6ea762b854b7c53a39bc8b4da7c83112c76074e0",
-                "reference": "6ea762b854b7c53a39bc8b4da7c83112c76074e0",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_gallery/zipball/685fe7b639ec33113ced7d8eb0c4b4375528d610",
+                "reference": "685fe7b639ec33113ced7d8eb0c4b4375528d610",
                 "shasum": ""
             },
             "require": {
@@ -11661,23 +11664,23 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_gallery/tree/7.x-2.x",
+                "source": "https://github.com/SU-SWS/stanford_gallery/tree/7.2.4",
                 "issues": "https://github.com/SU-SWS/stanford_gallery/issues"
             },
-            "time": "2018-02-13T22:32:22+00:00"
+            "time": "2018-06-27T15:38:01+00:00"
         },
         {
             "name": "su-sws/stanford_help",
-            "version": "dev-7.x-1.x",
+            "version": "7.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_help.git",
-                "reference": "c133d0d83e588a6b432c1be2038fa753e92c6d95"
+                "reference": "0b673aa15dd9914751458cb2212d430ca8ea7963"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_help/zipball/c133d0d83e588a6b432c1be2038fa753e92c6d95",
-                "reference": "c133d0d83e588a6b432c1be2038fa753e92c6d95",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_help/zipball/0b673aa15dd9914751458cb2212d430ca8ea7963",
+                "reference": "0b673aa15dd9914751458cb2212d430ca8ea7963",
                 "shasum": ""
             },
             "require": {
@@ -11689,23 +11692,23 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_help/tree/7.x-1.x",
+                "source": "https://github.com/SU-SWS/stanford_help/tree/7.1.2",
                 "issues": "https://github.com/SU-SWS/stanford_help/issues"
             },
-            "time": "2018-03-13T16:15:50+00:00"
+            "time": "2018-06-27T19:18:53+00:00"
         },
         {
             "name": "su-sws/stanford_helper",
-            "version": "dev-7.x-1.x",
+            "version": "7.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_helper.git",
-                "reference": "8ea94df67dad901ccb6faee0c8f7bf44e1e9e6f2"
+                "reference": "ac2a0fbb280b4290f3d3a18028c89ab07cfc8223"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_helper/zipball/8ea94df67dad901ccb6faee0c8f7bf44e1e9e6f2",
-                "reference": "8ea94df67dad901ccb6faee0c8f7bf44e1e9e6f2",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_helper/zipball/ac2a0fbb280b4290f3d3a18028c89ab07cfc8223",
+                "reference": "ac2a0fbb280b4290f3d3a18028c89ab07cfc8223",
                 "shasum": ""
             },
             "require": {
@@ -11717,23 +11720,23 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_helper/tree/7.x-1.x",
+                "source": "https://github.com/SU-SWS/stanford_helper/tree/7.1.1",
                 "issues": "https://github.com/SU-SWS/stanford_helper/issues"
             },
-            "time": "2018-02-09T07:31:37+00:00"
+            "time": "2018-06-27T17:55:02+00:00"
         },
         {
             "name": "su-sws/stanford_image",
-            "version": "dev-7.x-3.x-dev",
+            "version": "7.3.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_image.git",
-                "reference": "be01eb71b7cf28a3257ee079c8aa990511be21e4"
+                "reference": "a1617fb540edaf5984d388bdf81a4dcc80c79b90"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_image/zipball/be01eb71b7cf28a3257ee079c8aa990511be21e4",
-                "reference": "be01eb71b7cf28a3257ee079c8aa990511be21e4",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_image/zipball/a1617fb540edaf5984d388bdf81a4dcc80c79b90",
+                "reference": "a1617fb540edaf5984d388bdf81a4dcc80c79b90",
                 "shasum": ""
             },
             "require": {
@@ -11745,23 +11748,23 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_image/tree/7.x-3.x-dev",
+                "source": "https://github.com/SU-SWS/stanford_image/tree/7.3.6",
                 "issues": "https://github.com/SU-SWS/stanford_image/issues"
             },
-            "time": "2018-02-09T18:33:34+00:00"
+            "time": "2018-06-27T19:26:10+00:00"
         },
         {
             "name": "su-sws/stanford_image_styles",
-            "version": "dev-7.x-4.x",
+            "version": "7.4.3-alpha2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_image_styles.git",
-                "reference": "124ba5850d6c956c747c8b39f963dba4d0df2fa7"
+                "reference": "2dc99e48c8881ab5684f417a29cdef6654013bd9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_image_styles/zipball/124ba5850d6c956c747c8b39f963dba4d0df2fa7",
-                "reference": "124ba5850d6c956c747c8b39f963dba4d0df2fa7",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_image_styles/zipball/2dc99e48c8881ab5684f417a29cdef6654013bd9",
+                "reference": "2dc99e48c8881ab5684f417a29cdef6654013bd9",
                 "shasum": ""
             },
             "require": {
@@ -11773,23 +11776,23 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_image_styles/tree/7.x-4.x",
+                "source": "https://github.com/SU-SWS/stanford_image_styles/tree/7.4.3-alpha2",
                 "issues": "https://github.com/SU-SWS/stanford_image_styles/issues"
             },
-            "time": "2018-02-16T05:17:55+00:00"
+            "time": "2018-06-27T20:01:13+00:00"
         },
         {
             "name": "su-sws/stanford_install_tasks",
-            "version": "dev-7.x-1.x",
+            "version": "7.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_install_tasks.git",
-                "reference": "1a1049b468a30703bf6964df53a5484b94cc04c3"
+                "reference": "8dbc85df2bd94c836e3e3e75efc96561e7ed216b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_install_tasks/zipball/1a1049b468a30703bf6964df53a5484b94cc04c3",
-                "reference": "1a1049b468a30703bf6964df53a5484b94cc04c3",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_install_tasks/zipball/8dbc85df2bd94c836e3e3e75efc96561e7ed216b",
+                "reference": "8dbc85df2bd94c836e3e3e75efc96561e7ed216b",
                 "shasum": ""
             },
             "require": {
@@ -11801,23 +11804,23 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_install_tasks/tree/7.x-1.x",
+                "source": "https://github.com/SU-SWS/stanford_install_tasks/tree/7.1.1",
                 "issues": "https://github.com/SU-SWS/stanford_install_tasks/issues"
             },
-            "time": "2018-06-13T15:50:41+00:00"
+            "time": "2018-06-28T20:08:34+00:00"
         },
         {
             "name": "su-sws/stanford_jordan",
-            "version": "dev-7.x-3.x",
+            "version": "7.3.1",
             "source": {
                 "type": "git",
                 "url": "git@github.com:SU-SWS/stanford_jordan.git",
-                "reference": "e5b0aa96e45f204ed01392cf8dac84ce68d9069c"
+                "reference": "5b83223bb4f1e5507c47808fb7600ce4971e28df"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_jordan/zipball/e5b0aa96e45f204ed01392cf8dac84ce68d9069c",
-                "reference": "e5b0aa96e45f204ed01392cf8dac84ce68d9069c",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_jordan/zipball/5b83223bb4f1e5507c47808fb7600ce4971e28df",
+                "reference": "5b83223bb4f1e5507c47808fb7600ce4971e28df",
                 "shasum": ""
             },
             "require": {
@@ -11829,23 +11832,23 @@
             ],
             "description": "A Drupal theme.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_jordan/tree/7.x-3.x",
+                "source": "https://github.com/SU-SWS/stanford_jordan/tree/7.3.1",
                 "issues": "https://github.com/SU-SWS/stanford_jordan/issues"
             },
-            "time": "2018-02-09T18:01:14+00:00"
+            "time": "2018-06-28T17:52:12+00:00"
         },
         {
             "name": "su-sws/stanford_jumpstart",
-            "version": "dev-7.x-5.x",
+            "version": "7.5.5-beta6",
             "source": {
                 "type": "git",
                 "url": "git@github.com:SU-SWS/stanford_jumpstart.git",
-                "reference": "2aa38646455a6ddf9d8db08ad1a64cadef8bd9db"
+                "reference": "039406186e3eaacada3415f62bc65d5ca9d606eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_jumpstart/zipball/2aa38646455a6ddf9d8db08ad1a64cadef8bd9db",
-                "reference": "2aa38646455a6ddf9d8db08ad1a64cadef8bd9db",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_jumpstart/zipball/039406186e3eaacada3415f62bc65d5ca9d606eb",
+                "reference": "039406186e3eaacada3415f62bc65d5ca9d606eb",
                 "shasum": ""
             },
             "require": {
@@ -11857,14 +11860,14 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_jumpstart/tree/7.x-5.x",
+                "source": "https://github.com/SU-SWS/stanford_jumpstart/tree/7.5.5-beta6",
                 "issues": "https://github.com/SU-SWS/stanford_jumpstart/issues"
             },
-            "time": "2018-05-11T06:26:47+00:00"
+            "time": "2018-06-28T14:03:58+00:00"
         },
         {
             "name": "su-sws/stanford_jumpstart_academic",
-            "version": "dev-7.x-5.x",
+            "version": "7.5.1-alpha5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_jumpstart_academic.git",
@@ -11885,14 +11888,14 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_jumpstart_academic/tree/7.x-5.1-alpha5",
+                "source": "https://github.com/SU-SWS/stanford_jumpstart_academic/tree/7.5.1-alpha5",
                 "issues": "https://github.com/SU-SWS/stanford_jumpstart_academic/issues"
             },
             "time": "2018-04-16T19:49:23+00:00"
         },
         {
             "name": "su-sws/stanford_jumpstart_home",
-            "version": "dev-7.x-1.x",
+            "version": "7.1.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_jumpstart_home.git",
@@ -11913,23 +11916,23 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_jumpstart_home/tree/7.x-1.x",
+                "source": "https://github.com/SU-SWS/stanford_jumpstart_home/tree/7.1.8",
                 "issues": "https://github.com/SU-SWS/stanford_jumpstart_home/issues"
             },
             "time": "2018-04-16T18:21:41+00:00"
         },
         {
             "name": "su-sws/stanford_jumpstart_lab",
-            "version": "dev-7.x-5.x",
+            "version": "7.5.0-alpha3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_jumpstart_lab.git",
-                "reference": "65623549fb4afa251d8140a55391708c48b6a6ff"
+                "reference": "35e33b3788a1d7aa65301430d44f93744d9ba3a6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_jumpstart_lab/zipball/65623549fb4afa251d8140a55391708c48b6a6ff",
-                "reference": "65623549fb4afa251d8140a55391708c48b6a6ff",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_jumpstart_lab/zipball/35e33b3788a1d7aa65301430d44f93744d9ba3a6",
+                "reference": "35e33b3788a1d7aa65301430d44f93744d9ba3a6",
                 "shasum": ""
             },
             "require": {
@@ -11941,23 +11944,23 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_jumpstart_lab/tree/7.x-5.x",
+                "source": "https://github.com/SU-SWS/stanford_jumpstart_lab/tree/7.5.0-alpha3",
                 "issues": "https://github.com/SU-SWS/stanford_jumpstart_lab/issues"
             },
-            "time": "2018-02-09T18:31:07+00:00"
+            "time": "2018-06-27T20:34:15+00:00"
         },
         {
             "name": "su-sws/stanford_jumpstart_plus",
-            "version": "dev-7.x-6.x",
+            "version": "7.6.0",
             "source": {
                 "type": "git",
                 "url": "git@github.com:SU-SWS/stanford_jumpstart_plus.git",
-                "reference": "2d6b5b16562597326832d438970d54abb80c6a7f"
+                "reference": "f5c90621c7235cf39d7c039439d1680a56faf22a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_jumpstart_plus/zipball/2d6b5b16562597326832d438970d54abb80c6a7f",
-                "reference": "2d6b5b16562597326832d438970d54abb80c6a7f",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_jumpstart_plus/zipball/f5c90621c7235cf39d7c039439d1680a56faf22a",
+                "reference": "f5c90621c7235cf39d7c039439d1680a56faf22a",
                 "shasum": ""
             },
             "require": {
@@ -11969,23 +11972,23 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_jumpstart_plus/tree/7.x-6.x",
+                "source": "https://github.com/SU-SWS/stanford_jumpstart_plus/tree/7.6.0",
                 "issues": "https://github.com/SU-SWS/stanford_jumpstart_plus/issues"
             },
-            "time": "2018-03-15T21:44:36+00:00"
+            "time": "2018-06-27T20:45:35+00:00"
         },
         {
             "name": "su-sws/stanford_jumpstart_vpsa",
-            "version": "dev-7.x-4.x",
+            "version": "7.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_jumpstart_vpsa.git",
-                "reference": "946b9c07d10006d8f0597b618226dc4cfe0f3806"
+                "reference": "4dc0f5c803024b7378540ceea41a4662f194f2d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_jumpstart_vpsa/zipball/946b9c07d10006d8f0597b618226dc4cfe0f3806",
-                "reference": "946b9c07d10006d8f0597b618226dc4cfe0f3806",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_jumpstart_vpsa/zipball/4dc0f5c803024b7378540ceea41a4662f194f2d4",
+                "reference": "4dc0f5c803024b7378540ceea41a4662f194f2d4",
                 "shasum": ""
             },
             "require": {
@@ -11997,23 +12000,23 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_jumpstart_vpsa/tree/7.x-4.x",
+                "source": "https://github.com/SU-SWS/stanford_jumpstart_vpsa/tree/7.6.0",
                 "issues": "https://github.com/SU-SWS/stanford_jumpstart_vpsa/issues"
             },
-            "time": "2018-02-09T18:12:23+00:00"
+            "time": "2018-06-27T06:47:57+00:00"
         },
         {
             "name": "su-sws/stanford_landing_page",
-            "version": "dev-7.x-1.x",
+            "version": "7.1.6-beta2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_landing_page.git",
-                "reference": "610f03d5412160b3810d80cbc49047c06d380da0"
+                "reference": "717df8ae93cf1dafb9f84f4a32a784b745ac2de6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_landing_page/zipball/610f03d5412160b3810d80cbc49047c06d380da0",
-                "reference": "610f03d5412160b3810d80cbc49047c06d380da0",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_landing_page/zipball/717df8ae93cf1dafb9f84f4a32a784b745ac2de6",
+                "reference": "717df8ae93cf1dafb9f84f4a32a784b745ac2de6",
                 "shasum": ""
             },
             "require": {
@@ -12025,23 +12028,23 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_landing_page/tree/7.x-1.x",
+                "source": "https://github.com/SU-SWS/stanford_landing_page/tree/7.1.6-beta2",
                 "issues": "https://github.com/SU-SWS/stanford_landing_page/issues"
             },
-            "time": "2018-02-09T17:14:04+00:00"
+            "time": "2018-06-27T21:00:25+00:00"
         },
         {
             "name": "su-sws/stanford_light",
-            "version": "dev-master",
+            "version": "7.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_light.git",
-                "reference": "a5fdc41d95c86696854c3f313c8984dffd587fa0"
+                "reference": "7a4872945a4a09dafb39226d10fe7c74b94011f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_light/zipball/a5fdc41d95c86696854c3f313c8984dffd587fa0",
-                "reference": "a5fdc41d95c86696854c3f313c8984dffd587fa0",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_light/zipball/7a4872945a4a09dafb39226d10fe7c74b94011f5",
+                "reference": "7a4872945a4a09dafb39226d10fe7c74b94011f5",
                 "shasum": ""
             },
             "require": {
@@ -12053,23 +12056,23 @@
             ],
             "description": "A Drupal theme.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_light/tree/master",
+                "source": "https://github.com/SU-SWS/stanford_light/tree/7.1.2",
                 "issues": "https://github.com/SU-SWS/stanford_light/issues"
             },
-            "time": "2018-02-09T17:58:08+00:00"
+            "time": "2018-06-28T17:36:25+00:00"
         },
         {
             "name": "su-sws/stanford_manage_content",
-            "version": "dev-7.x-3.x-dev",
+            "version": "7.3.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_manage_content.git",
-                "reference": "5b25ffc5a9cdcd67565b120e7cced07fc91fa0da"
+                "reference": "e8668c2b40e044b9e066b3913552acb6bf644a31"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_manage_content/zipball/5b25ffc5a9cdcd67565b120e7cced07fc91fa0da",
-                "reference": "5b25ffc5a9cdcd67565b120e7cced07fc91fa0da",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_manage_content/zipball/e8668c2b40e044b9e066b3913552acb6bf644a31",
+                "reference": "e8668c2b40e044b9e066b3913552acb6bf644a31",
                 "shasum": ""
             },
             "require": {
@@ -12081,10 +12084,10 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_manage_content/tree/7.x-3.x-dev",
+                "source": "https://github.com/SU-SWS/stanford_manage_content/tree/7.3.6",
                 "issues": "https://github.com/SU-SWS/stanford_manage_content/issues"
             },
-            "time": "2018-02-16T05:20:33+00:00"
+            "time": "2018-06-27T21:49:12+00:00"
         },
         {
             "name": "su-sws/stanford_metatag_nobots",
@@ -12118,16 +12121,16 @@
         },
         {
             "name": "su-sws/stanford_news",
-            "version": "dev-7.x-3.x-dev",
+            "version": "7.3.7-alpha4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_news.git",
-                "reference": "e3f2904f5be2426d95386bc8988f8d8a52a933ad"
+                "reference": "94c55867fa8fde741c1ff2dd7c8edb25833e1d30"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_news/zipball/e3f2904f5be2426d95386bc8988f8d8a52a933ad",
-                "reference": "e3f2904f5be2426d95386bc8988f8d8a52a933ad",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_news/zipball/94c55867fa8fde741c1ff2dd7c8edb25833e1d30",
+                "reference": "94c55867fa8fde741c1ff2dd7c8edb25833e1d30",
                 "shasum": ""
             },
             "require": {
@@ -12139,23 +12142,23 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_news/tree/7.x-3.x-dev",
+                "source": "https://github.com/SU-SWS/stanford_news/tree/7.3.7-alpha4",
                 "issues": "https://github.com/SU-SWS/stanford_news/issues"
             },
-            "time": "2018-04-16T20:09:18+00:00"
+            "time": "2018-04-16T20:08:31+00:00"
         },
         {
             "name": "su-sws/stanford_page",
-            "version": "dev-7.x-2.x-dev",
+            "version": "7.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_page.git",
-                "reference": "5dd73c2ac081bb0de90cb63f0610331f40e5e91a"
+                "reference": "2bd1a0fe760c7dbce84f5d3b05fc57b8cdf67e37"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_page/zipball/5dd73c2ac081bb0de90cb63f0610331f40e5e91a",
-                "reference": "5dd73c2ac081bb0de90cb63f0610331f40e5e91a",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_page/zipball/2bd1a0fe760c7dbce84f5d3b05fc57b8cdf67e37",
+                "reference": "2bd1a0fe760c7dbce84f5d3b05fc57b8cdf67e37",
                 "shasum": ""
             },
             "require": {
@@ -12167,23 +12170,23 @@
             ],
             "description": "The basic building block page for any website.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_page/tree/7.x-2.x-dev",
+                "source": "https://github.com/SU-SWS/stanford_page/tree/7.2.2",
                 "issues": "https://github.com/SU-SWS/stanford_page/issues"
             },
-            "time": "2018-02-09T06:58:15+00:00"
+            "time": "2018-06-27T20:54:59+00:00"
         },
         {
             "name": "su-sws/stanford_paragraph_types",
-            "version": "dev-7.x-1.x",
+            "version": "7.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_paragraph_types.git",
-                "reference": "28e9dc2514f49b469eeb12f804b8ce53abb97604"
+                "reference": "091ef1e0d368f58bc6905fcb2da0a7f09449ebeb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_paragraph_types/zipball/28e9dc2514f49b469eeb12f804b8ce53abb97604",
-                "reference": "28e9dc2514f49b469eeb12f804b8ce53abb97604",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_paragraph_types/zipball/091ef1e0d368f58bc6905fcb2da0a7f09449ebeb",
+                "reference": "091ef1e0d368f58bc6905fcb2da0a7f09449ebeb",
                 "shasum": ""
             },
             "require": {
@@ -12195,23 +12198,23 @@
             ],
             "description": "A collection re-usable of paragraph types.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_paragraph_types/tree/7.x-1.x",
+                "source": "https://github.com/SU-SWS/stanford_paragraph_types/tree/7.1.4",
                 "issues": "https://github.com/SU-SWS/stanford_paragraph_types/issues"
             },
-            "time": "2018-06-20T22:21:19+00:00"
+            "time": "2018-06-27T21:54:13+00:00"
         },
         {
             "name": "su-sws/stanford_person",
-            "version": "dev-7.x-5.x-dev",
+            "version": "7.5.3-alpha2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_person.git",
-                "reference": "9b7d3bf3a5d7b9c5ecf8cbc06971fd5db45c202b"
+                "reference": "3a051d86889febe19f42c5e6ccecf74789c46705"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_person/zipball/9b7d3bf3a5d7b9c5ecf8cbc06971fd5db45c202b",
-                "reference": "9b7d3bf3a5d7b9c5ecf8cbc06971fd5db45c202b",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_person/zipball/3a051d86889febe19f42c5e6ccecf74789c46705",
+                "reference": "3a051d86889febe19f42c5e6ccecf74789c46705",
                 "shasum": ""
             },
             "require": {
@@ -12223,23 +12226,23 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_person/tree/7.x-5.x-dev",
+                "source": "https://github.com/SU-SWS/stanford_person/tree/7.5.3-alpha2",
                 "issues": "https://github.com/SU-SWS/stanford_person/issues"
             },
-            "time": "2018-02-14T04:24:40+00:00"
+            "time": "2018-06-27T22:00:19+00:00"
         },
         {
             "name": "su-sws/stanford_private_page",
-            "version": "dev-7.x-2.x",
+            "version": "7.2.0-alpha4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_private_page.git",
-                "reference": "6173fe006e47e80965f3359766090c2d7663139c"
+                "reference": "51e3a7e3cdb71cc584ab624ffebc8c86a0efa96a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_private_page/zipball/6173fe006e47e80965f3359766090c2d7663139c",
-                "reference": "6173fe006e47e80965f3359766090c2d7663139c",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_private_page/zipball/51e3a7e3cdb71cc584ab624ffebc8c86a0efa96a",
+                "reference": "51e3a7e3cdb71cc584ab624ffebc8c86a0efa96a",
                 "shasum": ""
             },
             "require": {
@@ -12251,23 +12254,23 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_private_page/tree/7.x-2.x",
+                "source": "https://github.com/SU-SWS/stanford_private_page/tree/7.2.0-alpha4",
                 "issues": "https://github.com/SU-SWS/stanford_private_page/issues"
             },
-            "time": "2018-03-02T18:31:53+00:00"
+            "time": "2018-06-27T22:30:25+00:00"
         },
         {
             "name": "su-sws/stanford_publication",
-            "version": "dev-7.x-2.x-dev",
+            "version": "7.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_publication.git",
-                "reference": "5ae3e91f693eab5c888c15f6e63a202265dfadd3"
+                "reference": "1ce746a2e333c3675904811ddfa6d86e30faef56"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_publication/zipball/5ae3e91f693eab5c888c15f6e63a202265dfadd3",
-                "reference": "5ae3e91f693eab5c888c15f6e63a202265dfadd3",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_publication/zipball/1ce746a2e333c3675904811ddfa6d86e30faef56",
+                "reference": "1ce746a2e333c3675904811ddfa6d86e30faef56",
                 "shasum": ""
             },
             "require": {
@@ -12279,23 +12282,23 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_publication/tree/7.x-2.x-dev",
+                "source": "https://github.com/SU-SWS/stanford_publication/tree/7.2.3",
                 "issues": "https://github.com/SU-SWS/stanford_publication/issues"
             },
-            "time": "2018-02-14T05:13:51+00:00"
+            "time": "2018-06-27T22:13:20+00:00"
         },
         {
             "name": "su-sws/stanford_related_content",
-            "version": "dev-7.x-1.x",
+            "version": "7.1.1-alpha1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_related_content.git",
-                "reference": "af69479a8b04e950d1e1be4cd5bce9ce2fb52da3"
+                "reference": "df327a4e3234e435a08c0932f048026f5d280717"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_related_content/zipball/af69479a8b04e950d1e1be4cd5bce9ce2fb52da3",
-                "reference": "af69479a8b04e950d1e1be4cd5bce9ce2fb52da3",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_related_content/zipball/df327a4e3234e435a08c0932f048026f5d280717",
+                "reference": "df327a4e3234e435a08c0932f048026f5d280717",
                 "shasum": ""
             },
             "require": {
@@ -12307,23 +12310,23 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_related_content/tree/7.x-1.x",
+                "source": "https://github.com/SU-SWS/stanford_related_content/tree/7.1.1-alpha1",
                 "issues": "https://github.com/SU-SWS/stanford_related_content/issues"
             },
-            "time": "2018-02-14T05:31:06+00:00"
+            "time": "2018-06-27T22:21:06+00:00"
         },
         {
             "name": "su-sws/stanford_seven",
-            "version": "dev-7.x-1.x",
+            "version": "7.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_seven.git",
-                "reference": "53822c8a410c6e1ff5c4890021758954140cc862"
+                "reference": "1be17a2ad26628b6e623976934c5b5f7d74d53b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_seven/zipball/53822c8a410c6e1ff5c4890021758954140cc862",
-                "reference": "53822c8a410c6e1ff5c4890021758954140cc862",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_seven/zipball/1be17a2ad26628b6e623976934c5b5f7d74d53b0",
+                "reference": "1be17a2ad26628b6e623976934c5b5f7d74d53b0",
                 "shasum": ""
             },
             "require": {
@@ -12335,23 +12338,23 @@
             ],
             "description": "A Drupal Admin Theme.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_seven/tree/7.x-1.x",
+                "source": "https://github.com/SU-SWS/stanford_seven/tree/7.1.3",
                 "issues": "https://github.com/SU-SWS/stanford_seven/issues"
             },
-            "time": "2018-06-20T17:03:23+00:00"
+            "time": "2018-06-28T17:30:05+00:00"
         },
         {
             "name": "su-sws/stanford_sites_content_importer",
-            "version": "dev-7.x-2.x",
+            "version": "7.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_sites_content_importer.git",
-                "reference": "3fb2504c9b9d2615d8a3319a567c092b757b373d"
+                "reference": "d85ed6f98e8d714878391bf8769473bd27aa1343"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_sites_content_importer/zipball/3fb2504c9b9d2615d8a3319a567c092b757b373d",
-                "reference": "3fb2504c9b9d2615d8a3319a567c092b757b373d",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_sites_content_importer/zipball/d85ed6f98e8d714878391bf8769473bd27aa1343",
+                "reference": "d85ed6f98e8d714878391bf8769473bd27aa1343",
                 "shasum": ""
             },
             "require": {
@@ -12363,23 +12366,23 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_sites_content_importer/tree/7.x-2.x",
+                "source": "https://github.com/SU-SWS/stanford_sites_content_importer/tree/7.2.1",
                 "issues": "https://github.com/SU-SWS/stanford_sites_content_importer/issues"
             },
-            "time": "2018-02-09T07:20:10+00:00"
+            "time": "2018-06-28T17:47:44+00:00"
         },
         {
             "name": "su-sws/stanford_sites_helper",
-            "version": "dev-7.x-2.x",
+            "version": "7.1.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_sites_helper.git",
-                "reference": "b40a43faa6733a577026d97dc89fec2e73bde57b"
+                "reference": "d6174b875fb2465c3fb1285a8128c6ef386cc46c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_sites_helper/zipball/b40a43faa6733a577026d97dc89fec2e73bde57b",
-                "reference": "b40a43faa6733a577026d97dc89fec2e73bde57b",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_sites_helper/zipball/d6174b875fb2465c3fb1285a8128c6ef386cc46c",
+                "reference": "d6174b875fb2465c3fb1285a8128c6ef386cc46c",
                 "shasum": ""
             },
             "require": {
@@ -12391,23 +12394,23 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_sites_helper/tree/7.x-1.x",
+                "source": "https://github.com/SU-SWS/stanford_sites_helper/tree/7.1.8",
                 "issues": "https://github.com/SU-SWS/stanford_sites_helper/issues"
             },
-            "time": "2018-02-09T18:10:52+00:00"
+            "time": "2018-06-29T15:20:53+00:00"
         },
         {
             "name": "su-sws/stanford_slides",
-            "version": "dev-7.x-3.x-dev",
+            "version": "7.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_slides.git",
-                "reference": "6e7067c1493949f72560abb3ee4e5d41404657fd"
+                "reference": "edc8d717095de0f7aed61e79451189671fa7f597"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_slides/zipball/6e7067c1493949f72560abb3ee4e5d41404657fd",
-                "reference": "6e7067c1493949f72560abb3ee4e5d41404657fd",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_slides/zipball/edc8d717095de0f7aed61e79451189671fa7f597",
+                "reference": "edc8d717095de0f7aed61e79451189671fa7f597",
                 "shasum": ""
             },
             "require": {
@@ -12419,10 +12422,10 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_slides/tree/7.x-3.x-dev",
+                "source": "https://github.com/SU-SWS/stanford_slides/tree/7.3.2",
                 "issues": "https://github.com/SU-SWS/stanford_slides/issues"
             },
-            "time": "2018-02-12T23:24:04+00:00"
+            "time": "2018-06-27T23:08:40+00:00"
         },
         {
             "name": "su-sws/stanford_ssp",
@@ -12430,12 +12433,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_ssp.git",
-                "reference": "b827d6cee6671696aed98f48a9403c1183f6d702"
+                "reference": "3d1050f15f765500c240efe24c1d55e7cd3f31f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_ssp/zipball/b827d6cee6671696aed98f48a9403c1183f6d702",
-                "reference": "b827d6cee6671696aed98f48a9403c1183f6d702",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_ssp/zipball/3d1050f15f765500c240efe24c1d55e7cd3f31f4",
+                "reference": "3d1050f15f765500c240efe24c1d55e7cd3f31f4",
                 "shasum": ""
             },
             "require": {
@@ -12450,20 +12453,20 @@
                 "source": "https://github.com/SU-SWS/stanford_ssp/tree/7.x-2.x",
                 "issues": "https://github.com/SU-SWS/stanford_ssp/issues"
             },
-            "time": "2018-06-20T01:31:13+00:00"
+            "time": "2018-06-28 16:38:36"
         },
         {
             "name": "su-sws/stanford_story_page",
-            "version": "dev-7.x-1.x",
+            "version": "7.1.3-alpha1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_story_page.git",
-                "reference": "0fe38ae270bffaa7d58cc1cb7fb3a7b0cadd3494"
+                "reference": "39ca14719b695adcdf8c8e45614aaa65a7cd1758"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_story_page/zipball/0fe38ae270bffaa7d58cc1cb7fb3a7b0cadd3494",
-                "reference": "0fe38ae270bffaa7d58cc1cb7fb3a7b0cadd3494",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_story_page/zipball/39ca14719b695adcdf8c8e45614aaa65a7cd1758",
+                "reference": "39ca14719b695adcdf8c8e45614aaa65a7cd1758",
                 "shasum": ""
             },
             "require": {
@@ -12475,23 +12478,23 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_story_page/tree/7.x-1.x",
+                "source": "https://github.com/SU-SWS/stanford_story_page/tree/7.1.3-alpha1",
                 "issues": "https://github.com/SU-SWS/stanford_story_page/issues"
             },
-            "time": "2018-06-20T22:25:43+00:00"
+            "time": "2018-06-28T13:48:57+00:00"
         },
         {
             "name": "su-sws/stanford_subsites",
-            "version": "dev-7.x-2.x",
+            "version": "7.3.1-alpha1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_subsites.git",
-                "reference": "2de08e640792dd38f095919fc3fc65c7ca276d03"
+                "reference": "af7b5d0b2b75208e7104c0c4836d1c1a4718a1f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_subsites/zipball/2de08e640792dd38f095919fc3fc65c7ca276d03",
-                "reference": "2de08e640792dd38f095919fc3fc65c7ca276d03",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_subsites/zipball/af7b5d0b2b75208e7104c0c4836d1c1a4718a1f0",
+                "reference": "af7b5d0b2b75208e7104c0c4836d1c1a4718a1f0",
                 "shasum": ""
             },
             "require": {
@@ -12503,23 +12506,23 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_subsites/tree/7.x-2.x",
+                "source": "https://github.com/SU-SWS/stanford_subsites/tree/7.3.1-alpha1",
                 "issues": "https://github.com/SU-SWS/stanford_subsites/issues"
             },
-            "time": "2018-05-24T23:37:39+00:00"
+            "time": "2018-06-27T23:27:35+00:00"
         },
         {
             "name": "su-sws/stanford_video",
-            "version": "dev-7.x-3.x",
+            "version": "7.3.0-alpha1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_video.git",
-                "reference": "4cd63d7b47cc3b47f12d6aa23384668f7f06337f"
+                "reference": "1e27275cabd5bd228c68ae871072c92d78f960a1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_video/zipball/4cd63d7b47cc3b47f12d6aa23384668f7f06337f",
-                "reference": "4cd63d7b47cc3b47f12d6aa23384668f7f06337f",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_video/zipball/1e27275cabd5bd228c68ae871072c92d78f960a1",
+                "reference": "1e27275cabd5bd228c68ae871072c92d78f960a1",
                 "shasum": ""
             },
             "require": {
@@ -12531,23 +12534,23 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_video/tree/7.x-3.x",
+                "source": "https://github.com/SU-SWS/stanford_video/tree/7.3.0-alpha1",
                 "issues": "https://github.com/SU-SWS/stanford_video/issues"
             },
-            "time": "2018-03-16T23:55:51+00:00"
+            "time": "2018-06-28T20:16:25+00:00"
         },
         {
             "name": "su-sws/stanford_wilbur",
-            "version": "dev-7.x-3.x",
+            "version": "7.3.1",
             "source": {
                 "type": "git",
                 "url": "git@github.com:SU-SWS/stanford_wilbur.git",
-                "reference": "cb237558a9e506913a06551b6f46e86c70d23d46"
+                "reference": "1447ac8b825c5b968dfbcff9812a46557392bfa3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_wilbur/zipball/cb237558a9e506913a06551b6f46e86c70d23d46",
-                "reference": "cb237558a9e506913a06551b6f46e86c70d23d46",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_wilbur/zipball/1447ac8b825c5b968dfbcff9812a46557392bfa3",
+                "reference": "1447ac8b825c5b968dfbcff9812a46557392bfa3",
                 "shasum": ""
             },
             "require": {
@@ -12559,23 +12562,23 @@
             ],
             "description": "A Drupal Theme.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_wilbur/tree/7.x-3.x",
+                "source": "https://github.com/SU-SWS/stanford_wilbur/tree/7.3.1",
                 "issues": "https://github.com/SU-SWS/stanford_wilbur/issues"
             },
-            "time": "2018-02-09T18:01:01+00:00"
+            "time": "2018-06-28T20:12:01+00:00"
         },
         {
             "name": "su-sws/stanford_wysiwyg",
-            "version": "dev-7.x-2.x-dev",
+            "version": "7.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_wysiwyg.git",
-                "reference": "82990982feb37282d8a20ab0a10e75ecd123f611"
+                "reference": "57adcbf8aa04e7fda49388fd573e3a230c23759c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_wysiwyg/zipball/82990982feb37282d8a20ab0a10e75ecd123f611",
-                "reference": "82990982feb37282d8a20ab0a10e75ecd123f611",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_wysiwyg/zipball/57adcbf8aa04e7fda49388fd573e3a230c23759c",
+                "reference": "57adcbf8aa04e7fda49388fd573e3a230c23759c",
                 "shasum": ""
             },
             "require": {
@@ -12587,10 +12590,10 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_wysiwyg/tree/7.x-2.x-dev",
+                "source": "https://github.com/SU-SWS/stanford_wysiwyg/tree/7.2.5",
                 "issues": "https://github.com/SU-SWS/stanford_wysiwyg/issues"
             },
-            "time": "2018-02-09T18:15:46+00:00"
+            "time": "2018-06-27T15:36:34+00:00"
         },
         {
             "name": "symfony/polyfill-apcu",
@@ -14450,16 +14453,16 @@
         },
         {
             "name": "fabpot/goutte",
-            "version": "v3.2.2",
+            "version": "v3.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfPHP/Goutte.git",
-                "reference": "395f61d7c2e15a813839769553a4de16fa3b3c96"
+                "reference": "3f0eaf0a40181359470651f1565b3e07e3dd31b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfPHP/Goutte/zipball/395f61d7c2e15a813839769553a4de16fa3b3c96",
-                "reference": "395f61d7c2e15a813839769553a4de16fa3b3c96",
+                "url": "https://api.github.com/repos/FriendsOfPHP/Goutte/zipball/3f0eaf0a40181359470651f1565b3e07e3dd31b8",
+                "reference": "3f0eaf0a40181359470651f1565b3e07e3dd31b8",
                 "shasum": ""
             },
             "require": {
@@ -14501,7 +14504,7 @@
             "keywords": [
                 "scraper"
             ],
-            "time": "2017-11-19T08:45:40+00:00"
+            "time": "2018-06-29T15:13:57+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -14848,12 +14851,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/linky_clicky.git",
-                "reference": "1e147300bb9c7169b8f9ab1b60609048599bf17f"
+                "reference": "1fa38f52a6ac78de555ef3745fa681e9f852dd8b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/linky_clicky/zipball/1e147300bb9c7169b8f9ab1b60609048599bf17f",
-                "reference": "1e147300bb9c7169b8f9ab1b60609048599bf17f",
+                "url": "https://api.github.com/repos/SU-SWS/linky_clicky/zipball/1fa38f52a6ac78de555ef3745fa681e9f852dd8b",
+                "reference": "1fa38f52a6ac78de555ef3745fa681e9f852dd8b",
                 "shasum": ""
             },
             "require": {
@@ -14886,7 +14889,7 @@
                 "source": "https://github.com/SU-SWS/linky_clicky/tree/5.x",
                 "issues": "https://github.com/SU-SWS/linky_clicky/issues"
             },
-            "time": "2018-06-15T18:04:45+00:00"
+            "time": "2018-06-28T00:21:45+00:00"
         },
         {
             "name": "weavora/mink-extra-context",
@@ -14922,81 +14925,46 @@
                 "Mink",
                 "feature"
             ],
-            "time": "2014-01-13T15:50:49+00:00"
+            "time": "2014-01-13 15:50:49"
         }
     ],
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "davidbarratt/custom-installer": 15,
         "omega8cc/drush-registry-rebuild": 20,
         "drupal/paranoia": 20,
+        "drupal/node_revision_delete": 15,
         "su-sws/stanford_ssp": 20,
         "stanford/wmd": 20,
         "stanford/webauth_extras": 20,
-        "su-sws/su-it-services": 20,
         "su-sws/linky_clicky": 20,
         "drupal/always_visible": 20,
         "drupal/context_list": 20,
         "drupal/context_useragent": 20,
         "drupal/css_injector": 20,
-        "drupal/stanford_date_timepicker": 20,
         "drupal/diff": 20,
         "drupal/filefield_paths": 20,
         "drupal/auto_nodetitle": 20,
         "drupal/token_tweaks": 20,
-        "su-sws/stanford_install_tasks": 20,
-        "su-sws/stanford_sites_content_importer": 20,
-        "su-sws/erus": 20,
-        "su-sws/stanford_affiliate_organization": 20,
-        "su-sws/stanford_alt_check": 20,
-        "su-sws/stanford_capx": 20,
-        "su-sws/stanford_carousel": 20,
-        "su-sws/stanford_courses": 20,
-        "su-sws/stanford_date_formats": 20,
-        "su-sws/stanford_easy_wysiwyg_css": 20,
-        "su-sws/stanford_events_importer": 20,
-        "su-sws/stanford_event_series": 20,
-        "su-sws/stanford_feeds_helper": 20,
-        "su-sws/stanford_field_formatters": 20,
-        "su-sws/stanford_gallery": 20,
-        "su-sws/stanford_help": 20,
-        "su-sws/stanford_helper": 20,
-        "su-sws/stanford_image": 20,
-        "su-sws/stanford_image_styles": 20,
-        "su-sws/stanford_jumpstart": 20,
-        "su-sws/stanford_jumpstart_academic": 20,
-        "su-sws/stanford_landing_page": 20,
-        "su-sws/stanford_manage_content": 20,
-        "su-sws/stanford_news": 20,
-        "su-sws/stanford_page": 20,
-        "su-sws/stanford_person": 20,
-        "su-sws/stanford_private_page": 20,
-        "su-sws/stanford_publication": 20,
-        "su-sws/stanford_related_content": 20,
-        "su-sws/stanford_slides": 20,
-        "su-sws/stanford_wysiwyg": 20,
+        "su-sws/erus": 15,
+        "su-sws/stanford_capx": 10,
+        "su-sws/stanford_carousel": 15,
+        "su-sws/stanford_image_styles": 15,
+        "su-sws/stanford_jumpstart": 10,
+        "su-sws/stanford_jumpstart_academic": 15,
+        "su-sws/stanford_landing_page": 10,
+        "su-sws/stanford_news": 15,
+        "su-sws/stanford_person": 15,
+        "su-sws/stanford_private_page": 15,
+        "su-sws/stanford_related_content": 15,
         "su-soe/stanford_jumpstart_engineering": 20,
-        "su-sws/open_framework": 20,
-        "su-sws/stanford_seven": 20,
-        "su-sws/stanford_framework": 20,
-        "su-sws/stanford_bean_types": 20,
-        "su-sws/stanford_jumpstart_home": 20,
-        "su-sws/stanford_fwb": 20,
-        "su-sws/stanford_story_page": 20,
-        "su-sws/stanford_paragraph_types": 20,
-        "su-sws/stanford_jordan": 20,
-        "su-sws/stanford_wilbur": 20,
-        "su-sws/stanford_jumpstart_plus": 20,
+        "su-sws/stanford_story_page": 15,
         "su-sws/stanford_metatag_nobots": 20,
-        "su-sws/stanford_faq": 20,
-        "su-sws/stanford_jumpstart_vpsa": 20,
-        "su-sws/stanford_fellowship": 20,
-        "su-sws/stanford_subsites": 20,
-        "su-sws/stanford_conference": 20,
-        "su-sws/stanford_video": 20,
-        "su-sws/stanford_jumpstart_lab": 20,
-        "su-sws/stanford_sites_helper": 20,
-        "su-sws/stanford_light": 20
+        "su-sws/stanford_subsites": 15,
+        "su-sws/stanford_conference": 15,
+        "su-sws/stanford_video": 15,
+        "su-sws/stanford_jumpstart_lab": 15
     },
     "prefer-stable": true,
     "prefer-lowest": false,

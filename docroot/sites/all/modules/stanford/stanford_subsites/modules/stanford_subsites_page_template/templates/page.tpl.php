@@ -1,4 +1,4 @@
-<div id="wrap" <?php if ($site_title_position_classes): ?>class="<?php print $site_title_position_classes; ?>"<?php endif; ?>> <a href="#main" class="element-invisible element-focusable"><?php print t('Skip to content'); ?></a>
+<div id="wrap" <?php if (!empty($site_title_position_classes)): ?>class="<?php print $site_title_position_classes; ?>"<?php endif; ?>> <a href="#main" class="element-invisible element-focusable"><?php print t('Skip to content'); ?></a>
   <?php if ($main_menu): ?>
   <a href="#main-nav" class="element-invisible element-focusable"><?php print t('Skip to navigation'); ?></a>
   <?php endif; ?>
@@ -11,7 +11,7 @@
     <div class="container">
       <div class="row-fluid">
         <div id="top-logo" class="span4"><a href="http://www.stanford.edu"><img src="<?php print base_path() . path_to_theme(); ?>/images/header-stanford-logo@2x.png" alt="Stanford University"></a></div>
-        <?php if ($page['global_header']): ?>
+        <?php if (!empty($page['global_header'])): ?>
         <div id="top-menu" class="span8"><?php print render($page['global_header']); ?></div>
         <?php endif; ?>
       </div>
@@ -23,13 +23,13 @@
       <div class="row">
         <div class="<?php if ($page['search_box']): print 'span9'; else: print 'span12'; endif; ?>">
           <?php if ($logo): ?>
-          <div id="logo" class="<?php if ($logo_image_style_classes): ?><?php print $logo_image_style_classes; ?><?php endif; ?> <?php if (!($site_name || $site_slogan)): ?>site-logo<?php endif; ?>"> <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"> <img src="<?php print $logo; ?>" alt="<?php if ($logo = theme_get_setting('logo_path')) { print $my_site_title; } else { print t('Stanford'); } ?>" role="presentation"> </a></div>
+          <div id="logo" class="<?php if (!empty($logo_image_style_classes)): ?><?php print $logo_image_style_classes; ?><?php endif; ?> <?php if (!($site_name || $site_slogan)): ?>site-logo<?php endif; ?>"> <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"> <img src="<?php print $logo; ?>" alt="<?php if ($logo = theme_get_setting('logo_path')) { print $my_site_title; } else { print t('Stanford'); } ?>" role="presentation"> </a></div>
           <?php endif; ?>
           <!-- /#logo -->
           <?php if ($site_name || $site_slogan): ?>
           <div id="name-and-slogan"  class="<?php if (isset($logo)) { print ('with-logo'); } ?><?php if ($site_title_second_line || $site_slogan) { print (' two-lines'); } ?>">
 
-            <?php if (($site_name) && !($site_title_first_line)): ?>
+            <?php if ($site_name && empty($site_title_first_line)): ?>
               <?php if ($subsite_name_logo_setting == "split") : ?>
               <div id="site-name" class="site-name"><a href="<?php print $subsite_front_page; ?>" title="<?php print t($subsite_site_name_text); ?>" rel="<?php print check_plain($subsite_site_name_text); ?>"><?php print $site_name; ?></a></div>
               <?php else: ?>
@@ -39,17 +39,17 @@
 
             <?php if ($site_title_first_line): ?>
               <?php if ($subsite_name_logo_setting == "split") : ?>
-                <div id="site-title-first-line" <?php if ($site_title_style_classes): ?>class="<?php print $site_title_style_classes; ?>"<?php endif; ?>><a href="<?php print $subsite_front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><?php print $site_title_first_line; ?></a></div>
+                <div id="site-title-first-line" <?php if (!empty($site_title_style_classes)): ?>class="<?php print $site_title_style_classes; ?>"<?php endif; ?>><a href="<?php print $subsite_front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><?php print $site_title_first_line; ?></a></div>
                 <?php else: ?>
-                <div id="site-title-first-line" <?php if ($site_title_style_classes): ?>class="<?php print $site_title_style_classes; ?>"<?php endif; ?>><a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><?php print $site_title_first_line; ?></a></div>
+                <div id="site-title-first-line" <?php if (!empty($site_title_style_classes)): ?>class="<?php print $site_title_style_classes; ?>"<?php endif; ?>><a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><?php print $site_title_first_line; ?></a></div>
               <?php endif; ?>
             <?php endif; ?>
 
-            <?php if ($site_title_second_line && !($site_title_position_classes)): ?>
+            <?php if ($site_title_second_line && empty($site_title_position_classes)): ?>
               <?php if ($subsite_name_logo_setting == "split") : ?>
-                <div id="site-title-second-line" <?php if ($site_title_position_classes): ?>class="<?php print $site_title_position_classes; ?>"<?php endif; ?>><a href="<?php print $subsite_front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><?php print $site_title_second_line; ?></a></div>
+                <div id="site-title-second-line" <?php if (!empty($site_title_position_classes)): ?>class="<?php print $site_title_position_classes; ?>"<?php endif; ?>><a href="<?php print $subsite_front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><?php print $site_title_second_line; ?></a></div>
                 <?php else: ?>
-                <div id="site-title-second-line" <?php if ($site_title_position_classes): ?>class="<?php print $site_title_position_classes; ?>"<?php endif; ?>><a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><?php print $site_title_second_line; ?></a></div>
+                <div id="site-title-second-line" <?php if (!empty($site_title_position_classes)): ?>class="<?php print $site_title_position_classes; ?>"<?php endif; ?>><a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><?php print $site_title_second_line; ?></a></div>
               <?php endif; ?>
             <?php endif; ?>
 
@@ -57,11 +57,11 @@
                 <div id="site-slogan" class="site-slogan"><?php print $site_slogan; ?></div>
             <?php endif; ?>
           </div>
-          <?php if ($site_title_second_line && $site_title_position_classes): ?>
+          <?php if ($site_title_second_line && !empty($site_title_position_classes)): ?>
             <?php if ($subsite_name_logo_setting == "split") : ?>
-              <div id="site-title-second-line" <?php if ($site_title_position_classes): ?>class="<?php print $site_title_position_classes; ?>"<?php endif; ?>><a href="<?php print $subsite_front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><?php print $site_title_second_line; ?></a></div>
+              <div id="site-title-second-line" <?php if (!empty($site_title_position_classes)): ?>class="<?php print $site_title_position_classes; ?>"<?php endif; ?>><a href="<?php print $subsite_front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><?php print $site_title_second_line; ?></a></div>
             <?php else: ?>
-              <div id="site-title-second-line" <?php if ($site_title_position_classes): ?>class="<?php print $site_title_position_classes; ?>"<?php endif; ?>><a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><?php print $site_title_second_line; ?></a></div>
+              <div id="site-title-second-line" <?php if (!empty($site_title_position_classes)): ?>class="<?php print $site_title_position_classes; ?>"<?php endif; ?>><a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><?php print $site_title_second_line; ?></a></div>
             <?php endif; ?>
           <?php endif; ?>
           <?php endif; ?>
@@ -117,7 +117,7 @@
   </div>
   <!-- /#main-menu -->
   <?php endif; ?>
-  <?php if ($page['fullwidth_top']): ?>
+  <?php if (!empty($page['fullwidth_top'])): ?>
     <div id="fullwidth-top" class="row-fluid fullwidth">
       <div class="container"><?php print render($page['fullwidth_top']); ?></div>
     </div>
@@ -271,7 +271,7 @@
     </div>
   </div>
   <!-- /#main, /#main-wrapper -->
-  <?php if ($page['fullwidth_bottom']): ?>
+  <?php if (!empty($page['fullwidth_bottom'])): ?>
     <div id="fullwidth-bottom" class="row-fluid fullwidth">
       <div class="container"><?php print render($page['fullwidth_bottom']); ?></div>
     </div>

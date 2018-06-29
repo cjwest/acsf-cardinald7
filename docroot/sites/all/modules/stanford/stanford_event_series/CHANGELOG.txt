@@ -1,6 +1,11 @@
 Stanford Event Series x.x-x.x xxxx-xx-xx
 --------------------------------------
 
+7.x-1.2                              2018-06-26
+-----------------------------------------------
+- Added codeclimate.yml
+- Added composer.json
+
 7.x-1.1                              2015-10-19
 -----------------------------------------------
 - Update documentation

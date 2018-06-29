@@ -2,7 +2,7 @@ name = Stanford Jordan
 base theme = stanford_framework
 description = Use of the Stanford-branded themes is limited to Stanford University academic departments, centers, research groups, and administrative units. If your website is for a student group, please use the Stanford Light theme. Sophistocated, scholarly, elegant subtheme of Stanford Framework, recommended for department and official group sites. Requires Stanford Framework and <a href="http://openframework.stanford.edu">Open Framework</a> to be enabled. Provided by <a href="http://webservices.stanford.edu">Stanford Web Services</a>. Learn more at the <a href="http://drupalthemes.stanford.edu">Drupal Themes website</a>.
 core = 7.x
-version = 7.x-3.0
+version = 7.x-3.1
 project = stanford_jordan
 project status url = https://github.com/SU-SWS/stanford_jordan
 

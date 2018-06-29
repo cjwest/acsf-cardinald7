@@ -1,5 +1,9 @@
 Stanford Full Width Banner
 
+Version 7.x-1.2                                                       2018-06-26
+--------------------------------------------------------------------------------
+- Added composer.json
+
 Version 7.x-1.1                                                       2017-09-05
 --------------------------------------------------------------------------------
 - Renamed views to eliminate poor word choice.

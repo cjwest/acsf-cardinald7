@@ -1,5 +1,5 @@
 #[Stanford Event Series](https://github.com/SU-SWS/stanford_image)
-##### Version: 7.x-1.x
+##### Version: 7.x-1.2
 
 Maintainers: [cjwest](https://github.com/cjwest)
 
@@ -15,7 +15,7 @@ Sub Modules
 This feature module contains a view for the stanford_manage feature. It provides a bulk operation view where content authors can make changes to multiple event series in one task.
 
 **[Stanford Event Series Context](modules/stanford_event_series_context)**
-This feature module contains a context for event series. It provides a context for placing blocks on event series nodes. 
+This feature module contains a context for event series. It provides a context for placing blocks on event series nodes.
 
 **[Stanford Event Series List View](modules/stanford_event_series_list_view)**
 This feature module contains a view for listing event series.
@@ -45,4 +45,3 @@ Contribution / Collaboration
 ---
 
 You are welcome to contribute functionality, bug fixes, or documentation to this module. If you would like to suggest a fix or new functionality you may add a new issue to the GitHub issue queue or you may fork this repository and submit a pull request. For more help please see [GitHub's article on fork, branch, and pull requests](https://help.github.com/articles/using-pull-requests)
-

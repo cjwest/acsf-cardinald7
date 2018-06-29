@@ -1,5 +1,5 @@
 #[Stanford Affiliate Organization](https://github.com/SU-SWS/stanford_affiliate_organization)
-##### Version: 7.x-1.1
+##### Version: 7.x-1.2
 
 Basic content type for affiliate organization.
 

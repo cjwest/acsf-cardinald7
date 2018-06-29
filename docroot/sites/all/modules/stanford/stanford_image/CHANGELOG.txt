@@ -1,6 +1,15 @@
 Stanford Image x.x-x.x xxxx-xx-xx
 --------------------------------------
 
+7.x-3.6                 2018-06-26
+----------------------------------
+- Added composer.json
+- Updated codeclimate.yml
+- Added travis.yml
+- Added header370x170 option
+- Added full_width_banner_tall_caption option
+- Added stanford_fw_banner_tall_caption option
+
 7.x-3.5+10-dev          2016-01-20
 ---------------------------------
 - Changed max_resolution to 3200x3200 for image field collection

@@ -47,14 +47,16 @@ class views_plugin_argument_default_subsite extends views_plugin_argument_defaul
     ob_start();
     $subsite = stanford_subsites_get_active_subsite();
 
-    if (isset($subsite->nid)) {
-      $result = $subsite->nid;
+    if (!$subsite) {
+      return 0;
     }
-    else {
-      $result = 0;
+
+    $index = stanford_subsite_index_get("nid", $subsite->nid);
+    if (!isset($index->tid)) {
+      return 0;
     }
 
     ob_end_clean();
-    return $result;
+    return $index->tid;
   }
 }

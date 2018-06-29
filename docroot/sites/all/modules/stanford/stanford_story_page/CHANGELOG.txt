@@ -1,5 +1,11 @@
 Stanford Story Page
 --------------------------------
+
+7.x-1.3-alpha1       2018-06-27
+-------------------------------
+- Changed default image
+- Added mobile css tweaks
+
 7.x-1.2              2018-04-16
 -------------------------------
 - some css fixes
@@ -7,8 +13,7 @@ Stanford Story Page
 
 7.x-1.1              2017-08-16
 -------------------------------
-- HSDO-970: Removed the page template in favor of context and css to make the
-paragraphs edge to edge.
+- HSDO-970: Removed the page template in favor of context and css to make the paragraphs edge to edge.
 - HSDO-950 Added section header as part of the homepage template.
 
 

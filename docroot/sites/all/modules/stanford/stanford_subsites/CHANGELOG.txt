@@ -1,6 +1,23 @@
 Stanford Subsites x.x-x.x xxxx-xx-xx
 ------------------------------------
 
+Stanford Subsites 7.x-3.1-alpha1 2018-06-27
+------------------------------------------
+- Fix menu_name lookup bug
+- Add new key to db table
+- Changed active subsite contextual arguments to use taxonomy term instead of node id
+- Add Code Climate integration
+- Add static caching to stanford_subsites_get_subsite_paths for performance
+- Updated the pathauto alias update on subsite form submit so it doesn't run on EVERY node
+- Fix php notice errors
+- Update page.tpl.php for GDPR
+- Add composer.json
+
+Stanford Subsites 7.x-3.0 2016-03-03
+------------------------------------------
+* Added menu_block as a dependency.
+* Fixed bug where wrong theme is loaded initially. BASIC-1711
+
 Stanford Subsites 7.x-2.1 2015-10-30
 ------------------------------------------
 * Changed menu_block delete function to match change in menu_block module

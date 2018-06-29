@@ -10,7 +10,6 @@
  * This module provides helper functionality to the Stanford Subsites
  * feature.
  *
- *
  * @todo :::::::::::::::::::::::::::::::::::::::::::::::::::::::::
  *  remove all 'Features' and have this whole thing as one module using
  *  field api.
@@ -50,9 +49,10 @@ module_load_include('inc', 'stanford_subsites', 'stanford_subsites');
  * Implements hook_help().
  *
  * @param string $path
- *   path to help page
+ *   Path to help page.
+ *
  * @param array $arg
- *   args
+ *   Args.
  *
  * @return html
  *   html output
@@ -175,8 +175,8 @@ function stanford_subsites_preprocess_html(&$vars, $hook) {
     if (isset($subsite_node->{SUBSITE_NAME_FIELD}[LANGUAGE_NONE][0]["safe_value"])) {
       $full_name .= $subsite_node->{SUBSITE_NAME_FIELD}[LANGUAGE_NONE][0]["safe_value"];
     }
-    if (isset($subsite_node->field_stanford_subsite_2nd_line[LANGUAGE_NONE][0]["safe_value"])) {
-      $full_name .= " " . $subsite_node->field_stanford_subsite_2nd_line[LANGUAGE_NONE][0]["safe_value"];
+    if (isset($subsite_node->{SUBSITE_2NDNAME_FIELD}[LANGUAGE_NONE][0]["safe_value"])) {
+      $full_name .= " " . $subsite_node->{SUBSITE_2NDNAME_FIELD}[LANGUAGE_NONE][0]["safe_value"];
     }
 
     $full_name = strtolower(html_entity_decode($full_name));
@@ -224,7 +224,7 @@ function stanford_subsites_preprocess_page(&$vars) {
   // Apply the subsite.
   $subsite_node = stanford_subsites_get_active_subsite();
 
-  if ($subsite_node) {
+  if (isset($subsite_node->nid)) {
     stanford_subsites_apply_subsite($subsite_node, $vars);
   }
   else {
@@ -280,7 +280,7 @@ function stanford_subsites_apply_subsite($node, &$vars) {
     $vars['site_title_second_line'] = $node->field_stanford_subsite_2nd_line[LANGUAGE_NONE][0]["safe_value"];
   }
 
-  // Create new $logo_title and $alt variables for use in the page.tpl.php
+  // Create new $logo_title and $alt variables for use in the page.tpl.php.
   $vars['alt'] = $vars['site_name'];
   $vars['logo_title'] = $vars['site_name'];
 
@@ -302,13 +302,13 @@ function stanford_subsites_apply_subsite($node, &$vars) {
     }
   }
 
-  // Setup subsite logo and title vars
+  // Setup subsite logo and title vars.
   // ///////////////////////////////////////////////////////////////////////////
 
   // Handle the linkage to the subsite logo and title.
   if (isset($node->{SUBSITE_FRONT_PAGE_FIELD}[LANGUAGE_NONE][0]["value"])) {
 
-    // Set the link setting as a variable for page.tpl.php
+    // Set the link setting as a variable for page.tpl.php.
     $vars['subsite_front_page'] = $node->{SUBSITE_FRONT_PAGE_FIELD}[LANGUAGE_NONE][0]["value"];
     $vars['subsite_name_logo_setting'] = $node->{SUBSITE_FRONT_PAGE_FIELD}[LANGUAGE_NONE][0]["value"];
 
@@ -330,7 +330,6 @@ function stanford_subsites_apply_subsite($node, &$vars) {
         )
       );
     }
-
 
     // What the active subsite setting is.
     switch ($node->{SUBSITE_FRONT_PAGE_FIELD}[LANGUAGE_NONE][0]["value"]) {
@@ -365,7 +364,7 @@ function stanford_subsites_apply_subsite($node, &$vars) {
 
   }
 
-  // SUBSITE SLOGAN
+  // SUBSITE SLOGAN.
   // ///////////////////////////////////////////////////////////////////////////
 
   if (isset($node->{SUBSITE_SLOGAN_FIELD}[LANGUAGE_NONE][0]["value"])) {
@@ -438,7 +437,7 @@ function stanford_subsites_node_insert($node) {
     $menu = $args['menu']['menu_name'];
     $context = $args['context'];
 
-    // Machine name
+    // Machine name.
     $machine_name = $node->{SUBSITE_MACHINE_NAME_FIELD}[LANGUAGE_NONE][0]['value'];
 
     // Log all of this info.
@@ -475,9 +474,9 @@ function stanford_subsites_node_delete($node) {
           $form = array();
           $form_state = array();
           $form_state['values']['delta'] = $delta;
-          $form_state['values']['block_title'] =  _menu_block_format_title(menu_block_get_config($delta));
+          $form_state['values']['block_title'] = _menu_block_format_title(menu_block_get_config($delta));
 
-          // Work in menu_block 2.7
+          // Works in menu_block 2.7.
           menu_block_delete_form_submit($form, $form_state);
 
         }
@@ -495,14 +494,14 @@ function stanford_subsites_node_delete($node) {
   }
 
   db_delete("subsite_index")
-  ->condition("nid", $node->nid)
-  ->execute();
+    ->condition("nid", $node->nid)
+    ->execute();
 }
 
 /**
  * Index insert is a wrapper for drupal_write_record to the subsite_index schema.
  *
- * Inserts a new record into the subsite_index scheam
+ * Inserts a new record into the subsite_index scheme.
  *
  * @param int $nid
  *   The subsite nid
@@ -513,9 +512,9 @@ function stanford_subsites_node_delete($node) {
  * @param string $context
  *   The name of the context for the whole subsite.
  * @param string $machine_name
- *   The unique value name
+ *   The unique value name.
  *
- * @return boolean
+ * @return bool
  *   True for success.
  */
 function stanford_subsite_index_insert($nid, $tid, $menu = "", $context = "", $machine_name = "") {
@@ -536,11 +535,11 @@ function stanford_subsite_index_insert($nid, $tid, $menu = "", $context = "", $m
  * record when something changes.
  *
  * @param int $nid
- *   The subsite nid
+ *   The subsite nid.
  * @param int $tid
- *   The subsite's term's id
+ *   The subsite's term's id.
  * @param string $menu
- *   The subsite's menu name
+ *   The subsite's menu name.
  * @param string $context
  *   The subsite's context name.
  *
@@ -595,7 +594,8 @@ function stanford_subsite_index_get($type = "nid", $value = NULL) {
       ->range(0, 1)
       ->execute()
       ->fetchObject();
-  } catch (Exception $e) {
+  }
+  catch (Exception $e) {
     drupal_set_message($e->getMessage(), 'error');
     return FALSE;
   }
@@ -609,12 +609,12 @@ function stanford_subsite_index_get($type = "nid", $value = NULL) {
  * @param object $node
  *   The node object.
  *
- * 1. Clears the path cache for subsite nodes
- * 2. Checks for subsite ref field in order to set the active subsite workspace
+ * 1. Clears the path cache for subsite nodes.
+ * 2. Checks for subsite ref field in order to set the active subsite workspace.
  */
 function stanford_subsites_node_update($node) {
 
-   if ($node->type !== SUBSITE_CONTENT_TYPE) {
+  if ($node->type !== SUBSITE_CONTENT_TYPE) {
     return;
   }
 

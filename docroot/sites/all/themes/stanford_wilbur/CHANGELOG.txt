@@ -1,3 +1,8 @@
+Version 7.x-3.1
+------------------------------
+Added codeclimate.yml
+Added composer.json
+
 Version 7.x-3.0
 ------------------------------
 hyperboy: Added full width block regions

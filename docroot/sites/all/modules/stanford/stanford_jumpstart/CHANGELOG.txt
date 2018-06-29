@@ -1,5 +1,12 @@
 Stanford Sites Jumpstart 7.x-x.x 2015-xx-xx
 -------------------------------------------
+
+7.x-5.5-beta6                     2018-06-26
+--------------------------------------------
+- Added composer.json
+- Altered markdown syntax in readme.md
+
+
 7.x-5.5-beta5                     2017-08-11
 --------------------------------------------
 - HSDO-1024 Updated help text links

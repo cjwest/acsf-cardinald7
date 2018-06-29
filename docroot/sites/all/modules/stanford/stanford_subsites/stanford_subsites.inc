@@ -22,22 +22,8 @@ function stanford_subsites_get_active_subsite() {
   }
 
   // Not found or set yet. Carry on.
-  $subsite_node = FALSE;
-
-  // First try from node.
-  $a0 = arg(0);
-  $a1 = arg(1);
-
-  if ($a0 == "node" && is_numeric($a1)) {
-    $node = node_load($a1);
-    $enabled_types = variable_get('stanford_subsite_content_types', array());
-
-    // Only check the node if it is "enabled"
-    if (is_object($node) && in_array($node->type, $enabled_types)) {
-      $subsite_node = _lookup_subsite_reference_by_node($node);
-    }
-
-  }
+  // First look in the node for the reference
+  $subsite_node = stanford_subsite_get_subsite_node_from_node();
 
   // If the page being viewed is not a node then check the path.
   if (!$subsite_node) {
@@ -51,6 +37,77 @@ function stanford_subsites_get_active_subsite() {
 
   return $subsite_node;
 }
+
+/**
+ * Try and find a subsite node from the node page.
+ *
+ * @return bool|\stdClass
+ */
+function stanford_subsite_get_subsite_node_from_node() {
+  $a0 = arg(0);
+  $a1 = arg(1);
+  $subsite_node = FALSE;
+
+  // Try not to node_load as custom_theme has issues with that.
+
+  if ($a0 !== "node" || !is_numeric($a1)) {
+    return FALSE;
+  }
+
+  $enabled_types = variable_get('stanford_subsite_content_types', array());
+  $node = new stdClass();
+  $q = new EntityFieldQuery();
+  $q->entityCondition('entity_type', 'node')
+    ->entityCondition('entity_id', $a1);
+
+  $r1 = $q->execute();
+
+  // Check to see that we got something. We should. But do it anyhow.
+  if (!isset($r1['node'][$a1])) {
+    return FALSE;
+  }
+
+  // Patch together some fun.
+  $node->type = $r1['node'][$a1]->type;
+  $node->vid = $r1['node'][$a1]->vid;
+  $node->nid = $a1;
+
+  // If THIS node is the subsite node itself. Then set it.
+  if ($node->type == SUBSITE_CONTENT_TYPE) {
+    return stanford_subsite_subsite_load_node_efq($a1, $node->vid);
+  }
+
+  // Only check the node if it is "enabled"
+  if (!is_object($node) || !in_array($node->type, $enabled_types)) {
+    return FALSE;
+  }
+
+  // At this point we are looking at a node that is not a subsite content type
+  // and it is in the 'enabled' list of content types that can be used in
+  // subsite. Time to look for the tag field itself.
+
+  // Now look for field_stanford_subsite_sub_tags.
+  $q = db_select('field_revision_field_stanford_subsite_sub_tags', 'fr');
+  $q->condition('fr.entity_id', $a1, '=');
+  $q->condition('fr.revision_id', $node->vid, '=');
+  $q->addField('fr', 'field_stanford_subsite_sub_tags_tid');
+
+  $r2 = $q->execute()->fetchObject();
+
+  // If we don't find a term id then we have no subsite relation.
+  if (empty($r2->field_stanford_subsite_sub_tags_tid)) {
+    return FALSE;
+  }
+
+  // At this point the node we are viewing has a relation to a subsite node.
+  // Time to gather that information.
+  $term = new stdClass();
+  $term->tid = $r2->field_stanford_subsite_sub_tags_tid;
+  $subsite_node = stanford_subsites_get_subsite_node_by_term($term);
+
+  return $subsite_node;
+}
+
 
 /**
  * Get all subsite nodes.
@@ -108,6 +165,9 @@ function _lookup_subsite_reference_by_node($node) {
 
   // If the node that is being viewed is the subsite node then just return it!
   if ($node->type == SUBSITE_CONTENT_TYPE) {
+    // when would this get called?
+    // this content type isn't in the enabled types array.
+    // $enabled_types = variable_get('stanford_subsite_content_types', array());
     return $node;
   }
 
@@ -149,7 +209,14 @@ function _lookup_subsite_reference_by_path($path) {
   // Check raw string for path... :( needs optimization.
   foreach ($subsite_paths as $nid => $site_path) {
     if (stripos($path, $site_path . "/") === 0) {
-      return node_load($nid);
+      $select = db_select("node", "n")
+        ->fields("n", array("vid"))
+        ->condition("n.nid", $nid);
+      $vid = $select->execute()->fetchField();
+
+      if (is_numeric($vid)) {
+        return stanford_subsite_subsite_load_node_efq($nid, $vid);
+      }
     }
   }
 
@@ -164,7 +231,22 @@ function _lookup_subsite_reference_by_path($path) {
  */
 function _get_subsite_paths() {
 
-  $paths = cache_get('stanford_subsites_subsite_paths');
+  // Try to fetch from static cache first.
+  $paths = NULL;
+  $data = &drupal_static(__FUNCTION__, NULL);
+
+  // Then DB cache if not available.
+  if (is_null($data)) {
+    $paths = cache_get('stanford_subsites_subsite_paths');
+    if (isset($paths->data)) {
+      $data = $paths->data;
+    }
+  }
+  else {
+    $paths = new stdClass();
+    $paths->data = $data;
+  }
+
   // If cache isnt set then we need to generate it.
   if (!$paths) {
     $paths = array();
@@ -176,6 +258,8 @@ function _get_subsite_paths() {
     while ($path_string = $query->fetchAssoc()) {
       $paths[$path_string['nid']] = drupal_get_path_alias("node/" . $path_string['nid']);
     }
+
+    // Save the cache if we can.
     cache_set('stanford_subsites_subsite_paths', $paths);
     return $paths;
   }
@@ -564,13 +648,23 @@ function stanford_subsites_get_subsite_term_from_node($node) {
   }
 
   $lang = LANGUAGE_NONE;
-  $tid = @$node->{SUBSITE_TAGS_FIELD}[$lang][0]['tid'];
+  $tid = $node->{SUBSITE_TAGS_FIELD}[$lang][0]['tid'];
 
   if (!$tid) {
     return FALSE;
   }
 
-  return taxonomy_term_load($tid);
+  // old way that ends up calling entity_load
+  //return taxonomy_term_load($tid);
+
+  $query = db_select("taxonomy_term_data", "ttd")
+            ->fields("ttd")
+            ->condition("tid", $tid)
+            ->execute();
+
+  $term = $query->fetchObject();
+
+  return $term;
 }
 
 /**
@@ -586,18 +680,103 @@ function stanford_subsites_get_subsite_node_by_term($term) {
   // Find a node by joining the taxonomy_index table to node and filtering on
   // node type and tid.
   $select = db_select("node", "n")
-    ->fields("n", array("nid"))
+    ->fields("n", array("nid", "vid"))
     ->condition("ti.tid", $term->tid)
     ->condition("n.type", SUBSITE_CONTENT_TYPE)
     ->range(0, 1);
 
   $select->join("taxonomy_index", "ti", "n.nid = ti.nid");
-  $nid = $select->execute()->fetchField();
+  $r = $select->execute()->fetchObject();
+  $nid = $r->nid;
+  $vid = $r->vid;
 
   // If through all that we get one node. Load and return it.
-  if (is_numeric($nid)) {
-    return node_load($nid);
+  if (is_numeric($nid) && is_numeric($vid)) {
+    return stanford_subsite_subsite_load_node_efq($nid, $vid);
   }
 
   return FALSE;
+}
+
+/**
+ * Loads a subsite node without using node_load.
+ *
+ * Using efq get all of the important information out of the database and
+ * put it in to a object that resembles what we get on node load.
+ *
+ * @param $nid
+ * @return \stdClass
+ */
+function stanford_subsite_subsite_load_node_efq($nid, $vid) {
+  $node = new stdClass();
+  $node->nid = $nid;
+
+  $q = db_select("node_revision", "nr");
+  $q->leftJoin("field_revision_field_stanford_subsite_sname", "sn", "nr.nid = sn.entity_id AND sn.revision_id = $vid");
+  $q->leftJoin("field_revision_field_stanford_subsite_2nd_line", "sl", "nr.nid = sl.entity_id AND sl.revision_id = $vid");
+  $q->leftJoin("field_revision_field_stanford_subsite_logo", "lo", "nr.nid = lo.entity_id AND lo.revision_id = $vid");
+  $q->leftJoin("field_revision_field_stanford_subsite_front", "fp", "nr.nid = fp.entity_id AND fp.revision_id = $vid");
+  $q->leftJoin("field_revision_field_stanford_subsite_slogan", "an", "nr.nid = an.entity_id AND an.revision_id = $vid");
+  $q->leftJoin("field_revision_field_stanford_subsite_theme", "st", "nr.nid = st.entity_id AND st.revision_id = $vid");
+  $q->addField("sn", "field_stanford_subsite_sname_value");
+  $q->addField("nr", "vid");
+  $q->addField("sl", "field_stanford_subsite_2nd_line_value");
+  $q->addField("lo", "field_stanford_subsite_logo_fid");
+  $q->addField("lo", "field_stanford_subsite_logo_alt");
+  $q->addField("lo", "field_stanford_subsite_logo_title");
+  $q->addField("fp", "field_stanford_subsite_front_value");
+  $q->addField("an", "field_stanford_subsite_slogan_value");
+  $q->addField("st", "field_stanford_subsite_theme_value");
+  $q->condition("nr.nid", $nid, "=");
+  $q->range(0, 1);
+
+  $r = $q->execute()->fetchObject();
+
+  if (!empty($r->vid)) {
+    $node->vid = $r->vid;
+  }
+
+  if (!empty($r->field_stanford_subsite_sname_value)) {
+    $node->field_stanford_subsite_sname[LANGUAGE_NONE][0]["safe_value"] = $r->field_stanford_subsite_sname_value;
+  }
+
+  if (!empty($r->field_stanford_subsite_2nd_line_value)) {
+    $node->field_stanford_subsite_2nd_line[LANGUAGE_NONE][0]["safe_value"] = $r->field_stanford_subsite_2nd_line_value;
+  }
+
+  if (!empty($r->field_stanford_subsite_logo_fid)) {
+    // $file = file_load($r->field_stanford_subsite_logo_fid);
+    // No xyz_load as theme borks.
+    $file_uri = db_select("file_managed", "fm")
+               ->fields("fm", array(
+                 'uri',
+               ))
+               ->condition("fid", $r->field_stanford_subsite_logo_fid)
+               ->execute()
+               ->fetchField();
+
+    $node->field_stanford_subsite_logo[LANGUAGE_NONE][0]["uri"] = $file_uri;
+  }
+
+  if (!empty($r->field_stanford_subsite_logo_alt)) {
+    $node->field_stanford_subsite_logo[LANGUAGE_NONE][0]['alt'] = $r->field_stanford_subsite_logo_alt;
+  }
+
+  if (!empty($r->field_stanford_subsite_logo_title)) {
+    $node->field_stanford_subsite_logo[LANGUAGE_NONE][0]['title'] = $r->field_stanford_subsite_logo_title;
+  }
+
+  if (!empty($r->field_stanford_subsite_front_value)) {
+    $node->field_stanford_subsite_front[LANGUAGE_NONE][0]["value"] = $r->field_stanford_subsite_front_value;
+  }
+
+  if (!empty($r->field_stanford_subsite_slogan_value)) {
+    $node->field_stanford_subsite_slogan[LANGUAGE_NONE][0]["value"] = $r->field_stanford_subsite_slogan_value;
+  }
+
+  if (!empty($r->field_stanford_subsite_theme_value)) {
+    $node->field_stanford_subsite_theme[LANGUAGE_NONE][0]["value"] = $r->field_stanford_subsite_theme_value;
+  }
+
+  return $node;
 }

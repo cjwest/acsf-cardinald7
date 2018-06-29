@@ -1,6 +1,11 @@
 Stanford Affiliate Organization x.x-x.x xxxx-xx-xx
 --------------------------------
 
+Stanford Affiliate Organization 7.x-1.2    2018-06-26
+-----------------------------------------------------
+- Added composer.json
+- Added codeclimate.yml
+
 Stanford Affiliate Organization 7.x-1.1+4-dev 2016-03-01
 --------------------------------------
 - SOE-604: Removing about from the URL

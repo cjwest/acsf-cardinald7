@@ -1,6 +1,6 @@
 #[Stanford Jumpstart Plus Permissions](https://github.com/SU-SWS/stanford_jumpstart_plus/tree/7.x-4.x/modules/stanford_jsplus_permissions)
 
-##### Version: 7.x-6.0-dev
+##### Version: 7.x-6.0
 
 Maintainers: [jbickar](https://github.com/jbickar), [sherakama](https://github.com/sherakama)
  
