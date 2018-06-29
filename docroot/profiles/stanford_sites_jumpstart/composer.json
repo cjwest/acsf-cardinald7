@@ -429,7 +429,7 @@
     "su-sws/stanford_seven": "~7.1",
     "su-sws/stanford_framework": "~7.3",
     "su-sws/stanford_jordan": "~7.3",
-    "su-sws/stanford_wilbur": "~7.3.x"
+    "su-sws/stanford_wilbur": "~7.3"
   },
   "extra": {
     "patches": {

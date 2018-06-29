@@ -299,6 +299,14 @@
     {
       "type": "vcs",
       "url": "https://github.com/su-sws/stanford_subsites"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/su-sws/stanford_wysiwyg"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/su-sws/stanford_metatag_nobots"
     }
   ],
   "require": {
@@ -429,7 +437,7 @@
 
     "drupal/always_visible": "dev-1.x#a6c2dac352a6bb658644f66a3bd96b6e5805a6c1",
     "drupal/auto_nodetitle": "dev-1.x#98d66fb24d54113bbdfba0d1797239493473cd78",
-    "drupal/context_useragent": "dev-1.x#8949c6d4ee7a462b49e1b08dfd7dc60f1fa7e8e8",
+    "drupal/context_useragent": "dev-1.x#3cd2c8c20cf9c075d5ccf8fe0bc2aa139823504c",
     "drupal/context_list": "dev-1.x#6d81d058c0fa2aa38f5c86f129b822146991a0fb",
     "drupal/css_injector": "dev-1.x#41bee7e4421ecfc52a6b673eef6fcde875282a2b",
     "drupal/token_tweaks": "dev-1.x#75818fbfb97bf8882ca106e6af703be7644b11bb",
@@ -451,7 +459,7 @@
     "su-sws/stanford_field_formatters": "~7.1",
     "su-sws/stanford_image": "~7.3",
     "su-sws/stanford_image_styles": "~7.4",
-    "su-sws/stanford_metatag_nobots": "~7.3",
+    "su-sws/stanford_metatag_nobots": "dev-7.x-3.x-dev",
     "su-sws/stanford_publication": "~7.2",
     "su-sws/stanford_wysiwyg": "~7.2",
     "su-sws/stanford_easy_wysiwyg_css": "~7.1",
