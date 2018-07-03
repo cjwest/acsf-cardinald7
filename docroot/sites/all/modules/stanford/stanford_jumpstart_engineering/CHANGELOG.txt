@@ -1,5 +1,12 @@
 Stanford Jumpstart Engineering
 
+Version 7.x-5.4                                                       2018-06-26
+--------------------------------------------------------------------------------
+- Added composer.json
+- Added landing_page styles to stanford_jumpstart_engineering.css
+- Updated stanford_jumpstart_engineering_update_7504 with new code
+- Added preprocess_page hook for new css additions
+
 Version 7.x-5.4+12-dev                                                2017-02-22
 --------------------------------------------------------------------------------
 - For JSE sites, this changes the image caption field on news to image caption and credits

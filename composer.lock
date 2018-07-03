@@ -1693,8 +1693,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "7.x-1.0+16-dev",
-                    "datestamp": "1523758085",
+                    "version": "7.x-1.0+19-dev",
+                    "datestamp": "1530515921",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -4457,17 +4457,17 @@
         },
         {
             "name": "drupal/ds",
-            "version": "2.15.0",
+            "version": "2.16.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/ds",
-                "reference": "7.x-2.15"
+                "reference": "7.x-2.16"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/ds-7.x-2.15.zip",
-                "reference": "7.x-2.15",
-                "shasum": "d6ca6231da8fad56f1a3338496f1e4bd77706bf3"
+                "url": "https://ftp.drupal.org/files/projects/ds-7.x-2.16.zip",
+                "reference": "7.x-2.16",
+                "shasum": "1af4e6bc74c154d2fd4aabff991dafdc923098a1"
             },
             "require": {
                 "drupal/ctools": "*",
@@ -4482,8 +4482,8 @@
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "7.x-2.15",
-                    "datestamp": "1524077723",
+                    "version": "7.x-2.16",
+                    "datestamp": "1530614320",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -11057,12 +11057,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SOE/stanford_jumpstart_engineering.git",
-                "reference": "1e3124845165b43d99db08b5cdd3486ac550bf1f"
+                "reference": "51eb470086e05b79d4cc4d13b575321f095a3746"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SOE/stanford_jumpstart_engineering/zipball/1e3124845165b43d99db08b5cdd3486ac550bf1f",
-                "reference": "1e3124845165b43d99db08b5cdd3486ac550bf1f",
+                "url": "https://api.github.com/repos/SU-SOE/stanford_jumpstart_engineering/zipball/51eb470086e05b79d4cc4d13b575321f095a3746",
+                "reference": "51eb470086e05b79d4cc4d13b575321f095a3746",
                 "shasum": ""
             },
             "require": {
@@ -11076,7 +11076,7 @@
             "support": {
                 "source": "https://github.com/SU-SOE/stanford_jumpstart_engineering/tree/7.x-5.x"
             },
-            "time": "2018-03-03T00:26:25+00:00"
+            "time": "2018-07-02 23:28:40"
         },
         {
             "name": "su-sws/SU-IT-Services",
@@ -14889,7 +14889,7 @@
                 "source": "https://github.com/SU-SWS/linky_clicky/tree/5.x",
                 "issues": "https://github.com/SU-SWS/linky_clicky/issues"
             },
-            "time": "2018-06-28T00:21:45+00:00"
+            "time": "2018-06-28 00:21:45"
         },
         {
             "name": "weavora/mink-extra-context",

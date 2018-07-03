@@ -1,10 +1,10 @@
 #[Stanford Jumpstart Engineering Related Content](https://github.com/SU-SWS/stanford_jumpstart_engineering)
-##### Version: 7.x-5.4-dev
+##### Version: 7.x-5.4
 
 Maintainers: [cjwest](https://github.com/cjwest), [boznik](https://github.com/boznik)
 [Changelog.txt](CHANGELOG.txt)
 
-The Stanford Jumpstart Engineering Related Content feature is used to add related content to JSE sites. 
+The Stanford Jumpstart Engineering Related Content feature is used to add related content to JSE sites.
 
 
 Installation

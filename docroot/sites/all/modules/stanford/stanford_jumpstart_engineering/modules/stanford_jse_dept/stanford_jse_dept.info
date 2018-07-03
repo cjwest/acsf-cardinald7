@@ -10,4 +10,3 @@ stylesheets[all][] = css/stanford_jse_dept_related_content.css
 ; scripts[] = js/stanford_module.js
 project status url = https://github.com/SU-SWS/stanford_jumpstart_engineering
 files[] = stanford_jse_dept.install
-
