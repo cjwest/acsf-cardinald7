@@ -4,6 +4,7 @@
   "type": "drupal-custom-profile",
   "license": "GPL-2.0+",
   "minimum-stability": "dev",
+  "prefer-stable": true,
   "repositories": [
     {
       "type": "composer",
@@ -299,6 +300,14 @@
     {
       "type": "vcs",
       "url": "https://github.com/su-sws/stanford_subsites"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/su-sws/stanford_wysiwyg"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/su-sws/stanford_metatag_nobots"
     }
   ],
   "require": {
@@ -343,7 +352,7 @@
     "drupal/date_ical":  "~2.14",
     "drupal/default_image_ft":  "~1.6",
     "drupal/delta":  "~3.0-beta11",
-    "drupal/diff":  "~3.2",
+    "drupal/diff": "dev-3.x#b1b09189d52380a008c9cb29b879e3aa140ec2e0",
     "drupal/drafty":  "~1.0-beta3",
     "drupal/draggableviews":  "~2.1",
     "drupal/ds":  "~2.14",
@@ -429,7 +438,7 @@
 
     "drupal/always_visible": "dev-1.x#a6c2dac352a6bb658644f66a3bd96b6e5805a6c1",
     "drupal/auto_nodetitle": "dev-1.x#98d66fb24d54113bbdfba0d1797239493473cd78",
-    "drupal/context_useragent": "dev-1.x#8949c6d4ee7a462b49e1b08dfd7dc60f1fa7e8e8",
+    "drupal/context_useragent": "dev-1.x#3cd2c8c20cf9c075d5ccf8fe0bc2aa139823504c",
     "drupal/context_list": "dev-1.x#6d81d058c0fa2aa38f5c86f129b822146991a0fb",
     "drupal/css_injector": "dev-1.x#41bee7e4421ecfc52a6b673eef6fcde875282a2b",
     "drupal/token_tweaks": "dev-1.x#75818fbfb97bf8882ca106e6af703be7644b11bb",
@@ -437,42 +446,42 @@
     "drupal/rubik": "~4.4",
     "drupal/tao": "~3.1",
 
-    "su-sws/stanford_install_tasks": "dev-7.x-1.x",
-    "su-sws/stanford_sites_content_importer": "dev-7.x-2.x",
+    "su-sws/stanford_install_tasks": "~7.1",
+    "su-sws/stanford_sites_content_importer": "~7.2",
 
-    "su-sws/erus": "dev-7.x-1.x-dev",
-    "su-sws/stanford_capx": "dev-7.x-3.x",
-    "su-sws/stanford_carousel": "dev-7.x-2.x",
-    "su-sws/stanford_courses": "dev-7.x-4.x",
-    "su-sws/stanford_feeds_helper": "dev-7.x-1.x",
-    "su-sws/stanford_helper": "dev-7.x-1.x",
-    "su-sws/stanford_date_formats": "dev-7.x-1.x-dev",
-    "su-sws/stanford_event_series": "dev-7.x-1.x",
-    "su-sws/stanford_field_formatters": "dev-7.x-1.x",
-    "su-sws/stanford_image": "dev-7.x-3.x-dev",
-    "su-sws/stanford_image_styles": "dev-7.x-4.x",
+    "su-sws/erus": "~7.1@alpha",
+    "su-sws/stanford_capx": "~7.3@beta",
+    "su-sws/stanford_carousel": "~7.2@alpha",
+    "su-sws/stanford_courses": "~7.4",
+    "su-sws/stanford_feeds_helper": "~7.1",
+    "su-sws/stanford_helper": "~7.1",
+    "su-sws/stanford_date_formats": "~7.1",
+    "su-sws/stanford_event_series": "~7.1",
+    "su-sws/stanford_field_formatters": "~7.1",
+    "su-sws/stanford_image": "~7.3",
+    "su-sws/stanford_image_styles": "~7.4@alpha",
     "su-sws/stanford_metatag_nobots": "dev-7.x-3.x-dev",
-    "su-sws/stanford_publication": "dev-7.x-2.x-dev",
-    "su-sws/stanford_wysiwyg": "dev-7.x-2.x-dev",
-    "su-sws/stanford_easy_wysiwyg_css": "dev-7.x-1.x",
-    "su-sws/stanford_alt_check": "dev-7.x-1.x",
-    "su-sws/stanford_jumpstart": "dev-7.x-5.x",
-    "su-sws/stanford_jumpstart_home": "dev-7.x-1.x",
-    "su-sws/stanford_faq": "dev-7.x-4.x-dev",
-    "su-sws/stanford_jumpstart_vpsa": "dev-7.x-4.x",
-    "su-sws/stanford_manage_content": "dev-7.x-3.x-dev",
-    "su-sws/stanford_private_page": "dev-7.x-2.x",
-    "su-sws/stanford_landing_page": "dev-7.x-1.x",
-    "su-sws/stanford_affiliate_organization": "dev-7.x-1.x",
-    "su-sws/stanford_fellowship": "dev-7.x-1.x",
-    "su-sws/stanford_subsites": "dev-7.x-2.x",
-    "su-sws/stanford_gallery": "dev-7.x-2.x",
+    "su-sws/stanford_publication": "~7.2",
+    "su-sws/stanford_wysiwyg": "~7.2",
+    "su-sws/stanford_easy_wysiwyg_css": "~7.1",
+    "su-sws/stanford_alt_check": "~7.1",
+    "su-sws/stanford_jumpstart": "~7.5@beta",
+    "su-sws/stanford_jumpstart_home": "~7.1",
+    "su-sws/stanford_faq": "~7.4",
+    "su-sws/stanford_jumpstart_vpsa": "~7.4",
+    "su-sws/stanford_manage_content": "~7.3",
+    "su-sws/stanford_private_page": "~7.2@alpha",
+    "su-sws/stanford_landing_page": "~7.1@beta",
+    "su-sws/stanford_affiliate_organization": "~7.1",
+    "su-sws/stanford_fellowship": "~7.1",
+    "su-sws/stanford_subsites": "~7.3@alpha",
+    "su-sws/stanford_gallery": "~7.2",
 
-    "su-sws/open_framework": "dev-7.x-2.x",
-    "su-sws/stanford_seven": "dev-7.x-1.x",
-    "su-sws/stanford_framework": "dev-7.x-3.x",
-    "su-sws/stanford_jordan": "dev-7.x-3.x",
-    "su-sws/stanford_wilbur": "dev-7.x-3.x"
+    "su-sws/open_framework": "~7.2",
+    "su-sws/stanford_seven": "~7.1",
+    "su-sws/stanford_framework": "~7.3",
+    "su-sws/stanford_jordan": "~7.3",
+    "su-sws/stanford_wilbur": "~7.3"
   },
   "extra": {
     "patches": {
@@ -493,6 +502,10 @@
       "drupal/features": {
         "https://drupal.org/node/927566":
         "https://drupal.org/files/issues/features-parent_identifier-927566-79.patch"
+      },
+      "drupal/filefield_paths": {
+        "https://www.drupal.org/project/filefield_paths/issues/2946648":
+        "https://www.drupal.org/files/issues/filefield_paths-support_php_72-2946648-3.patch"
       },
       "drupal/jw_player": {
         "https://www.drupal.org/node/2713921":
