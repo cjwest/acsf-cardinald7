@@ -1,4 +1,5 @@
 # [Stanford Jumpstart](https://github.com/SU-SWS/stanford_jumpstart)
+#### Version 7.x-6.0-beta1
 
 Maintainers: [jbickar](https://github.com/jbickar), [sherakama](https://github.com/sherakama)
 

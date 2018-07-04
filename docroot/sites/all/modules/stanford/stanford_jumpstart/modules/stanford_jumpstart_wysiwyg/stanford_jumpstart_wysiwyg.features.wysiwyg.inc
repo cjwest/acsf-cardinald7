@@ -10,16 +10,11 @@
 function stanford_jumpstart_wysiwyg_wysiwyg_default_profiles() {
   $profiles = array();
 
-  // Exported profile: content_editor_text_format
+  // Exported profile: content_editor_text_format.
   $profiles['content_editor_text_format'] = array(
     'format' => 'content_editor_text_format',
     'editor' => 'ckeditor',
     'settings' => array(
-      'default' => 1,
-      'user_choose' => 0,
-      'show_toggle' => 1,
-      'theme' => 'advanced',
-      'language' => 'en',
       'buttons' => array(
         'default' => array(
           'Bold' => 1,
@@ -45,20 +40,16 @@ function stanford_jumpstart_wysiwyg_wysiwyg_default_profiles() {
           'SpellChecker' => 1,
         ),
       ),
-      'toolbar_loc' => 'top',
-      'toolbar_align' => 'left',
-      'path_loc' => 'bottom',
-      'resizing' => 1,
-      'verify_html' => 1,
-      'preformatted' => 0,
-      'convert_fonts_to_spans' => 1,
-      'remove_linebreaks' => 1,
-      'apply_source_formatting' => 1,
-      'paste_auto_cleanup_on_paste' => 1,
-      'block_formats' => 'p,h2,h3,h4',
+      'theme' => 'advanced',
+      'language' => 'en',
+      'toolbarLocation' => 'top',
+      'resize_enabled' => 1,
+      'default_toolbar_grouping' => 0,
+      'simple_source_formatting' => 1,
       'css_setting' => 'easy',
+      'css_theme' => 'stanford_framework',
       'css_path' => '',
-      'css_classes' => 'Button Link=a.btn
+      'stylesSet' => 'Button Link=a.btn
 More Link=a.more-link
 Descriptor=p.descriptor
 Summary Paragraph=p.summary
@@ -75,8 +66,21 @@ Column Toggle Table=table.tablesaw-column-toggle
 Sticky Swipe Table=table.tablesaw-swipe.sticky-enabled
 Sticky Column Toggle Table=table.tablesaw-column-toggle.sticky-enabled
 Persist Header=th.tablesaw-persist',
-
+      'block_formats' => 'p,h2,h3,h4',
+      'forcePasteAsPlainText' => 0,
+      'pasteFromWordNumberedHeadingToList' => 0,
+      'pasteFromWordPromptCleanup' => 0,
+      'pasteFromWordRemoveFontStyles' => 1,
+      'pasteFromWordRemoveStyles' => 1,
     ),
+    'preferences' => array(
+      'default' => 1,
+      'user_choose' => 0,
+      'show_toggle' => 1,
+      'add_to_summaries' => 0,
+      'version' => '3.6.6.1.7696',
+    ),
+    'name' => 'formatcontent_editor_text_format',
     'rdf_mapping' => array(),
   );
 

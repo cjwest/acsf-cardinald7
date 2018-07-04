@@ -8843,17 +8843,17 @@
         },
         {
             "name": "drupal/uuid",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/uuid",
-                "reference": "7.x-1.0"
+                "reference": "7.x-1.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/uuid-7.x-1.0.zip",
-                "reference": "7.x-1.0",
-                "shasum": "6badd2aa8b047edb7ef7c1568296482582782a59"
+                "url": "https://ftp.drupal.org/files/projects/uuid-7.x-1.1.zip",
+                "reference": "7.x-1.1",
+                "shasum": "5696fc43e412f39aaeb17a200940bd39bcaf72c7"
             },
             "require": {
                 "drupal/drupal": "*"
@@ -8870,8 +8870,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "7.x-1.0",
-                    "datestamp": "1493291943",
+                    "version": "7.x-1.1",
+                    "datestamp": "1530724916",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -8883,6 +8883,10 @@
                 "GPL-2.0-or-later"
             ],
             "authors": [
+                {
+                    "name": "Manuel Garcia",
+                    "homepage": "https://www.drupal.org/user/213194"
+                },
                 {
                     "name": "dixon_",
                     "homepage": "https://www.drupal.org/user/239911"
@@ -10748,16 +10752,16 @@
         },
         {
             "name": "paragonie/random_compat",
-            "version": "v2.0.15",
+            "version": "v2.0.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paragonie/random_compat.git",
-                "reference": "10bcb46e8f3d365170f6de9d05245aa066b81f09"
+                "reference": "29af24f25bab834fcbb38ad2a69fa93b867e070d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/10bcb46e8f3d365170f6de9d05245aa066b81f09",
-                "reference": "10bcb46e8f3d365170f6de9d05245aa066b81f09",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/29af24f25bab834fcbb38ad2a69fa93b867e070d",
+                "reference": "29af24f25bab834fcbb38ad2a69fa93b867e070d",
                 "shasum": ""
             },
             "require": {
@@ -10793,7 +10797,7 @@
                 "pseudorandom",
                 "random"
             ],
-            "time": "2018-06-08T15:26:40+00:00"
+            "time": "2018-07-04T16:31:37+00:00"
         },
         {
             "name": "pear/console_table",
@@ -11053,16 +11057,16 @@
         },
         {
             "name": "su-soe/stanford_jumpstart_engineering",
-            "version": "dev-7.x-5.x",
+            "version": "7.5.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SOE/stanford_jumpstart_engineering.git",
-                "reference": "51eb470086e05b79d4cc4d13b575321f095a3746"
+                "reference": "cd785438b72b9f551ae8a834ff9a51ca8b8b5a21"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SOE/stanford_jumpstart_engineering/zipball/51eb470086e05b79d4cc4d13b575321f095a3746",
-                "reference": "51eb470086e05b79d4cc4d13b575321f095a3746",
+                "url": "https://api.github.com/repos/SU-SOE/stanford_jumpstart_engineering/zipball/cd785438b72b9f551ae8a834ff9a51ca8b8b5a21",
+                "reference": "cd785438b72b9f551ae8a834ff9a51ca8b8b5a21",
                 "shasum": ""
             },
             "require": {
@@ -11074,9 +11078,9 @@
             ],
             "description": "Jumpstart Engineering Support Module.",
             "support": {
-                "source": "https://github.com/SU-SOE/stanford_jumpstart_engineering/tree/7.x-5.x"
+                "source": "https://github.com/SU-SOE/stanford_jumpstart_engineering/tree/7.5.4"
             },
-            "time": "2018-07-02 23:28:40"
+            "time": "2018-07-02T23:20:47+00:00"
         },
         {
             "name": "su-sws/SU-IT-Services",
@@ -11839,16 +11843,16 @@
         },
         {
             "name": "su-sws/stanford_jumpstart",
-            "version": "7.5.5-beta6",
+            "version": "7.6.0-beta1",
             "source": {
                 "type": "git",
                 "url": "git@github.com:SU-SWS/stanford_jumpstart.git",
-                "reference": "039406186e3eaacada3415f62bc65d5ca9d606eb"
+                "reference": "f324821c10c6a20bb1ae79c69ef3c426b8c1961d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_jumpstart/zipball/039406186e3eaacada3415f62bc65d5ca9d606eb",
-                "reference": "039406186e3eaacada3415f62bc65d5ca9d606eb",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_jumpstart/zipball/f324821c10c6a20bb1ae79c69ef3c426b8c1961d",
+                "reference": "f324821c10c6a20bb1ae79c69ef3c426b8c1961d",
                 "shasum": ""
             },
             "require": {
@@ -11860,10 +11864,10 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_jumpstart/tree/7.5.5-beta6",
+                "source": "https://github.com/SU-SWS/stanford_jumpstart/tree/7.6.0-beta1",
                 "issues": "https://github.com/SU-SWS/stanford_jumpstart/issues"
             },
-            "time": "2018-06-28T14:03:58+00:00"
+            "time": "2018-07-04T22:27:39+00:00"
         },
         {
             "name": "su-sws/stanford_jumpstart_academic",
@@ -14218,7 +14222,7 @@
         },
         {
             "name": "drupal/core-render",
-            "version": "8.5.4",
+            "version": "8.5.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-render.git",
@@ -14253,7 +14257,7 @@
         },
         {
             "name": "drupal/core-utility",
-            "version": "8.5.4",
+            "version": "8.5.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-utility.git",
@@ -14958,7 +14962,6 @@
         "su-sws/stanford_person": 15,
         "su-sws/stanford_private_page": 15,
         "su-sws/stanford_related_content": 15,
-        "su-soe/stanford_jumpstart_engineering": 20,
         "su-sws/stanford_story_page": 15,
         "su-sws/stanford_metatag_nobots": 20,
         "su-sws/stanford_subsites": 15,

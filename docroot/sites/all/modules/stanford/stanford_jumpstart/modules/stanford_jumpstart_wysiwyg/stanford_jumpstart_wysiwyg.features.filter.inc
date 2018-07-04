@@ -252,12 +252,15 @@ ol[start]',
             181 => 'sticky-enabled',
             182 => 'tablesaw-persist',
           ),
+          'rule_bypass_valid_classes' => 0,
           'rule_valid_ids' => array(
             0 => 'prefix-*',
           ),
+          'rule_bypass_valid_ids' => 0,
           'rule_style_urls' => array(
             0 => '/*',
           ),
+          'rule_bypass_style_urls' => 0,
         ),
       ),
       'pathologic' => array(

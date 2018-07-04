@@ -2,13 +2,13 @@ name = Stanford Sites Jumpstart WYSIWYG
 description = Baseline WYSIWYG configuration for Stanford Sites Jumpstart
 core = 7.x
 package = Stanford Sites Jumpstart
-version = 7.x-5.5-beta6
+version = 7.x-6.0-beta1
 dependencies[] = better_formats
 dependencies[] = features
 dependencies[] = filter
 dependencies[] = pathologic
 dependencies[] = stanford_easy_wysiwyg_css
-dependencies[] = wysiwyg (>=2.2)
+dependencies[] = wysiwyg (>=2.5)
 dependencies[] = wysiwyg_filter
 features[features_api][] = api:2
 features[filter][] = content_editor_text_format
