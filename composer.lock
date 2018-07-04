@@ -32,7 +32,7 @@
                 "source": "https://github.com/Stanford/WMD/tree/master",
                 "issues": "https://github.com/Stanford/WMD/issues"
             },
-            "time": "2018-05-10T23:12:42+00:00"
+            "time": "2018-05-10 23:12:42"
         },
         {
             "name": "Stanford/webauth_extras",
@@ -60,7 +60,7 @@
                 "source": "https://github.com/Stanford/webauth_extras/tree/master",
                 "issues": "https://github.com/Stanford/webauth_extras/issues"
             },
-            "time": "2018-05-10T23:09:54+00:00"
+            "time": "2018-05-10 23:09:54"
         },
         {
             "name": "components/chosen",
@@ -11057,16 +11057,16 @@
         },
         {
             "name": "su-soe/stanford_jumpstart_engineering",
-            "version": "7.5.4",
+            "version": "7.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SOE/stanford_jumpstart_engineering.git",
-                "reference": "cd785438b72b9f551ae8a834ff9a51ca8b8b5a21"
+                "reference": "915d8c77e1352dbced344b36c74f8bfc09ffb90e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SOE/stanford_jumpstart_engineering/zipball/cd785438b72b9f551ae8a834ff9a51ca8b8b5a21",
-                "reference": "cd785438b72b9f551ae8a834ff9a51ca8b8b5a21",
+                "url": "https://api.github.com/repos/SU-SOE/stanford_jumpstart_engineering/zipball/915d8c77e1352dbced344b36c74f8bfc09ffb90e",
+                "reference": "915d8c77e1352dbced344b36c74f8bfc09ffb90e",
                 "shasum": ""
             },
             "require": {
@@ -11078,9 +11078,9 @@
             ],
             "description": "Jumpstart Engineering Support Module.",
             "support": {
-                "source": "https://github.com/SU-SOE/stanford_jumpstart_engineering/tree/7.5.4"
+                "source": "https://github.com/SU-SOE/stanford_jumpstart_engineering/tree/7.6.0"
             },
-            "time": "2018-07-02T23:20:47+00:00"
+            "time": "2018-07-04T23:05:48+00:00"
         },
         {
             "name": "su-sws/SU-IT-Services",
@@ -11871,16 +11871,16 @@
         },
         {
             "name": "su-sws/stanford_jumpstart_academic",
-            "version": "7.5.1-alpha5",
+            "version": "7.6.0-alpha1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_jumpstart_academic.git",
-                "reference": "8848af9369ff12d54464f07a8ae43f13b09a19e9"
+                "reference": "aa6d6dbc48660a72126ab9e9b84258b00bd63735"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_jumpstart_academic/zipball/8848af9369ff12d54464f07a8ae43f13b09a19e9",
-                "reference": "8848af9369ff12d54464f07a8ae43f13b09a19e9",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_jumpstart_academic/zipball/aa6d6dbc48660a72126ab9e9b84258b00bd63735",
+                "reference": "aa6d6dbc48660a72126ab9e9b84258b00bd63735",
                 "shasum": ""
             },
             "require": {
@@ -11892,10 +11892,10 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_jumpstart_academic/tree/7.5.1-alpha5",
+                "source": "https://github.com/SU-SWS/stanford_jumpstart_academic/tree/7.6.0-alpha1",
                 "issues": "https://github.com/SU-SWS/stanford_jumpstart_academic/issues"
             },
-            "time": "2018-04-16T19:49:23+00:00"
+            "time": "2018-07-04T22:54:30+00:00"
         },
         {
             "name": "su-sws/stanford_jumpstart_home",
@@ -11927,16 +11927,16 @@
         },
         {
             "name": "su-sws/stanford_jumpstart_lab",
-            "version": "7.5.0-alpha3",
+            "version": "7.6.0-alpha1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_jumpstart_lab.git",
-                "reference": "35e33b3788a1d7aa65301430d44f93744d9ba3a6"
+                "reference": "7c23b1b82b8e15117b51e46fc585cf16974e24f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_jumpstart_lab/zipball/35e33b3788a1d7aa65301430d44f93744d9ba3a6",
-                "reference": "35e33b3788a1d7aa65301430d44f93744d9ba3a6",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_jumpstart_lab/zipball/7c23b1b82b8e15117b51e46fc585cf16974e24f4",
+                "reference": "7c23b1b82b8e15117b51e46fc585cf16974e24f4",
                 "shasum": ""
             },
             "require": {
@@ -11948,10 +11948,10 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_jumpstart_lab/tree/7.5.0-alpha3",
+                "source": "https://github.com/SU-SWS/stanford_jumpstart_lab/tree/7.6.0-alpha1",
                 "issues": "https://github.com/SU-SWS/stanford_jumpstart_lab/issues"
             },
-            "time": "2018-06-27T20:34:15+00:00"
+            "time": "2018-07-04T23:00:35+00:00"
         },
         {
             "name": "su-sws/stanford_jumpstart_plus",
@@ -12121,7 +12121,7 @@
                 "issues": "https://github.com/SU-SWS/stanford_metatag_nobots/issues"
             },
             "abandoned": "drupal/nobots",
-            "time": "2018-02-20T06:04:14+00:00"
+            "time": "2018-02-20 06:04:14"
         },
         {
             "name": "su-sws/stanford_news",

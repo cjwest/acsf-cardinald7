@@ -1,5 +1,5 @@
-#Stanford Jumpstart Engineering (JSE) Roles
-##### Version: 7.x-5.4-dev
+# Stanford Jumpstart Engineering (JSE) Roles
+##### Version: 7.x-6.0
 
 Maintainers: [sherakama](https://github.com/sherakama), [boznik](https://github.com/boznik), and [cjwest](https://github.com/cjwest),
 [Changelog.txt](CHANGELOG.txt)

@@ -1,5 +1,5 @@
-#[Stanford Jumpstart Engineering Related Content](https://github.com/SU-SWS/stanford_jumpstart_engineering)
-##### Version: 7.x-5.4
+# [Stanford Jumpstart Engineering Related Content](https://github.com/SU-SWS/stanford_jumpstart_engineering)
+##### Version: 7.x-6.0
 
 Maintainers: [cjwest](https://github.com/cjwest), [boznik](https://github.com/boznik)
 [Changelog.txt](CHANGELOG.txt)

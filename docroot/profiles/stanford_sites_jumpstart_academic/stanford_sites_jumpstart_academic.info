@@ -4,7 +4,7 @@ description = Stanford Sites Jumpstart Academic Installation.
 project = stanford_sites_jumpstart_academic
 project status url = https://github.com/SU-SWS/stanford_sites_jumpstart_academic
 core = 7.x
-version = 7.x-5.x
+version = 7.x-6.0
 
 ; ITasks Config
 taskdir = sites/all/libraries/stanford_install_tasks
