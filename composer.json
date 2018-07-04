@@ -4,6 +4,7 @@
   "type": "drupal-custom-profile",
   "license": "GPL-2.0+",
   "minimum-stability": "dev",
+  "prefer-stable": true,
   "repositories": [
     {
       "type": "composer",
@@ -338,7 +339,7 @@
     "drupal/date_ical": "~2.14",
     "drupal/default_image_ft": "~1.6",
     "drupal/delta": "~3.0-beta11",
-    "drupal/diff": "~3.2",
+    "drupal/diff": "dev-3.x#b1b09189d52380a008c9cb29b879e3aa140ec2e0",
     "drupal/drafty": "~1.0-beta3",
     "drupal/draggableviews": "~2.1",
     "drupal/ds": "~2.14",
@@ -355,7 +356,7 @@
     "drupal/field_group": "~1.5",
     "drupal/field_permissions": "~1.0",
     "drupal/file_entity": "~2.0-beta2",
-    "drupal/filefield_paths": "~1.0",
+    "drupal/filefield_paths": "dev-1.x#e016a2edd0221250b03d4ec9538109e94ef8bc0d",
     "drupal/flag": "~3.9",
     "drupal/geofield": "~1.2",
     "drupal/geophp": "~1.7",
@@ -424,40 +425,40 @@
     "drupal/rubik": "~4.4",
     "drupal/tao": "~3.1",
 
-    "SU-SWS/stanford_install_tasks": "dev-7.x-1.x",
-    "SU-SWS/stanford_sites_content_importer": "dev-7.x-2.x",
+    "SU-SWS/stanford_install_tasks": "~7.1",
+    "SU-SWS/stanford_sites_content_importer": "~7.2",
 
-    "su-sws/erus": "dev-7.x-1.x-dev",
-    "su-sws/stanford_alt_check": "dev-7.x-1.x",
-    "su-sws/stanford_bean_types": "dev-7.x-3.x",
-    "su-sws/stanford_capx": "dev-7.x-3.x",
-    "su-sws/stanford_carousel": "dev-7.x-2.x",
-    "su-sws/stanford_courses": "dev-7.x-4.x",
-    "su-sws/stanford_date_formats": "dev-7.x-1.x-dev",
-    "su-sws/stanford_easy_wysiwyg_css": "dev-7.x-1.x",
-    "su-sws/stanford_event_series": "dev-7.x-1.x",
-    "su-sws/stanford_events_importer": "dev-7.x-3.x",
-    "su-sws/stanford_feeds_helper": "dev-7.x-1.x",
-    "su-sws/stanford_field_formatters": "dev-7.x-1.x",
-    "su-sws/stanford_gallery": "dev-7.x-2.x",
-    "su-sws/stanford_helper": "dev-7.x-1.x",
-    "su-sws/stanford_image": "dev-7.x-3.x-dev",
-    "su-sws/stanford_image_styles": "dev-7.x-4.x",
-    "su-sws/stanford_jumpstart": "dev-7.x-5.x",
-    "su-sws/stanford_jumpstart_home": "dev-7.x-1.x",
-    "su-sws/stanford_jumpstart_plus": "dev-7.x-6.x",
-    "su-sws/stanford_landing_page": "dev-7.x-1.x",
-    "su-sws/stanford_manage_content": "dev-7.x-3.x-dev",
-    "su-sws/stanford_news": "dev-7.x-3.x-dev",
-    "su-sws/stanford_page": "dev-7.x-2.x-dev",
-    "su-sws/stanford_person": "dev-7.x-5.x-dev",
-    "su-sws/stanford_slides": "dev-7.x-3.x-dev",
+    "su-sws/erus": "~7.1@alpha",
+    "su-sws/stanford_alt_check": "~7.1",
+    "su-sws/stanford_bean_types": "~7.3",
+    "su-sws/stanford_capx": "~7.3@beta",
+    "su-sws/stanford_carousel": "~7.2@alpha",
+    "su-sws/stanford_courses": "~7.4",
+    "su-sws/stanford_date_formats": "~7.1",
+    "su-sws/stanford_easy_wysiwyg_css": "~7.1",
+    "su-sws/stanford_event_series": "~7.1",
+    "su-sws/stanford_events_importer": "~7.3",
+    "su-sws/stanford_feeds_helper": "~7.1",
+    "su-sws/stanford_field_formatters": "~7.1",
+    "su-sws/stanford_gallery": "~7.2",
+    "su-sws/stanford_helper": "~7.1",
+    "su-sws/stanford_image": "~7.3",
+    "su-sws/stanford_image_styles": "~7.4@alpha",
+    "su-sws/stanford_jumpstart": "~7.5@beta",
+    "su-sws/stanford_jumpstart_home": "~7.1",
+    "su-sws/stanford_jumpstart_plus": "~7.6",
+    "su-sws/stanford_landing_page": "~7.1@beta",
+    "su-sws/stanford_manage_content": "~7.3",
+    "su-sws/stanford_news": "~7.3@alpha",
+    "su-sws/stanford_page": "~7.2",
+    "su-sws/stanford_person": "~7.5@alpha",
+    "su-sws/stanford_slides": "~7.3",
 
-    "su-sws/open_framework": "dev-7.x-2.x",
-    "su-sws/stanford_seven": "dev-7.x-1.x",
-    "su-sws/stanford_framework": "dev-7.x-3.x",
-    "su-sws/stanford_jordan": "dev-7.x-3.x",
-    "su-sws/stanford_wilbur": "dev-7.x-3.x"
+    "su-sws/open_framework": "~7.2",
+    "su-sws/stanford_seven": "~7.1",
+    "su-sws/stanford_framework": "~7.3",
+    "su-sws/stanford_jordan": "~7.3",
+    "su-sws/stanford_wilbur": "~7.3"
   },
   "extra": {
     "patches": {
@@ -478,6 +479,10 @@
       "drupal/features": {
         "https://drupal.org/node/927566":
         "https://drupal.org/files/issues/features-parent_identifier-927566-79.patch"
+      },
+      "drupal/filefield_paths": {
+        "https://www.drupal.org/project/filefield_paths/issues/2946648":
+        "https://www.drupal.org/files/issues/filefield_paths-support_php_72-2946648-3.patch"
       },
       "drupal/jw_player": {
         "https://www.drupal.org/node/2713921":
