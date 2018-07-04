@@ -1,5 +1,5 @@
-#[Stanford Sites Jumpstart Lab](https://github.com/SU-SWS/stanford_sites_jumpstart_lab)
-##### Version: 7.x-5.0-alpha1
+# [Stanford Sites Jumpstart Lab](https://github.com/SU-SWS/stanford_sites_jumpstart_lab)
+##### Version: 7.x-6.0-dev
 
 Maintainers: [jbickar](https://github.com/jbickar), [sherakama](https://github.com/sherakama)  
 [Changelog.txt](CHANGELOG.txt)
