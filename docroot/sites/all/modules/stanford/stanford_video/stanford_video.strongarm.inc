@@ -13,11 +13,18 @@ function stanford_video_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'additional_settings__active_tab_stanford_video';
+  $strongarm->value = 'edit-workflow';
+  $export['additional_settings__active_tab_stanford_video'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__stanford_video';
   $strongarm->value = array(
     'view_modes' => array(
       'teaser' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'full' => array(
         'custom_settings' => FALSE,
@@ -31,32 +38,14 @@ function stanford_video_strongarm() {
       'search_result' => array(
         'custom_settings' => FALSE,
       ),
-      'token' => array(
+      'diff_standard' => array(
         'custom_settings' => FALSE,
-      ),
-      'stanford_8_col_banner' => array(
-        'custom_settings' => FALSE,
-      ),
-      'revision' => array(
-        'custom_settings' => FALSE,
-      ),
-      'stanford_video_half_width' => array(
-        'custom_settings' => TRUE,
       ),
     ),
     'extra_fields' => array(
       'form' => array(
-        'metatags' => array(
-          'weight' => '13',
-        ),
         'title' => array(
           'weight' => '0',
-        ),
-        'path' => array(
-          'weight' => '12',
-        ),
-        'redirect' => array(
-          'weight' => '11',
         ),
       ),
       'display' => array(),
@@ -68,7 +57,9 @@ function stanford_video_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_stanford_video';
-  $strongarm->value = array();
+  $strongarm->value = array(
+    0 => 'main-menu',
+  );
   $export['menu_options_stanford_video'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -77,6 +68,97 @@ function stanford_video_strongarm() {
   $strongarm->name = 'menu_parent_stanford_video';
   $strongarm->value = 'main-menu:0';
   $export['menu_parent_stanford_video'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'nodeformscols_field_placements_stanford_video_default';
+  $strongarm->value = array(
+    'title' => array(
+      'region' => 'main',
+      'weight' => '0',
+      'has_required' => TRUE,
+      'title' => 'Title',
+    ),
+    'additional_settings' => array(
+      'region' => 'main',
+      'weight' => '10',
+      'has_required' => FALSE,
+      'title' => 'Vertical tabs',
+      'hidden' => 0,
+    ),
+    'actions' => array(
+      'region' => 'main',
+      'weight' => '11',
+      'has_required' => FALSE,
+      'title' => 'Save',
+      'hidden' => 0,
+    ),
+    'body' => array(
+      'region' => 'main',
+      'weight' => '1',
+      'has_required' => FALSE,
+      'title' => 'Description',
+      'hidden' => 0,
+    ),
+    'field_stanford_video_file' => array(
+      'region' => 'main',
+      'weight' => '5',
+      'has_required' => FALSE,
+      'title' => 'Video File',
+      'hidden' => 0,
+    ),
+    'field_stanford_video_caption' => array(
+      'region' => 'main',
+      'weight' => '3',
+      'has_required' => FALSE,
+      'title' => 'Caption File',
+      'hidden' => 0,
+    ),
+    'field_stanford_video_link' => array(
+      'region' => 'main',
+      'weight' => '4',
+      'has_required' => FALSE,
+      'title' => 'Video Link',
+      'hidden' => 1,
+    ),
+    'field_stanford_video_server' => array(
+      'region' => 'main',
+      'weight' => '6',
+      'has_required' => FALSE,
+      'title' => 'Streaming Server',
+      'hidden' => 0,
+    ),
+    'field_stanford_video_account' => array(
+      'region' => 'main',
+      'weight' => '7',
+      'has_required' => FALSE,
+      'title' => 'Account Name',
+      'hidden' => 0,
+    ),
+    'field_stanford_video_filename' => array(
+      'region' => 'main',
+      'weight' => '8',
+      'has_required' => FALSE,
+      'title' => 'File Name',
+      'hidden' => 0,
+    ),
+    'field_stanford_video_external' => array(
+      'region' => 'main',
+      'weight' => '9',
+      'has_required' => FALSE,
+      'title' => 'External Video Embed',
+      'hidden' => 0,
+    ),
+    'field_stanford_video_poster' => array(
+      'region' => 'main',
+      'weight' => '2',
+      'has_required' => FALSE,
+      'title' => 'Image',
+      'hidden' => 0,
+    ),
+  );
+  $export['nodeformscols_field_placements_stanford_video_default'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -101,20 +183,6 @@ function stanford_video_strongarm() {
   $strongarm->name = 'node_submitted_stanford_video';
   $strongarm->value = 0;
   $export['node_submitted_stanford_video'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_node_stanford_video_pattern';
-  $strongarm->value = 'videos/[node:title]';
-  $export['pathauto_node_stanford_video_pattern'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_taxonomy_term_stanford_video_categories_pattern';
-  $strongarm->value = '';
-  $export['pathauto_taxonomy_term_stanford_video_categories_pattern'] = $strongarm;
 
   return $export;
 }

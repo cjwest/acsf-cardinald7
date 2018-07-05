@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
     "content-hash": "8f3d9e984a7a06274f1524d109d7b8b3",
@@ -32,7 +32,7 @@
                 "source": "https://github.com/Stanford/WMD/tree/master",
                 "issues": "https://github.com/Stanford/WMD/issues"
             },
-            "time": "2018-05-10 23:12:42"
+            "time": "2018-05-10T23:12:42+00:00"
         },
         {
             "name": "Stanford/webauth_extras",
@@ -60,7 +60,7 @@
                 "source": "https://github.com/Stanford/webauth_extras/tree/master",
                 "issues": "https://github.com/Stanford/webauth_extras/issues"
             },
-            "time": "2018-05-10 23:09:54"
+            "time": "2018-05-10T23:09:54+00:00"
         },
         {
             "name": "components/chosen",
@@ -68,13 +68,33 @@
             "dist": {
                 "type": "zip",
                 "url": "https://github.com/harvesthq/chosen/releases/download/v1.8.2/chosen_v1.8.2.zip",
-                "reference": null,
-                "shasum": null
+                "reference": "37d348616fe88c98cc0803a1eb9b761487af1182",
+                "shasum": ""
             },
             "require": {
-                "composer/installers": "~1.0"
+                "components/jquery": "*"
             },
-            "type": "drupal-library"
+            "type": "component",
+            "extra": {
+                "component": {
+                    "files": [
+                        "chosen.jquery.js",
+                        "chosen.jquery.min.js",
+                        "chosen.proto.js",
+                        "chosen.proto.min.js",
+                        "chosen.css",
+                        "chosen.min.css",
+                        "chosen-sprite@2x.png",
+                        "chosen-sprite.png"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Chosen is a library for making long, unwieldy select boxes more friendly.",
+            "time": "2017-10-19T02:42:53+00:00"
         },
         {
             "name": "components/jquery",
@@ -1682,7 +1702,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/auto_nodetitle",
-                "reference": "98d66fb24d54113bbdfba0d1797239493473cd78"
+                "reference": "9e6caac6c8d370e952103f5fcd06cc31b4e6c28e"
             },
             "require": {
                 "drupal/drupal": "~7.0"
@@ -1727,8 +1747,7 @@
             "homepage": "https://www.drupal.org/project/auto_nodetitle",
             "support": {
                 "source": "http://cgit.drupalcode.org/auto_nodetitle"
-            },
-            "time": "2011-09-08 16:07:46"
+            }
         },
         {
             "name": "drupal/backup_migrate",
@@ -3040,7 +3059,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/context_list",
-                "reference": "6d81d058c0fa2aa38f5c86f129b822146991a0fb"
+                "reference": "6b9b1a1871bea70d49fb794627a6453d67f84585"
             },
             "require": {
                 "drupal/context": "*",
@@ -3075,8 +3094,7 @@
             "homepage": "https://www.drupal.org/project/context_list",
             "support": {
                 "source": "http://cgit.drupalcode.org/context_list"
-            },
-            "time": "2014-07-08 19:51:59"
+            }
         },
         {
             "name": "drupal/context_list_active",
@@ -3438,8 +3456,7 @@
             "homepage": "https://www.drupal.org/project/css_injector",
             "support": {
                 "source": "http://cgit.drupalcode.org/css_injector"
-            },
-            "time": "2013-12-23 06:52:25"
+            }
         },
         {
             "name": "drupal/ctools",
@@ -4365,7 +4382,7 @@
                 },
                 "drupal": {
                     "version": "7.59",
-                    "datestamp": "1524674011",
+                    "datestamp": "1524805044",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4377,10 +4394,6 @@
                 "GPL-2.0-or-later"
             ],
             "authors": [
-                {
-                    "name": "Cottser",
-                    "homepage": "https://www.drupal.org/user/1167326"
-                },
                 {
                     "name": "David_Rothstein",
                     "homepage": "https://www.drupal.org/user/124982"
@@ -11265,6 +11278,7 @@
                 "shasum": ""
             },
             "type": "drupal-custom-module",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0+"
             ],
@@ -11276,10 +11290,6 @@
             ],
             "description": "Stanford Career Academic Profiles API integration Module",
             "homepage": "https://github.com/SU-SWS/stanford_capx",
-            "support": {
-                "source": "https://github.com/SU-SWS/stanford_capx/tree/7.3.0-beta8",
-                "issues": "https://github.com/SU-SWS/stanford_capx/issues"
-            },
             "time": "2018-06-28T17:10:27+00:00"
         },
         {
@@ -11384,14 +11394,11 @@
                 "composer/installers": "~1.0"
             },
             "type": "drupal-custom-module",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0+"
             ],
             "description": "A collection of date formats.",
-            "support": {
-                "source": "https://github.com/SU-SWS/stanford_date_formats/tree/7.1.2",
-                "issues": "https://github.com/SU-SWS/stanford_date_formats/issues"
-            },
             "time": "2018-06-26T21:49:21+00:00"
         },
         {
@@ -11775,14 +11782,11 @@
                 "composer/installers": "^1.2"
             },
             "type": "drupal-custom-module",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0+"
             ],
             "description": "A Drupal feature.",
-            "support": {
-                "source": "https://github.com/SU-SWS/stanford_image_styles/tree/7.4.3-alpha2",
-                "issues": "https://github.com/SU-SWS/stanford_image_styles/issues"
-            },
             "time": "2018-06-27T20:01:13+00:00"
         },
         {
@@ -11920,7 +11924,7 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_jumpstart_home/tree/7.1.8",
+                "source": "https://github.com/SU-SWS/stanford_jumpstart_home/tree/7.x-1.x",
                 "issues": "https://github.com/SU-SWS/stanford_jumpstart_home/issues"
             },
             "time": "2018-04-16T18:21:41+00:00"
@@ -12121,7 +12125,7 @@
                 "issues": "https://github.com/SU-SWS/stanford_metatag_nobots/issues"
             },
             "abandoned": "drupal/nobots",
-            "time": "2018-02-20 06:04:14"
+            "time": "2018-02-20T06:04:14+00:00"
         },
         {
             "name": "su-sws/stanford_news",
@@ -12141,14 +12145,11 @@
                 "composer/installers": "^1.2"
             },
             "type": "drupal-custom-module",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0+"
             ],
             "description": "A Drupal feature.",
-            "support": {
-                "source": "https://github.com/SU-SWS/stanford_news/tree/7.3.7-alpha4",
-                "issues": "https://github.com/SU-SWS/stanford_news/issues"
-            },
             "time": "2018-04-16T20:08:31+00:00"
         },
         {
@@ -12169,14 +12170,11 @@
                 "composer/installers": "^1.2"
             },
             "type": "drupal-custom-module",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0+"
             ],
             "description": "The basic building block page for any website.",
-            "support": {
-                "source": "https://github.com/SU-SWS/stanford_page/tree/7.2.2",
-                "issues": "https://github.com/SU-SWS/stanford_page/issues"
-            },
             "time": "2018-06-27T20:54:59+00:00"
         },
         {
@@ -12197,14 +12195,11 @@
                 "composer/installers": "^1.2"
             },
             "type": "drupal-custom-module",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0+"
             ],
             "description": "A collection re-usable of paragraph types.",
-            "support": {
-                "source": "https://github.com/SU-SWS/stanford_paragraph_types/tree/7.1.4",
-                "issues": "https://github.com/SU-SWS/stanford_paragraph_types/issues"
-            },
             "time": "2018-06-27T21:54:13+00:00"
         },
         {
@@ -12457,7 +12452,7 @@
                 "source": "https://github.com/SU-SWS/stanford_ssp/tree/7.x-2.x",
                 "issues": "https://github.com/SU-SWS/stanford_ssp/issues"
             },
-            "time": "2018-06-28 16:38:36"
+            "time": "2018-06-28T16:38:36+00:00"
         },
         {
             "name": "su-sws/stanford_story_page",
@@ -12517,16 +12512,16 @@
         },
         {
             "name": "su-sws/stanford_video",
-            "version": "7.3.0-alpha1",
+            "version": "7.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_video.git",
-                "reference": "1e27275cabd5bd228c68ae871072c92d78f960a1"
+                "reference": "e2936133dd18ba287af44769e8da522549169c93"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_video/zipball/1e27275cabd5bd228c68ae871072c92d78f960a1",
-                "reference": "1e27275cabd5bd228c68ae871072c92d78f960a1",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_video/zipball/e2936133dd18ba287af44769e8da522549169c93",
+                "reference": "e2936133dd18ba287af44769e8da522549169c93",
                 "shasum": ""
             },
             "require": {
@@ -12538,10 +12533,10 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_video/tree/7.3.0-alpha1",
+                "source": "https://github.com/SU-SWS/stanford_video/tree/7.2.3",
                 "issues": "https://github.com/SU-SWS/stanford_video/issues"
             },
-            "time": "2018-06-28T20:16:25+00:00"
+            "time": "2018-06-28T20:27:50+00:00"
         },
         {
             "name": "su-sws/stanford_wilbur",
@@ -12594,7 +12589,7 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_wysiwyg/tree/7.2.5",
+                "source": "https://github.com/SU-SWS/stanford_wysiwyg/tree/SITES-533",
                 "issues": "https://github.com/SU-SWS/stanford_wysiwyg/issues"
             },
             "time": "2018-06-27T15:36:34+00:00"
@@ -14893,7 +14888,7 @@
                 "source": "https://github.com/SU-SWS/linky_clicky/tree/5.x",
                 "issues": "https://github.com/SU-SWS/linky_clicky/issues"
             },
-            "time": "2018-06-28 00:21:45"
+            "time": "2018-06-28T00:21:45+00:00"
         },
         {
             "name": "weavora/mink-extra-context",
@@ -14929,7 +14924,7 @@
                 "Mink",
                 "feature"
             ],
-            "time": "2014-01-13 15:50:49"
+            "time": "2014-01-13T15:50:49+00:00"
         }
     ],
     "aliases": [],
@@ -14966,7 +14961,6 @@
         "su-sws/stanford_metatag_nobots": 20,
         "su-sws/stanford_subsites": 15,
         "su-sws/stanford_conference": 15,
-        "su-sws/stanford_video": 15,
         "su-sws/stanford_jumpstart_lab": 15
     },
     "prefer-stable": true,

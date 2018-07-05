@@ -1,13 +1,14 @@
 Stanford Web Video x.x-x.x xxxx-xx-xx
 ---------------------------------
 
-7.x-2.3                           2018-06-28
+7.x-3.0-alpha1                    2018-06-27
 --------------------------------------------
-- Added composer.json
-
-7.x-2.2+6-dev                     2017-01-20
---------------------------------------------
-- Set content type to published by default
+- Brand new styles and layouts
+- New Video vocabulary
+- New installation requirements on variables
+- Removal of a bunch of deprecated code
+- Removed stanford_jw_player.tpl.php
+- New views
 
 7.x-2.2                           2016-05-30
 --------------------------------------------
