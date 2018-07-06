@@ -34,3 +34,15 @@ function acsf_helper_form_system_modules_alter(&$form, &$form_state, $form_id) {
   unset($form['modules']['Stanford']['webauth_extras']);
   unset($form['modules']['Stanford']['capx_webauth']);
 }
+
+/**
+ * Implements hook_module_implements_alter().
+ */
+function acsf_helper_module_implements_alter(&$implementations, $hook) {
+  if ($hook == 'form_alter' && module_exists('paranoia')) {
+    $group = $implementations['paranoia'];
+    unset($implementations['paranoia']);
+    $implementations['paranoia'] = $group;
+  }
+}
+
