@@ -1,6 +1,21 @@
 <?php
 
-$env = !empty($_ENV['AH_SITE_ENVIRONMENT']) ? '-' . $_ENV['AH_SITE_ENVIRONMENT'] : '';
+$env = !empty($_ENV['AH_SITE_ENVIRONMENT']) ? $_ENV['AH_SITE_ENVIRONMENT'] : '';
+// E.g., $url = https://acsf.stanford.edu/saml/02live/eao.stanford.edu
+$url = 'https://acsf.stanford.edu/saml/' . $env . '/' . filter_var($_SERVER['HTTP_HOST'], FILTER_SANITIZE_URL);
+switch ($env) {
+  case '02dev':
+    $idp = 'https://idp-uat.stanford.edu/';
+    break;
+  case '02test':
+    $idp = 'https://idp-uat.stanford.edu/';
+    break;
+  case '02live':
+    $idp = 'https://idp.stanford.edu/';
+    break;
+  default:
+    $idp = 'https://idp.stanford.edu/';
+}
 $config = array(
 
   // This is a authentication source which handles admin authentication.
@@ -19,11 +34,11 @@ $config = array(
 
     // The entity ID of this SP.
     // Can be NULL/unset, in which case an entity ID is generated based on the metadata URL.
-    'entityID' => 'https://saml.cardinalsites.stanford.edu/',
+    'entityID' => $url,
 
     // The entity ID of the IdP this should SP should contact.
     // Can be NULL/unset, in which case the user will be shown a list of available IdPs.
-    'idp' => "https://idp.stanford.edu/",
+    'idp' => $idp,
 
     // The URL to the discovery service.
     // Can be NULL/unset, in which case a builtin discovery service will be used.

@@ -113,3 +113,112 @@ BfuJMPzg7ZB419AEoeYnLktqAWiU+ISnVfbwFOJ+OM/O7VQOeHDm2AeYcwo12CAc
     'en' => 'Stanford University WebAuth',
   ),
 );
+
+$metadata['https://idp-uat.stanford.edu/'] = array (
+  'entityid' => 'https://idp-uat.stanford.edu/',
+  'contacts' =>
+    array (
+      0 =>
+        array (
+          'contactType' => 'technical',
+          'givenName' => 'Shibboleth Team',
+          'emailAddress' =>
+            array (
+              0 => 'shibboleth-team@lists.stanford.edu',
+            ),
+        ),
+    ),
+  'metadata-set' => 'shib13-idp-remote',
+  'expire' => 1561506930,
+  'SingleSignOnService' =>
+    array (
+      0 =>
+        array (
+          'Binding' => 'urn:mace:shibboleth:1.0:profiles:AuthnRequest',
+          'Location' => 'https://login-uat.stanford.edu/idp/profile/Shibboleth/SSO',
+        ),
+      1 =>
+        array (
+          'Binding' => 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST',
+          'Location' => 'https://login-uat.stanford.edu/idp/profile/SAML2/POST/SSO',
+        ),
+      2 =>
+        array (
+          'Binding' => 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign',
+          'Location' => 'https://login-uat.stanford.edu/idp/profile/SAML2/POST-SimpleSign/SSO',
+        ),
+      3 =>
+        array (
+          'Binding' => 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect',
+          'Location' => 'https://login-uat.stanford.edu/idp/profile/SAML2/Redirect/SSO',
+        ),
+    ),
+  'ArtifactResolutionService' =>
+    array (
+    ),
+  'keys' =>
+    array (
+      0 =>
+        array (
+          'encryption' => true,
+          'signing' => true,
+          'type' => 'X509Certificate',
+          'X509Certificate' => 'MIIDzDCCArQCCQCdJebZPEsQBzANBgkqhkiG9w0BAQsFADCBpzELMAkGA1UEBhMC
+          VVMxEzARBgNVBAgMCkNhbGlmb3JuaWExETAPBgNVBAcMCFN0YW5mb3JkMRwwGgYD
+          VQQKDBNTdGFuZm9yZCBVbml2ZXJzaXR5MTMwMQYDVQQLDCpBdXRoZW50aWNhdGlv
+          biBhbmQgQ29sbGFib3JhdGlvbiBTb2x1dGlvbnMxHTAbBgNVBAMMFGlkcC11YXQu
+          c3RhbmZvcmQuZWR1MB4XDTE2MDUyMzIwMTIxMVoXDTI2MDUyMTIwMTIxMVowgacx
+          CzAJBgNVBAYTAlVTMRMwEQYDVQQIDApDYWxpZm9ybmlhMREwDwYDVQQHDAhTdGFu
+          Zm9yZDEcMBoGA1UECgwTU3RhbmZvcmQgVW5pdmVyc2l0eTEzMDEGA1UECwwqQXV0
+          aGVudGljYXRpb24gYW5kIENvbGxhYm9yYXRpb24gU29sdXRpb25zMR0wGwYDVQQD
+          DBRpZHAtdWF0LnN0YW5mb3JkLmVkdTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCC
+          AQoCggEBAJlkwhaVvmjhW6EGIATvco0UQntR1p9+XneAU7z08j3CLyjgb5n7qTgn
+          3piZmENA0y3aD9cvIZ6ixYN8oCGfPTjwMr488cCQsBkvXCoA4O1XThvPsdd5KjQX
+          y8IAsno6qrYsfeS+nlMgeJhHVPRRFkos+JUs0LGYHK/vZdMpIVYhDbH3udwjMP9O
+          Qf4h1HCr4zy2n/XWg3GO9AyKq50ibTogOZy0wQr7gp1+l5RW0hXG1IYShbu57MaI
+          TtsUZUMUJZGGGeEBYANWelJ8TnXvOJt0ZqLeULJSgCS8EyKQM4Ty5Qy7cbTVN8zP
+          aPne4smCvpeAHxyaCqx3z6XXBgKutDcCAwEAATANBgkqhkiG9w0BAQsFAAOCAQEA
+          DxXtRxiUAd9brr55fv0gxMFNTE7ayZh5BWFgukOvMyS0H1ces7NmiqoDJR3uMc7P
+          1zdudiAoO4tlRGnMm9FA5eE8Rhm8WEPvwdaGcoiIu80yPXPHWx+7sBy4mAc4llrO
+          AYwCbXM0E6jLh4Y068j+mLmzYzkW6Ro7mImTyGNYNWJUr3jP+79m6Fr0QbC44Giz
+          S4UszE26axYpmhs2ONQFsOBs1VazgNt/LJfgQXK3MpdRct2vOMIeHSJAw6lJ1rfc
+          CoS3z3uvz7LPaJdw4ZyDC9i0bQoKvfpi96pOnsc2TE/MMo3JbG2vW8g0G3f9xv5O
+          PzwNr2FQZzZfjH0wg9dMfQ==',
+        ),
+    ),
+  'scope' =>
+    array (
+      0 => 'stanford.edu',
+    ),
+  'UIInfo' =>
+    array (
+      'DisplayName' =>
+        array (
+          'en' => 'Stanford University Login (UAT)',
+        ),
+      'Description' =>
+        array (
+        ),
+      'InformationURL' =>
+        array (
+          'en' => 'http://saml.stanford.edu/',
+        ),
+      'PrivacyStatementURL' =>
+        array (
+        ),
+      'Logo' =>
+        array (
+          0 =>
+            array (
+              'url' => 'https://login-uat.stanford.edu/logo.png',
+              'height' => 60,
+              'width' => 80,
+              'lang' => 'en',
+            ),
+        ),
+    ),
+  'name' =>
+    array (
+      'en' => 'Stanford University Login (UAT)',
+    ),
+);
