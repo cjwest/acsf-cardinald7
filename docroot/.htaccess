@@ -61,6 +61,24 @@ DirectoryIndex index.php index.html index.htm
 <IfModule mod_rewrite.c>
   RewriteEngine on
 
+  # Rewrite URLs of the form foo.cardinalsites.acsitefactory.com to
+  # https://foo.cardinalsites.stanford.edu
+  # See https://stanfordits.atlassian.net/browse/SITES-129.
+  RewriteCond "%{HTTP_HOST}"   "^(.*)\.cardinalsites\.acsitefactory\.com" [NC]
+  RewriteRule "^/?(.*)"        "https://%1.cardinalsites.stanford.edu/$1" [L,R,NE]
+
+  # Test environment.
+  RewriteCond "%{HTTP_HOST}"   "^(.*)\.test-cardinalsites\.acsitefactory\.com" [NC]
+  RewriteRule "^/?(.*)"        "https://%1-test.cardinalsites.stanford.edu/$1" [L,R,NE]
+
+  # Dev environment.
+  RewriteCond "%{HTTP_HOST}"   "^(.*)\.dev-cardinalsites\.acsitefactory\.com" [NC]
+  RewriteRule "^/?(.*)"        "https://%1-dev.cardinalsites.stanford.edu/$1" [L,R,NE]
+
+  # Remote Administration environment.
+  RewriteCond "%{HTTP_HOST}"   "^(.*)\.acqra-cardinalsites\.acsitefactory\.com" [NC]
+  RewriteRule "^/?(.*)"        "https://%1-acqra.cardinalsites.stanford.edu/$1" [L,R,NE]
+
   # Set "protossl" to "s" if we were accessed via https://.  This is used later
   # if you enable "www." stripping or enforcement, in order to ensure that
   # you don't bounce between http and https.
