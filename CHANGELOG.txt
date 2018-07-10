@@ -1,5 +1,30 @@
 ACSF CardinalD7
 
+Version 1.0.0                                                        2018-07-10
+-------------------------------------------------------------------------------
+- Fundamental re-architecture to a composer-based workflow ("socorro")
+- Update all stanford and contrib modules to latest versions
+- Added new installation profiles
+- Customize Paranoia disabled form message
+- Add Lando local environment config and composer setup
+
+Version 0.0.15                                                       2018-07-09
+-------------------------------------------------------------------------------
+- Bug fix for incorrectly trying to generate aggregated SAML metadata
+- Set temp directory and logging location
+
+Version 0.0.14                                                       2018-07-09
+-------------------------------------------------------------------------------
+- Update SimpleSAMLphp configuration to dynamically generate an entityId.
+- Aggregate SAML metadata and publish at a URL.
+
+Version 0.0.13                                                       2018-06-13
+-------------------------------------------------------------------------------
+- Update contrib module paranoia-7.x-1.7+5-dev.
+- Update theme stanford_framework-7.x-3.6 for GDPR compliance.
+- Update contrib module acsf-7.x-1.48.
+- Add scripts/js-injector.php to write JS Injector files to disk for migration.
+
 Version 0.0.12                                                       2018-04-25
 -------------------------------------------------------------------------------
 - Critical security update to drupal-7.59.
