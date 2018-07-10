@@ -52,6 +52,12 @@ $config['authproc.sp'] = array(
   90 => 'core:LanguageAdaptor',
 );
 
+// Set log and temp location, as specified by Acquia
+$config['tempdir'] = '/mnt/tmp/' . $_ENV['AH_SITE_NAME'];
+$config['logging.handler'] = 'file';
+$config['loggingdir'] = $config['tempdir'];
+$config['logging.logfile'] = 'simplesamlphp-' . date("Ymd") . '.log';
+
 /**
  * Cookies No Cache.
  *
