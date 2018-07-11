@@ -1,5 +1,9 @@
 ACSF CardinalD7
 
+Version 1.0.1                                                        2018-07-11
+-------------------------------------------------------------------------------
+- Force loading through a *.cardinalsites.stanford.edu URL
+
 Version 1.0.0                                                        2018-07-10
 -------------------------------------------------------------------------------
 - Fundamental re-architecture to a composer-based workflow ("socorro")
