@@ -50,14 +50,15 @@ function stanford_dept_install_finished() {
  *   passed.
  */
 function stanford_dept_system_info_alter(&$info, $file, $type) {
+  // Run everything that we alter in "stanford".
   stanford_system_info_alter($info, $file, $type);
 
-  // Allow a few themes from being enabled by hiding them from the UI.
+  // Allow a few themes to be enabled by revealing them in the UI.
   if (
     isset($info['project']) &&
-    ($info['project'] == 'cube' ||
-    $info['project'] == 'rubik' ||
-    $info['project'] == 'tao')
+    ($info['project'] == 'stanford_framework' ||
+    $info['project'] == 'stanford_jordan' ||
+    $info['project'] == 'stanford_wilbur')
   ) {
     $info['hidden'] = FALSE;
     return;

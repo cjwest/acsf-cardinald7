@@ -29,6 +29,7 @@ function acsf_helper_system_info_alter(&$info, $file, $type) {
  * @param $form_id String representing the name of the form itself. Typically this is the name of the function that generated the form.
  */
 function acsf_helper_form_system_modules_alter(&$form, &$form_state, $form_id) {
+  unset($form['modules']['Core']['statistics']);
   unset($form['modules']['Stanford']['webauth']);
   unset($form['modules']['Stanford']['stanford_webauth_block']);
   unset($form['modules']['Stanford']['webauth_extras']);
