@@ -1,5 +1,10 @@
 ACSF CardinalD7
 
+Version 1.0.2                                                        2018-07-13
+-------------------------------------------------------------------------------
+- Block end-users from enabling certain modules in stanford and stanford_dept
+- Reveal themes in stanford_dept
+
 Version 1.0.1                                                        2018-07-11
 -------------------------------------------------------------------------------
 - Force loading through a *.cardinalsites.stanford.edu URL
