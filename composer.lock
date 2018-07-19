@@ -68,33 +68,13 @@
             "dist": {
                 "type": "zip",
                 "url": "https://github.com/harvesthq/chosen/releases/download/v1.8.2/chosen_v1.8.2.zip",
-                "reference": "37d348616fe88c98cc0803a1eb9b761487af1182",
-                "shasum": ""
+                "reference": null,
+                "shasum": null
             },
             "require": {
-                "components/jquery": "*"
+                "composer/installers": "~1.0"
             },
-            "type": "component",
-            "extra": {
-                "component": {
-                    "files": [
-                        "chosen.jquery.js",
-                        "chosen.jquery.min.js",
-                        "chosen.proto.js",
-                        "chosen.proto.min.js",
-                        "chosen.css",
-                        "chosen.min.css",
-                        "chosen-sprite@2x.png",
-                        "chosen-sprite.png"
-                    ]
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Chosen is a library for making long, unwieldy select boxes more friendly.",
-            "time": "2017-10-19T02:42:53+00:00"
+            "type": "drupal-library"
         },
         {
             "name": "components/jquery",
@@ -469,7 +449,10 @@
             },
             "type": "composer-plugin",
             "extra": {
-                "class": "cweagans\\Composer\\Patches"
+                "class": "cweagans\\Composer\\Patches",
+                "patches_applied": {
+                    "Call the preserve paths hooks": "https://github.com/SebCorbin/composer-patches/commit/1cb9bacba51f8bba0c5f3f322c3bb61e4ceae974.patch"
+                }
             },
             "autoload": {
                 "psr-4": {
@@ -772,33 +755,39 @@
         },
         {
             "name": "doctrine/common",
-            "version": "v2.8.1",
+            "version": "v2.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/common.git",
-                "reference": "f68c297ce6455e8fd794aa8ffaf9fa458f6ade66"
+                "reference": "a210246d286c77d2b89040f8691ba7b3a713d2c1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/common/zipball/f68c297ce6455e8fd794aa8ffaf9fa458f6ade66",
-                "reference": "f68c297ce6455e8fd794aa8ffaf9fa458f6ade66",
+                "url": "https://api.github.com/repos/doctrine/common/zipball/a210246d286c77d2b89040f8691ba7b3a713d2c1",
+                "reference": "a210246d286c77d2b89040f8691ba7b3a713d2c1",
                 "shasum": ""
             },
             "require": {
-                "doctrine/annotations": "1.*",
-                "doctrine/cache": "1.*",
-                "doctrine/collections": "1.*",
-                "doctrine/inflector": "1.*",
-                "doctrine/lexer": "1.*",
-                "php": "~7.1"
+                "doctrine/annotations": "^1.0",
+                "doctrine/cache": "^1.0",
+                "doctrine/collections": "^1.0",
+                "doctrine/event-manager": "^1.0",
+                "doctrine/inflector": "^1.0",
+                "doctrine/lexer": "^1.0",
+                "doctrine/persistence": "^1.0",
+                "doctrine/reflection": "^1.0",
+                "php": "^7.1"
             },
             "require-dev": {
-                "phpunit/phpunit": "^5.7"
+                "doctrine/coding-standard": "^1.0",
+                "phpunit/phpunit": "^6.3",
+                "squizlabs/php_codesniffer": "^3.0",
+                "symfony/phpunit-bridge": "^4.0.5"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.8.x-dev"
+                    "dev-master": "2.9.x-dev"
                 }
             },
             "autoload": {
@@ -830,10 +819,14 @@
                 {
                     "name": "Johannes Schmitt",
                     "email": "schmittjoh@gmail.com"
+                },
+                {
+                    "name": "Marco Pivetta",
+                    "email": "ocramius@gmail.com"
                 }
             ],
             "description": "Common Library for Doctrine projects",
-            "homepage": "http://www.doctrine-project.org",
+            "homepage": "https://www.doctrine-project.org",
             "keywords": [
                 "annotations",
                 "collections",
@@ -841,7 +834,81 @@
                 "persistence",
                 "spl"
             ],
-            "time": "2017-08-31T08:43:38+00:00"
+            "time": "2018-07-12T21:16:12+00:00"
+        },
+        {
+            "name": "doctrine/event-manager",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/event-manager.git",
+                "reference": "a520bc093a0170feeb6b14e9d83f3a14452e64b3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/event-manager/zipball/a520bc093a0170feeb6b14e9d83f3a14452e64b3",
+                "reference": "a520bc093a0170feeb6b14e9d83f3a14452e64b3",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1"
+            },
+            "conflict": {
+                "doctrine/common": "<2.9@dev"
+            },
+            "require-dev": {
+                "doctrine/coding-standard": "^4.0",
+                "phpunit/phpunit": "^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Common\\": "lib/Doctrine/Common"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com"
+                },
+                {
+                    "name": "Marco Pivetta",
+                    "email": "ocramius@gmail.com"
+                }
+            ],
+            "description": "Doctrine Event Manager component",
+            "homepage": "https://www.doctrine-project.org/projects/event-manager.html",
+            "keywords": [
+                "event",
+                "eventdispatcher",
+                "eventmanager"
+            ],
+            "time": "2018-06-11T11:59:03+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -963,6 +1030,159 @@
                 "parser"
             ],
             "time": "2014-09-09T13:34:57+00:00"
+        },
+        {
+            "name": "doctrine/persistence",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/persistence.git",
+                "reference": "17896f6d56a2794a1619e019596ae627aabd8fd5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/persistence/zipball/17896f6d56a2794a1619e019596ae627aabd8fd5",
+                "reference": "17896f6d56a2794a1619e019596ae627aabd8fd5",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/annotations": "^1.0",
+                "doctrine/cache": "^1.0",
+                "doctrine/collections": "^1.0",
+                "doctrine/event-manager": "^1.0",
+                "doctrine/reflection": "^1.0",
+                "php": "^7.1"
+            },
+            "conflict": {
+                "doctrine/common": "<2.9@dev"
+            },
+            "require-dev": {
+                "doctrine/coding-standard": "^4.0",
+                "phpstan/phpstan": "^0.8",
+                "phpunit/phpunit": "^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Common\\": "lib/Doctrine/Common"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com"
+                },
+                {
+                    "name": "Marco Pivetta",
+                    "email": "ocramius@gmail.com"
+                }
+            ],
+            "description": "Doctrine Persistence abstractions.",
+            "homepage": "https://doctrine-project.org/projects/persistence.html",
+            "keywords": [
+                "persistence"
+            ],
+            "time": "2018-06-14T18:57:48+00:00"
+        },
+        {
+            "name": "doctrine/reflection",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/reflection.git",
+                "reference": "02538d3f95e88eb397a5f86274deb2c6175c2ab6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/reflection/zipball/02538d3f95e88eb397a5f86274deb2c6175c2ab6",
+                "reference": "02538d3f95e88eb397a5f86274deb2c6175c2ab6",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/annotations": "^1.0",
+                "ext-tokenizer": "*",
+                "php": "^7.1"
+            },
+            "require-dev": {
+                "doctrine/coding-standard": "^4.0",
+                "doctrine/common": "^2.8",
+                "phpstan/phpstan": "^0.9.2",
+                "phpstan/phpstan-phpunit": "^0.9.4",
+                "phpunit/phpunit": "^7.0",
+                "squizlabs/php_codesniffer": "^3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Common\\": "lib/Doctrine/Common"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com"
+                },
+                {
+                    "name": "Marco Pivetta",
+                    "email": "ocramius@gmail.com"
+                }
+            ],
+            "description": "Doctrine Reflection component",
+            "homepage": "https://www.doctrine-project.org/projects/reflection.html",
+            "keywords": [
+                "reflection"
+            ],
+            "time": "2018-06-14T14:45:07+00:00"
         },
         {
             "name": "dompdf/dompdf",
@@ -1597,7 +1817,7 @@
                 },
                 "drupal": {
                     "version": "7.x-1.4",
-                    "datestamp": "1523697542",
+                    "datestamp": "1523697484",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1699,7 +1919,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/auto_nodetitle",
-                "reference": "9e6caac6c8d370e952103f5fcd06cc31b4e6c28e"
+                "reference": "98d66fb24d54113bbdfba0d1797239493473cd78"
             },
             "require": {
                 "drupal/drupal": "~7.0"
@@ -1710,8 +1930,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "7.x-1.0+19-dev",
-                    "datestamp": "1530515921",
+                    "version": "7.x-1.0+16-dev",
+                    "datestamp": "1523758085",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -1744,7 +1964,8 @@
             "homepage": "https://www.drupal.org/project/auto_nodetitle",
             "support": {
                 "source": "http://cgit.drupalcode.org/auto_nodetitle"
-            }
+            },
+            "time": "2011-09-08T16:07:46+00:00"
         },
         {
             "name": "drupal/backup_migrate",
@@ -3056,7 +3277,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/context_list",
-                "reference": "6b9b1a1871bea70d49fb794627a6453d67f84585"
+                "reference": "6d81d058c0fa2aa38f5c86f129b822146991a0fb"
             },
             "require": {
                 "drupal/context": "*",
@@ -3091,7 +3312,8 @@
             "homepage": "https://www.drupal.org/project/context_list",
             "support": {
                 "source": "http://cgit.drupalcode.org/context_list"
-            }
+            },
+            "time": "2014-07-08T19:51:59+00:00"
         },
         {
             "name": "drupal/context_list_active",
@@ -3453,7 +3675,8 @@
             "homepage": "https://www.drupal.org/project/css_injector",
             "support": {
                 "source": "http://cgit.drupalcode.org/css_injector"
-            }
+            },
+            "time": "2013-12-23T06:52:25+00:00"
         },
         {
             "name": "drupal/ctools",
@@ -4379,7 +4602,7 @@
                 },
                 "drupal": {
                     "version": "7.59",
-                    "datestamp": "1524805044",
+                    "datestamp": "1524674011",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4391,6 +4614,10 @@
                 "GPL-2.0-or-later"
             ],
             "authors": [
+                {
+                    "name": "Cottser",
+                    "homepage": "https://www.drupal.org/user/1167326"
+                },
                 {
                     "name": "David_Rothstein",
                     "homepage": "https://www.drupal.org/user/124982"
@@ -5670,7 +5897,8 @@
             "homepage": "https://www.drupal.org/project/filefield_paths",
             "support": {
                 "source": "http://cgit.drupalcode.org/filefield_paths"
-            }
+            },
+            "time": "2016-01-04T09:05:19+00:00"
         },
         {
             "name": "drupal/flag",
@@ -5959,17 +6187,17 @@
         },
         {
             "name": "drupal/google_analytics",
-            "version": "2.4.0",
+            "version": "2.5.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/google_analytics",
-                "reference": "7.x-2.4"
+                "reference": "7.x-2.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/google_analytics-7.x-2.4.zip",
-                "reference": "7.x-2.4",
-                "shasum": "f45b6ce1afae9ded387e9e94bc0d959b442eae1f"
+                "url": "https://ftp.drupal.org/files/projects/google_analytics-7.x-2.5.zip",
+                "reference": "7.x-2.5",
+                "shasum": "00a5378b4e7ebe455474c2c2d524bf0e42420cec"
             },
             "require": {
                 "drupal/drupal": "~7.0"
@@ -5983,8 +6211,8 @@
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "7.x-2.4",
-                    "datestamp": "1506373144",
+                    "version": "7.x-2.5",
+                    "datestamp": "1531469021",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -8904,23 +9132,24 @@
         },
         {
             "name": "drupal/uuid",
-            "version": "1.1.0",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/uuid",
-                "reference": "7.x-1.1"
+                "reference": "7.x-1.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/uuid-7.x-1.1.zip",
-                "reference": "7.x-1.1",
-                "shasum": "5696fc43e412f39aaeb17a200940bd39bcaf72c7"
+                "url": "https://ftp.drupal.org/files/projects/uuid-7.x-1.2.zip",
+                "reference": "7.x-1.2",
+                "shasum": "ed94aa59fc45c300ac6c38c6f419e60d777a89f3"
             },
             "require": {
                 "drupal/drupal": "*"
             },
             "require-dev": {
                 "drupal/entity": "*",
+                "drupal/file_entity": "*",
                 "drupal/rest_server": "*",
                 "drupal/services": "*",
                 "drupal/uuid_services": "*"
@@ -8931,8 +9160,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "7.x-1.1",
-                    "datestamp": "1530724916",
+                    "version": "7.x-1.2",
+                    "datestamp": "1531990681",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -9687,7 +9916,7 @@
                 },
                 "drupal": {
                     "version": "7.x-4.17",
-                    "datestamp": "1525373073",
+                    "datestamp": "1524581885",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -10089,17 +10318,17 @@
         },
         {
             "name": "drupal/xmlsitemap",
-            "version": "2.3.0",
+            "version": "2.4.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/xmlsitemap",
-                "reference": "7.x-2.3"
+                "reference": "7.x-2.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/xmlsitemap-7.x-2.3.zip",
-                "reference": "7.x-2.3",
-                "shasum": "46d7c5cd9b73b192c468448f7a3d44cdce4914d9"
+                "url": "https://ftp.drupal.org/files/projects/xmlsitemap-7.x-2.4.zip",
+                "reference": "7.x-2.4",
+                "shasum": "2155d468c8fca6a15306689e91d8a235adc9ba6e"
             },
             "require": {
                 "drupal/drupal": "~7.0"
@@ -10114,8 +10343,8 @@
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "7.x-2.3",
-                    "datestamp": "1464192286",
+                    "version": "7.x-2.4",
+                    "datestamp": "1531986645",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -10704,16 +10933,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v4.0.2",
+            "version": "v4.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "35b8caf75e791ba1b2d24fec1552168d72692b12"
+                "reference": "bd088dc940a418f09cda079a9b5c7c478890fb8d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/35b8caf75e791ba1b2d24fec1552168d72692b12",
-                "reference": "35b8caf75e791ba1b2d24fec1552168d72692b12",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/bd088dc940a418f09cda079a9b5c7c478890fb8d",
+                "reference": "bd088dc940a418f09cda079a9b5c7c478890fb8d",
                 "shasum": ""
             },
             "require": {
@@ -10751,7 +10980,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2018-06-03T11:33:10+00:00"
+            "time": "2018-07-15T17:25:16+00:00"
         },
         {
             "name": "omega8cc/drush-registry-rebuild",
@@ -11326,7 +11555,6 @@
                 "shasum": ""
             },
             "type": "drupal-custom-module",
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0+"
             ],
@@ -11338,6 +11566,10 @@
             ],
             "description": "Stanford Career Academic Profiles API integration Module",
             "homepage": "https://github.com/SU-SWS/stanford_capx",
+            "support": {
+                "source": "https://github.com/SU-SWS/stanford_capx/tree/7.3.0-beta8",
+                "issues": "https://github.com/SU-SWS/stanford_capx/issues"
+            },
             "time": "2018-06-28T17:10:27+00:00"
         },
         {
@@ -11442,11 +11674,14 @@
                 "composer/installers": "~1.0"
             },
             "type": "drupal-custom-module",
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0+"
             ],
             "description": "A collection of date formats.",
+            "support": {
+                "source": "https://github.com/SU-SWS/stanford_date_formats/tree/7.1.2",
+                "issues": "https://github.com/SU-SWS/stanford_date_formats/issues"
+            },
             "time": "2018-06-26T21:49:21+00:00"
         },
         {
@@ -11830,11 +12065,14 @@
                 "composer/installers": "^1.2"
             },
             "type": "drupal-custom-module",
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0+"
             ],
             "description": "A Drupal feature.",
+            "support": {
+                "source": "https://github.com/SU-SWS/stanford_image_styles/tree/7.4.3-alpha2",
+                "issues": "https://github.com/SU-SWS/stanford_image_styles/issues"
+            },
             "time": "2018-06-27T20:01:13+00:00"
         },
         {
@@ -12193,11 +12431,14 @@
                 "composer/installers": "^1.2"
             },
             "type": "drupal-custom-module",
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0+"
             ],
             "description": "A Drupal feature.",
+            "support": {
+                "source": "https://github.com/SU-SWS/stanford_news/tree/7.3.7-alpha4",
+                "issues": "https://github.com/SU-SWS/stanford_news/issues"
+            },
             "time": "2018-04-16T20:08:31+00:00"
         },
         {
@@ -12218,11 +12459,14 @@
                 "composer/installers": "^1.2"
             },
             "type": "drupal-custom-module",
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0+"
             ],
             "description": "The basic building block page for any website.",
+            "support": {
+                "source": "https://github.com/SU-SWS/stanford_page/tree/7.2.2",
+                "issues": "https://github.com/SU-SWS/stanford_page/issues"
+            },
             "time": "2018-06-27T20:54:59+00:00"
         },
         {
@@ -12243,11 +12487,14 @@
                 "composer/installers": "^1.2"
             },
             "type": "drupal-custom-module",
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0+"
             ],
             "description": "A collection re-usable of paragraph types.",
+            "support": {
+                "source": "https://github.com/SU-SWS/stanford_paragraph_types/tree/7.1.4",
+                "issues": "https://github.com/SU-SWS/stanford_paragraph_types/issues"
+            },
             "time": "2018-06-27T21:54:13+00:00"
         },
         {
@@ -13394,20 +13641,21 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.35.3",
+            "version": "v1.35.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "b48680b6eb7d16b5025b9bfc4108d86f6b8af86f"
+                "reference": "7e081e98378a1e78c29cc9eba4aefa5d78a05d2a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/b48680b6eb7d16b5025b9bfc4108d86f6b8af86f",
-                "reference": "b48680b6eb7d16b5025b9bfc4108d86f6b8af86f",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/7e081e98378a1e78c29cc9eba4aefa5d78a05d2a",
+                "reference": "7e081e98378a1e78c29cc9eba4aefa5d78a05d2a",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
+                "php": ">=5.3.3",
+                "symfony/polyfill-ctype": "^1.8"
             },
             "require-dev": {
                 "psr/container": "^1.0",
@@ -13446,16 +13694,16 @@
                 },
                 {
                     "name": "Twig Team",
-                    "homepage": "http://twig.sensiolabs.org/contributors",
+                    "homepage": "https://twig.symfony.com/contributors",
                     "role": "Contributors"
                 }
             ],
             "description": "Twig, the flexible, fast, and secure template language for PHP",
-            "homepage": "http://twig.sensiolabs.org",
+            "homepage": "https://twig.symfony.com",
             "keywords": [
                 "templating"
             ],
-            "time": "2018-03-20T04:25:58+00:00"
+            "time": "2018-07-13T07:12:17+00:00"
         },
         {
             "name": "webflo/drupal-finder",
@@ -14898,12 +15146,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/linky_clicky.git",
-                "reference": "1fa38f52a6ac78de555ef3745fa681e9f852dd8b"
+                "reference": "874674614921add7c2c8d7e6259e43b5385c59cd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/linky_clicky/zipball/1fa38f52a6ac78de555ef3745fa681e9f852dd8b",
-                "reference": "1fa38f52a6ac78de555ef3745fa681e9f852dd8b",
+                "url": "https://api.github.com/repos/SU-SWS/linky_clicky/zipball/874674614921add7c2c8d7e6259e43b5385c59cd",
+                "reference": "874674614921add7c2c8d7e6259e43b5385c59cd",
                 "shasum": ""
             },
             "require": {
@@ -14936,7 +15184,7 @@
                 "source": "https://github.com/SU-SWS/linky_clicky/tree/5.x",
                 "issues": "https://github.com/SU-SWS/linky_clicky/issues"
             },
-            "time": "2018-06-28T00:21:45+00:00"
+            "time": "2018-07-10T00:29:38+00:00"
         },
         {
             "name": "weavora/mink-extra-context",

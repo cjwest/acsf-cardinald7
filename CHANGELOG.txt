@@ -1,5 +1,11 @@
 ACSF CardinalD7
 
+Version 1.0.3                                                        2018-07-19
+-------------------------------------------------------------------------------
+- Update to googleanalytics-7.x-2.5
+- Update to uuid-7.x-1.2
+- Security update to xmlsitemap-7.x-2.4
+
 Version 1.0.2                                                        2018-07-13
 -------------------------------------------------------------------------------
 - Block end-users from enabling certain modules in stanford and stanford_dept
