@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8f3d9e984a7a06274f1524d109d7b8b3",
+    "content-hash": "1bd3063776ed31d122f8d6a6133c4fe8",
     "packages": [
         {
             "name": "Stanford/WMD",
@@ -7209,53 +7209,6 @@
             }
         },
         {
-            "name": "drupal/newrelic_appname",
-            "version": "1.0.0-alpha1",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/newrelic_appname",
-                "reference": "7.x-1.0-alpha1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/newrelic_appname-7.x-1.0-alpha1.zip",
-                "reference": "7.x-1.0-alpha1",
-                "shasum": "b58cbed66353f006598c7ab7f667301bdad16ed5"
-            },
-            "require": {
-                "drupal/drupal": "~7.0"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "7.x-1.0-alpha1",
-                    "datestamp": "1479254340",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Project has not opted into security advisory coverage!"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/7/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "John Bickar",
-                    "homepage": "https://www.drupal.org/user/158583"
-                }
-            ],
-            "description": "Sets the newrelic.appname PHP variable for reporting to NewRelic.",
-            "homepage": "https://www.drupal.org/project/newrelic_appname",
-            "support": {
-                "source": "http://cgit.drupalcode.org/newrelic_appname"
-            }
-        },
-        {
             "name": "drupal/nobots",
             "version": "1.0.0",
             "source": {
@@ -12727,12 +12680,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_ssp.git",
-                "reference": "3d1050f15f765500c240efe24c1d55e7cd3f31f4"
+                "reference": "56eba18990ca6faba765ec70cb5abde941dd891b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_ssp/zipball/3d1050f15f765500c240efe24c1d55e7cd3f31f4",
-                "reference": "3d1050f15f765500c240efe24c1d55e7cd3f31f4",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_ssp/zipball/56eba18990ca6faba765ec70cb5abde941dd891b",
+                "reference": "56eba18990ca6faba765ec70cb5abde941dd891b",
                 "shasum": ""
             },
             "require": {
@@ -12747,7 +12700,7 @@
                 "source": "https://github.com/SU-SWS/stanford_ssp/tree/7.x-2.x",
                 "issues": "https://github.com/SU-SWS/stanford_ssp/issues"
             },
-            "time": "2018-06-28T16:38:36+00:00"
+            "time": "2018-07-20T23:28:06+00:00"
         },
         {
             "name": "su-sws/stanford_story_page",
@@ -13461,16 +13414,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v2.8.42",
+            "version": "v2.8.43",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "0084ec5bb6614688f547ef80bf1ef8a900c4e350"
+                "reference": "e7f50768f107fa951f4c80dc447b893502cf2e89"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/0084ec5bb6614688f547ef80bf1ef8a900c4e350",
-                "reference": "0084ec5bb6614688f547ef80bf1ef8a900c4e350",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/e7f50768f107fa951f4c80dc447b893502cf2e89",
+                "reference": "e7f50768f107fa951f4c80dc447b893502cf2e89",
                 "shasum": ""
             },
             "require": {
@@ -13597,7 +13550,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2018-06-25T12:02:18+00:00"
+            "time": "2018-07-23T09:03:03+00:00"
         },
         {
             "name": "trentrichardson/jquery-timepicker-addon",

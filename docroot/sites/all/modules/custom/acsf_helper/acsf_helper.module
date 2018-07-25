@@ -30,10 +30,13 @@ function acsf_helper_system_info_alter(&$info, $file, $type) {
  */
 function acsf_helper_form_system_modules_alter(&$form, &$form_state, $form_id) {
   unset($form['modules']['Core']['statistics']);
-  unset($form['modules']['Stanford']['webauth']);
-  unset($form['modules']['Stanford']['stanford_webauth_block']);
-  unset($form['modules']['Stanford']['webauth_extras']);
+  unset($form['modules']['Other']['mollom']);
+  unset($form['modules']['Services - servers']['xmlrpc_server']);
   unset($form['modules']['Stanford']['capx_webauth']);
+  unset($form['modules']['Stanford']['stanford_metatag_nobots']);
+  unset($form['modules']['Stanford']['stanford_webauth_block']);
+  unset($form['modules']['Stanford']['webauth']);
+  unset($form['modules']['Stanford']['webauth_extras']);
   unset($form['modules']['Stanford - ACSF']['acsf_helper']);
 }
 

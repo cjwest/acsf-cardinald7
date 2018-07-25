@@ -57,7 +57,6 @@
 
     "drupal/drupal": "~7.0",
     "drupal/acsf": "~1.43",
-    "drupal/newrelic_appname": "~1.0-alpha1",
     "drupal/paranoia": "dev-1.x",
     "drupal/node_revision_delete": "~3.0@alpha",
     "drupal/honeypot": "~1.24",
