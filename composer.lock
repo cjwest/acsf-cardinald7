@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
     "content-hash": "1bd3063776ed31d122f8d6a6133c4fe8",
@@ -32,7 +32,7 @@
                 "source": "https://github.com/Stanford/WMD/tree/master",
                 "issues": "https://github.com/Stanford/WMD/issues"
             },
-            "time": "2018-05-10T23:12:42+00:00"
+            "time": "2018-05-10 23:12:42"
         },
         {
             "name": "Stanford/webauth_extras",
@@ -60,7 +60,7 @@
                 "source": "https://github.com/Stanford/webauth_extras/tree/master",
                 "issues": "https://github.com/Stanford/webauth_extras/issues"
             },
-            "time": "2018-05-10T23:09:54+00:00"
+            "time": "2018-05-10 23:09:54"
         },
         {
             "name": "components/chosen",
@@ -1817,7 +1817,7 @@
                 },
                 "drupal": {
                     "version": "7.x-1.4",
-                    "datestamp": "1523697484",
+                    "datestamp": "1523697542",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1930,8 +1930,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "7.x-1.0+16-dev",
-                    "datestamp": "1523758085",
+                    "version": "7.x-1.0+19-dev",
+                    "datestamp": "1530515921",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -1964,8 +1964,7 @@
             "homepage": "https://www.drupal.org/project/auto_nodetitle",
             "support": {
                 "source": "http://cgit.drupalcode.org/auto_nodetitle"
-            },
-            "time": "2011-09-08T16:07:46+00:00"
+            }
         },
         {
             "name": "drupal/backup_migrate",
@@ -3312,8 +3311,7 @@
             "homepage": "https://www.drupal.org/project/context_list",
             "support": {
                 "source": "http://cgit.drupalcode.org/context_list"
-            },
-            "time": "2014-07-08T19:51:59+00:00"
+            }
         },
         {
             "name": "drupal/context_list_active",
@@ -3675,8 +3673,7 @@
             "homepage": "https://www.drupal.org/project/css_injector",
             "support": {
                 "source": "http://cgit.drupalcode.org/css_injector"
-            },
-            "time": "2013-12-23T06:52:25+00:00"
+            }
         },
         {
             "name": "drupal/ctools",
@@ -5897,8 +5894,7 @@
             "homepage": "https://www.drupal.org/project/filefield_paths",
             "support": {
                 "source": "http://cgit.drupalcode.org/filefield_paths"
-            },
-            "time": "2016-01-04T09:05:19+00:00"
+            }
         },
         {
             "name": "drupal/flag",
@@ -9869,7 +9865,7 @@
                 },
                 "drupal": {
                     "version": "7.x-4.17",
-                    "datestamp": "1524581885",
+                    "datestamp": "1525373073",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -12163,7 +12159,7 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_jumpstart_home/tree/7.x-1.x",
+                "source": "https://github.com/SU-SWS/stanford_jumpstart_home/tree/7.1.8",
                 "issues": "https://github.com/SU-SWS/stanford_jumpstart_home/issues"
             },
             "time": "2018-04-16T18:21:41+00:00"
@@ -12364,7 +12360,7 @@
                 "issues": "https://github.com/SU-SWS/stanford_metatag_nobots/issues"
             },
             "abandoned": "drupal/nobots",
-            "time": "2018-02-20T06:04:14+00:00"
+            "time": "2018-02-20 06:04:14"
         },
         {
             "name": "su-sws/stanford_news",
@@ -12700,7 +12696,7 @@
                 "source": "https://github.com/SU-SWS/stanford_ssp/tree/7.x-2.x",
                 "issues": "https://github.com/SU-SWS/stanford_ssp/issues"
             },
-            "time": "2018-07-20T23:28:06+00:00"
+            "time": "2018-07-20 23:28:06"
         },
         {
             "name": "su-sws/stanford_story_page",
@@ -12837,7 +12833,7 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_wysiwyg/tree/SITES-533",
+                "source": "https://github.com/SU-SWS/stanford_wysiwyg/tree/7.2.5",
                 "issues": "https://github.com/SU-SWS/stanford_wysiwyg/issues"
             },
             "time": "2018-06-27T15:36:34+00:00"
@@ -15137,7 +15133,7 @@
                 "source": "https://github.com/SU-SWS/linky_clicky/tree/5.x",
                 "issues": "https://github.com/SU-SWS/linky_clicky/issues"
             },
-            "time": "2018-07-10T00:29:38+00:00"
+            "time": "2018-07-10 00:29:38"
         },
         {
             "name": "weavora/mink-extra-context",
@@ -15173,7 +15169,7 @@
                 "Mink",
                 "feature"
             ],
-            "time": "2014-01-13T15:50:49+00:00"
+            "time": "2014-01-13 15:50:49"
         }
     ],
     "aliases": [],
