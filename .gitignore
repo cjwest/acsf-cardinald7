@@ -7,6 +7,7 @@ docroot/sites/*/private
 # these to function as a live website. D8 does however.
 !/docroot/sites/all/modules/stanford/stanford_capx/includes/vendor/
 /vendor/
+!/docroot/sites/all/modules/stanford/stanford_jumpstart/modules/stanford_jumpstart_wysiwyg/node_modules
 
 # Ignore Drupal 7 core files.
 /docroot/profiles/README.txt
