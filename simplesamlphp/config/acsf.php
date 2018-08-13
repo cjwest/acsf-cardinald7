@@ -35,7 +35,24 @@ function build_acsf_saml_metadata() {
       continue;
     }
     $metadata = "https://" . $key . "/simplesaml/module.php/saml/sp/metadata.php/default-sp?output=xml";
-    $sources[] = array('type' => 'xml', 'url' => $metadata);
+    
+    // Check if the simpleSAMLphp URL resolves. If it does not, we get a fatal error in our aggregated metadata.
+    // See https://stanfordits.atlassian.net/browse/SITES-690.
+    $resolver = "https://" . $key . "/simplesaml/module.php/core/frontpage_welcome.php";
+    $ch = curl_init($resolver);
+    // CURLOPT_CONNECT_ONLY: TRUE tells the library to perform all the required proxy authentication and connection
+    // setup, but no data transfer. This option is implemented for HTTP, SMTP and POP3.
+    curl_setopt($ch, CURLOPT_CONNECT_ONLY, TRUE);
+    // CURLOPT_NOBODY: TRUE to exclude the body from the output. Request method is then set to HEAD. Changing this
+    // to FALSE does not change it to GET.
+    curl_setopt($ch, CURLOPT_NOBODY, TRUE);
+    // CURLOPT_CONNECTTIMEOUT: The number of seconds to wait while trying to connect. Use 0 to wait indefinitely.
+    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 2);
+    curl_exec($ch);
+    
+    if(!curl_errno($ch)) {
+      $sources[] = array('type' => 'xml', 'url' => $metadata);
+    }
   }
   return $sources;
 }
