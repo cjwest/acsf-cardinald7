@@ -151,6 +151,14 @@
     },
     {
       "type": "vcs",
+      "url": "https://github.com/su-ddd/stanfordmodern"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/su-ddd/stanford_basic"
+    },
+    {
+      "type": "vcs",
       "url": "https://github.com/SU-SWS/erus"
     },
     {
@@ -457,6 +465,9 @@
     "su-sws/stanford_person": "~7.5@alpha",
     "su-sws/stanford_slides": "~7.3",
     "su-sws/stanford_video": "~7.2.0",
+
+    "su-ddd/stanfordmodern": "~7.1",
+    "su-ddd/stanford_basic": "~7.1",
     "su-sws/open_framework": "~7.2",
     "su-sws/stanford_seven": "~7.1",
     "su-sws/stanford_framework": "~7.3",

@@ -58,7 +58,8 @@ function stanford_dept_system_info_alter(&$info, $file, $type) {
     isset($info['project']) &&
     ($info['project'] == 'stanford_framework' ||
     $info['project'] == 'stanford_jordan' ||
-    $info['project'] == 'stanford_wilbur')
+    $info['project'] == 'stanford_wilbur' ||
+    $info['project'] == 'stanfordmodern')
   ) {
     $info['hidden'] = FALSE;
     return;

@@ -1930,8 +1930,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "7.x-1.0+19-dev",
-                    "datestamp": "1530515921",
+                    "version": "7.x-1.0+24-dev",
+                    "datestamp": "1533642780",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -1964,7 +1964,8 @@
             "homepage": "https://www.drupal.org/project/auto_nodetitle",
             "support": {
                 "source": "http://cgit.drupalcode.org/auto_nodetitle"
-            }
+            },
+            "time": "2011-09-08 16:07:46"
         },
         {
             "name": "drupal/backup_migrate",
@@ -2031,17 +2032,17 @@
         },
         {
             "name": "drupal/bean",
-            "version": "1.11.0",
+            "version": "1.13.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/bean",
-                "reference": "7.x-1.11"
+                "reference": "7.x-1.13"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/bean-7.x-1.11.zip",
-                "reference": "7.x-1.11",
-                "shasum": "e112beda7f13a0b02c8b2a09df9818ba9ec4665e"
+                "url": "https://ftp.drupal.org/files/projects/bean-7.x-1.13.zip",
+                "reference": "7.x-1.13",
+                "shasum": "8dad9ed20dd2bbcd31cfa5581d62433c354807a1"
             },
             "require": {
                 "drupal/ctools": "*",
@@ -2059,8 +2060,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "7.x-1.11",
-                    "datestamp": "1470638339",
+                    "version": "7.x-1.13",
+                    "datestamp": "1533832980",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2338,25 +2339,27 @@
         },
         {
             "name": "drupal/block_class",
-            "version": "2.3.0",
+            "version": "2.4.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/block_class",
-                "reference": "7.x-2.3"
+                "reference": "7.x-2.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/block_class-7.x-2.3.zip",
-                "reference": "7.x-2.3",
-                "shasum": "fd3d0a8a611893c77e8961dc42619089b7630b5b"
+                "url": "https://ftp.drupal.org/files/projects/block_class-7.x-2.4.zip",
+                "reference": "7.x-2.4",
+                "shasum": "1ed588fc276f692659c83e4971516bb671986644"
             },
             "require": {
                 "drupal/drupal": "*"
             },
             "require-dev": {
                 "drupal/context": "*",
+                "drupal/fe_block": "*",
                 "drupal/features": "~2.0",
-                "drupal/features_extra": "*"
+                "drupal/menu_block": "*",
+                "drupal/views": "*"
             },
             "type": "drupal-module",
             "extra": {
@@ -2364,8 +2367,8 @@
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "7.x-2.3",
-                    "datestamp": "1450415939",
+                    "version": "7.x-2.4",
+                    "datestamp": "1532735881",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3311,7 +3314,8 @@
             "homepage": "https://www.drupal.org/project/context_list",
             "support": {
                 "source": "http://cgit.drupalcode.org/context_list"
-            }
+            },
+            "time": "2014-07-08 19:51:59"
         },
         {
             "name": "drupal/context_list_active",
@@ -3673,7 +3677,8 @@
             "homepage": "https://www.drupal.org/project/css_injector",
             "support": {
                 "source": "http://cgit.drupalcode.org/css_injector"
-            }
+            },
+            "time": "2013-12-23 06:52:25"
         },
         {
             "name": "drupal/ctools",
@@ -5869,8 +5874,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "7.x-1.0+1-dev",
-                    "datestamp": "1451898839",
+                    "version": "7.x-1.1+1-dev",
+                    "datestamp": "1534256281",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -5888,13 +5893,22 @@
                 {
                     "name": "Deciphered",
                     "homepage": "https://www.drupal.org/user/103796"
+                },
+                {
+                    "name": "dpagini",
+                    "homepage": "https://www.drupal.org/user/1802126"
+                },
+                {
+                    "name": "voleger",
+                    "homepage": "https://www.drupal.org/user/3260314"
                 }
             ],
             "description": "Adds improved Token based file sorting and renaming functionalities.",
             "homepage": "https://www.drupal.org/project/filefield_paths",
             "support": {
                 "source": "http://cgit.drupalcode.org/filefield_paths"
-            }
+            },
+            "time": "2016-01-04 09:05:19"
         },
         {
             "name": "drupal/flag",
@@ -6287,17 +6301,17 @@
         },
         {
             "name": "drupal/honeypot",
-            "version": "1.24.0",
+            "version": "1.25.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/honeypot",
-                "reference": "7.x-1.24"
+                "reference": "7.x-1.25"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/honeypot-7.x-1.24.zip",
-                "reference": "7.x-1.24",
-                "shasum": "a9b3bab6bf8a4d1677ecef6f63f859c8f3567f4d"
+                "url": "https://ftp.drupal.org/files/projects/honeypot-7.x-1.25.zip",
+                "reference": "7.x-1.25",
+                "shasum": "5fd4d11c9cdc4da3d305641ad2d23b921436c3f2"
             },
             "require": {
                 "drupal/drupal": "~7.0"
@@ -6308,8 +6322,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "7.x-1.24",
-                    "datestamp": "1519706884",
+                    "version": "7.x-1.25",
+                    "datestamp": "1533849180",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -11176,20 +11190,22 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.9.6",
+            "version": "v0.9.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "4a2ce86f199d51b6e2524214dc06835e872f4fce"
+                "reference": "4f5b6c090948773a8bfeea6a0f07ab7d0b24e932"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/4a2ce86f199d51b6e2524214dc06835e872f4fce",
-                "reference": "4a2ce86f199d51b6e2524214dc06835e872f4fce",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/4f5b6c090948773a8bfeea6a0f07ab7d0b24e932",
+                "reference": "4f5b6c090948773a8bfeea6a0f07ab7d0b24e932",
                 "shasum": ""
             },
             "require": {
                 "dnoegel/php-xdg-base-dir": "0.1",
+                "ext-json": "*",
+                "ext-tokenizer": "*",
                 "jakub-onderka/php-console-highlighter": "0.3.*",
                 "nikic/php-parser": "~1.3|~2.0|~3.0|~4.0",
                 "php": ">=5.4.0",
@@ -11244,7 +11260,7 @@
                 "interactive",
                 "shell"
             ],
-            "time": "2018-06-10T17:57:20+00:00"
+            "time": "2018-08-11T15:54:43+00:00"
         },
         {
             "name": "robloach/component-installer",
@@ -11293,6 +11309,62 @@
             ],
             "description": "Allows installation of Components via Composer.",
             "time": "2015-08-10T12:35:38+00:00"
+        },
+        {
+            "name": "su-ddd/stanford_basic",
+            "version": "7.1.6",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:su-ddd/stanford_basic.git",
+                "reference": "43924aad525e092052ce0f7678bbf2e66ae4aa8f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/su-ddd/stanford_basic/zipball/43924aad525e092052ce0f7678bbf2e66ae4aa8f",
+                "reference": "43924aad525e092052ce0f7678bbf2e66ae4aa8f",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "^1.2"
+            },
+            "type": "drupal-custom-theme",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Stanford Basic",
+            "support": {
+                "source": "https://github.com/su-ddd/stanford_basic/tree/7.1.6",
+                "issues": "https://github.com/su-ddd/stanford_basic/issues"
+            },
+            "time": "2018-08-14T19:59:50+00:00"
+        },
+        {
+            "name": "su-ddd/stanfordmodern",
+            "version": "7.1.7",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:su-ddd/stanfordmodern.git",
+                "reference": "b1a7dbbb299f0fac022b87a59dbfff3715fcd6d4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/su-ddd/stanfordmodern/zipball/b1a7dbbb299f0fac022b87a59dbfff3715fcd6d4",
+                "reference": "b1a7dbbb299f0fac022b87a59dbfff3715fcd6d4",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "^1.2"
+            },
+            "type": "drupal-custom-theme",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Stanford Modern",
+            "support": {
+                "source": "https://github.com/su-ddd/stanfordmodern/tree/7.1.7",
+                "issues": "https://github.com/su-ddd/stanfordmodern/issues"
+            },
+            "time": "2018-08-14T18:57:07+00:00"
         },
         {
             "name": "su-soe/stanford_jumpstart_engineering",
@@ -12616,16 +12688,16 @@
         },
         {
             "name": "su-sws/stanford_sites_helper",
-            "version": "7.1.8",
+            "version": "7.1.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_sites_helper.git",
-                "reference": "d6174b875fb2465c3fb1285a8128c6ef386cc46c"
+                "reference": "6f0a5b275bd2cde39662bdcfb3d8b9c0af24643f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_sites_helper/zipball/d6174b875fb2465c3fb1285a8128c6ef386cc46c",
-                "reference": "d6174b875fb2465c3fb1285a8128c6ef386cc46c",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_sites_helper/zipball/6f0a5b275bd2cde39662bdcfb3d8b9c0af24643f",
+                "reference": "6f0a5b275bd2cde39662bdcfb3d8b9c0af24643f",
                 "shasum": ""
             },
             "require": {
@@ -12637,10 +12709,10 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_sites_helper/tree/7.1.8",
+                "source": "https://github.com/SU-SWS/stanford_sites_helper/tree/7.1.9",
                 "issues": "https://github.com/SU-SWS/stanford_sites_helper/issues"
             },
-            "time": "2018-06-29T15:20:53+00:00"
+            "time": "2018-08-13T21:03:03+00:00"
         },
         {
             "name": "su-sws/stanford_slides",
@@ -12840,16 +12912,16 @@
         },
         {
             "name": "symfony/polyfill-apcu",
-            "version": "v1.8.0",
+            "version": "v1.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-apcu.git",
-                "reference": "9b83bd010112ec196410849e840d9b9fefcb15ad"
+                "reference": "19e1b73bf255265ad0b568f81766ae2a3266d8d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-apcu/zipball/9b83bd010112ec196410849e840d9b9fefcb15ad",
-                "reference": "9b83bd010112ec196410849e840d9b9fefcb15ad",
+                "url": "https://api.github.com/repos/symfony/polyfill-apcu/zipball/19e1b73bf255265ad0b568f81766ae2a3266d8d2",
+                "reference": "19e1b73bf255265ad0b568f81766ae2a3266d8d2",
                 "shasum": ""
             },
             "require": {
@@ -12858,7 +12930,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.8-dev"
+                    "dev-master": "1.9-dev"
                 }
             },
             "autoload": {
@@ -12892,29 +12964,32 @@
                 "portable",
                 "shim"
             ],
-            "time": "2018-04-26T10:06:28+00:00"
+            "time": "2018-08-06T14:22:27+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.8.0",
+            "version": "v1.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
-                "reference": "7cc359f1b7b80fc25ed7796be7d96adc9b354bae"
+                "reference": "e3d826245268269cd66f8326bd8bc066687b4a19"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/7cc359f1b7b80fc25ed7796be7d96adc9b354bae",
-                "reference": "7cc359f1b7b80fc25ed7796be7d96adc9b354bae",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/e3d826245268269cd66f8326bd8bc066687b4a19",
+                "reference": "e3d826245268269cd66f8326bd8bc066687b4a19",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
             },
+            "suggest": {
+                "ext-ctype": "For best performance"
+            },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.8-dev"
+                    "dev-master": "1.9-dev"
                 }
             },
             "autoload": {
@@ -12947,20 +13022,20 @@
                 "polyfill",
                 "portable"
             ],
-            "time": "2018-04-30T19:57:29+00:00"
+            "time": "2018-08-06T14:22:27+00:00"
         },
         {
             "name": "symfony/polyfill-intl-icu",
-            "version": "v1.8.0",
+            "version": "v1.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-intl-icu.git",
-                "reference": "80ee17ae83c10cd513e5144f91a73607a21edb4e"
+                "reference": "f22a90256d577c7ef7efad8df1f0201663d57644"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-intl-icu/zipball/80ee17ae83c10cd513e5144f91a73607a21edb4e",
-                "reference": "80ee17ae83c10cd513e5144f91a73607a21edb4e",
+                "url": "https://api.github.com/repos/symfony/polyfill-intl-icu/zipball/f22a90256d577c7ef7efad8df1f0201663d57644",
+                "reference": "f22a90256d577c7ef7efad8df1f0201663d57644",
                 "shasum": ""
             },
             "require": {
@@ -12973,7 +13048,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.8-dev"
+                    "dev-master": "1.9-dev"
                 }
             },
             "autoload": {
@@ -13005,20 +13080,20 @@
                 "portable",
                 "shim"
             ],
-            "time": "2018-04-25T14:53:50+00:00"
+            "time": "2018-08-06T14:22:27+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.8.0",
+            "version": "v1.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "3296adf6a6454a050679cde90f95350ad604b171"
+                "reference": "d0cd638f4634c16d8df4508e847f14e9e43168b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/3296adf6a6454a050679cde90f95350ad604b171",
-                "reference": "3296adf6a6454a050679cde90f95350ad604b171",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/d0cd638f4634c16d8df4508e847f14e9e43168b8",
+                "reference": "d0cd638f4634c16d8df4508e847f14e9e43168b8",
                 "shasum": ""
             },
             "require": {
@@ -13030,7 +13105,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.8-dev"
+                    "dev-master": "1.9-dev"
                 }
             },
             "autoload": {
@@ -13064,20 +13139,20 @@
                 "portable",
                 "shim"
             ],
-            "time": "2018-04-26T10:06:28+00:00"
+            "time": "2018-08-06T14:22:27+00:00"
         },
         {
             "name": "symfony/polyfill-php54",
-            "version": "v1.8.0",
+            "version": "v1.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php54.git",
-                "reference": "6c3a2b84c6025e4ea3f6a19feac35408c64b22e1"
+                "reference": "412977e090c6a8472dc39d50d1beb7d59495a965"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php54/zipball/6c3a2b84c6025e4ea3f6a19feac35408c64b22e1",
-                "reference": "6c3a2b84c6025e4ea3f6a19feac35408c64b22e1",
+                "url": "https://api.github.com/repos/symfony/polyfill-php54/zipball/412977e090c6a8472dc39d50d1beb7d59495a965",
+                "reference": "412977e090c6a8472dc39d50d1beb7d59495a965",
                 "shasum": ""
             },
             "require": {
@@ -13086,7 +13161,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.8-dev"
+                    "dev-master": "1.9-dev"
                 }
             },
             "autoload": {
@@ -13122,20 +13197,20 @@
                 "portable",
                 "shim"
             ],
-            "time": "2018-04-26T10:06:28+00:00"
+            "time": "2018-08-06T14:22:27+00:00"
         },
         {
             "name": "symfony/polyfill-php55",
-            "version": "v1.8.0",
+            "version": "v1.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php55.git",
-                "reference": "a39456128377a85f2c5707fcae458678560cba46"
+                "reference": "578b8528da843de0fc65ec395900fa3181f2ead7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php55/zipball/a39456128377a85f2c5707fcae458678560cba46",
-                "reference": "a39456128377a85f2c5707fcae458678560cba46",
+                "url": "https://api.github.com/repos/symfony/polyfill-php55/zipball/578b8528da843de0fc65ec395900fa3181f2ead7",
+                "reference": "578b8528da843de0fc65ec395900fa3181f2ead7",
                 "shasum": ""
             },
             "require": {
@@ -13145,7 +13220,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.8-dev"
+                    "dev-master": "1.9-dev"
                 }
             },
             "autoload": {
@@ -13178,20 +13253,20 @@
                 "portable",
                 "shim"
             ],
-            "time": "2018-04-26T10:06:28+00:00"
+            "time": "2018-08-06T14:22:27+00:00"
         },
         {
             "name": "symfony/polyfill-php56",
-            "version": "v1.8.0",
+            "version": "v1.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php56.git",
-                "reference": "af98553c84912459db3f636329567809d639a8f6"
+                "reference": "7b4fc009172cc0196535b0328bd1226284a28000"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php56/zipball/af98553c84912459db3f636329567809d639a8f6",
-                "reference": "af98553c84912459db3f636329567809d639a8f6",
+                "url": "https://api.github.com/repos/symfony/polyfill-php56/zipball/7b4fc009172cc0196535b0328bd1226284a28000",
+                "reference": "7b4fc009172cc0196535b0328bd1226284a28000",
                 "shasum": ""
             },
             "require": {
@@ -13201,7 +13276,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.8-dev"
+                    "dev-master": "1.9-dev"
                 }
             },
             "autoload": {
@@ -13234,30 +13309,30 @@
                 "portable",
                 "shim"
             ],
-            "time": "2018-04-26T10:06:28+00:00"
+            "time": "2018-08-06T14:22:27+00:00"
         },
         {
             "name": "symfony/polyfill-php70",
-            "version": "v1.8.0",
+            "version": "v1.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php70.git",
-                "reference": "77454693d8f10dd23bb24955cffd2d82db1007a6"
+                "reference": "1e24b0c4a56d55aaf368763a06c6d1c7d3194934"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php70/zipball/77454693d8f10dd23bb24955cffd2d82db1007a6",
-                "reference": "77454693d8f10dd23bb24955cffd2d82db1007a6",
+                "url": "https://api.github.com/repos/symfony/polyfill-php70/zipball/1e24b0c4a56d55aaf368763a06c6d1c7d3194934",
+                "reference": "1e24b0c4a56d55aaf368763a06c6d1c7d3194934",
                 "shasum": ""
             },
             "require": {
-                "paragonie/random_compat": "~1.0|~2.0",
+                "paragonie/random_compat": "~1.0|~2.0|~9.99",
                 "php": ">=5.3.3"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.8-dev"
+                    "dev-master": "1.9-dev"
                 }
             },
             "autoload": {
@@ -13293,20 +13368,20 @@
                 "portable",
                 "shim"
             ],
-            "time": "2018-04-26T10:06:28+00:00"
+            "time": "2018-08-06T14:22:27+00:00"
         },
         {
             "name": "symfony/polyfill-util",
-            "version": "v1.8.0",
+            "version": "v1.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-util.git",
-                "reference": "1a5ad95d9436cbff3296034fe9f8d586dce3fb3a"
+                "reference": "8e15d04ba3440984d23e7964b2ee1d25c8de1581"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-util/zipball/1a5ad95d9436cbff3296034fe9f8d586dce3fb3a",
-                "reference": "1a5ad95d9436cbff3296034fe9f8d586dce3fb3a",
+                "url": "https://api.github.com/repos/symfony/polyfill-util/zipball/8e15d04ba3440984d23e7964b2ee1d25c8de1581",
+                "reference": "8e15d04ba3440984d23e7964b2ee1d25c8de1581",
                 "shasum": ""
             },
             "require": {
@@ -13315,7 +13390,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.8-dev"
+                    "dev-master": "1.9-dev"
                 }
             },
             "autoload": {
@@ -13345,7 +13420,7 @@
                 "polyfill",
                 "shim"
             ],
-            "time": "2018-04-26T10:06:28+00:00"
+            "time": "2018-08-06T14:22:27+00:00"
         },
         {
             "name": "symfony/security-acl",
@@ -13410,16 +13485,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v2.8.43",
+            "version": "v2.8.44",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "e7f50768f107fa951f4c80dc447b893502cf2e89"
+                "reference": "789dc7eb57579185a430e65c5efce4b2d6b6b7b1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/e7f50768f107fa951f4c80dc447b893502cf2e89",
-                "reference": "e7f50768f107fa951f4c80dc447b893502cf2e89",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/789dc7eb57579185a430e65c5efce4b2d6b6b7b1",
+                "reference": "789dc7eb57579185a430e65c5efce4b2d6b6b7b1",
                 "shasum": ""
             },
             "require": {
@@ -13546,7 +13621,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2018-07-23T09:03:03+00:00"
+            "time": "2018-08-01T14:12:49+00:00"
         },
         {
             "name": "trentrichardson/jquery-timepicker-addon",
@@ -13840,16 +13915,16 @@
     "packages-dev": [
         {
             "name": "behat/behat",
-            "version": "v3.4.3",
+            "version": "v3.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Behat/Behat.git",
-                "reference": "d60b161bff1b95ec4bb80bb8cb210ccf890314c2"
+                "reference": "e4bce688be0c2029dc1700e46058d86428c63cab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Behat/Behat/zipball/d60b161bff1b95ec4bb80bb8cb210ccf890314c2",
-                "reference": "d60b161bff1b95ec4bb80bb8cb210ccf890314c2",
+                "url": "https://api.github.com/repos/Behat/Behat/zipball/e4bce688be0c2029dc1700e46058d86428c63cab",
+                "reference": "e4bce688be0c2029dc1700e46058d86428c63cab",
                 "shasum": ""
             },
             "require": {
@@ -13859,9 +13934,9 @@
                 "ext-mbstring": "*",
                 "php": ">=5.3.3",
                 "psr/container": "^1.0",
-                "symfony/class-loader": "~2.1||~3.0||~4.0",
+                "symfony/class-loader": "~2.1||~3.0",
                 "symfony/config": "~2.3||~3.0||~4.0",
-                "symfony/console": "~2.5||~3.0||~4.0",
+                "symfony/console": "~2.7.40||^2.8.33||~3.3.15||^3.4.3||^4.0.3",
                 "symfony/dependency-injection": "~2.1||~3.0||~4.0",
                 "symfony/event-dispatcher": "~2.1||~3.0||~4.0",
                 "symfony/translation": "~2.3||~3.0||~4.0",
@@ -13872,18 +13947,13 @@
                 "phpunit/phpunit": "^4.8.36|^6.3",
                 "symfony/process": "~2.5|~3.0|~4.0"
             },
-            "suggest": {
-                "behat/mink-extension": "for integration with Mink testing framework",
-                "behat/symfony2-extension": "for integration with Symfony2 web framework",
-                "behat/yii-extension": "for integration with Yii web framework"
-            },
             "bin": [
                 "bin/behat"
             ],
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.2.x-dev"
+                    "dev-master": "3.5.x-dev"
                 }
             },
             "autoload": {
@@ -13919,7 +13989,7 @@
                 "symfony",
                 "testing"
             ],
-            "time": "2017-11-27T10:37:56+00:00"
+            "time": "2018-08-10T18:56:51+00:00"
         },
         {
             "name": "behat/gherkin",
@@ -14462,7 +14532,7 @@
         },
         {
             "name": "drupal/core-render",
-            "version": "8.5.5",
+            "version": "8.5.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-render.git",
@@ -14497,7 +14567,7 @@
         },
         {
             "name": "drupal/core-utility",
-            "version": "8.5.5",
+            "version": "8.5.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-utility.git",
@@ -15095,12 +15165,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/linky_clicky.git",
-                "reference": "874674614921add7c2c8d7e6259e43b5385c59cd"
+                "reference": "5f0ff70cc1f82c48c1743468683da4d26b8ea590"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/linky_clicky/zipball/874674614921add7c2c8d7e6259e43b5385c59cd",
-                "reference": "874674614921add7c2c8d7e6259e43b5385c59cd",
+                "url": "https://api.github.com/repos/SU-SWS/linky_clicky/zipball/5f0ff70cc1f82c48c1743468683da4d26b8ea590",
+                "reference": "5f0ff70cc1f82c48c1743468683da4d26b8ea590",
                 "shasum": ""
             },
             "require": {
@@ -15133,7 +15203,7 @@
                 "source": "https://github.com/SU-SWS/linky_clicky/tree/5.x",
                 "issues": "https://github.com/SU-SWS/linky_clicky/issues"
             },
-            "time": "2018-07-10 00:29:38"
+            "time": "2018-08-14T15:11:59+00:00"
         },
         {
             "name": "weavora/mink-extra-context",
