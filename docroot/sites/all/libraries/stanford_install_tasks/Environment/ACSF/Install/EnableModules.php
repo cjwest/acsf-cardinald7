@@ -33,7 +33,6 @@ class EnableModules extends AbstractInstallTask {
       'acsf',
       'acsf_helper',
       'paranoia',
-      'newrelic_appname',
       'stanford_ssp',
       'stanford_saml_block'
     );

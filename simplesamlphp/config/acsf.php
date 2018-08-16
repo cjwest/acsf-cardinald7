@@ -35,7 +35,7 @@ function build_acsf_saml_metadata() {
       continue;
     }
     $metadata = "https://" . $key . "/simplesaml/module.php/saml/sp/metadata.php/default-sp?output=xml";
-    
+
     // Check if the simpleSAMLphp URL resolves. If it does not, we get a fatal error in our aggregated metadata.
     // See https://stanfordits.atlassian.net/browse/SITES-690.
     $resolver = "https://" . $key . "/simplesaml/module.php/core/frontpage_welcome.php";
@@ -49,7 +49,7 @@ function build_acsf_saml_metadata() {
     // CURLOPT_CONNECTTIMEOUT: The number of seconds to wait while trying to connect. Use 0 to wait indefinitely.
     curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 2);
     curl_exec($ch);
-    
+
     if(!curl_errno($ch)) {
       $sources[] = array('type' => 'xml', 'url' => $metadata);
     }

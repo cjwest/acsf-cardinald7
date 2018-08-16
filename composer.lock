@@ -12119,10 +12119,10 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_install_tasks/tree/7.1.1",
+                "source": "https://github.com/SU-SWS/stanford_install_tasks/tree/7.1.2",
                 "issues": "https://github.com/SU-SWS/stanford_install_tasks/issues"
             },
-            "time": "2018-06-28T20:08:34+00:00"
+            "time": "2018-08-16T23:25:23+00:00"
         },
         {
             "name": "su-sws/stanford_jordan",

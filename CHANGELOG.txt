@@ -1,5 +1,16 @@
 ACSF CardinalD7
 
+Version 1.0.4                                                        2018-08-15
+-------------------------------------------------------------------------------
+- Add Stanford Modern and Stanford Basic themes
+- Remove newrelic_appname
+- Bug fix: Add previously-ignored masonry and tablesaw libraries
+- Update to stanford_sites_helper-7.x-1.9
+- Bug fix: stanford_ssp local user login form
+- Security update: block xmlrpc.php
+- Bug fix: Adding custom domains to Factory sites before DNS cutover no longer
+    breaks aggregated SAML metadata
+
 Version 1.0.3                                                        2018-07-19
 -------------------------------------------------------------------------------
 - Update to googleanalytics-7.x-2.5
