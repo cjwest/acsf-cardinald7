@@ -16,27 +16,14 @@ function stanford_ssp_menu() {
     'description' => "Authentication endpoint.",
     'page callback' => 'stanford_ssp_sso_auth',
     'access callback' => "stanford_ssp_access_login_page",
+    'type' => MENU_SUGGESTED_ITEM,
   );
 
   $items['sso/denied-test'] = array(
     'title' => "Always denied",
     'description' => "Authentication endpoint test.",
     'page callback' => 'stanford_ssp_sso_auth',
-  );
-
-  $items['sso/workgroup-test'] = array(
-    'title' => "Workgroup XML sample response",
-    'description' => "Workgroup data test.",
-    'page callback' => 'stanford_ssp_sample_workgroup_response',
-    // Just a test page. Nothing doing here.
-    'access callback' => TRUE,
-  );
-
-  $items['sso/test-test'] = array(
-    'title' => 'title title',
-    'page callback' => 'stanford_ssp_get_workgroup_members_by_api',
-    // Just a test page. Nothing doing here.
-    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
   );
 
   // Configuration Forms
@@ -114,6 +101,7 @@ function stanford_ssp_menu() {
     'description' => "Redirect from saml_login to sso/login.",
     'page callback' => 'stanford_ssp_redirect',
     'access callback' => "stanford_ssp_access_login_page",
+    'type' => MENU_CALLBACK,
   );
 
   return $items;
@@ -377,11 +365,11 @@ function stanford_ssp_user_insert(&$edit, $account, $category) {
     watchdog('stanford_ssp_user_insert', 'Could not load SAML information', array(), WATCHDOG_DEBUG);
   }
 
-  // If the new account and the current user don't have matching emails then
-  // the account must have been created by a form or drush instead of through
-  // the user actually doing a login themselves.
-  if (isset($attributes['email'][0]) && ($attributes['email'][0] !== $account->init)) {
-    return;
+  // Some SPs and users do not provide mail or email attributes. Use something
+  // else to try and validate that the created user is not the current user. The
+  // best thing we can try to use is the sunet id.
+  if (isset($attributes['uid'][0]) && ($attributes['uid'][0] !== str_replace("@stanford.edu", "", $account->init))) {
+    return FALSE;
   }
 
   // Act on the current user.
@@ -871,7 +859,7 @@ function stanford_ssp_import_webauth_settings() {
   variable_set('stanford_simplesamlphp_auth_autoenablesaml', TRUE);
   variable_set('stanford_ssp_prevent_cache', FALSE);
   variable_set('stanford_ssp_show_sso_login', TRUE);
-  // Grant all the "SUNet User" role to all users who log in with stanford_ssp.
+  // Grant the "SUNet User" role to all users who log in with stanford_ssp.
   // We are assuming that we want this
   // if we are upgrading from WMD to stanford_ssp.
   variable_set('stanford_ssp_grant_sunet_user_role', TRUE);
@@ -1011,7 +999,6 @@ function stanford_ssp_fetch_from_workgroup_api($group = "") {
   // UAT server is at: https://workgroupsvc-uat.stanford.edu/v1/workgroups/
   // Old production server: https://workgroupsvc.stanford.edu/v1/workgroups/
   // New production server: https://aswsweb.stanford.edu/mais/workgroupsvc/v1/workgroups/
-  // $endpoint = variable_get('stanford_ssp_workgroup_api_endpoint', 'https://aswsweb.stanford.edu/mais/workgroupsvc/v1/workgroups/');
   $endpoint = variable_get('stanford_ssp_workgroup_api_endpoint', 'https://workgroupsvc.stanford.edu/v1/workgroups/');
   $endpoint .= $group;
 
@@ -1023,8 +1010,8 @@ function stanford_ssp_fetch_from_workgroup_api($group = "") {
   // Add the SSL certificate paths.
   $openssl_defaults = openssl_get_cert_locations();
   $default_path = $openssl_defaults['default_cert_dir'];
-  $cert_filename = variable_get('stanford_ssp_workgroup_api_cert', $default_path . "/stanford-ssp.cert");
-  $key_filename = variable_get('stanford_ssp_workgroup_api_key', $default_path . "/stanford-ssp.key");
+  $cert_filename = variable_get('stanford_ssp_workgroup_api_cert', $default_path . "/stanford_ssp.cert");
+  $key_filename = variable_get('stanford_ssp_workgroup_api_key', $default_path . "/stanford_ssp.key");
 
   $ch = curl_init();
   curl_setopt($ch, CURLOPT_URL, $endpoint);
@@ -1075,42 +1062,4 @@ function stanford_ssp_get_api_members_from_xml_array(array $member) {
     throw new Exception("Invalid member attribute data");
   }
   return $member['@attributes']['id'];
-}
-
-/**
- * Fake or test workgroup api response.
- *
- * This fake endpoint response is derived from the example found at:
- * https://web.stanford.edu/dept/as/mais/applications/workgroupapi/api.html.
- *
- * This should only be used for testing and not real authentication.
- */
-function stanford_ssp_sample_workgroup_response() {
-
-  drupal_add_http_header('Content-Type', 'text/xml;charset=UTF-8');
-
-  $response = <<<EOD
-<?xml version="1.0" encoding="UTF-8"?>
-<workgroup>
-    <description>Test workgroup</description>
-    <filter>FACULTY_STAFF_STUDENT</filter>
-    <visibility>PRIVATE</visibility>
-    <reusable>TRUE</reusable>
-    <privgroup>TRUE</privgroup>
-    <members>
-        <member id="sunet1" name="user1" url="https://workgroupsvc.stanford.edu/v1/users/user1"/>
-        <member id="sunet2" name="user2" url="https://workgroupsvc.stanford.edu/v1/users/user2"/>
-        <workgroup name="workgroup:mais" url="https://workgroupsvc.stanford.edu/v1/workgroups/workgroup:mais"/>
-        <workgroup name="workgroup:mais-dev" url="https://workgroupsvc.stanford.edu/v1/workgroups/workgroup:mais-dev"/>
-    </members>
-    <administrators>
-        <member id="sunet3" name="user3" url="https://workgroupsvc.stanford.edu/v1/users/user3"/>
-        <member id="sunet4" name="user4" url="https://workgroupsvc.stanford.edu/v1/users/user4"/>
-        <workgroup name="mais-staff" url="https://workgroupsvc.stanford.edu/v1/workgroups/mais-staff"/>
-    </administrators>
-</workgroup>
-EOD;
-
-  print($response);
-  drupal_exit();
 }

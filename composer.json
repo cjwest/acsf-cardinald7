@@ -60,7 +60,7 @@
     "drupal/paranoia": "dev-1.x",
     "drupal/node_revision_delete": "~3.0@alpha",
     "drupal/honeypot": "~1.24",
-    "SU-SWS/stanford_ssp": "dev-7.x-2.x",
+    "SU-SWS/stanford_ssp": "~7.2@alpha",
     "Stanford/WMD": "dev-master",
     "Stanford/webauth_extras": "dev-master",
     "SU-SWS/SU-IT-Services": "~7.1"

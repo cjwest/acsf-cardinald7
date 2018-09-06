@@ -12744,20 +12744,21 @@
         },
         {
             "name": "su-sws/stanford_ssp",
-            "version": "dev-7.x-2.x",
+            "version": "7.2.2-alpha3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_ssp.git",
-                "reference": "56eba18990ca6faba765ec70cb5abde941dd891b"
+                "reference": "29da88f38dc9eaa4127208f9a54c11ced61602c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_ssp/zipball/56eba18990ca6faba765ec70cb5abde941dd891b",
-                "reference": "56eba18990ca6faba765ec70cb5abde941dd891b",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_ssp/zipball/29da88f38dc9eaa4127208f9a54c11ced61602c6",
+                "reference": "29da88f38dc9eaa4127208f9a54c11ced61602c6",
                 "shasum": ""
             },
             "require": {
-                "composer/installers": "^1.2"
+                "composer/installers": "^1.2",
+                "drupal/switch": "~1.0"
             },
             "type": "drupal-custom-module",
             "license": [
@@ -12765,10 +12766,10 @@
             ],
             "description": "A Drupal Authentication Module.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_ssp/tree/7.x-2.x",
+                "source": "https://github.com/SU-SWS/stanford_ssp/tree/7.2.2-alpha3",
                 "issues": "https://github.com/SU-SWS/stanford_ssp/issues"
             },
-            "time": "2018-07-20 23:28:06"
+            "time": "2018-09-04T17:43:20+00:00"
         },
         {
             "name": "su-sws/stanford_story_page",
