@@ -9638,6 +9638,66 @@
             }
         },
         {
+          "name": "drupal/views_load_more",
+          "version": "1.5.0",
+          "source": {
+            "type": "git",
+            "url": "https://git.drupal.org/project/views_load_more",
+            "reference": "7.x-1.5"
+          },
+          "dist": {
+            "type": "zip",
+            "url": "https://ftp.drupal.org/files/projects/views_load_more-7.x-1.5.zip",
+            "reference": "7.x-1.5",
+            "shasum": "4c6657c8793ccf8f989173b24b9cdc57cc416a35"
+          },
+          "require": {
+            "drupal/drupal": "~7.0",
+            "drupal/views": "*"
+          },
+          "type": "drupal-module",
+          "extra": {
+            "branch-alias": {
+              "dev-1.x": "1.x-dev"
+            },
+            "drupal": {
+              "version": "7.x-1.5",
+              "datestamp": "1412631228",
+              "security-coverage": {
+                "status": "covered",
+                "message": "Covered by Drupal's security advisory policy"
+              }
+            }
+          },
+          "notification-url": "https://packages.drupal.org/7/downloads",
+          "license": [
+            "GPL-2.0-or-later"
+          ],
+          "authors": [
+            {
+              "name": "attila.fekete",
+              "homepage": "https://www.drupal.org/user/762986"
+            },
+            {
+              "name": "ericduran",
+              "homepage": "https://www.drupal.org/user/244460"
+            },
+            {
+              "name": "m4olivei",
+              "homepage": "https://www.drupal.org/user/410384"
+            },
+            {
+              "name": "wjaspers",
+              "homepage": "https://www.drupal.org/user/813890"
+            }
+          ],
+          "description": "A pager plugin for views. Gives users the option to add a 'more' button to a view and have the results appended to existing results being displayed.",
+          "homepage": "https://www.drupal.org/project/views_load_more",
+          "support": {
+            "source": "http://cgit.drupalcode.org/views_load_more"
+          }
+        },
+        {
             "name": "drupal/views_matrix",
             "version": "1.0.0",
             "source": {
