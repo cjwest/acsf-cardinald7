@@ -36,6 +36,11 @@ class HomePageSettings extends AbstractInstallTask {
     variable_set('stanford_jumpstart_home_active_body_class', 'stanford-jumpstart-home-mayfield-lab');
     variable_set('context_status', $context_status);
 
+    // Enable the default context.
+    $context = context_load($default);
+    $context->disabled = FALSE;
+    context_save($context);
+
     foreach ($names as $context_name) {
       $context_status[$context_name] = TRUE;
       $settings = variable_get('sjh_' . $context_name, array());

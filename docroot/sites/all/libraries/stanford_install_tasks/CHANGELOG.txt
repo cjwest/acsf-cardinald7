@@ -1,6 +1,10 @@
 Stanford Installation Tasks
 --------------------------------------
 
+7.x-1.3                            2018-09-12
+---------------------------------------------
+- Enable the default homepage context for Jumpstart Lab
+
 7.x-1.2                            2018-08-16
 ---------------------------------------------
 - Do not enable newrelic_appname on ACSF

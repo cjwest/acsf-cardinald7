@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1bd3063776ed31d122f8d6a6133c4fe8",
+    "content-hash": "3781b8c9702896a4d26149e22e331cd8",
     "packages": [
         {
             "name": "Stanford/WMD",
@@ -32,7 +32,7 @@
                 "source": "https://github.com/Stanford/WMD/tree/master",
                 "issues": "https://github.com/Stanford/WMD/issues"
             },
-            "time": "2018-05-10 23:12:42"
+            "time": "2018-05-10T23:12:42+00:00"
         },
         {
             "name": "Stanford/webauth_extras",
@@ -60,7 +60,7 @@
                 "source": "https://github.com/Stanford/webauth_extras/tree/master",
                 "issues": "https://github.com/Stanford/webauth_extras/issues"
             },
-            "time": "2018-05-10 23:09:54"
+            "time": "2018-05-10T23:09:54+00:00"
         },
         {
             "name": "components/chosen",
@@ -1311,7 +1311,7 @@
                 },
                 "drupal": {
                     "version": "7.x-1.48",
-                    "datestamp": "1526468584",
+                    "datestamp": "1534931880",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1378,7 +1378,7 @@
                 },
                 "drupal": {
                     "version": "7.x-1.48",
-                    "datestamp": "1526468584",
+                    "datestamp": "1534931880",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1439,7 +1439,7 @@
                 },
                 "drupal": {
                     "version": "7.x-1.48",
-                    "datestamp": "1526468584",
+                    "datestamp": "1534931880",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1500,7 +1500,7 @@
                 },
                 "drupal": {
                     "version": "7.x-1.48",
-                    "datestamp": "1526468584",
+                    "datestamp": "1534931880",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1561,7 +1561,7 @@
                 },
                 "drupal": {
                     "version": "7.x-1.48",
-                    "datestamp": "1526468584",
+                    "datestamp": "1534931880",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1622,7 +1622,7 @@
                 },
                 "drupal": {
                     "version": "7.x-1.48",
-                    "datestamp": "1526468584",
+                    "datestamp": "1534931880",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1817,7 +1817,7 @@
                 },
                 "drupal": {
                     "version": "7.x-1.4",
-                    "datestamp": "1523697542",
+                    "datestamp": "1523697484",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1930,8 +1930,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "7.x-1.0+24-dev",
-                    "datestamp": "1533642780",
+                    "version": "7.x-1.0+16-dev",
+                    "datestamp": "1523758085",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -1965,7 +1965,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/auto_nodetitle"
             },
-            "time": "2011-09-08 16:07:46"
+            "time": "2011-09-08T16:07:46+00:00"
         },
         {
             "name": "drupal/backup_migrate",
@@ -2153,7 +2153,7 @@
                 },
                 "drupal": {
                     "version": "7.x-3.5",
-                    "datestamp": "1508952844",
+                    "datestamp": "1536016681",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3315,7 +3315,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/context_list"
             },
-            "time": "2014-07-08 19:51:59"
+            "time": "2014-07-08T19:51:59+00:00"
         },
         {
             "name": "drupal/context_list_active",
@@ -3678,7 +3678,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/css_injector"
             },
-            "time": "2013-12-23 06:52:25"
+            "time": "2013-12-23T06:52:25+00:00"
         },
         {
             "name": "drupal/ctools",
@@ -5908,7 +5908,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/filefield_paths"
             },
-            "time": "2016-01-04 09:05:19"
+            "time": "2016-01-04T09:05:19+00:00"
         },
         {
             "name": "drupal/flag",
@@ -8595,6 +8595,67 @@
             }
         },
         {
+            "name": "drupal/special_menu_items",
+            "version": "dev-2.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/special_menu_items",
+                "reference": "46955e1b61243966e87f2d846bbb51a37440852a"
+            },
+            "require": {
+                "drupal/drupal": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "7.x-2.0+2-dev",
+                    "datestamp": "1431433981",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/7/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Servit",
+                    "homepage": "https://www.drupal.org/user/583048"
+                },
+                {
+                    "name": "danielbeeke",
+                    "homepage": "https://www.drupal.org/user/2484978"
+                },
+                {
+                    "name": "gagarine",
+                    "homepage": "https://www.drupal.org/user/162439"
+                },
+                {
+                    "name": "globetrotter",
+                    "homepage": "https://www.drupal.org/user/138066"
+                },
+                {
+                    "name": "khaled.zaidan",
+                    "homepage": "https://www.drupal.org/user/663072"
+                },
+                {
+                    "name": "webflo",
+                    "homepage": "https://www.drupal.org/user/254778"
+                }
+            ],
+            "description": "Allow users to add placeholder and/or separator menu items.",
+            "homepage": "https://www.drupal.org/project/special_menu_items",
+            "support": {
+                "source": "http://cgit.drupalcode.org/special_menu_items"
+            }
+        },
+        {
             "name": "drupal/stanford_date_timepicker",
             "version": "dev-1.x",
             "source": {
@@ -9638,64 +9699,64 @@
             }
         },
         {
-          "name": "drupal/views_load_more",
-          "version": "1.5.0",
-          "source": {
-            "type": "git",
-            "url": "https://git.drupal.org/project/views_load_more",
-            "reference": "7.x-1.5"
-          },
-          "dist": {
-            "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/views_load_more-7.x-1.5.zip",
-            "reference": "7.x-1.5",
-            "shasum": "4c6657c8793ccf8f989173b24b9cdc57cc416a35"
-          },
-          "require": {
-            "drupal/drupal": "~7.0",
-            "drupal/views": "*"
-          },
-          "type": "drupal-module",
-          "extra": {
-            "branch-alias": {
-              "dev-1.x": "1.x-dev"
+            "name": "drupal/views_load_more",
+            "version": "1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/views_load_more",
+                "reference": "7.x-1.5"
             },
-            "drupal": {
-              "version": "7.x-1.5",
-              "datestamp": "1412631228",
-              "security-coverage": {
-                "status": "covered",
-                "message": "Covered by Drupal's security advisory policy"
-              }
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/views_load_more-7.x-1.5.zip",
+                "reference": "7.x-1.5",
+                "shasum": "4c6657c8793ccf8f989173b24b9cdc57cc416a35"
+            },
+            "require": {
+                "drupal/drupal": "~7.0",
+                "drupal/views": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "7.x-1.5",
+                    "datestamp": "1412631228",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/7/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "attila.fekete",
+                    "homepage": "https://www.drupal.org/user/762986"
+                },
+                {
+                    "name": "ericduran",
+                    "homepage": "https://www.drupal.org/user/244460"
+                },
+                {
+                    "name": "m4olivei",
+                    "homepage": "https://www.drupal.org/user/410384"
+                },
+                {
+                    "name": "wjaspers",
+                    "homepage": "https://www.drupal.org/user/813890"
+                }
+            ],
+            "description": "A pager plugin for views. Gives users the option to add a 'more' button to a view and have the results appended to existing results being displayed.",
+            "homepage": "https://www.drupal.org/project/views_load_more",
+            "support": {
+                "source": "http://cgit.drupalcode.org/views_load_more"
             }
-          },
-          "notification-url": "https://packages.drupal.org/7/downloads",
-          "license": [
-            "GPL-2.0-or-later"
-          ],
-          "authors": [
-            {
-              "name": "attila.fekete",
-              "homepage": "https://www.drupal.org/user/762986"
-            },
-            {
-              "name": "ericduran",
-              "homepage": "https://www.drupal.org/user/244460"
-            },
-            {
-              "name": "m4olivei",
-              "homepage": "https://www.drupal.org/user/410384"
-            },
-            {
-              "name": "wjaspers",
-              "homepage": "https://www.drupal.org/user/813890"
-            }
-          ],
-          "description": "A pager plugin for views. Gives users the option to add a 'more' button to a view and have the results appended to existing results being displayed.",
-          "homepage": "https://www.drupal.org/project/views_load_more",
-          "support": {
-            "source": "http://cgit.drupalcode.org/views_load_more"
-          }
         },
         {
             "name": "drupal/views_matrix",
@@ -9939,7 +10000,7 @@
                 },
                 "drupal": {
                     "version": "7.x-4.17",
-                    "datestamp": "1525373073",
+                    "datestamp": "1524581885",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -10367,7 +10428,7 @@
                 },
                 "drupal": {
                     "version": "7.x-2.4",
-                    "datestamp": "1531986645",
+                    "datestamp": "1535558919",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -10394,10 +10455,6 @@
                 {
                     "name": "andrei.dincu",
                     "homepage": "https://www.drupal.org/user/2628879"
-                },
-                {
-                    "name": "earnie",
-                    "homepage": "https://www.drupal.org/user/86710"
                 },
                 {
                     "name": "juampynr",
@@ -11623,16 +11680,16 @@
         },
         {
             "name": "su-sws/stanford_capx",
-            "version": "7.3.0-beta8",
+            "version": "7.3.0-beta10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_capx.git",
-                "reference": "dc82d73b66876d8f1818f56bfb104387a78ec34a"
+                "reference": "c7bd64d0447301b49338417737710d213a039708"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_capx/zipball/dc82d73b66876d8f1818f56bfb104387a78ec34a",
-                "reference": "dc82d73b66876d8f1818f56bfb104387a78ec34a",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_capx/zipball/c7bd64d0447301b49338417737710d213a039708",
+                "reference": "c7bd64d0447301b49338417737710d213a039708",
                 "shasum": ""
             },
             "type": "drupal-custom-module",
@@ -11648,10 +11705,10 @@
             "description": "Stanford Career Academic Profiles API integration Module",
             "homepage": "https://github.com/SU-SWS/stanford_capx",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_capx/tree/7.3.0-beta8",
+                "source": "https://github.com/SU-SWS/stanford_capx/tree/7.3.0-beta10",
                 "issues": "https://github.com/SU-SWS/stanford_capx/issues"
             },
-            "time": "2018-06-28T17:10:27+00:00"
+            "time": "2018-09-12T16:53:08+00:00"
         },
         {
             "name": "su-sws/stanford_carousel",
@@ -11711,20 +11768,35 @@
         },
         {
             "name": "su-sws/stanford_courses",
-            "version": "7.4.4",
+            "version": "7.4.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_courses.git",
-                "reference": "09164ff367d23ddff19a91c7655602c4b4320b3f"
+                "reference": "2b7d9924b8a11e456eae2ced73aaa5c2b716fd90"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_courses/zipball/09164ff367d23ddff19a91c7655602c4b4320b3f",
-                "reference": "09164ff367d23ddff19a91c7655602c4b4320b3f",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_courses/zipball/2b7d9924b8a11e456eae2ced73aaa5c2b716fd90",
+                "reference": "2b7d9924b8a11e456eae2ced73aaa5c2b716fd90",
                 "shasum": ""
             },
             "require": {
-                "composer/installers": "^1.2"
+                "composer/installers": "^1.2",
+                "drupal/context": "~3.0",
+                "drupal/ctools": "~1.10",
+                "drupal/date": "~2.0",
+                "drupal/ds": "~2.0",
+                "drupal/entityreference": "~1.0",
+                "drupal/features": "~2.0",
+                "drupal/feeds": "~2.0@beta",
+                "drupal/feeds_tamper": "~1.0",
+                "drupal/feeds_xpathparser": "~1.0",
+                "drupal/field_collection": "~1.0@beta",
+                "drupal/field_group": "~1.3",
+                "drupal/rules": "~2.0",
+                "drupal/strongarm": "~2.0",
+                "drupal/views_matrix": "~1.0",
+                "drupal/views_selective_filters": "~1.5"
             },
             "type": "drupal-custom-module",
             "license": [
@@ -11732,10 +11804,10 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_courses/tree/7.4.4",
+                "source": "https://github.com/SU-SWS/stanford_courses/tree/7.4.5",
                 "issues": "https://github.com/SU-SWS/stanford_courses/issues"
             },
-            "time": "2018-06-27T13:11:45+00:00"
+            "time": "2018-09-12T17:18:00+00:00"
         },
         {
             "name": "su-sws/stanford_date_formats",
@@ -12158,16 +12230,16 @@
         },
         {
             "name": "su-sws/stanford_install_tasks",
-            "version": "7.1.1",
+            "version": "7.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_install_tasks.git",
-                "reference": "8dbc85df2bd94c836e3e3e75efc96561e7ed216b"
+                "reference": "fcc312d68924eee610f8a8bea3bd8d699ab47054"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_install_tasks/zipball/8dbc85df2bd94c836e3e3e75efc96561e7ed216b",
-                "reference": "8dbc85df2bd94c836e3e3e75efc96561e7ed216b",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_install_tasks/zipball/fcc312d68924eee610f8a8bea3bd8d699ab47054",
+                "reference": "fcc312d68924eee610f8a8bea3bd8d699ab47054",
                 "shasum": ""
             },
             "require": {
@@ -12179,10 +12251,10 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_install_tasks/tree/7.1.2",
+                "source": "https://github.com/SU-SWS/stanford_install_tasks/tree/7.1.3",
                 "issues": "https://github.com/SU-SWS/stanford_install_tasks/issues"
             },
-            "time": "2018-08-16T23:25:23+00:00"
+            "time": "2018-09-12T16:51:49+00:00"
         },
         {
             "name": "su-sws/stanford_jordan",
@@ -12492,7 +12564,7 @@
                 "issues": "https://github.com/SU-SWS/stanford_metatag_nobots/issues"
             },
             "abandoned": "drupal/nobots",
-            "time": "2018-02-20 06:04:14"
+            "time": "2018-02-20T06:04:14+00:00"
         },
         {
             "name": "su-sws/stanford_news",
@@ -12804,16 +12876,16 @@
         },
         {
             "name": "su-sws/stanford_ssp",
-            "version": "7.2.2-alpha3",
+            "version": "7.2.2-alpha4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_ssp.git",
-                "reference": "29da88f38dc9eaa4127208f9a54c11ced61602c6"
+                "reference": "ce458d8292d02a98deb6e9b7153ad763233a9e38"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_ssp/zipball/29da88f38dc9eaa4127208f9a54c11ced61602c6",
-                "reference": "29da88f38dc9eaa4127208f9a54c11ced61602c6",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_ssp/zipball/ce458d8292d02a98deb6e9b7153ad763233a9e38",
+                "reference": "ce458d8292d02a98deb6e9b7153ad763233a9e38",
                 "shasum": ""
             },
             "require": {
@@ -12826,10 +12898,10 @@
             ],
             "description": "A Drupal Authentication Module.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_ssp/tree/7.2.2-alpha3",
+                "source": "https://github.com/SU-SWS/stanford_ssp/tree/7.2.2-alpha4",
                 "issues": "https://github.com/SU-SWS/stanford_ssp/issues"
             },
-            "time": "2018-09-04T17:43:20+00:00"
+            "time": "2018-09-12T16:55:11+00:00"
         },
         {
             "name": "su-sws/stanford_story_page",
@@ -12945,20 +13017,21 @@
         },
         {
             "name": "su-sws/stanford_wysiwyg",
-            "version": "7.2.5",
+            "version": "7.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_wysiwyg.git",
-                "reference": "57adcbf8aa04e7fda49388fd573e3a230c23759c"
+                "reference": "41666141a22ba8160662abe78bc8320ec1fcbc41"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_wysiwyg/zipball/57adcbf8aa04e7fda49388fd573e3a230c23759c",
-                "reference": "57adcbf8aa04e7fda49388fd573e3a230c23759c",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_wysiwyg/zipball/41666141a22ba8160662abe78bc8320ec1fcbc41",
+                "reference": "41666141a22ba8160662abe78bc8320ec1fcbc41",
                 "shasum": ""
             },
             "require": {
-                "composer/installers": "^1.2"
+                "composer/installers": "^1.2",
+                "drupal/wysiwyg": "~2.5"
             },
             "type": "drupal-custom-module",
             "license": [
@@ -12966,10 +13039,10 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_wysiwyg/tree/7.2.5",
+                "source": "https://github.com/SU-SWS/stanford_wysiwyg/tree/7.2.6",
                 "issues": "https://github.com/SU-SWS/stanford_wysiwyg/issues"
             },
-            "time": "2018-06-27T15:36:34+00:00"
+            "time": "2018-09-05T20:38:25+00:00"
         },
         {
             "name": "symfony/polyfill-apcu",
@@ -15300,7 +15373,7 @@
                 "Mink",
                 "feature"
             ],
-            "time": "2014-01-13 15:50:49"
+            "time": "2014-01-13T15:50:49+00:00"
         }
     ],
     "aliases": [],
@@ -15310,7 +15383,8 @@
         "omega8cc/drush-registry-rebuild": 20,
         "drupal/paranoia": 20,
         "drupal/node_revision_delete": 15,
-        "su-sws/stanford_ssp": 20,
+        "drupal/special_menu_items": 20,
+        "su-sws/stanford_ssp": 15,
         "stanford/wmd": 20,
         "stanford/webauth_extras": 20,
         "su-sws/linky_clicky": 20,
