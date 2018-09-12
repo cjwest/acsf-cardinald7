@@ -6,7 +6,7 @@
  */
 
 $context = new stdClass();
-$context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+$context->disabled = TRUE; // Disable by default
 $context->api_version = 3;
 $context->name = 'stanford_jumpstart_home_mayfield_lab';
 $context->description = 'Tagline with Research Projects, Recent Publications, and Recent News blocks';

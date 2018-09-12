@@ -12342,16 +12342,16 @@
         },
         {
             "name": "su-sws/stanford_jumpstart_home",
-            "version": "7.1.8",
+            "version": "7.1.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_jumpstart_home.git",
-                "reference": "c0a242a938b5fb6cb0b995d4841a4b3c4de225d9"
+                "reference": "c54c5ea1823670aab6a52554edd2bf72103af7bc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_jumpstart_home/zipball/c0a242a938b5fb6cb0b995d4841a4b3c4de225d9",
-                "reference": "c0a242a938b5fb6cb0b995d4841a4b3c4de225d9",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_jumpstart_home/zipball/c54c5ea1823670aab6a52554edd2bf72103af7bc",
+                "reference": "c54c5ea1823670aab6a52554edd2bf72103af7bc",
                 "shasum": ""
             },
             "require": {
@@ -12363,10 +12363,10 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_jumpstart_home/tree/7.1.8",
+                "source": "https://github.com/SU-SWS/stanford_jumpstart_home/tree/7.1.9",
                 "issues": "https://github.com/SU-SWS/stanford_jumpstart_home/issues"
             },
-            "time": "2018-04-16T18:21:41+00:00"
+            "time": "2018-09-12T18:46:27+00:00"
         },
         {
             "name": "su-sws/stanford_jumpstart_lab",
