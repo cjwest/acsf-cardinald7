@@ -1,0 +1,5 @@
+name = Match Redirect
+description = Matching source patterns are redirected to a single destination.
+core = 7.x
+
+configure = admin/config/search/match_redirect

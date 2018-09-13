@@ -60,6 +60,7 @@
     "drupal/paranoia": "dev-1.x",
     "drupal/node_revision_delete": "~3.0@alpha",
     "drupal/honeypot": "~1.24",
+    "drupal/match_redirect": "dev-1.x#8fa200c4d942d622debc72978739aec8dd074634",
     "drupal/special_menu_items": "dev-2.x#46955e1b61243966e87f2d846bbb51a37440852a",
     "drupal/views_load_more": "~1.5",
 
@@ -162,6 +163,10 @@
       "drupal/context": {
         "Remove usage of deprecated create_function() calls for PHP 7.2+ future proofing":
         "https://www.drupal.org/files/issues/context-support_php_72-2946595-3.patch"
+      },
+      "drupal/match_redirect": {
+        "Add wildcard to target URL: https://www.drupal.org/project/match_redirect/issues/2118233":
+        "https://www.drupal.org/files/issues/wildcard_to_target-2118233-9--rerolled-23.patch"
       }
     },
     "merge-plugin": {

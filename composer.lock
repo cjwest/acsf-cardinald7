@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3781b8c9702896a4d26149e22e331cd8",
+    "content-hash": "6da5069f6b608d4fbf4008a14ef29838",
     "packages": [
         {
             "name": "Stanford/WMD",
@@ -6781,6 +6781,55 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/link"
             }
+        },
+        {
+            "name": "drupal/match_redirect",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/match_redirect",
+                "reference": "8fa200c4d942d622debc72978739aec8dd074634"
+            },
+            "require": {
+                "drupal/drupal": "~7.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "7.x-1.0+4-dev",
+                    "datestamp": "1395421157",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                },
+                "patches_applied": {
+                    "Add wildcard to target URL: https://www.drupal.org/project/match_redirect/issues/2118233": "https://www.drupal.org/files/issues/wildcard_to_target-2118233-9--rerolled-23.patch"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/7/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "biff45452",
+                    "homepage": "https://www.drupal.org/user/1016514"
+                },
+                {
+                    "name": "daniel.nitsche",
+                    "homepage": "https://www.drupal.org/user/1151108"
+                }
+            ],
+            "description": "Matching source patterns are redirected to a single destination.",
+            "homepage": "https://www.drupal.org/project/match_redirect",
+            "support": {
+                "source": "http://cgit.drupalcode.org/match_redirect"
+            },
+            "time": "2014-03-21T16:54:50+00:00"
         },
         {
             "name": "drupal/menu_attributes",
@@ -15383,6 +15432,7 @@
         "omega8cc/drush-registry-rebuild": 20,
         "drupal/paranoia": 20,
         "drupal/node_revision_delete": 15,
+        "drupal/match_redirect": 20,
         "drupal/special_menu_items": 20,
         "su-sws/stanford_ssp": 15,
         "stanford/wmd": 20,
