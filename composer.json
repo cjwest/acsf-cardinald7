@@ -218,7 +218,8 @@
       "docroot/sites/all/libraries/jsonpath/": ["library/jsonpath"],
       "docroot/sites/all/modules/stanford/webauth/": ["Stanford/WMD"],
       "docroot/sites/all/modules/stanford/stanford_sites_systemtools/": ["su-sws/SU-IT-Services"],
-      "docroot/sites/all/libraries/iCalcreator/": ["iCalcreator/iCalcreator"]
+      "docroot/sites/all/libraries/iCalcreator/": ["iCalcreator/iCalcreator"],
+      "docroot/sites/all/libraries/jwplayer/": ["library/jw_player"]
     },
     "preserve-paths": [
       "docroot/profiles",
