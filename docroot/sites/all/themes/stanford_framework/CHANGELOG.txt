@@ -1,3 +1,9 @@
+Version 7.x-3.7        2018-09-13
+---------------------------------
+- Fix implemented for apple touch icons.
+- GDPR Responsive footer styles
+- Fix to site title 3rd line theme setting
+
 Version 7.x-3.6        2018-05-24
 ---------------------------------
 - Changed footer link text per guidance from University Communications

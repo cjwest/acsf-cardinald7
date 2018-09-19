@@ -150,7 +150,9 @@ function drush_acsf_site_scrub() {
   }
 
   // Remove openid associations.
-  db_query('DELETE FROM {openid_association}');
+  if (db_table_exists('openid_association')) {
+    db_query('DELETE FROM {openid_association}');
+  }
 
   // Reset the cron key.
   variable_set('cron_key', md5(mt_rand()));

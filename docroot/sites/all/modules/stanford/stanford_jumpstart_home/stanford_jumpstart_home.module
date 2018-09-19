@@ -303,6 +303,8 @@ function stanford_jumpstart_homepage_dashboard_form($form, $form_state) {
     '#type' => 'checkbox',
     '#title' => t('Include BIG text'),
     '#weight' => 9998,
+    // Yes, the variable is named "stanford_jumpstart_home_include_flat_styles",
+    // and the UI option is "Include BIG text".
     '#default_value' => variable_get('stanford_jumpstart_home_include_flat_styles', 1),
   );
 
@@ -414,9 +416,28 @@ function stanford_jumpstart_home_process_file_managed($element, &$form_state, $f
  * Implements hook_preprocess_html().
  */
 function stanford_jumpstart_home_preprocess_html(&$vars) {
-  if (variable_get('stanford_jumpstart_home_include_flat_styles', 0)) {
+
+  // Enable big text styles for version 1.7 and after.
+  // Because of the drastic change in versions 1.6 and 1.7 this upgrade path
+  // addition has been added. New sites 1.7 and after get the new stylesheet and
+  // pervious to version 1.7 sites can opt out of the legacy one.
+  // Why is the variable for BIG text styles named
+  // "stanford_jumpstart_home_include_flat_styles"? Nobody knows. But
+  // "stanford_jumpstart_home_include_flat_styles" enables the BIG text styles.
+  if (variable_get('stanford_jumpstart_home_include_flat_styles', 1) && !variable_get('stanford_jumpstart_home_enable_legacy_flat_styles', 0)) {
     drupal_add_css(drupal_get_path('module', 'stanford_jumpstart_home') . '/css/stanford_jumpstart_home_typography.css');
     $vars['classes_array'][] = 'big-text-styles';
+  }
+
+  // Legacy condition for those upgrading from less than version 1.7. For when
+  // a site was using 1.6 or less and relied on the styles as they were. We also
+  // do not add the body class for big-text-styles in the legacy version.
+  // stanford_jumpstart_home_include_flat_styles means that the user has chosen
+  // "Include BIG text" in the UI.
+  // "stanford_jumpstart_home_enable_legacy_flat_styles" is the setting
+  // indicating that they chose that option in 1.6, and 1.6 only. Whew.
+  if (variable_get('stanford_jumpstart_home_include_flat_styles', 1) && variable_get('stanford_jumpstart_home_enable_legacy_flat_styles', 0)) {
+    drupal_add_css(drupal_get_path('module', 'stanford_jumpstart_home') . '/css/stanford_jumpstart_home_typography.1.6.css');
   }
 
   $context_name = variable_get('stanford_jumpstart_home_active', '');

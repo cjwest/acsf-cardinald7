@@ -1,5 +1,13 @@
 Stanford Jumpstart Home
 -------------------------------------------------------------------
+
+7.x-1.10                                                   2018-09-13
+--------------------------------------------------------------------
+- Change upgrade path hook from 7001 to 7100
+- Provide upgrade path for versions 1.6 and below
+- Provide different upgrade path for versions 1.7 and above
+- Add legacy 'big text' stylesheet for sites that were on version 1.6
+
 7.x-1.9                                                   2018-09-12
 --------------------------------------------------------------------
 - Set stanford_jumpstart_home_mayfield_lab to be disabled by default

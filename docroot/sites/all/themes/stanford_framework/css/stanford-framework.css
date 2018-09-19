@@ -176,7 +176,7 @@
 
 /* line 151, ../sass/includes/_module-brand-bars.scss */
 #bottom-menu .top-links a {
-  font-size: 17px !important;
+  font-size: 17px;
 }
 /* line 154, ../sass/includes/_module-brand-bars.scss */
 #bottom-menu .bottom-links a {
@@ -349,6 +349,106 @@ body.admin-menu {
   #top-menu,
   #global-footer {
     display: none !important;
+  }
+}
+/* ----- Global Footer (GDPR and Homesite Responsiveness) ----------------------- */
+/* line 297, ../sass/includes/_module-brand-bars.scss */
+#global-footer {
+  padding: 25px 0 10px 0;
+}
+/* line 300, ../sass/includes/_module-brand-bars.scss */
+#global-footer img {
+  width: 120px;
+  height: 56px;
+}
+/* line 306, ../sass/includes/_module-brand-bars.scss */
+#global-footer .container a {
+  color: #ffffff;
+  font-size: 15px;
+}
+/* line 311, ../sass/includes/_module-brand-bars.scss */
+#global-footer .container #bottom-menu .top-links a {
+  color: #ffffff;
+  font-size: 18px;
+}
+/* line 318, ../sass/includes/_module-brand-bars.scss */
+p.vcard {
+  color: #ffffff;
+}
+
+@media (max-width: 767px) {
+  /* line 323, ../sass/includes/_module-brand-bars.scss */
+  #global-footer {
+    padding: 20px 0px 10px;
+  }
+  /* line 327, ../sass/includes/_module-brand-bars.scss */
+  #bottom-logo {
+    float: none;
+    margin-bottom: 0.5em;
+    padding-top: 0;
+    width: auto;
+  }
+  /* line 334, ../sass/includes/_module-brand-bars.scss */
+  #bottom-menu {
+    float: none;
+    text-align: center;
+    width: auto;
+  }
+  /* line 340, ../sass/includes/_module-brand-bars.scss */
+  #bottom-menu ul {
+    margin-bottom: 0.5em;
+  }
+  /* line 344, ../sass/includes/_module-brand-bars.scss */
+  #bottom-menu ul li {
+    display: inline-block;
+  }
+  /* line 348, ../sass/includes/_module-brand-bars.scss */
+  p.vcard {
+    margin: 1em 0;
+  }
+}
+@media (max-width: 585px) {
+  /* line 354, ../sass/includes/_module-brand-bars.scss */
+  #bottom-menu {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+  /* line 360, ../sass/includes/_module-brand-bars.scss */
+  #bottom-menu p.vcard {
+    flex-basis: 100%;
+  }
+  /* line 364, ../sass/includes/_module-brand-bars.scss */
+  #bottom-menu ul li {
+    display: block;
+    line-height: 1.8em;
+    text-align: left;
+  }
+}
+@media (max-width: 480px) {
+  /* line 372, ../sass/includes/_module-brand-bars.scss */
+  #bottom-menu {
+    width: auto;
+    text-align: unset;
+  }
+  /* line 377, ../sass/includes/_module-brand-bars.scss */
+  #bottom-menu ul li {
+    display: block;
+  }
+  /* line 381, ../sass/includes/_module-brand-bars.scss */
+  #bottom-menu .top-links,
+  #bottom-menu .bottom-links {
+    width: calc(50% - 30px);
+    float: left;
+  }
+  /* line 387, ../sass/includes/_module-brand-bars.scss */
+  #bottom-menu .top-links {
+    margin-left: 50px;
+  }
+  /* line 391, ../sass/includes/_module-brand-bars.scss */
+  p.vcard {
+    width: calc(100% - 40px);
+    float: left;
   }
 }
 /* ----- Logo ------------------------ */

@@ -66,7 +66,7 @@ function stanford_framework_preprocess_html(&$vars) {
     ),
   );
 
-  $apple_icon_sizes = array(57,72,76,114,120,144,152,167,180);
+  $apple_icon_sizes = array(57,60,72,76,114,120,144,152,180);
 
   foreach($apple_icon_sizes as $size){
     $apple = array(

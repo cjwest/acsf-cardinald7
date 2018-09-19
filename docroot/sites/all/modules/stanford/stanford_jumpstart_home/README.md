@@ -1,5 +1,5 @@
 #[Stanford Jumpstart Homepage](https://github.com/SU-SWS/stanford_jumpstart_home)
-##### Version: 7.x-1.9
+##### Version: 7.x-1.10
 
 Maintainers: [jbickar](https://github.com/jbickar), [sherakama](https://github.com/sherakama)
 

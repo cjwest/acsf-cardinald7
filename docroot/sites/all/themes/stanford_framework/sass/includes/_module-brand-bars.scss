@@ -149,7 +149,7 @@
         margin: 0;
     }
     .top-links a {
-        font-size: 17px !important;
+        font-size: 17px;
     }
     .bottom-links a {
         font-weight: 300 !important;
@@ -290,4 +290,106 @@ body.admin-menu {
     #global-footer {
         display: none !important;
     }
+}
+
+/* ----- Global Footer (GDPR and Homesite Responsiveness) ----------------------- */
+
+#global-footer {
+  padding: 25px 0 10px 0;
+
+  img {
+    width: 120px;
+    height: 56px;
+  }
+
+  .container {
+    a {
+      color: #ffffff;
+      font-size: 15px;
+    }
+
+    #bottom-menu .top-links a {
+      color: #ffffff;
+      font-size: 18px;
+    }
+  }
+}
+
+p.vcard {
+  color: #ffffff;
+}
+
+@media (max-width: 767px) {
+  #global-footer {
+    padding: 20px 0px 10px;
+  }
+
+  #bottom-logo {
+    float: none;
+    margin-bottom: .5em;
+    padding-top: 0;
+    width: auto;
+  }
+
+  #bottom-menu {
+    float: none;
+    text-align: center;
+    width: auto;
+  }
+
+  #bottom-menu ul {
+    margin-bottom: .5em;
+  }
+
+  #bottom-menu ul li {
+    display: inline-block;
+  }
+
+  p.vcard {
+    margin: 1em 0;
+  }
+}
+
+@media (max-width: 585px) {
+  #bottom-menu {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  #bottom-menu p.vcard {
+    flex-basis: 100%;
+  }
+
+  #bottom-menu ul li {
+    display: block;
+    line-height: 1.8em;
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  #bottom-menu {
+    width: auto;
+    text-align: unset;
+  }
+
+  #bottom-menu ul li {
+    display: block;
+  }
+
+  #bottom-menu .top-links,
+  #bottom-menu .bottom-links {
+    width: calc(50% - 30px);
+    float: left;
+  }
+
+  #bottom-menu .top-links {
+    margin-left: 50px;
+  }
+
+  p.vcard {
+    width: calc(100% - 40px);
+    float: left;
+  }
 }
