@@ -1,5 +1,17 @@
 ACSF CardinalD7
 
+Version 1.0.8                                                        2018-09-20
+-------------------------------------------------------------------------------
+- Bug fix: correct path to jwplayer library
+- Update module acsf_7.x-1.49
+- Update module better_exposed_filters-7.x-3.6
+- Update module libraries-7.x-2.4
+- Update module xmlsitemap-7.x-2.5
+- Update local module stanford_faq- 7.x-4.3
+- Update local module stanford_jumpstart_home-7.x-1.10
+- Update local module stanford_ssp 7.x-2.2-alpha5
+- Update local theme stanford_framework-7.x-3.7
+
 Version 1.0.7                                                        2018-09-13
 -------------------------------------------------------------------------------
 - Update Stanford Install Tasks to 7.x-1.3
