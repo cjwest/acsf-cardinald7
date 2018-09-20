@@ -11760,7 +11760,7 @@
             "description": "Stanford Career Academic Profiles API integration Module",
             "homepage": "https://github.com/SU-SWS/stanford_capx",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_capx/tree/7.x-3.0-beta10",
+                "source": "https://github.com/SU-SWS/stanford_capx/tree/7.3.0-beta10",
                 "issues": "https://github.com/SU-SWS/stanford_capx/issues"
             },
             "time": "2018-09-12T16:53:08+00:00"
@@ -12931,16 +12931,16 @@
         },
         {
             "name": "su-sws/stanford_ssp",
-            "version": "7.2.2-alpha4",
+            "version": "7.2.2-alpha5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_ssp.git",
-                "reference": "ce458d8292d02a98deb6e9b7153ad763233a9e38"
+                "reference": "07c3657fa80cb4c485225c918c583990f66ef8df"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_ssp/zipball/ce458d8292d02a98deb6e9b7153ad763233a9e38",
-                "reference": "ce458d8292d02a98deb6e9b7153ad763233a9e38",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_ssp/zipball/07c3657fa80cb4c485225c918c583990f66ef8df",
+                "reference": "07c3657fa80cb4c485225c918c583990f66ef8df",
                 "shasum": ""
             },
             "require": {
@@ -12953,10 +12953,10 @@
             ],
             "description": "A Drupal Authentication Module.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_ssp/tree/7.2.2-alpha4",
+                "source": "https://github.com/SU-SWS/stanford_ssp/tree/7.2.2-alpha5",
                 "issues": "https://github.com/SU-SWS/stanford_ssp/issues"
             },
-            "time": "2018-09-12T16:55:11+00:00"
+            "time": "2018-09-20T16:05:31+00:00"
         },
         {
             "name": "su-sws/stanford_story_page",
