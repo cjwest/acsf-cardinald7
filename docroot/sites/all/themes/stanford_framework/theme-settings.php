@@ -6,16 +6,28 @@
 
 
 /**
- * [stanford_framework_form_system_theme_settings_alter description]
+ * Add custom theme settings to the appearance form.
  *
  * @param  [type] $form       [description]
  * @param  [type] $form_state [description]
  */
 function stanford_framework_form_system_theme_settings_alter(&$form, &$form_state) {
 
+  // Include parent theme-settings.php file always.
+  $ofw = drupal_get_path('theme', 'open_framework');
+  $form_state['build_info']['files'][] = $ofw . "/theme-settings.php";
+
+  // As themes can sub-theme at will we will include the active theme's
+  // theme-settings.php file by default.
   $themes = list_themes();
   $active_theme = $GLOBALS['theme_key'];
   $form_state['build_info']['files'][] = str_replace("/$active_theme.info", '', $themes[$active_theme]->filename) . '/theme-settings.php';
+
+  // In case the active theme isn't this theme include the theme-settings.php.
+  if ($active_theme !== 'stanford_framework') {
+    $sufw = drupal_get_path('theme', 'stanford_framework');
+    $form_state['build_info']['files'][] = $sufw . "/theme-settings.php";
+  }
 
   drupal_add_css(drupal_get_path('theme', 'stanford_framework') . "/css/theme-settings.css");
   drupal_add_js(drupal_get_path('theme', 'stanford_framework') . "/js/theme-settings.js");
@@ -45,12 +57,10 @@ function stanford_framework_form_system_theme_settings_alter(&$form, &$form_stat
   // Hide border options from everyone.
   $form['border_container']['#access'] = FALSE;
 
-
   // My Theme Options
-  // -----------------------------------------------------------------
+  // -----------------------------------------------------------------.
 
-
-  // Choose style
+  // Choose style.
   $form['choosestyle_container'] = array(
     '#type' => 'fieldset',
     '#title' => t('Choose Style'),
@@ -71,7 +81,7 @@ function stanford_framework_form_system_theme_settings_alter(&$form, &$form_stat
     ),
   );
 
-  // Header Text
+  // Header Text.
   $form['header_container'] = array(
     '#type' => 'fieldset',
     '#title' => t('Site Title'),
@@ -80,7 +90,7 @@ function stanford_framework_form_system_theme_settings_alter(&$form, &$form_stat
     '#collapsed' => TRUE,
   );
 
-  // Site Title Line 1 Container
+  // Site Title Line 1 Container.
   $form['header_container']['site_title_line1_container'] = array(
     '#type' => 'fieldset',
     '#title' => t('Line 1'),
@@ -107,7 +117,7 @@ function stanford_framework_form_system_theme_settings_alter(&$form, &$form_stat
     ),
   );
 
-  // Site Title Line 2 Container
+  // Site Title Line 2 Container.
   $form['header_container']['site_title_line2_container'] = array(
     '#type' => 'fieldset',
     '#title' => t('Line 2'),
@@ -122,7 +132,7 @@ function stanford_framework_form_system_theme_settings_alter(&$form, &$form_stat
     '#description' => t('<em>(This will replace the Drupal default site title)</em>'),
   );
 
-  // Site Title Line 3 Container
+  // Site Title Line 3 Container.
   $form['header_container']['site_title_line3_container'] = array(
     '#type' => 'fieldset',
     '#title' => t('Line 3'),
@@ -148,7 +158,7 @@ function stanford_framework_form_system_theme_settings_alter(&$form, &$form_stat
     ),
   );
 
-  // Site Title Line 4 Container
+  // Site Title Line 4 Container.
   $form['header_container']['site_title_line4_container'] = array(
     '#type' => 'fieldset',
     '#title' => t('Line 4'),
@@ -169,7 +179,7 @@ function stanford_framework_form_system_theme_settings_alter(&$form, &$form_stat
     ),
   );
 
-  // Site Title Line 5 Container
+  // Site Title Line 5 Container.
   $form['header_container']['site_title_line5_container'] = array(
     '#type' => 'fieldset',
     '#title' => t('Line 5'),
@@ -193,7 +203,7 @@ function stanford_framework_form_system_theme_settings_alter(&$form, &$form_stat
     ),
   );
 
-  // Logo Image Container
+  // Logo Image Container.
   $form['header_container']['logo_image_container'] = array(
     '#type' => 'fieldset',
     '#title' => t('Logo image'),
@@ -212,7 +222,7 @@ function stanford_framework_form_system_theme_settings_alter(&$form, &$form_stat
   );
 
   // THEME OPTIONS FROM STANFORD LIGHT
-  // Design Container
+  // Design Container.
   $form['design_container'] = array(
     '#type' => 'fieldset',
     '#title' => t('Customize design'),
@@ -226,7 +236,7 @@ function stanford_framework_form_system_theme_settings_alter(&$form, &$form_stat
     ),
   );
 
-  // Styles
+  // Styles.
   $form['design_container']['styles'] = array(
     '#type' => 'radios',
     '#title' => t('Choose styles'),
@@ -243,7 +253,7 @@ function stanford_framework_form_system_theme_settings_alter(&$form, &$form_stat
     ),
   );
 
-  // Fonts
+  // Fonts.
   $form['design_container']['fonts'] = array(
     '#type' => 'radios',
     '#title' => t('Choose fonts'),
@@ -255,7 +265,7 @@ function stanford_framework_form_system_theme_settings_alter(&$form, &$form_stat
     ),
   );
 
-  // Header Background Container
+  // Header Background Container.
   $form['header_bkg_container'] = array(
     '#type' => 'fieldset',
     '#title' => t('Header Background'),
@@ -264,7 +274,7 @@ function stanford_framework_form_system_theme_settings_alter(&$form, &$form_stat
     '#collapsed' => TRUE,
   );
 
-  // Header background image
+  // Header background image.
   $form['header_bkg_container']['header_bkg'] = array(
     '#type' => 'radios',
     '#title' => t('Enable header background image'),
@@ -275,7 +285,7 @@ function stanford_framework_form_system_theme_settings_alter(&$form, &$form_stat
     ),
   );
 
-  // Default path for header background image
+  // Default path for header background image.
   $header_bkg_path = theme_get_setting('header_bkg_path');
 
   $fid = 0;
@@ -287,7 +297,8 @@ function stanford_framework_form_system_theme_settings_alter(&$form, &$form_stat
     $fid = $query->fetchField();
   }
 
-  // Helpful text showing the file name, disabled to avoid the user thinking it can be used for any purpose.
+  // Helpful text showing the file name, disabled to avoid the user thinking it
+  // can be used for any purpose.
   $form['header_bkg_container']['header_bkg_path'] = array(
     '#type' => 'hidden',
     '#title' => 'Path to header background image',
@@ -295,7 +306,7 @@ function stanford_framework_form_system_theme_settings_alter(&$form, &$form_stat
   );
 
 
-  // Upload header background image field
+  // Upload header background image field.
   $form['header_bkg_container']['header_bkg_upload'] = array(
     '#type' => 'managed_file',
     '#title' => 'Upload header background image',
@@ -313,7 +324,7 @@ function stanford_framework_form_system_theme_settings_alter(&$form, &$form_stat
     $form['header_bkg_container']['header_bkg_upload']['preview'] = array('#markup' => theme('image', array('path' => theme_get_setting('header_bkg_path'))));
   }
 
-  // Header background front page style
+  // Header background front page style.
   $form['header_bkg_container']['header_bkg_style_front'] = array(
     '#type' => 'checkbox',
     '#title' => t('<strong>Display as full-bleed body background image on homepage</strong>'),
@@ -321,7 +332,7 @@ function stanford_framework_form_system_theme_settings_alter(&$form, &$form_stat
     '#return_value' => 'header-bkg-style-frontbleed',
   );
 
-  // Header background image style
+  // Header background image style.
   $form['header_bkg_container']['header_bkg_style'] = array(
     '#type' => 'radios',
     '#title' => t('Choose header background image style'),
@@ -332,7 +343,7 @@ function stanford_framework_form_system_theme_settings_alter(&$form, &$form_stat
     ),
   );
 
-  // Header background text color
+  // Header background text color.
   $form['header_bkg_container']['header_bkg_text'] = array(
     '#type' => 'radios',
     '#title' => t('Choose header text color'),
@@ -344,9 +355,9 @@ function stanford_framework_form_system_theme_settings_alter(&$form, &$form_stat
   );
 
   // Weights
-  // ------------------------------------------------------
+  // ------------------------------------------------------.
 
-  // Weights are done at the end of the form to allow for easier update
+  // Weights are done at the end of the form to allow for easier update.
   $form['choosestyle_container']['#weight'] = 0;
   $form['design_container']['#weight'] = 5;
   $form['header_container']['#weight'] = 10;
@@ -359,13 +370,12 @@ function stanford_framework_form_system_theme_settings_alter(&$form, &$form_stat
   $form['favicon']['#weight'] = 45;
   $form['packages_container']['#weight'] = 50;
 
-  // Attach custom submit handler to the form
-  $form['#submit'] = array('stanford_framework_settings_submit');
-  unset($form['#validate']);
+  // Attach custom submit handler to the form.
+  $form['#submit'][] = 'stanford_framework_settings_submit';
 }
 
 /**
- * [stanford_framework_settings_submit description]
+ * Submit handler for style chooser.
  *
  * @param  [type] $form       [description]
  * @param  [type] $form_state [description]

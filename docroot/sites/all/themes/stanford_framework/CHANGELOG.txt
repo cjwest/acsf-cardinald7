@@ -1,3 +1,7 @@
+Version 7.x-3.8        2018-09-24
+---------------------------------
+- Bug fix: Fatal error when submitting theme settings form
+
 Version 7.x-3.7        2018-09-13
 ---------------------------------
 - Fix implemented for apple touch icons.

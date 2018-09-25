@@ -12089,16 +12089,16 @@
         },
         {
             "name": "su-sws/stanford_framework",
-            "version": "7.3.7",
+            "version": "7.3.8",
             "source": {
                 "type": "git",
                 "url": "git@github.com:SU-SWS/stanford_framework.git",
-                "reference": "8d11d7b09a7d34199d258042c3e554cedf54f40a"
+                "reference": "fab645cf76dc6175214a588ff7077d34ac38c5bc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_framework/zipball/8d11d7b09a7d34199d258042c3e554cedf54f40a",
-                "reference": "8d11d7b09a7d34199d258042c3e554cedf54f40a",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_framework/zipball/fab645cf76dc6175214a588ff7077d34ac38c5bc",
+                "reference": "fab645cf76dc6175214a588ff7077d34ac38c5bc",
                 "shasum": ""
             },
             "require": {
@@ -12110,10 +12110,10 @@
             ],
             "description": "A Drupal Theme.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_framework/tree/7.3.7",
+                "source": "https://github.com/SU-SWS/stanford_framework/tree/7.3.8",
                 "issues": "https://github.com/SU-SWS/stanford_framework/issues"
             },
-            "time": "2018-09-14T15:08:16+00:00"
+            "time": "2018-09-24T21:13:30+00:00"
         },
         {
             "name": "su-sws/stanford_fwb",
