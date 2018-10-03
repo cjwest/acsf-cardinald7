@@ -8,6 +8,8 @@
  * Form builder function for CSS Injector's main admin page.
  */
 function css_injector_admin_form($form, &$form_state) {
+  _css_injector_update_breadcrumb();
+
   $rules = _css_injector_load_rule(NULL, TRUE);
   $path = drupal_get_path('module', 'css_injector') . '/';
   $form = array();
@@ -102,6 +104,7 @@ function theme_css_injector_admin_form($variables) {
  * Form builder function for the CSS rule edit form.
  */
 function css_injector_edit($form, $form_state, $crid = NULL) {
+  _css_injector_update_breadcrumb();
 
   if (isset($crid) && is_numeric($crid)) {
     $rule = _css_injector_load_rule($crid, TRUE);
@@ -126,22 +129,31 @@ function css_injector_edit($form, $form_state, $crid = NULL) {
     );
   }
 
-  // Adding css stylesheet for icons.
-  $form['#attached']['js'] = array(
-    drupal_get_path('module', 'css_injector') . '/ace/ace.js' => array(
-      'preprocess' => FALSE,
-    ),
-    drupal_get_path('module', 'css_injector') . '/syntax_highlighter.js' => array(
-      'preprocess' => FALSE,
-    ),
-  );
+  if (variable_get('css_injector_use_ace', 1) && !module_exists('ace_editor')) {
+    // Adding ace syntex highliter.
 
-  $form['#attached']['css'] = array(
-    drupal_get_path('module', 'css_injector') . '/syntax_highlighter.css',
-  );
+    $form['#attached']['js'] = array(
+      'https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.9/ace.js' => array(
+        'preprocess' => FALSE,
+      ),
+      'https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.9/theme-chrome.js' => array(
+        'preprocess' => FALSE,
+      ),
+      'https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.9/mode-css.js' => array(
+        'preprocess' => FALSE,
+      ),
+      drupal_get_path('module', 'css_injector') . '/syntax_highlighter.js' => array(
+        'preprocess' => FALSE,
+      ),
+    );
+
+    $form['#attached']['css'] = array(
+      drupal_get_path('module', 'css_injector') . '/syntax_highlighter.css',
+    );
+  }
 
   if (isset($crid)) {
-  $form['crid'] = array(
+    $form['crid'] = array(
       '#type' => 'value',
       '#value' => $crid,
     );
@@ -154,11 +166,13 @@ function css_injector_edit($form, $form_state, $crid = NULL) {
     '#required' => TRUE,
   );
 
+  // CSS could have been submitted by the form but a validation error may have
+  // occurred so we want the submitted css first, then the rules css, then none.
   $form['css_text'] = array(
     '#type' => 'textarea',
     '#title' => t('CSS code'),
     '#rows' => 10,
-    '#default_value' => $rule['css_text'],
+    '#default_value' => isset($form_state['input']['css_text']) ? $form_state['input']['css_text'] : $rule['css_text'],
     '#required' => TRUE,
   );
 
@@ -168,18 +182,19 @@ function css_injector_edit($form, $form_state, $crid = NULL) {
   );
 
   // Get info of site themes.
-  $themes = array();
-  $theme_list = list_themes();
-  $default_theme = variable_get('theme_default');
-  foreach ($theme_list as $single_theme) {
-    $themes[$single_theme->name] = $single_theme->info['name'];
-  }
+  $themes = _css_injector_get_themes();
+
   $rule['rule_themes'] = unserialize($rule['rule_themes']);
+  $default_theme = variable_get('theme_default');
+  $rule_themes = variable_get('css_injector_default_theme', $default_theme);
+  if (isset($rule['rule_themes']) && !empty($rule['rule_themes'])) {
+    $rule_themes = $rule['rule_themes'];
+  }
 
   $form['conditional']['rule_themes'] = array(
   '#type' => 'select',
   '#title' => 'Themes to show on',
-  '#default_value' => isset($rule['rule_themes']) ? $rule['rule_themes'] : $default_theme,
+  '#default_value' => $rule_themes,
   '#options' => $themes,
   '#description' => t('Select themes css will be applied to. @theme theme is selected by default.', array('@theme' => $themes[$default_theme])),
   '#multiple' => TRUE,
@@ -301,6 +316,7 @@ function css_injector_edit_save_and_continue($form, &$form_state) {
  * Menu callback -- ask for confirmation of rule deletion.
  */
 function css_injector_delete_confirm($form, &$form_state, $crid) {
+  _css_injector_update_breadcrumb();
   $form['crid'] = array(
     '#type' => 'value',
     '#value' => $crid,

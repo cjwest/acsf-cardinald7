@@ -320,16 +320,16 @@
         },
         {
             "name": "consolidation/annotated-command",
-            "version": "2.8.5",
+            "version": "2.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/consolidation/annotated-command.git",
-                "reference": "1e8ff512072422b850b44aa721b5b303e4a5ebb3"
+                "reference": "4bdbb8fa149e1cc1511bd77b0bc4729fd66bccac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/consolidation/annotated-command/zipball/1e8ff512072422b850b44aa721b5b303e4a5ebb3",
-                "reference": "1e8ff512072422b850b44aa721b5b303e4a5ebb3",
+                "url": "https://api.github.com/repos/consolidation/annotated-command/zipball/4bdbb8fa149e1cc1511bd77b0bc4729fd66bccac",
+                "reference": "4bdbb8fa149e1cc1511bd77b0bc4729fd66bccac",
                 "shasum": ""
             },
             "require": {
@@ -368,7 +368,7 @@
                 }
             ],
             "description": "Initialize Symfony Console commands from annotated command class methods.",
-            "time": "2018-08-18T23:51:49+00:00"
+            "time": "2018-09-19T17:47:18+00:00"
         },
         {
             "name": "consolidation/output-formatters",
@@ -1711,6 +1711,10 @@
                     "homepage": "https://www.drupal.org/user/53892"
                 },
                 {
+                    "name": "RenatoG",
+                    "homepage": "https://www.drupal.org/user/3326031"
+                },
+                {
                     "name": "fubhy",
                     "homepage": "https://www.drupal.org/user/761344"
                 },
@@ -1725,6 +1729,10 @@
                 {
                     "name": "sun",
                     "homepage": "https://www.drupal.org/user/54136"
+                },
+                {
+                    "name": "truls1502",
+                    "homepage": "https://www.drupal.org/user/325866"
                 }
             ],
             "description": "Provides a dropdown menu to most administrative tasks and other common destinations (to users with the proper permissions).",
@@ -1818,7 +1826,7 @@
                 },
                 "drupal": {
                     "version": "7.x-1.4",
-                    "datestamp": "1523697484",
+                    "datestamp": "1523697542",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1931,8 +1939,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "7.x-1.0+16-dev",
-                    "datestamp": "1523758085",
+                    "version": "7.x-1.0+24-dev",
+                    "datestamp": "1533642780",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -1965,8 +1973,7 @@
             "homepage": "https://www.drupal.org/project/auto_nodetitle",
             "support": {
                 "source": "http://cgit.drupalcode.org/auto_nodetitle"
-            },
-            "time": "2011-09-08T16:07:46+00:00"
+            }
         },
         {
             "name": "drupal/backup_migrate",
@@ -3318,8 +3325,7 @@
             "homepage": "https://www.drupal.org/project/context_list",
             "support": {
                 "source": "http://cgit.drupalcode.org/context_list"
-            },
-            "time": "2014-07-08T19:51:59+00:00"
+            }
         },
         {
             "name": "drupal/context_list_active",
@@ -3624,7 +3630,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/css_injector",
-                "reference": "41bee7e4421ecfc52a6b673eef6fcde875282a2b"
+                "reference": "708ae4e2c6d2c8683fc27b6f03cfe3237a0fab96"
             },
             "require": {
                 "drupal/drupal": "~7.0"
@@ -3643,8 +3649,7 @@
                     }
                 },
                 "patches_applied": {
-                    "https://www.drupal.org/node/2471911": "https://www.drupal.org/files/issues/css_injector-remove_drupal_realpath-2471911-2.patch",
-                    "https://www.drupal.org/node/2160385": "https://www.drupal.org/files/issues/css_injector-bad_crid_protection-2160385-10.patch"
+                    "https://www.drupal.org/project/css_injector/issues/3002687": "https://www.drupal.org/files/issues/2018-09-26/css_injector-ace-editor.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/7/downloads",
@@ -3682,7 +3687,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/css_injector"
             },
-            "time": "2013-12-23T06:52:25+00:00"
+            "time": "2016-08-02T18:01:48+00:00"
         },
         {
             "name": "drupal/ctools",
@@ -5539,6 +5544,10 @@
             ],
             "authors": [
                 {
+                    "name": "RenatoG",
+                    "homepage": "https://www.drupal.org/user/3326031"
+                },
+                {
                     "name": "fago",
                     "homepage": "https://www.drupal.org/user/16747"
                 },
@@ -5549,6 +5558,10 @@
                 {
                     "name": "larowlan",
                     "homepage": "https://www.drupal.org/user/395439"
+                },
+                {
+                    "name": "ram4nd",
+                    "homepage": "https://www.drupal.org/user/601534"
                 }
             ],
             "description": "Provides a field collection field, to which any number of fields can be attached.",
@@ -5911,8 +5924,7 @@
             "homepage": "https://www.drupal.org/project/filefield_paths",
             "support": {
                 "source": "http://cgit.drupalcode.org/filefield_paths"
-            },
-            "time": "2016-01-04T09:05:19+00:00"
+            }
         },
         {
             "name": "drupal/flag",
@@ -8322,6 +8334,10 @@
             ],
             "authors": [
                 {
+                    "name": "TR",
+                    "homepage": "https://www.drupal.org/user/202830"
+                },
+                {
                     "name": "fago",
                     "homepage": "https://www.drupal.org/user/16747"
                 },
@@ -10056,7 +10072,7 @@
                 },
                 "drupal": {
                     "version": "7.x-4.17",
-                    "datestamp": "1524581885",
+                    "datestamp": "1525373073",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -15508,10 +15524,10 @@
         "drupal/always_visible": 20,
         "drupal/context_list": 20,
         "drupal/context_useragent": 20,
-        "drupal/css_injector": 20,
         "drupal/diff": 20,
         "drupal/filefield_paths": 20,
         "drupal/auto_nodetitle": 20,
+        "drupal/css_injector": 20,
         "drupal/token_tweaks": 20,
         "su-sws/erus": 15,
         "su-sws/stanford_capx": 10,

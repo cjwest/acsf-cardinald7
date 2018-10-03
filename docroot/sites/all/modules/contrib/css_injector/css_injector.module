@@ -103,6 +103,14 @@ function css_injector_css_alter(&$css) {
  */
 function css_injector_menu() {
   $items = array(
+    'admin/config/development/css-injector/settings' => array(
+      'title' => 'CSS injector module settings',
+      'description' => 'Settings page for CSS injector module.',
+      'page callback' => 'drupal_get_form',
+      'page arguments' => array('css_injector_admin'),
+      'access arguments' => array('administer css injection settings'),
+      'type' => MENU_LOCAL_ACTION,
+    ),
     'admin/config/development/css-injector' => array(
       'title' => 'CSS injector',
       'description' => 'Add CSS to the page output based on configurable rules.',
@@ -110,6 +118,7 @@ function css_injector_menu() {
       'page arguments' => array('css_injector_admin_form'),
       'access arguments' => array('administer css injection'),
       'file' => 'css_injector.admin.inc',
+      'type' => MENU_NORMAL_ITEM,
     ),
     'admin/config/development/css-injector/edit' => array(
       'title' => 'Edit CSS injector rule',
@@ -137,6 +146,47 @@ function css_injector_menu() {
     ),
   );
   return $items;
+}
+
+/**
+ * Implements hook_admin().
+ */
+function css_injector_admin() {
+  $form = array();
+
+  $themes = _css_injector_get_themes();
+  $default_theme = variable_get('theme_default');
+  $rule_themes = variable_get('css_injector_default_theme', $default_theme);
+
+  $form['css_injector_default_theme'] = array(
+    '#type' => 'select',
+    '#title' => t('CSS injector default themes'),
+    '#options' => $themes,
+    '#default_value' => $rule_themes,
+    '#description' => t('Select themes css will be applied to. @theme theme is selected by default.', array('@theme' => $themes[$default_theme])),
+    '#multiple' => TRUE,
+  );
+
+  if (!module_exists('ace_editor')) {
+    $form['css_injector_use_ace'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Use Ace syntex highlighter'),
+      '#default_value' => variable_get('css_injector_use_ace', 1),
+      '#description' => t("Check if you want to enhance your editing experience with Ace syntex highlighter. If checked, Ace will be loaded via CDN."),
+    );
+  } else {
+    $form['css_injector_use_ace_error'] = array(
+      '#type' => 'markup',
+      '#markup' => t('You already have Ace highlighter module installed. Please enable it to enhance your editing experience with Ace syntex highlighter.'),
+    );
+  }
+
+  $form['css_injector_import'] = array(
+    '#type' => 'markup',
+    '#markup' => '<br>' . t('If you want to import your css injector files from dev site to production, you can use !this sandox module. </br> Be aware, sandbox modules are not supported and you are using it on your own risk.', array('!this' => l('CSS Injector import','https://www.drupal.org/sandbox/stillfinder/2597592'))) . '</br>',
+  );
+
+  return system_settings_form($form);
 }
 
 /**
@@ -168,7 +218,7 @@ function _css_injector_load_rule($crid = NULL, $reset = FALSE) {
   static $rules;
   // TODO: Change to drupal_static_fast pattern.
   if (!isset($rules) || $reset) {
-    if (!$reset && ($cache = cache_get('css_injector:rules')) && !empty($cache->data)) {
+    if (!$reset && ($cache = cache_get('css_injector:rules')) && is_array($cache->data)) {
       $rules = $cache->data;
     }
     else {
@@ -251,4 +301,34 @@ function _css_injector_rule_uri($crid) {
     $uri = 'public://css_injector/css_injector_' . $crid . '.css';
     return $uri;
   }
+}
+
+/**
+ * Return list of available themes.
+ */
+function _css_injector_get_themes() {
+  $themes = array();
+  $theme_list = list_themes();
+  foreach ($theme_list as $single_theme) {
+    //
+    if ($single_theme->status && file_exists($single_theme->filename)) {
+      $themes[$single_theme->name] = $single_theme->info['name'];
+    }
+  }
+  return $themes;
+}
+
+/**
+ * Returns full breadcrumb for rules forms.
+ */
+function _css_injector_update_breadcrumb() {
+  $breadcrumb = array(
+    l('Home', ''),
+    l('Administration', 'admin'),
+    l('Configuration', 'admin/config'),
+    l('Development', 'admin/config/development'),
+    l('CSS Injector', 'admin/config/development/css-injector'),
+  );
+
+  drupal_set_breadcrumb($breadcrumb);
 }

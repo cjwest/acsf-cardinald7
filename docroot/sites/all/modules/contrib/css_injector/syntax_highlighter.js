@@ -25,8 +25,15 @@
         $text = $this.text() == 'Disable syntax highlighter' ? 'Enable syntax highlighter' : 'Disable syntax highlighter';
         $this.text($text);
         $('.form-item-css-text .form-textarea-wrapper, .ace-editor').toggle();
+        if (!$this.hasClass('ace-disabled')) {
+          editor.setValue($("#edit-css-text").val());
+        }
       });
 
+      // And once more for good luck.
+      if ($("#edit-css-text", context).length) {
+        editor.setValue($("#edit-css-text", context).val());
+      }
     }
   }
 
