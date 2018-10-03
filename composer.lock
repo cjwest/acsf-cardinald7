@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7849a16ae9f93ef90654d01d9a454a15",
+    "content-hash": "c3de4d27207082043e418c80a67df5b5",
     "packages": [
         {
             "name": "Stanford/WMD",
@@ -10395,6 +10395,9 @@
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
+                },
+                "patches_applied": {
+                    "CKEditor height does not reflect the rows attribute: https://www.drupal.org/project/wysiwyg/issues/2410565#comment-9958287": "https://www.drupal.org/files/issues/wysiwyg-heights.2410565.5.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/7/downloads",

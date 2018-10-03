@@ -167,6 +167,10 @@
       "drupal/match_redirect": {
         "Add wildcard to target URL: https://www.drupal.org/project/match_redirect/issues/2118233":
         "https://www.drupal.org/files/issues/wildcard_to_target-2118233-9--rerolled-23.patch"
+      },
+      "drupal/wysiwyg": {
+        "CKEditor height does not reflect the rows attribute: https://www.drupal.org/project/wysiwyg/issues/2410565#comment-9958287":
+        "https://www.drupal.org/files/issues/wysiwyg-heights.2410565.5.patch"
       }
     },
     "merge-plugin": {
