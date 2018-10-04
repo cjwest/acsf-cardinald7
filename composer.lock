@@ -3649,7 +3649,7 @@
                     }
                 },
                 "patches_applied": {
-                    "https://www.drupal.org/project/css_injector/issues/3002687": "https://www.drupal.org/files/issues/2018-09-26/css_injector-ace-editor.patch"
+                    "https://www.drupal.org/project/css_injector/issues/3002687": "https://www.drupal.org/files/issues/2018-10-03/css_injector-ace-editor-3002687-4.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/7/downloads",
@@ -3686,8 +3686,7 @@
             "homepage": "https://www.drupal.org/project/css_injector",
             "support": {
                 "source": "http://cgit.drupalcode.org/css_injector"
-            },
-            "time": "2016-08-02T18:01:48+00:00"
+            }
         },
         {
             "name": "drupal/ctools",

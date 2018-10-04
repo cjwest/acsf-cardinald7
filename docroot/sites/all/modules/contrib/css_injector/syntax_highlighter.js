@@ -3,9 +3,9 @@
   /**
    * Add syntext highlighter for textarea.
    */
-  Drupal.behaviors.slideUpDown = {
+  Drupal.behaviors.cssInjectorHighlighter = {
     attach: function(context, settings) {
-      $('body').addClass('has-js');
+      $('body', context).addClass('has-js');
       var editor = ace.edit("editor");
       editor.getSession().setUseWorker(false);
       editor.setTheme("ace/theme/chrome");
