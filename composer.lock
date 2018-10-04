@@ -7929,17 +7929,17 @@
         },
         {
             "name": "drupal/print",
-            "version": "2.0.0",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/print",
-                "reference": "7.x-2.0"
+                "reference": "7.x-2.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/print-7.x-2.0.zip",
-                "reference": "7.x-2.0",
-                "shasum": "88b43d83e8e6362795a50987287d92ed7cd8ce65"
+                "url": "https://ftp.drupal.org/files/projects/print-7.x-2.1.zip",
+                "reference": "7.x-2.1",
+                "shasum": "77ca2c4a1b6fcfed6d8e3efcce4f8df061ecb78e"
             },
             "require": {
                 "drupal/drupal": "*"
@@ -7954,8 +7954,8 @@
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "7.x-2.0",
-                    "datestamp": "1396469062",
+                    "version": "7.x-2.1",
+                    "datestamp": "1538591740",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -10045,17 +10045,17 @@
         },
         {
             "name": "drupal/webform",
-            "version": "4.17.0",
+            "version": "4.18.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/webform",
-                "reference": "7.x-4.17"
+                "reference": "7.x-4.18"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/webform-7.x-4.17.zip",
-                "reference": "7.x-4.17",
-                "shasum": "11d39acba7e4d9f6cd24bf4865aeeb079fac5589"
+                "url": "https://ftp.drupal.org/files/projects/webform-7.x-4.18.zip",
+                "reference": "7.x-4.18",
+                "shasum": "a14a30af3420f4bc04bbb2dea6351a7af061ebc0"
             },
             "require": {
                 "drupal/ctools": "*",
@@ -10071,8 +10071,8 @@
                     "dev-4.x": "4.x-dev"
                 },
                 "drupal": {
-                    "version": "7.x-4.17",
-                    "datestamp": "1525373073",
+                    "version": "7.x-4.18",
+                    "datestamp": "1538403780",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -10789,32 +10789,32 @@
         },
         {
             "name": "jakub-onderka/php-console-color",
-            "version": "0.1",
+            "version": "v0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JakubOnderka/PHP-Console-Color.git",
-                "reference": "e0b393dacf7703fc36a4efc3df1435485197e6c1"
+                "reference": "d5deaecff52a0d61ccb613bb3804088da0307191"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JakubOnderka/PHP-Console-Color/zipball/e0b393dacf7703fc36a4efc3df1435485197e6c1",
-                "reference": "e0b393dacf7703fc36a4efc3df1435485197e6c1",
+                "url": "https://api.github.com/repos/JakubOnderka/PHP-Console-Color/zipball/d5deaecff52a0d61ccb613bb3804088da0307191",
+                "reference": "d5deaecff52a0d61ccb613bb3804088da0307191",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.2"
+                "php": ">=5.4.0"
             },
             "require-dev": {
                 "jakub-onderka/php-code-style": "1.0",
-                "jakub-onderka/php-parallel-lint": "0.*",
+                "jakub-onderka/php-parallel-lint": "1.0",
                 "jakub-onderka/php-var-dump-check": "0.*",
-                "phpunit/phpunit": "3.7.*",
+                "phpunit/phpunit": "~4.3",
                 "squizlabs/php_codesniffer": "1.*"
             },
             "type": "library",
             "autoload": {
-                "psr-0": {
-                    "JakubOnderka\\PhpConsoleColor": "src/"
+                "psr-4": {
+                    "JakubOnderka\\PhpConsoleColor\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -10824,11 +10824,10 @@
             "authors": [
                 {
                     "name": "Jakub Onderka",
-                    "email": "jakub.onderka@gmail.com",
-                    "homepage": "http://www.acci.cz"
+                    "email": "jakub.onderka@gmail.com"
                 }
             ],
-            "time": "2014-04-08T15:00:19+00:00"
+            "time": "2018-09-29T17:23:10+00:00"
         },
         {
             "name": "jakub-onderka/php-console-highlighter",
@@ -12950,16 +12949,16 @@
         },
         {
             "name": "su-sws/stanford_ssp",
-            "version": "7.2.2-alpha5",
+            "version": "7.2.2-alpha6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_ssp.git",
-                "reference": "07c3657fa80cb4c485225c918c583990f66ef8df"
+                "reference": "1bb07a1bec05b3bfbe845844778790054a8813cf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_ssp/zipball/07c3657fa80cb4c485225c918c583990f66ef8df",
-                "reference": "07c3657fa80cb4c485225c918c583990f66ef8df",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_ssp/zipball/1bb07a1bec05b3bfbe845844778790054a8813cf",
+                "reference": "1bb07a1bec05b3bfbe845844778790054a8813cf",
                 "shasum": ""
             },
             "require": {
@@ -12972,10 +12971,10 @@
             ],
             "description": "A Drupal Authentication Module.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_ssp/tree/7.2.2-alpha5",
+                "source": "https://github.com/SU-SWS/stanford_ssp/tree/7.2.2-alpha6",
                 "issues": "https://github.com/SU-SWS/stanford_ssp/issues"
             },
-            "time": "2018-09-20T16:05:31+00:00"
+            "time": "2018-10-03T16:22:36+00:00"
         },
         {
             "name": "su-sws/stanford_story_page",
@@ -13693,16 +13692,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v2.8.45",
+            "version": "v2.8.46",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "289dc238c533476d0101d736816b408b02e51751"
+                "reference": "a7f5ade1f8b3eb74a130cf681c45bfa991c330d1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/289dc238c533476d0101d736816b408b02e51751",
-                "reference": "289dc238c533476d0101d736816b408b02e51751",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/a7f5ade1f8b3eb74a130cf681c45bfa991c330d1",
+                "reference": "a7f5ade1f8b3eb74a130cf681c45bfa991c330d1",
                 "shasum": ""
             },
             "require": {
@@ -13829,7 +13828,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2018-08-27T17:33:57+00:00"
+            "time": "2018-09-30T03:53:41+00:00"
         },
         {
             "name": "trentrichardson/jquery-timepicker-addon",
