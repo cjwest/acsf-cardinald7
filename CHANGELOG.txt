@@ -1,5 +1,16 @@
 ACSF CardinalD7
 
+Version 1.0.9                                                        2018-10-04
+-------------------------------------------------------------------------------
+- Enable syslog at install
+- Bug fix: CSS Injector loses code
+- Update print-7.x-2.1
+- Update webform-7.x-4.8
+- Bug fix: WYSIWYG fields in collapsed field collections were too short
+- Update stanford_sites_helper-7.x-1.10
+- Update stanford_ssp-7.x-2.2-alpha6
+- Update stanford_framework-7.x-3.8
+
 Version 1.0.8                                                        2018-09-20
 -------------------------------------------------------------------------------
 - Bug fix: correct path to jwplayer library
