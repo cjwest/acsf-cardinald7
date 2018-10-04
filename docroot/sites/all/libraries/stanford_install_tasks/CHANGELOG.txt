@@ -1,6 +1,10 @@
 Stanford Installation Tasks
 --------------------------------------
 
+7.x-1.4                            2018-10-04
+---------------------------------------------
+- Enable syslog during install on ACSF
+
 7.x-1.3                            2018-09-12
 ---------------------------------------------
 - Enable the default homepage context for Jumpstart Lab
