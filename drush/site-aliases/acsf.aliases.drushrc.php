@@ -75,8 +75,40 @@ $stack_uri = array(
   "leland" => "people.stanford.edu",
 );
 
+// Production webheads.
+$webheads = [
+  'leland' => [
+    'web-3025.enterprise-g1.hosting.acquia.com',
+    'web-3026.enterprise-g1.hosting.acquia.com',
+    'web-3027.enterprise-g1.hosting.acquia.com',
+    'web-3028.enterprise-g1.hosting.acquia.com',
+    'web-3029.enterprise-g1.hosting.acquia.com',
+    'web-3030.enterprise-g1.hosting.acquia.com',
+  ],
+  'cardinald7' => [
+    'web-2160.enterprise-g1.hosting.acquia.com',
+    'web-2161.enterprise-g1.hosting.acquia.com',
+    'web-2162.enterprise-g1.hosting.acquia.com',
+    'web-2163.enterprise-g1.hosting.acquia.com',
+    'web-2164.enterprise-g1.hosting.acquia.com',
+    'web-2165.enterprise-g1.hosting.acquia.com',
+  ],
+  'cardinalsites' => [
+    'web-2145.enterprise-g1.hosting.acquia.com',
+    'web-2146.enterprise-g1.hosting.acquia.com',
+    'web-2147.enterprise-g1.hosting.acquia.com',
+    'web-2148.enterprise-g1.hosting.acquia.com',
+    'web-2149.enterprise-g1.hosting.acquia.com',
+    'web-2150.enterprise-g1.hosting.acquia.com',
+  ],
+];
+
 // Sanitize for drush rysnc. eg: @alias:%files/
 $site = array_shift(explode(":", $site));
+
+// Randomize the webheads for production.
+$count = count($webheads[$stack]);
+$random = mt_rand(0, ($count - 1));
 
 // Define the alias.
 $aliases[$stack . "." . $site] = array(
@@ -84,8 +116,8 @@ $aliases[$stack . "." . $site] = array(
   'ac-site' => $stack,
   'ac-env' => $stack_id[$stack] . 'live',
   'ac-realm' => 'enterprise-g1',
-  'uri' => 'https://'. $site . '.' . $stack_uri[$stack],
-  'remote-host' => $stack . $stack_id[$stack] . 'live.ssh.enterprise-g1.acquia-sites.com',
+  'uri' => 'https://' . $site . '.' . $stack_uri[$stack],
+  'remote-host' => $webheads[$stack][$random],
   'remote-user' => $stack . '.' . $stack_id[$stack] . 'live',
   'path-aliases' => array(
     '%drush-script' => 'drush' . $drush_major_version,
@@ -103,7 +135,7 @@ $aliases["test." . $stack . "." . $site] = array(
   'remote-user' => $stack . '.' . $stack_id[$stack] . 'test',
   'path-aliases' => array(
     '%drush-script' => 'drush' . $drush_major_version,
-  )
+  ),
 );
 
 // Development Environment.
@@ -117,5 +149,5 @@ $aliases["dev." . $stack . "." . $site] = array(
   'remote-user' => $stack . '.' . $stack_id[$stack] . 'dev',
   'path-aliases' => array(
     '%drush-script' => 'drush' . $drush_major_version,
-  )
+  ),
 );
