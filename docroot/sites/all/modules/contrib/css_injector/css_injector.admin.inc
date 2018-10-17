@@ -178,7 +178,7 @@ function css_injector_edit($form, $form_state, $crid = NULL) {
 
   $form['css_text_ace'] = array(
     '#prefix' => '<span class="disable-ace">Disable syntax highlighter</span>',
-    '#markup' => '<div class="ace-editor"><div id="editor">' . $rule['css_text'] . '</div></div>',
+    '#markup' => '<div class="ace-editor"><div id="editor"></div></div>',
   );
 
   // Get info of site themes.
@@ -308,9 +308,8 @@ function css_injector_edit_save($form, &$form_state) {
  */
 function css_injector_edit_save_and_continue($form, &$form_state) {
   css_injector_edit_save($form, $form_state);
-  $form_state['redirect'] = 'admin/config/development/css-injector/edit/' . $form_state['values']['rule']['crid'];
+  unset($form_state['redirect']);
 }
-
 
 /**
  * Menu callback -- ask for confirmation of rule deletion.
