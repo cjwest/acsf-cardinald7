@@ -96,6 +96,7 @@
       "cp -R vendor/mustangostang/spyc/ docroot/sites/all/libraries/Spyc",
       "cp -R vendor/trentrichardson/jquery-timepicker-addon/src docroot/sites/all/libraries/jquery-ui-timepicker/",
       "cp -R vendor/dompdf/dompdf/ docroot/sites/all/libraries/dompdf",
+      "cp -R vendor/phenx/php-font-lib/ docroot/sites/all/libraries/dompdf/lib/php-font-lib",
       "@composer clean-gits"
     ],
     "post-update-cmd": [
@@ -105,6 +106,7 @@
       "cp -R vendor/mustangostang/spyc/ docroot/sites/all/libraries/Spyc",
       "cp -R vendor/trentrichardson/jquery-timepicker-addon/src docroot/sites/all/libraries/jquery-ui-timepicker/",
       "cp -R vendor/dompdf/dompdf/ docroot/sites/all/libraries/dompdf",
+      "cp -R vendor/phenx/php-font-lib/ docroot/sites/all/libraries/dompdf/lib/php-font-lib",
       "@composer clean-gits"
     ],
     "post-create-project-cmd": [
