@@ -1312,7 +1312,7 @@
                 },
                 "drupal": {
                     "version": "7.x-1.49",
-                    "datestamp": "1534931880",
+                    "datestamp": "1539175681",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1347,6 +1347,10 @@
                     "homepage": "https://www.drupal.org/user/762986"
                 },
                 {
+                    "name": "lcatlett",
+                    "homepage": "https://www.drupal.org/user/855628"
+                },
+                {
                     "name": "nagba",
                     "homepage": "https://www.drupal.org/user/21231"
                 },
@@ -1379,7 +1383,7 @@
                 },
                 "drupal": {
                     "version": "7.x-1.49",
-                    "datestamp": "1534931880",
+                    "datestamp": "1539175681",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1406,6 +1410,10 @@
                 {
                     "name": "attila.fekete",
                     "homepage": "https://www.drupal.org/user/762986"
+                },
+                {
+                    "name": "lcatlett",
+                    "homepage": "https://www.drupal.org/user/855628"
                 },
                 {
                     "name": "nagba",
@@ -1440,7 +1448,7 @@
                 },
                 "drupal": {
                     "version": "7.x-1.49",
-                    "datestamp": "1534931880",
+                    "datestamp": "1539175681",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1467,6 +1475,10 @@
                 {
                     "name": "attila.fekete",
                     "homepage": "https://www.drupal.org/user/762986"
+                },
+                {
+                    "name": "lcatlett",
+                    "homepage": "https://www.drupal.org/user/855628"
                 },
                 {
                     "name": "nagba",
@@ -1501,7 +1513,7 @@
                 },
                 "drupal": {
                     "version": "7.x-1.49",
-                    "datestamp": "1534931880",
+                    "datestamp": "1539175681",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1528,6 +1540,10 @@
                 {
                     "name": "attila.fekete",
                     "homepage": "https://www.drupal.org/user/762986"
+                },
+                {
+                    "name": "lcatlett",
+                    "homepage": "https://www.drupal.org/user/855628"
                 },
                 {
                     "name": "nagba",
@@ -1562,7 +1578,7 @@
                 },
                 "drupal": {
                     "version": "7.x-1.49",
-                    "datestamp": "1534931880",
+                    "datestamp": "1539175681",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1589,6 +1605,10 @@
                 {
                     "name": "attila.fekete",
                     "homepage": "https://www.drupal.org/user/762986"
+                },
+                {
+                    "name": "lcatlett",
+                    "homepage": "https://www.drupal.org/user/855628"
                 },
                 {
                     "name": "nagba",
@@ -1623,7 +1643,7 @@
                 },
                 "drupal": {
                     "version": "7.x-1.49",
-                    "datestamp": "1534931880",
+                    "datestamp": "1539175681",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1650,6 +1670,10 @@
                 {
                     "name": "attila.fekete",
                     "homepage": "https://www.drupal.org/user/762986"
+                },
+                {
+                    "name": "lcatlett",
+                    "homepage": "https://www.drupal.org/user/855628"
                 },
                 {
                     "name": "nagba",
@@ -3643,7 +3667,7 @@
                     }
                 },
                 "patches_applied": {
-                    "https://www.drupal.org/project/css_injector/issues/3002687": "https://www.drupal.org/files/issues/2018-10-03/css_injector-ace-editor-3002687-4.patch"
+                    "https://www.drupal.org/project/css_injector/issues/3002687": "https://www.drupal.org/files/issues/2018-10-10/css_injector-ace-editor-3002687-6-D7.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/7/downloads",
@@ -3680,7 +3704,8 @@
             "homepage": "https://www.drupal.org/project/css_injector",
             "support": {
                 "source": "http://cgit.drupalcode.org/css_injector"
-            }
+            },
+            "time": "2016-08-02T18:01:48+00:00"
         },
         {
             "name": "drupal/ctools",
@@ -6662,7 +6687,7 @@
                 },
                 "drupal": {
                     "version": "7.x-2.4",
-                    "datestamp": "1536581580",
+                    "datestamp": "1538770681",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -7941,7 +7966,7 @@
                 },
                 "drupal": {
                     "version": "7.x-2.1",
-                    "datestamp": "1538591740",
+                    "datestamp": "1538760180",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -10485,7 +10510,7 @@
                 },
                 "drupal": {
                     "version": "7.x-2.5",
-                    "datestamp": "1535559180",
+                    "datestamp": "1539120480",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
