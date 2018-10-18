@@ -617,7 +617,7 @@ function _video_embed_code_get_settings_str($settings = array()) {
       $values[] = $name;
     }
     else {
-      $values[] = $name . '=' . $value;
+      $values[] = $name . '=' . urlencode($value);
     }
   }
 
