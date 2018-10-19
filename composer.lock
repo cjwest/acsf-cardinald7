@@ -9333,6 +9333,9 @@
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
                     }
+                },
+                "patches_applied": {
+                    "Double url encoding - https://www.drupal.org/project/video_embed_field/issues/2580459": "https://www.drupal.org/files/issues/youtube_autoplay-2580459-25.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/7/downloads",
@@ -12704,16 +12707,16 @@
         },
         {
             "name": "su-sws/stanford_paragraph_types",
-            "version": "7.1.4",
+            "version": "7.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_paragraph_types.git",
-                "reference": "091ef1e0d368f58bc6905fcb2da0a7f09449ebeb"
+                "reference": "d2b147076d7a4b5c546e2d6b9083f905a9695e20"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_paragraph_types/zipball/091ef1e0d368f58bc6905fcb2da0a7f09449ebeb",
-                "reference": "091ef1e0d368f58bc6905fcb2da0a7f09449ebeb",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_paragraph_types/zipball/d2b147076d7a4b5c546e2d6b9083f905a9695e20",
+                "reference": "d2b147076d7a4b5c546e2d6b9083f905a9695e20",
                 "shasum": ""
             },
             "require": {
@@ -12725,10 +12728,10 @@
             ],
             "description": "A collection re-usable of paragraph types.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_paragraph_types/tree/7.1.4",
+                "source": "https://github.com/SU-SWS/stanford_paragraph_types/tree/7.1.5",
                 "issues": "https://github.com/SU-SWS/stanford_paragraph_types/issues"
             },
-            "time": "2018-06-27T21:54:13+00:00"
+            "time": "2018-10-17T17:08:44+00:00"
         },
         {
             "name": "su-sws/stanford_person",
