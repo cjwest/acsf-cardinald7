@@ -35,6 +35,4 @@ config.rb
 cgi-bin
 
 node_modules
-!node_modules/tablesaw
-!node_modules/shoestring
-!node_modules/javascript-natural-sort
+!/modules/stanford_jumpstart_wysiwyg/node_modules
