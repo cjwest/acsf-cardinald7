@@ -1,5 +1,20 @@
 ACSF CardinalD7
 
+Version 1.0.10                                                       2018-10-19
+-------------------------------------------------------------------------------
+- Bug fix: added dompdf library
+- Bug fix: rename spyc library directory
+- Bug fix: minor updates to align with Drupal core 7.59
+- Bug fix: CSS Injector loses code when Varnish is caching Javascript
+- Bug fix: Video Embed Field and click-to-play
+- Update to acsf-7.x-1.50
+- Update to block_class-7.x-2.4
+- Update to honeypot-7.x-1.25
+- Update to libraries-7.x-2.5
+- Update to print-7.x-2.2
+- Update to xmlsitemap-7.x-2.6
+- Added ACSF drush alias file
+
 Version 1.0.9                                                        2018-10-04
 -------------------------------------------------------------------------------
 - Enable syslog at install

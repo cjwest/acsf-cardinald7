@@ -93,7 +93,7 @@
     ],
     "post-install-cmd": [
       "cp docroot/sites/all/libraries/jsonpath/jsonpath-0.8.1.php docroot/sites/all/libraries/jsonpath/jsonpath.php",
-      "cp -R vendor/mustangostang/spyc/ docroot/sites/all/libraries/Spyc",
+      "cp -R vendor/mustangostang/spyc/ docroot/sites/all/libraries/spyc",
       "cp -R vendor/trentrichardson/jquery-timepicker-addon/src docroot/sites/all/libraries/jquery-ui-timepicker/",
       "cp -R vendor/dompdf/dompdf/ docroot/sites/all/libraries/dompdf",
       "cp -R vendor/phenx/php-font-lib/ docroot/sites/all/libraries/dompdf/lib/php-font-lib",
@@ -103,7 +103,7 @@
       "sh scripts/updates/apply-patches.sh",
       "echo \"Don't forget to run acsf-init if core was updated.\"",
       "cp docroot/sites/all/libraries/jsonpath/jsonpath-0.8.1.php docroot/sites/all/libraries/jsonpath/jsonpath.php",
-      "cp -R vendor/mustangostang/spyc/ docroot/sites/all/libraries/Spyc",
+      "cp -R vendor/mustangostang/spyc/ docroot/sites/all/libraries/spyc",
       "cp -R vendor/trentrichardson/jquery-timepicker-addon/src docroot/sites/all/libraries/jquery-ui-timepicker/",
       "cp -R vendor/dompdf/dompdf/ docroot/sites/all/libraries/dompdf",
       "cp -R vendor/phenx/php-font-lib/ docroot/sites/all/libraries/dompdf/lib/php-font-lib",
