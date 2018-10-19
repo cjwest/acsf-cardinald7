@@ -5,8 +5,8 @@ package = Acquia Cloud Site Factory
 
 dependencies[] = acsf
 
-; Information added by Drupal.org packaging script on 2018-08-22
-version = "7.x-1.49"
+; Information added by Drupal.org packaging script on 2018-10-10
+version = "7.x-1.50"
 core = "7.x"
 project = "acsf"
-datestamp = "1534931892"
+datestamp = "1539175686"
