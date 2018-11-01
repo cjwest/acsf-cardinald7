@@ -29,6 +29,10 @@ vendor
 # Ignore some extra items we don't really want due to composer dependencies.
 docroot/sites/all/libraries/jquery
 
+# Ignore custom themes directory. We can put clones of the sites off of ACSF
+# in here. EG: neurosub theme for jumpstartneuro
+docroot/sites/all/themes/custom
+
 # Ignore test output
 tests/behat/*/index.html
 tests/behat/*/assets

@@ -51,3 +51,35 @@ function acsf_helper_module_implements_alter(&$implementations, $hook) {
   }
 }
 
+/**
+ * Implements hook_page_build().
+ *
+ * Handles 404 redirect for the sites.stanford.edu site.
+ *
+ * We do this here rather than in hook_init() because we want redirect and
+ * match_redirect to have a chance to act first.
+ *
+ * @param array &$page
+ *   The page render array.
+ */
+function acsf_helper_page_build(array &$page) {
+  // When a site is not found and a redirect is not found on
+  // sites.stanford.edu/something-something we want to redirect to UIT page.
+  global $conf;
+  $headers = drupal_get_http_header();
+  $is_ah = $_ENV['AH_SITE_GROUP'] ?? FALSE;
+  // 7481 resolves to the site at sites.stanford.edu.
+  $key_site_id = variable_get("acsf_helper_key_site_id", "7481");
+
+  // If Drupal hits a 404, we should check to see if we are on a valid site.
+  // When we are not, there is no site_id.
+  // Perform this check only on the AH environment.
+  if ($is_ah && isset($headers["status"]) && $headers["status"] == "404 Not Found") {
+    if ($key_site_id == (string) $conf['gardens_site_id']) {
+      header("Location:https://uit.stanford.edu/service/stanfordsites");
+      drupal_exit();
+    }
+  }
+
+}
+

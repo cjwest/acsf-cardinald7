@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d49f377360ea228671c165c325acce0e",
+    "content-hash": "d61b2b7895b8c2d60c532e22fdb61c6a",
     "packages": [
         {
             "name": "Stanford/WMD",
@@ -372,16 +372,16 @@
         },
         {
             "name": "consolidation/output-formatters",
-            "version": "3.3.1",
+            "version": "3.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/consolidation/output-formatters.git",
-                "reference": "853d2d462a191d44a25a5593d8fe2c4a1e59e382"
+                "reference": "a942680232094c4a5b21c0b7e54c20cce623ae19"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/consolidation/output-formatters/zipball/853d2d462a191d44a25a5593d8fe2c4a1e59e382",
-                "reference": "853d2d462a191d44a25a5593d8fe2c4a1e59e382",
+                "url": "https://api.github.com/repos/consolidation/output-formatters/zipball/a942680232094c4a5b21c0b7e54c20cce623ae19",
+                "reference": "a942680232094c4a5b21c0b7e54c20cce623ae19",
                 "shasum": ""
             },
             "require": {
@@ -424,7 +424,7 @@
                 }
             ],
             "description": "Format text by applying transformations provided by plug-in formatters.",
-            "time": "2018-10-16T01:14:51+00:00"
+            "time": "2018-10-19T22:35:38+00:00"
         },
         {
             "name": "cweagans/composer-patches",
@@ -1756,17 +1756,11 @@
         },
         {
             "name": "drupal/admin_menu",
-            "version": "3.0.0-rc5",
+            "version": "dev-3.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/admin_menu",
-                "reference": "7.x-3.0-rc5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/admin_menu-7.x-3.0-rc5.zip",
-                "reference": "7.x-3.0-rc5",
-                "shasum": "64de77d5b1ed7158549a4fc6f2fd657aaacdaead"
+                "reference": "40063e595f96485782ed0e8ede77bb21b41c54eb"
             },
             "require": {
                 "drupal/drupal": "^7.11"
@@ -1777,8 +1771,8 @@
                     "dev-3.x": "3.x-dev"
                 },
                 "drupal": {
-                    "version": "7.x-3.0-rc5",
-                    "datestamp": "1419029280",
+                    "version": "7.x-3.0-rc5+22-dev",
+                    "datestamp": "1538484483",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -1795,6 +1789,10 @@
                     "homepage": "https://www.drupal.org/user/53892"
                 },
                 {
+                    "name": "RenatoG",
+                    "homepage": "https://www.drupal.org/user/3326031"
+                },
+                {
                     "name": "fubhy",
                     "homepage": "https://www.drupal.org/user/761344"
                 },
@@ -1809,13 +1807,18 @@
                 {
                     "name": "sun",
                     "homepage": "https://www.drupal.org/user/54136"
+                },
+                {
+                    "name": "truls1502",
+                    "homepage": "https://www.drupal.org/user/325866"
                 }
             ],
             "description": "Provides a dropdown menu to most administrative tasks and other common destinations (to users with the proper permissions).",
             "homepage": "https://www.drupal.org/project/admin_menu",
             "support": {
                 "source": "http://cgit.drupalcode.org/admin_menu"
-            }
+            },
+            "time": "2018-10-02T13:13:39+00:00"
         },
         {
             "name": "drupal/admin_views",
@@ -1880,17 +1883,17 @@
         },
         {
             "name": "drupal/advanced_help",
-            "version": "1.4.0",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/advanced_help",
-                "reference": "7.x-1.4"
+                "reference": "7.x-1.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/advanced_help-7.x-1.4.zip",
-                "reference": "7.x-1.4",
-                "shasum": "8f7c5bc4bb354ff0b4bcbb9bdef7304100ee58cb"
+                "url": "https://ftp.drupal.org/files/projects/advanced_help-7.x-1.5.zip",
+                "reference": "7.x-1.5",
+                "shasum": "44eb55138fd5871da9efa0fbd46afd3208227f67"
             },
             "require": {
                 "drupal/drupal": "~7.0"
@@ -1901,8 +1904,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "7.x-1.4",
-                    "datestamp": "1523697484",
+                    "version": "7.x-1.5",
+                    "datestamp": "1540469881",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2015,8 +2018,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "7.x-1.0+16-dev",
-                    "datestamp": "1523758085",
+                    "version": "7.x-1.0+24-dev",
+                    "datestamp": "1533642780",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -2049,8 +2052,7 @@
             "homepage": "https://www.drupal.org/project/auto_nodetitle",
             "support": {
                 "source": "http://cgit.drupalcode.org/auto_nodetitle"
-            },
-            "time": "2011-09-08T16:07:46+00:00"
+            }
         },
         {
             "name": "drupal/backup_migrate",
@@ -2146,7 +2148,7 @@
                 },
                 "drupal": {
                     "version": "7.x-1.11",
-                    "datestamp": "1533832380",
+                    "datestamp": "1533832980",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3165,7 +3167,8 @@
                 },
                 "patches_applied": {
                     "https://www.drupal.org/node/1904174": "https://www.drupal.org/files/issues/context_css_injector_1.diff",
-                    "Remove usage of deprecated create_function() calls for PHP 7.2+ future proofing": "https://www.drupal.org/files/issues/context-support_php_72-2946595-3.patch"
+                    "Remove usage of deprecated create_function() calls for PHP 7.2+ future proofing": "https://www.drupal.org/files/issues/context-support_php_72-2946595-3.patch",
+                    "PHP 7 uasort - https://www.drupal.org/project/context/issues/3005518": "https://www.drupal.org/files/issues/2018-10-09/context-php7-uasorting-3005518-2-D7_0.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/7/downloads",
@@ -3402,8 +3405,7 @@
             "homepage": "https://www.drupal.org/project/context_list",
             "support": {
                 "source": "http://cgit.drupalcode.org/context_list"
-            },
-            "time": "2014-07-08T19:51:59+00:00"
+            }
         },
         {
             "name": "drupal/context_list_active",
@@ -4182,6 +4184,10 @@
             ],
             "authors": [
                 {
+                    "name": "Extatic",
+                    "homepage": "https://www.drupal.org/user/1903688"
+                },
+                {
                     "name": "Hadi Farnoud",
                     "homepage": "https://www.drupal.org/user/38806"
                 },
@@ -4671,17 +4677,17 @@
         },
         {
             "name": "drupal/drupal",
-            "version": "7.59.0",
+            "version": "7.60.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/drupal",
-                "reference": "7.59"
+                "reference": "7.60"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/drupal-7.59.zip",
-                "reference": "7.59",
-                "shasum": "6f9c6ec087c3e76b880d28b59d7f2afb4587e095"
+                "url": "https://ftp.drupal.org/files/projects/drupal-7.60.zip",
+                "reference": "7.60",
+                "shasum": "eda05482554b1a50d48bc6a4779f90abd5dacdcb"
             },
             "type": "drupal-core",
             "extra": {
@@ -4689,8 +4695,8 @@
                     "dev-7.x": "7.x-dev"
                 },
                 "drupal": {
-                    "version": "7.59",
-                    "datestamp": "1524674011",
+                    "version": "7.60",
+                    "datestamp": "1539816864",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4702,10 +4708,6 @@
                 "GPL-2.0-or-later"
             ],
             "authors": [
-                {
-                    "name": "Cottser",
-                    "homepage": "https://www.drupal.org/user/1167326"
-                },
                 {
                     "name": "David_Rothstein",
                     "homepage": "https://www.drupal.org/user/124982"
@@ -5621,6 +5623,10 @@
             ],
             "authors": [
                 {
+                    "name": "RenatoG",
+                    "homepage": "https://www.drupal.org/user/3326031"
+                },
+                {
                     "name": "fago",
                     "homepage": "https://www.drupal.org/user/16747"
                 },
@@ -5631,6 +5637,10 @@
                 {
                     "name": "larowlan",
                     "homepage": "https://www.drupal.org/user/395439"
+                },
+                {
+                    "name": "ram4nd",
+                    "homepage": "https://www.drupal.org/user/601534"
                 }
             ],
             "description": "Provides a field collection field, to which any number of fields can be attached.",
@@ -5848,8 +5858,8 @@
                     "version": "7.x-2.22",
                     "datestamp": "1528996424",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Project has not opted into security advisory coverage!"
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 }
             },
@@ -5993,8 +6003,7 @@
             "homepage": "https://www.drupal.org/project/filefield_paths",
             "support": {
                 "source": "http://cgit.drupalcode.org/filefield_paths"
-            },
-            "time": "2016-01-04T09:05:19+00:00"
+            }
         },
         {
             "name": "drupal/flag",
@@ -6332,53 +6341,6 @@
             "homepage": "https://www.drupal.org/project/google_analytics",
             "support": {
                 "source": "http://cgit.drupalcode.org/google_analytics"
-            }
-        },
-        {
-            "name": "drupal/google_tag",
-            "version": "1.4.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/google_tag",
-                "reference": "7.x-1.4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/google_tag-7.x-1.4.zip",
-                "reference": "7.x-1.4",
-                "shasum": "395383b6e0628eeb1eeec039f2a4bf28708be9ff"
-            },
-            "require": {
-                "drupal/drupal": "~7.0"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "7.x-1.4",
-                    "datestamp": "1535722680",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/7/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "solotandem",
-                    "homepage": "https://www.drupal.org/user/240748"
-                }
-            ],
-            "description": "Allows your website analytics to be managed using Google Tag Manager.",
-            "homepage": "https://www.drupal.org/project/google_tag",
-            "support": {
-                "source": "http://cgit.drupalcode.org/google_tag"
             }
         },
         {
@@ -8194,6 +8156,10 @@
                 {
                     "name": "Dave Reid",
                     "homepage": "https://www.drupal.org/user/53892"
+                },
+                {
+                    "name": "pifagor",
+                    "homepage": "https://www.drupal.org/user/2375692"
                 }
             ],
             "description": "Allows users to redirect from old URLs to new URLs.",
@@ -8450,6 +8416,10 @@
                 "GPL-2.0-or-later"
             ],
             "authors": [
+                {
+                    "name": "TR",
+                    "homepage": "https://www.drupal.org/user/202830"
+                },
                 {
                     "name": "fago",
                     "homepage": "https://www.drupal.org/user/16747"
@@ -9557,6 +9527,10 @@
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
+                },
+                "patches_applied": {
+                    "PHP 7.2 - Dont count non countables": "https://www.drupal.org/files/issues/2018-06-06/2977851-views-php72-count-2.patch",
+                    "[] operator not support for strings - https://www.drupal.org/project/views/issues/2767167": "https://www.drupal.org/files/issues/2018-08-06/views-n2767167-12.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/7/downloads",
@@ -10188,7 +10162,7 @@
                 },
                 "drupal": {
                     "version": "7.x-4.18",
-                    "datestamp": "1538403780",
+                    "datestamp": "1538768077",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -13069,16 +13043,16 @@
         },
         {
             "name": "su-sws/stanford_ssp",
-            "version": "7.2.2-alpha6",
+            "version": "7.2.2-alpha7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_ssp.git",
-                "reference": "1bb07a1bec05b3bfbe845844778790054a8813cf"
+                "reference": "64a1a4e1e3695ad75bb8e14fa646d109e5e67d8b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_ssp/zipball/1bb07a1bec05b3bfbe845844778790054a8813cf",
-                "reference": "1bb07a1bec05b3bfbe845844778790054a8813cf",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_ssp/zipball/64a1a4e1e3695ad75bb8e14fa646d109e5e67d8b",
+                "reference": "64a1a4e1e3695ad75bb8e14fa646d109e5e67d8b",
                 "shasum": ""
             },
             "require": {
@@ -13091,10 +13065,10 @@
             ],
             "description": "A Drupal Authentication Module.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_ssp/tree/7.2.2-alpha6",
+                "source": "https://github.com/SU-SWS/stanford_ssp/tree/7.2.2-alpha7",
                 "issues": "https://github.com/SU-SWS/stanford_ssp/issues"
             },
-            "time": "2018-10-03T16:22:36+00:00"
+            "time": "2018-10-17T22:02:44+00:00"
         },
         {
             "name": "su-sws/stanford_story_page",
@@ -14859,7 +14833,7 @@
         },
         {
             "name": "drupal/core-render",
-            "version": "8.6.1",
+            "version": "8.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-render.git",
@@ -14894,16 +14868,16 @@
         },
         {
             "name": "drupal/core-utility",
-            "version": "8.6.1",
+            "version": "8.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-utility.git",
-                "reference": "490bbe8248aa88468674aa8a9ef216a1a388ea3a"
+                "reference": "49051642c88be22a266f34ceeca21beae9d18a88"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-utility/zipball/490bbe8248aa88468674aa8a9ef216a1a388ea3a",
-                "reference": "490bbe8248aa88468674aa8a9ef216a1a388ea3a",
+                "url": "https://api.github.com/repos/drupal/core-utility/zipball/49051642c88be22a266f34ceeca21beae9d18a88",
+                "reference": "49051642c88be22a266f34ceeca21beae9d18a88",
                 "shasum": ""
             },
             "require": {
@@ -14928,7 +14902,7 @@
             "keywords": [
                 "drupal"
             ],
-            "time": "2018-05-11T09:46:46+00:00"
+            "time": "2018-10-17T22:19:50+00:00"
         },
         {
             "name": "drupal/drupal-driver",
@@ -15633,15 +15607,16 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "davidbarratt/custom-installer": 15,
+        "omega8cc/drush-registry-rebuild": 20,
+        "drupal/admin_menu": 20,
+        "drupal/paranoia": 20,
+        "drupal/node_revision_delete": 15,
+        "drupal/match_redirect": 20,
+        "drupal/special_menu_items": 20,
         "su-sws/stanford_ssp": 15,
         "stanford/wmd": 20,
         "stanford/webauth_extras": 20,
-        "davidbarratt/custom-installer": 15,
-        "drupal/match_redirect": 20,
-        "drupal/node_revision_delete": 15,
-        "drupal/paranoia": 20,
-        "drupal/special_menu_items": 20,
-        "omega8cc/drush-registry-rebuild": 20,
         "su-sws/linky_clicky": 20,
         "drupal/always_visible": 20,
         "drupal/context_list": 20,
@@ -15672,13 +15647,13 @@
     "prefer-lowest": false,
     "platform": {
         "php": ">=5.2.5",
-        "ext-curl": "*",
         "ext-gd": "*",
+        "ext-xml": "*",
         "ext-json": "*",
         "ext-openssl": "*",
+        "ext-curl": "*",
         "ext-pdo": "*",
-        "ext-pdo_mysql": "*",
-        "ext-xml": "*"
+        "ext-pdo_mysql": "*"
     },
     "platform-dev": []
 }
