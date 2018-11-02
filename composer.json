@@ -183,6 +183,9 @@
         "https://www.drupal.org/files/issues/2018-06-06/2977851-views-php72-count-2.patch",
         "[] operator not support for strings - https://www.drupal.org/project/views/issues/2767167":
         "https://www.drupal.org/files/issues/2018-08-06/views-n2767167-12.patch"
+      },
+      "dompdf/dompdf": {
+        "Replace create_function calls": "patches/dompdf-create-function.patch"
       }
     },
     "merge-plugin": {

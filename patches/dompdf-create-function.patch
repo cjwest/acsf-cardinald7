@@ -1,0 +1,84 @@
+diff --git a/include/frame_reflower.cls.php b/include/frame_reflower.cls.php
+index 576039e1..a89be23e 100644
+--- a/include/frame_reflower.cls.php
++++ b/include/frame_reflower.cls.php
+@@ -232,10 +232,19 @@ abstract class Frame_Reflower {
+                           array("",'"',"'"), $string);
+ 
+     // Convert escaped hex characters into ascii characters (e.g. \A => newline)
++    /*
++     * Old
++     $string = preg_replace_callback("/\\\\([0-9a-fA-F]{0,6})/",
++                                create_function('$matches',
++                                                'return unichr(hexdec($matches[1]));'),
++                                $string);
++     * New
++     */
+     $string = preg_replace_callback("/\\\\([0-9a-fA-F]{0,6})/",
+-                                    create_function('$matches',
+-                                                    'return unichr(hexdec($matches[1]));'),
+-                                    $string);
++      function ($matches) {
++        return unichr(hexdec($matches[1]));
++      },
++      $string);
+     return $string;
+   }
+   
+diff --git a/include/text_frame_reflower.cls.php b/include/text_frame_reflower.cls.php
+index 73e98759..991e3c37 100644
+--- a/include/text_frame_reflower.cls.php
++++ b/include/text_frame_reflower.cls.php
+@@ -372,8 +372,16 @@ class Text_Frame_Reflower extends Frame_Reflower {
+       /*foreach($words as &$word) {
+         $word = Font_Metrics::get_text_width($word, $font, $size, $word_spacing, $char_spacing);
+       }*/
++
++      /*
++       * Original.
+       array_walk($words, create_function('&$val,$str',
+                                          '$val = Font_Metrics::get_text_width($str, "'.addslashes($font).'", '.$size.', '.$word_spacing.', '.$char_spacing.');'));
++      * New.
++      */
++      foreach($words as $str => &$val) {
++        $val = Font_Metrics::get_text_width($str, addslashes($font), $size, $word_spacing, $char_spacing);
++      }
+       arsort($words);
+       $min = reset($words);
+       break;
+@@ -383,8 +391,16 @@ class Text_Frame_Reflower extends Frame_Reflower {
+       /*foreach($words as &$word) {
+         $word = Font_Metrics::get_text_width($word, $font, $size, $word_spacing, $char_spacing);
+       }*/
++
++      /*
++       * Original.
+       array_walk($lines, create_function('&$val,$str',
+                                          '$val = Font_Metrics::get_text_width($str, "'.addslashes($font).'", '.$size.', '.$word_spacing.', '.$char_spacing.');'));
++      * New.
++      */
++      foreach($lines as $str => &$val) {
++        $val = Font_Metrics::get_text_width($str, addslashes($font), $size, $word_spacing, $char_spacing);
++      }
+ 
+       arsort($lines);
+       $min = reset($lines);
+@@ -414,8 +430,16 @@ class Text_Frame_Reflower extends Frame_Reflower {
+       /*foreach($words as &$word) {
+         $word = Font_Metrics::get_text_width($word, $font, $size, $word_spacing, $char_spacing);
+       }*/
+-      array_walk($lines, create_function('&$val,$str',
+-                                         '$val = Font_Metrics::get_text_width($str, "'.$font.'", '.$size.', '.$word_spacing.', '.$char_spacing.');'));
++
++      /*
++       * Original.
++        array_walk($lines, create_function('&$val,$str',
++                                           '$val = Font_Metrics::get_text_width($str, "'.$font.'", '.$size.', '.$word_spacing.', '.$char_spacing.');'));
++      * New.
++      */
++      foreach($lines as $str => &$val) {
++        $val = Font_Metrics::get_text_width($str, $font, $size, $word_spacing, $char_spacing);
++      }
+       arsort($lines);
+       reset($lines);
+       $str = key($lines);
