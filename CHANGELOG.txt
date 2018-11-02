@@ -1,5 +1,15 @@
 ACSF CardinalD7
 
+Version 1.0.11                                                       2018-11-02
+-------------------------------------------------------------------------------
+- Add Google Tag Manager module
+- Bug fix: adding custom domains that resolve elsewhere break aggregated SAML metadata
+- Create redirect for 404 on sites.stanford.edu to Stanford Sites service page
+- Set image_allow_insecure_derivatives to TRUE
+- Fixes for sorting and PHP 7.2 compatibility
+- Redirect sites/default/files/* to sites/g/files/asdfd5768a/g
+- Bug fix: fatal error in dompdf library
+
 Version 1.0.10                                                       2018-10-19
 -------------------------------------------------------------------------------
 - Bug fix: added dompdf library
