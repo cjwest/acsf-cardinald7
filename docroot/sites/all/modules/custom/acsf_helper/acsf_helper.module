@@ -41,6 +41,34 @@ function acsf_helper_form_system_modules_alter(&$form, &$form_state, $form_id) {
 }
 
 /**
+ * Implements hook_menu().
+ *
+ * @return array An array of menu items.
+ */
+function acsf_helper_menu() {
+  $items['sites/default/files/%'] = array(
+    'page callback' => 'acsf_sites_default_files_redirect',
+    'type' => MENU_CALLBACK,
+    'access callback' => TRUE,
+    'page arguments' => array(
+      3,
+    )
+  );
+  return $items;
+}
+
+/**
+ * @param $arg1 string A menu path passed from acsf_helper_menu().
+ *
+ * Redirect requests for "sites/default/files/foo.pdf" to "sites/g/files/sbakbj5626/f/foo.pdf", dependent on the
+ * "file_public_path" variable of the site.
+ */
+function acsf_sites_default_files_redirect($arg1) {
+  $file_public_path = variable_get('file_public_path', 'sites/default/files');
+  drupal_goto($file_public_path . '/' . check_plain($arg1), array(), 301);
+}
+
+/**
  * Implements hook_module_implements_alter().
  */
 function acsf_helper_module_implements_alter(&$implementations, $hook) {
@@ -82,4 +110,3 @@ function acsf_helper_page_build(array &$page) {
   }
 
 }
-
