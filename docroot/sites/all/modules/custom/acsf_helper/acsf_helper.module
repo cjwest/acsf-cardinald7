@@ -46,14 +46,18 @@ function acsf_helper_form_system_modules_alter(&$form, &$form_state, $form_id) {
  * @return array An array of menu items.
  */
 function acsf_helper_menu() {
-  $items['sites/default/files/%'] = array(
-    'page callback' => 'acsf_sites_default_files_redirect',
-    'type' => MENU_CALLBACK,
-    'access callback' => TRUE,
-    'page arguments' => array(
-      3,
-    )
-  );
+  $items = [];
+  $is_ah = getenv('AH_SITE_ENVIRONMENT');
+  if ($is_ah) {
+    $items['sites/default/files/%'] = array(
+      'page callback' => 'acsf_sites_default_files_redirect',
+      'type' => MENU_CALLBACK,
+      'access callback' => TRUE,
+      'page arguments' => array(
+        3,
+      ),
+    );
+  }
   return $items;
 }
 
@@ -65,7 +69,16 @@ function acsf_helper_menu() {
  */
 function acsf_sites_default_files_redirect($arg1) {
   $file_public_path = variable_get('file_public_path', 'sites/default/files');
-  drupal_goto($file_public_path . '/' . check_plain($arg1), array(), 301);
+
+  // If the public path is set to what we are trying to redirect to throw out
+  // a 404 or you will get stuck in a redirect looooooooooooop.
+  if ($file_public_path == "sites/default/files") {
+    return MENU_NOT_FOUND;
+  }
+
+  $path = current_path();
+  $new_file_path = preg_replace("/sites\/default\/files/", $file_public_path, $path);
+  drupal_goto($new_file_path, array(), 301);
 }
 
 /**
