@@ -10,6 +10,7 @@ if (!array_key_exists('PATH_INFO', $_SERVER)) {
 
 $sourceId = substr($_SERVER['PATH_INFO'], 1);
 $source = SimpleSAML_Auth_Source::getById($sourceId, 'sspmod_saml_Auth_Source_SP');
+
 $spMetadata = $source->getMetadata();
 
 try {

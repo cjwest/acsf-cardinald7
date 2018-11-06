@@ -1,55 +1,103 @@
 <?php
+/**
+ * @file
+ * This file has been modified.
+ *
+ * This file has been edited from it's original source and should be
+ * considered custom to this project. It generates a static XML file in which
+ * it serves up.
+ */
 
-$config = SimpleSAML_Configuration::getInstance();
+require_once dirname(__FILE__) . "/../includes/serveXML.php";
+require_once dirname(__FILE__) . "/../includes/createXML.php";
+require_once dirname(__FILE__) . "/../includes/acsf.php";
+
+// Start up Simplesaml.
+$saml = SimpleSAML_Configuration::getInstance();
 $gConfig = SimpleSAML_Configuration::getConfig('module_aggregator.php');
 
+// Check for the genKey URL parameter. If no parameter was sent then we should
+// just return the static XML document if available. If not available, generate
+// the static XML file and return it to the asker.
+$genKey = $gConfig->getValue('genKey');
+$xmlFile = $gConfig->getValue('xmlTmp');
 
-// Get list of aggregators
-$aggregators = $gConfig->getConfigItem('aggregators');
+// -----------------------------------------------------------------------------
+// GENERATE
+// If the request has the genKey correct generate new XML metadata.
+// -----------------------------------------------------------------------------
+if (isset($_REQUEST['genKey']) && htmlspecialchars($_REQUEST['genKey']) == $genKey) {
 
-// If aggregator ID is not provided, show the list of available aggregates
+  // Ensure this doesn't get cached in Varnish.
+  header('Cache-control: no-cache');
+
+  // Before we go any further check to see if sites.json has changed.
+  $cache_hash = build_acsf_saml_metadata_get_sites_json_hash_cache();
+  $new_hash = build_acsf_saml_metadata_sites_json_hash();
+
+  // If we have a match no need to continue.
+  if ($cache_hash == $new_hash) {
+    exit("No new changes.");
+  }
+
+  // If we don't have a match generate the $sources for the config and cache
+  // the new hash.
+  build_acsf_saml_metadata_set_sites_json_hash($new_hash);
+
+  // Add the sources to the metadata file.
+  $_SESSION['build_with_sources'] = TRUE;
+  SimpleSAML_Configuration::clearInternalState();
+  $gConfig = SimpleSAML_Configuration::getConfig('module_aggregator.php');
+
+  // Get list of aggregators.
+  $aggregators = $gConfig->getConfigItem('aggregators');
+
+  $id = htmlspecialchars($_GET['id']);
+  $createXML = new CreateXML($aggregators, $gConfig, $xmlFile, $id);
+
+  // Optional Params.
+  if (isset($_REQUEST['set'])) {
+    $createXML->setLimit(htmlspecialchars($_REQUEST['set']));
+  }
+
+  // Optional Param.
+  if (isset($_REQUEST['exclude'])) {
+    $createXML->setExclude(htmlspecialchars($_REQUEST['exclude']));
+  }
+
+  // Allow the user to set the mimetype.
+  if (isset($_GET['mimetype'])) {
+    $createXML->setMimeType(htmlspecialchars($_GET['mimetype']));
+  }
+
+  // Do it.
+  $createXML->generateXML();
+
+  // Yay.
+  exit('Success.');
+}
+
+// -----------------------------------------------------------------------------
+// SERVE
+// If the request does not have the genKey try to serve up the static xml file.
+// -----------------------------------------------------------------------------
+if (!isset($_REQUEST['genKey']) && file_exists($xmlFile)) {
+  $serveXML = new ServeXML($xmlFile);
+  $serveXML->sendToBrowser();
+  exit();
+}
+
+// -----------------------------------------------------------------------------
+// LIST
+// If aggregator ID is not provided, show the list of available aggregates.
+// -----------------------------------------------------------------------------
 if (!array_key_exists('id', $_GET)) {
-	$t = new SimpleSAML_XHTML_Template($config, 'aggregator:list.php');
-	$t->data['sources'] = $aggregators->getOptions();
-	$t->show();
-	exit;
-}
-$id = $_GET['id'];
-if (!in_array($id, $aggregators->getOptions()))
-	throw new SimpleSAML_Error_NotFound('No aggregator with id ' . var_export($id, TRUE) . ' found.');
-
-$aConfig = $aggregators->getConfigItem($id);
-
-
-$aggregator = new sspmod_aggregator_Aggregator($gConfig, $aConfig, $id);
-
-if (isset($_REQUEST['set']))
-	$aggregator->limitSets($_REQUEST['set']);
-
-if (isset($_REQUEST['exclude'])) 
-	$aggregator->exclude($_REQUEST['exclude']);
-
-
-$xml = $aggregator->getMetadataDocument();
-
-$mimetype = 'application/samlmetadata+xml';
-$allowedmimetypes = array(
-    'text/plain',
-    'application/samlmetadata-xml',
-    'application/xml',
-);
-
-if (isset($_GET['mimetype']) && in_array($_GET['mimetype'], $allowedmimetypes)) {
-    $mimetype = $_GET['mimetype'];
+  $t = new SimpleSAML_XHTML_Template($saml, 'aggregator:list.php');
+  $t->data['sources'] = $aggregators->getOptions();
+  $t->show();
+  exit();
 }
 
-if ($mimetype === 'text/plain') {
-    SimpleSAML_Utilities::formatDOMElement($xml);
-}
-
-$metadata = '<?xml version="1.0"?>'."\n".$xml->ownerDocument->saveXML($xml);
-
-header('Content-Type: ' . $mimetype);
-header('Content-Length: ' . strlen($metadata));
-
-echo $metadata;
+// If the file does not exist and no keys were provided, error out, and let the
+// user know.
+throw new SimpleSAML_Error_Exception("Could not serve metadata or metadata file doesn't exist.");

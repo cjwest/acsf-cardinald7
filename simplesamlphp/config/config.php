@@ -15,7 +15,7 @@
  * *****************************************
  */
 
-// PHP 7
+// PHP 7.
 if (!is_array($config)) {
   $config = array();
 }
@@ -43,10 +43,13 @@ $config['technicalcontact_email'] = "sws-developers@stanford.edu";
 $config['secretsalt'] = 'xn3jhrrw1sp1he6x4ao1ilwdacxgkdon';
 $config['auth.adminpassword'] = '6hwuzew6csdjwam';
 
-// Core settings
+// Core settings.
 $config['authproc.sp'] = array(
   10 => array(
     'class'                 => 'core:AttributeMap',
+    // Even though your linter may complain about this line
+    // DO NOT TOUCH IT!!!!!!
+    // If you provide this key your SAML config will FAIL!
     'oid2name',
   ),
   90 => 'core:LanguageAdaptor',
@@ -65,16 +68,14 @@ $config['authproc.sp'] = array(
 # setcookie('NO_CACHE', '1');
 
 
-/**
- * ACQUIA ENVIRONMENT CONFIGURATION
- */
+// ACQUIA ENVIRONMENT CONFIGURATION.
 if (getenv('AH_SITE_ENVIRONMENT')) {
-  include_once("config.acquia.php");
+  include_once "config.acquia.php";
 }
 
 /**
  * LANDO LOCAL CONFIGURATION.
  */
 if (getenv('LANDO') == "ON") {
-  include_once("config.lando.php");
+  include_once "config.lando.php";
 }

@@ -22,7 +22,7 @@ $config = array(
 		)
 	),
 
-	
+
 	'maxDuration' 	=> 60*60*24*5, // Maximum 5 days duration on ValidUntil.
 
 	// If base64 encoded for entity is already cached in the entity, should we
@@ -42,4 +42,3 @@ $config = array(
 	'sign.certificate' => 'server.crt',
 
 );
-

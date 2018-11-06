@@ -35,7 +35,6 @@ class sspmod_core_Auth_Process_AttributeMap extends SimpleSAML_Auth_ProcessingFi
 
         assert('is_array($config)');
         $mapFiles = array();
-
         foreach ($config as $origName => $newName) {
             if (is_int($origName)) {
                 if ($newName === '%duplicate') {

@@ -178,7 +178,7 @@ if (!function_exists('ah_db_current_host')) {
   }
 }
 
-// Set log and temp location, as specified by Acquia
+// Set log and temp location, as specified by Acquia.
 $config['tempdir'] = '/mnt/tmp/' . $_ENV['AH_SITE_NAME'];
 $config['logging.handler'] = 'file';
 $config['loggingdir'] = $config['tempdir'];
