@@ -1,5 +1,9 @@
 ACSF CardinalD7
 
+Version 1.0.13                                                       2018-11-06
+-------------------------------------------------------------------------------
+- Serve aggregated SAML metadata as a static file rather than generating it at runtime
+
 Version 1.0.12                                                       2018-11-02
 -------------------------------------------------------------------------------
 - Bug fix: improperly redirecting to correct file path.
