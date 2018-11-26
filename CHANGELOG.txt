@@ -1,5 +1,9 @@
 ACSF CardinalD7
 
+Version 1.0.14                                                       2018-11-26
+-------------------------------------------------------------------------------
+- Bug fix: generate correct metadata for custom domains even when DNS does not yet point to ACSF.
+
 Version 1.0.13                                                       2018-11-06
 -------------------------------------------------------------------------------
 - Serve aggregated SAML metadata as a static file rather than generating it at runtime
