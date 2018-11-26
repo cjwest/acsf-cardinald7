@@ -118,5 +118,46 @@ Check out this article for more help: https://stackoverflow.com/questions/166410
 - Patched core to alter the importance of profile modules and themes. Instead of being less important than the stuff in sites/all a patch alters this behaviour and makes them more prominent. This allows for opt-out of stack behaviour
 - Composer uses a mix of patches, preserve path, and merge plugins to accomplish what is in this repo. Please get familiar with them.
 - Unlike other build systems, Acquia requires that all items be tracked in the repository and that is why you see both composer and have the items tracked.
-- Diseval is installed on ACSF and to be conscious of the repurcussions of that on your development.
-- Libraries use the 'package' type and this has repurcussions. Please see the highlighted notes at: https://getcomposer.org/doc/05-repositories.md#package-2
+- Diseval is installed on ACSF and to be conscious of the repercussions of that on your development.
+- Libraries use the 'package' type and this has repercussions. Please see the highlighted notes at: [https://getcomposer.org/doc/05-repositories.md#package-2](https://getcomposer.org/doc/05-repositories.md#package-2)
+
+# SimpleSAML PHP Metadata generation
+
+Every site on the factory has to have an entry and an `entityID` unique to itself
+in the IdP. To accomplish this we use a heavily modified version of the [SimpleSAMLphp Aggregator module](https://github.com/simplesamlphp/simplesamlphp-module-aggregator).
+
+In order to reduce the overhead on the generation and serving of the XML, which
+can, and has, grown over the 10mb varnish caching limit, we have separated out
+the creation and the serving of the XML in to two parts.
+
+### Generate Metadata
+
+The genKey can be found in: /simplesamlphp/config/module_aggregator.php:49
+
+#### Generate Metadata URLs
+- https://saml-dev.sites.stanford.edu/simplesaml/module.php/aggregator/?id=acsf-02dev&genKey=[REPLACE-WITH-KEY]
+- https://saml-test.sites.stanford.edu/simplesaml/module.php/aggregator/?id=acsf-02test&genKey=[REPLACE-WITH-KEY]
+- https://saml.sites.stanford.edu/simplesaml/module.php/aggregator/?id=acsf-02live&genKey=[REPLACE-WITH-KEY]
+
+These urls are hit by a cron job every 5 minutes and will save an xml file to
+disk when there are changes to `sites.json` (the file that stores canonical information of all sites within a given stack and environment). If there are no changes to `sites.json`, an md5 comparison of `sites.json` and a stored hash will result in the script terminating in order to avoid the load associated with fetching and creating the
+large XML document. The metadata XML document can be found in a configurable tmp directory at: `/mnt/gfs/cardinald702[live|test|dev]/tmp/saml-aggregate-metadata.xml`. A `sites_json_hash` file is stored in the same directory.
+
+When generating metadata, the script will loop through the domains found in
+sites.json. This includes the custom domains that may not have their DNS added.
+When fetching metadata on a URI that does not resolve, the script will cheat and
+fall back to fetching metadata from `saml[-dev|-test].stanford.edu` and replace
+the default URI with the non-resolving one so that it will exist when the DNS
+finally propagates.
+
+### Fetch Metadata
+
+#### Fetch Metadata URLs
+- https://saml-dev.sites.stanford.edu/simplesaml/module.php/aggregator/?id=acsf-02dev&mimetype=application/xml
+- https://saml-test.sites.stanford.edu/simplesaml/module.php/aggregator/?id=acsf-02test&mimetype=application/xml
+- https://saml.sites.stanford.edu/simplesaml/module.php/aggregator/?id=acsf-02live&mimetype=application/xml
+
+When requesting metadata, this endpoint will deliver the static file saved to
+disk and not dynamically generate any new xml. The file it serves can be found
+at `/mnt/gfs/cardinald702[live|test|dev]/tmp/saml-aggregate-metadata.xml`. When
+that file does not exist it will error out and not serve anything (which is why it is important to have the cron jobs running to generate the metadata with the correct `genKey`).

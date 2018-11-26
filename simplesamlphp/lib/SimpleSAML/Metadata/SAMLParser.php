@@ -151,6 +151,17 @@ class SimpleSAML_Metadata_SAMLParser
      */
     private $entityDescriptor;
 
+    /**
+     * Fallback URLs for when something does not resolve.
+     *
+     * @var array
+     *  An array of URIs to use as a fallback for when metadata requests fail.
+     */
+    public static $fallbackUrls = [
+      '02live' => "saml.sites.stanford.edu",
+      '02test' => "saml-test.sites.stanford.edu",
+      '02dev' => "saml-dev.sites.stanford.edu",
+    ];
 
     /**
      * This is the constructor for the SAMLParser class.
@@ -303,19 +314,58 @@ class SimpleSAML_Metadata_SAMLParser
     {
 
         if ($file === null) {
-            throw new Exception('Cannot open file NULL. File name not specified.');
+          throw new Exception('Cannot open file NULL. File name not specified.');
         }
 
-        $data = \SimpleSAML\Utils\HTTP::fetch($file);
-
+        // Try to fetch and parse the metadata from a remote source.
+        // If that remote source fails, catch the error and default to the
+        // backup source which is a known entity.
         try {
-            $doc = \SAML2\DOMDocumentFactory::fromString($data);
-        } catch(\Exception $e) {
-            throw new Exception('Failed to read XML from file: '.$file);
+          // This @ squelch here is an intentional trade between fixing a lot of other code and getting stuff done.
+          // It is here to prevent a PHP warning when the HTTP fetch fails and spits them out to the browser; catch does
+          // not catch PHP warnings.
+          $data = @\SimpleSAML\Utils\HTTP::fetch($file);
+          $doc = \SAML2\DOMDocumentFactory::fromString($data);
+        }
+        catch(\Exception $e) {
+
+          // If the above failed we can cheat and fetch the information from a
+          // known quantity. The metadata is more or less the same for every
+          // site on this stack and just needs to have the url changed.
+          if (isset($_ENV['AH_SITE_ENVIRONMENT'])) {
+
+            $matches = [];
+            preg_match("/https:\/\/.*\.stanford\.edu/", $file, $matches);
+
+            // Store original URI.
+            $uri = str_replace("https://", "", array_pop($matches));
+            // Get the URI of a known source.
+            $knownSite = SimpleSAML_Metadata_SAMLParser::$fallbackUrls[$_ENV['AH_SITE_ENVIRONMENT']];
+            // Generate the path to the known source metadata.
+            $file = "https://" . $knownSite . "/simplesaml/module.php/saml/sp/metadata.php/default-sp?output=xml";
+
+            // Try to fetch that metadata. It is possible this could fail as
+            // well so throw an exception if it does for debugging.
+            try {
+              $data = \SimpleSAML\Utils\HTTP::fetch($file);
+              $data = str_replace($knownSite, $uri, $data);
+              $doc = \SAML2\DOMDocumentFactory::fromString($data);
+            }
+            catch(\Exception $e) {
+              throw new Exception('Failed to read XML from file: ' . $file);
+            }
+
+          }
+          // If not acquia then fail out.
+          else {
+            throw new Exception('Failed to read XML from file: ' . $file);
+          }
         }
 
+        // After all of that if we don't have XML something failed and so
+        // should we.
         if ($doc->documentElement === null) {
-            throw new Exception('Opened file is not an XML document: '.$file);
+          throw new Exception('Opened file is not an XML document: ' . $file);
         }
 
         return self::parseDescriptorsElement($doc->documentElement);

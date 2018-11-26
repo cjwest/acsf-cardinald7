@@ -80,8 +80,10 @@ class CreateXML {
 
     // Set Aggregators.
     $this->aggregators = $aggregators;
+
     // Set path to XML.
     $this->filePath = $filePath;
+
     // Agg config object.
     $this->gConfig = $gConfig;
 

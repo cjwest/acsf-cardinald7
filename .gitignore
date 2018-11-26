@@ -157,6 +157,7 @@ nbproject/*
 *.gz
 *.sql
 *.zip
+sites.json
 
 # Ignore phpunit.xml, only phpunit.xml.dist should be committed.
 phpunit.xml
