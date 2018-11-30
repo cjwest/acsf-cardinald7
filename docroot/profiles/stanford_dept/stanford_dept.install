@@ -33,3 +33,10 @@ function stanford_dept_filter_info_alter(&$info) {
 function stanford_dept_sites_install_configure_form_submit($form, &$form_state) {
   stanford_sites_install_configure_form_submit($form, $form_state);
 }
+
+/**
+ * Pass through to stanford profile's alter.
+ */
+function stanford_dept_form_install_configure_form_alter(&$form, $form_state) {
+  stanford_form_install_configure_form_alter($form, $form_state);
+}
