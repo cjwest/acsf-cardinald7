@@ -43,7 +43,7 @@ class context_reaction_block extends context_reaction {
       if (!isset($form['selector'][$group])) {
         $form['selector'][$group] = array(
           '#type' => 'fieldset',
-          '#collapsible' => TRUE,
+          '#collapsible' => TRUE, 
           '#collapsed' => TRUE,
           '#title' => isset($block->context_group) ? $block->context_group : $modules[$block->module],
         );
@@ -384,7 +384,7 @@ class context_reaction_block extends context_reaction {
           }
         }
       }
-
+      
       $this->is_editable_check($context_blocks);
       global $theme;
       $active_regions = $this->system_region_list($theme);
@@ -420,7 +420,7 @@ class context_reaction_block extends context_reaction {
   }
 
   /**
-   * Determine if there is an active context editor block, and set a flag.  We will set a flag so
+   * Determine if there is an active context editor block, and set a flag.  We will set a flag so 
    * that we can make sure that blocks with empty content have some default content.  This is
    * needed so the save of the context inline editor does not remove the blocks with no content.
    */
@@ -443,7 +443,7 @@ class context_reaction_block extends context_reaction {
       }
     }
   }
-
+  
   /**
    * Generate the safe weight range for a block being added to a region such that
    * there are enough potential unique weights to support all blocks.
@@ -452,7 +452,10 @@ class context_reaction_block extends context_reaction {
     $blocks = $this->get_blocks();
     $block_count = 0;
     foreach ($blocks as $region => $block_list) {
-      $block_count += count($block_list);
+      // Ensure the $block_list variable is countable.
+      if (is_array($block_list) || $block_list instanceof Countable) {
+        $block_count += count($block_list);
+      }
     }
     // Add 2 to make sure there's space at either end of the block list
     return round(($block_count + 2) / 2);
@@ -583,18 +586,9 @@ class context_reaction_block extends context_reaction {
   /**
    * Sort callback.
    */
-   static function block_sort($a, $b) {
-    // To preserve the sorting of PHP 5 when using PHP 7, items of equal weight
-    // should be sorted by which item came first. Assume object a.
-    if (version_compare(phpversion(), '7.0.0', '>=')) {
-      if ($a->weight == $b->weight) {
-        return 1;
-      }
-    }
-
-    // Not equal weights or PHP < 7, let uasort do its thing.
+  static function block_sort($a, $b) {
     return ($a->weight - $b->weight);
-   }
+  }
 
   /**
    * Compatibility wrapper around json_decode().
@@ -638,7 +632,7 @@ class context_reaction_block extends context_reaction {
         module_load_include('module', 'block', 'block');
         $block = $info[$bid];
         $block->title = isset($block->title) ? $block->title : '';
-        $block->context = $context;
+        $block->context = $context;        
         $block->region = '';
         $rendered_blocks = _block_render_blocks(array($block)); // For E_STRICT warning
         $block = array_shift($rendered_blocks);

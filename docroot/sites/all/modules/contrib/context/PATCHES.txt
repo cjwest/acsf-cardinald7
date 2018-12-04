@@ -5,11 +5,3 @@ https://www.drupal.org/node/1904174
 Source: https://www.drupal.org/files/issues/context_css_injector_1.diff
 
 
-Remove usage of deprecated create_function() calls for PHP 7.2+ future proofing
-Source: https://www.drupal.org/files/issues/context-support_php_72-2946595-3.patch
-
-
-PHP 7 uasort - https://www.drupal.org/project/context/issues/3005518
-Source: https://www.drupal.org/files/issues/2018-10-09/context-php7-uasorting-3005518-2-D7_0.patch
-
-

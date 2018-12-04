@@ -11,6 +11,7 @@ vendor
 !/docroot/sites/all/modules/stanford/erus/includes/vendor
 !/docroot/sites/all/modules/stanford/stanford_jumpstart/modules/stanford_jumpstart_masonry/vendor
 !/simplesamlphp/vendor
+docroot/sites/all/libraries/jquery-ui-timepicker/src/
 
 # Ignore Drupal 7 core files.
 /docroot/profiles/README.txt

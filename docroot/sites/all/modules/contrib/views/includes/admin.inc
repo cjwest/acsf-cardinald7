@@ -2480,27 +2480,10 @@ function views_ui_edit_form_get_bucket($type, $view, $display) {
 
 /**
  * Regenerate the current tab for AJAX updates.
- *
- * @param view $view
- *   The view object to work on.
- * @param array $output
- *   The output array.
- * @param string $display_id
- *   The ID of the display in the $view that is being viewed.
  */
-function views_ui_regenerate_tab(&$view, array &$output, $display_id) {
+function views_ui_regenerate_tab(&$view, &$output, $display_id) {
   if (!$view->set_display('default')) {
     return;
-  }
-
-  // Make sure $output is an array.
-  if (!is_array($output)) {
-    if ($output === NULL || $output === '') {
-      $output = array();
-    }
-    else {
-      $output = array($output);
-    }
   }
 
   // Regenerate the main display area.
@@ -3021,7 +3004,7 @@ function views_ui_ajax_form($js, $key, $view, $display_id = '') {
   array_splice($args, 0, 4);
 
   $form_state = views_ui_build_form_state($js, $key, $view, $display_id, $args);
-  // Check to see if this is the top form of the stack. If it is, pop
+  // check to see if this is the top form of the stack. If it is, pop
   // it off; if it isn't, the user clicked somewhere else and the stack is
   // now irrelevant.
   if (!empty($view->stack)) {
@@ -4563,9 +4546,9 @@ function views_ui_config_item_form_submit_temporary($form, &$form_state) {
   // Store the item back on the view.
   $form_state['view']->temporary_options[$type][$form_state['id']] = $handler->options;
 
-  // @todo Figure out whether views_ui_ajax_form is perhaps the better place to
-  // fix the issue. views_ui_ajax_form() drops the current form from the stack,
-  // even if it's an #ajax. So add the item back to the top of the stack.
+  // @todo: Figure out whether views_ui_ajax_form is perhaps the better place
+  // to fix the issue. views_ui_ajax_form() drops the current form from the
+  // stack, even if it's an #ajax. So add the item back to the top of the stack.
   views_ui_add_form_to_stack($form_state['form_key'], $form_state['view'], $form_state['display_id'], array($type, $item['id']), TRUE);
 
   $form_state['rerender'] = TRUE;
@@ -4601,8 +4584,8 @@ function views_ui_config_item_form_submit($form, &$form_state) {
     }
   }
 
-  // Create a new handler and unpack the options from the form onto it. We can
-  // use that for storage.
+  // Create a new handler and unpack the options from the form onto it. We
+  // can use that for storage.
   $handler = views_get_handler($item['table'], $item['field'], $handler_type, $override);
   $handler->init($form_state['view'], $item);
 

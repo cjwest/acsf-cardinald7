@@ -57,6 +57,7 @@
 
     "drupal/drupal": "~7.60",
     "drupal/acsf": "~1.43",
+    "drupal/google_tag": "~1.4",
     "drupal/paranoia": "dev-1.x",
     "drupal/node_revision_delete": "~3.0@alpha",
     "drupal/honeypot": "~1.24",
@@ -156,19 +157,13 @@
         "Call the preserve paths hooks":
         "https://github.com/SebCorbin/composer-patches/commit/1cb9bacba51f8bba0c5f3f322c3bb61e4ceae974.patch"
       },
-      "drupal/features": {
-        "2957125: Features replace eval().":
-        "https://www.drupal.org/files/issues/2018-05-31/features-replace_eval_anonymous_functions-4_0.patch"
-      },
       "drupal/filefield_paths": {
         "https://www.drupal.org/project/filefield_paths/issues/2946648":
         "https://www.drupal.org/files/issues/filefield_paths-support_php_72-2946648-3.patch"
       },
-      "drupal/context": {
-        "Remove usage of deprecated create_function() calls for PHP 7.2+ future proofing":
-        "https://www.drupal.org/files/issues/context-support_php_72-2946595-3.patch",
-        "PHP 7 uasort - https://www.drupal.org/project/context/issues/3005518":
-        "https://www.drupal.org/files/issues/2018-10-09/context-php7-uasorting-3005518-2-D7_0.patch"
+      "drupal/features": {
+        "2957125: Features replace eval().":
+        "https://www.drupal.org/files/issues/2018-11-27/features-replace_eval_anonymous_functions-15.patch"
       },
       "drupal/match_redirect": {
         "Add wildcard to target URL: https://www.drupal.org/project/match_redirect/issues/2118233":
@@ -177,12 +172,6 @@
       "drupal/wysiwyg": {
         "CKEditor height does not reflect the rows attribute: https://www.drupal.org/project/wysiwyg/issues/2410565#comment-9958287":
         "https://www.drupal.org/files/issues/wysiwyg-heights.2410565.5.patch"
-      },
-      "drupal/views": {
-        "PHP 7.2 - Dont count non countables":
-        "https://www.drupal.org/files/issues/2018-06-06/2977851-views-php72-count-2.patch",
-        "[] operator not support for strings - https://www.drupal.org/project/views/issues/2767167":
-        "https://www.drupal.org/files/issues/2018-08-06/views-n2767167-12.patch"
       },
       "dompdf/dompdf": {
         "Replace create_function calls": "patches/dompdf-create-function.patch"

@@ -6,6 +6,6 @@ Source: https://drupal.org/files/issues/features-parent_identifier-927566-79.pat
 
 
 2957125: Features replace eval().
-Source: https://www.drupal.org/files/issues/2018-05-31/features-replace_eval_anonymous_functions-4_0.patch
+Source: https://www.drupal.org/files/issues/2018-11-27/features-replace_eval_anonymous_functions-15.patch
 
 
