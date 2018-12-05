@@ -1778,8 +1778,8 @@
                     "dev-3.x": "3.x-dev"
                 },
                 "drupal": {
-                    "version": "7.x-3.0-rc5+24-dev",
-                    "datestamp": "1541229780",
+                    "version": "7.x-3.0-rc5+25-dev",
+                    "datestamp": "1541232480",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -3165,7 +3165,7 @@
                 },
                 "drupal": {
                     "version": "7.x-3.8",
-                    "datestamp": "1542674280",
+                    "datestamp": "1543594684",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3543,7 +3543,7 @@
                 },
                 "drupal": {
                     "version": "7.x-3.8",
-                    "datestamp": "1542674280",
+                    "datestamp": "1543594684",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4119,16 +4119,16 @@
                     "homepage": "https://www.drupal.org/user/242659"
                 },
                 {
+                    "name": "cafuego",
+                    "homepage": "https://www.drupal.org/user/218525"
+                },
+                {
                     "name": "developer-x",
                     "homepage": "https://www.drupal.org/user/399625"
                 },
                 {
                     "name": "dww",
                     "homepage": "https://www.drupal.org/user/46549"
-                },
-                {
-                    "name": "gisle",
-                    "homepage": "https://www.drupal.org/user/409554"
                 },
                 {
                     "name": "podarok",
@@ -4266,16 +4266,16 @@
                     "homepage": "https://www.drupal.org/user/242659"
                 },
                 {
+                    "name": "cafuego",
+                    "homepage": "https://www.drupal.org/user/218525"
+                },
+                {
                     "name": "developer-x",
                     "homepage": "https://www.drupal.org/user/399625"
                 },
                 {
                     "name": "dww",
                     "homepage": "https://www.drupal.org/user/46549"
-                },
-                {
-                    "name": "gisle",
-                    "homepage": "https://www.drupal.org/user/409554"
                 },
                 {
                     "name": "podarok",
@@ -4345,16 +4345,16 @@
                     "homepage": "https://www.drupal.org/user/242659"
                 },
                 {
+                    "name": "cafuego",
+                    "homepage": "https://www.drupal.org/user/218525"
+                },
+                {
                     "name": "developer-x",
                     "homepage": "https://www.drupal.org/user/399625"
                 },
                 {
                     "name": "dww",
                     "homepage": "https://www.drupal.org/user/46549"
-                },
-                {
-                    "name": "gisle",
-                    "homepage": "https://www.drupal.org/user/409554"
                 },
                 {
                     "name": "podarok",
@@ -7075,7 +7075,7 @@
                 },
                 "drupal": {
                     "version": "7.x-2.7",
-                    "datestamp": "1435675672",
+                    "datestamp": "1543950480",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -12456,16 +12456,16 @@
         },
         {
             "name": "su-sws/stanford_install_tasks",
-            "version": "7.1.4",
+            "version": "7.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_install_tasks.git",
-                "reference": "4ec1a234e8b1c87c1892779d03c63c19630b577a"
+                "reference": "5e5d7692b42c58a06f980d2165356bfc02820a7f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_install_tasks/zipball/4ec1a234e8b1c87c1892779d03c63c19630b577a",
-                "reference": "4ec1a234e8b1c87c1892779d03c63c19630b577a",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_install_tasks/zipball/5e5d7692b42c58a06f980d2165356bfc02820a7f",
+                "reference": "5e5d7692b42c58a06f980d2165356bfc02820a7f",
                 "shasum": ""
             },
             "require": {
@@ -12477,10 +12477,10 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_install_tasks/tree/7.1.4",
+                "source": "https://github.com/SU-SWS/stanford_install_tasks/tree/7.1.5",
                 "issues": "https://github.com/SU-SWS/stanford_install_tasks/issues"
             },
-            "time": "2018-10-04T17:54:52+00:00"
+            "time": "2018-12-03T23:03:06+00:00"
         },
         {
             "name": "su-sws/stanford_jordan",
@@ -13102,16 +13102,16 @@
         },
         {
             "name": "su-sws/stanford_ssp",
-            "version": "7.2.2-alpha7",
+            "version": "7.2.2-alpha9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_ssp.git",
-                "reference": "64a1a4e1e3695ad75bb8e14fa646d109e5e67d8b"
+                "reference": "93f665e60360bf1c05ce07f81538bd3554179f18"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_ssp/zipball/64a1a4e1e3695ad75bb8e14fa646d109e5e67d8b",
-                "reference": "64a1a4e1e3695ad75bb8e14fa646d109e5e67d8b",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_ssp/zipball/93f665e60360bf1c05ce07f81538bd3554179f18",
+                "reference": "93f665e60360bf1c05ce07f81538bd3554179f18",
                 "shasum": ""
             },
             "require": {
@@ -13124,10 +13124,10 @@
             ],
             "description": "A Drupal Authentication Module.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_ssp/tree/7.2.2-alpha7",
+                "source": "https://github.com/SU-SWS/stanford_ssp/tree/7.2.2-alpha9",
                 "issues": "https://github.com/SU-SWS/stanford_ssp/issues"
             },
-            "time": "2018-10-17T22:02:44+00:00"
+            "time": "2018-12-04T17:08:22+00:00"
         },
         {
             "name": "su-sws/stanford_story_page",

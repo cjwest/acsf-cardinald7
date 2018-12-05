@@ -1,6 +1,10 @@
 Stanford Installation Tasks
 --------------------------------------
 
+7.x-1.5                            2018-12-03
+---------------------------------------------
+- Set the default timezone to America/Los Angeles.
+
 7.x-1.4                            2018-10-04
 ---------------------------------------------
 - Enable syslog during install on ACSF
