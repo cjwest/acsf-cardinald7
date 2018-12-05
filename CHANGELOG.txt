@@ -1,5 +1,14 @@
 ACSF CardinalD7
 
+Version 1.0.15                                                       2018-12-06
+-------------------------------------------------------------------------------
+- Update core to drupal-7.61
+- Bug fix: site timezone was being set to UTC
+- Update to stanford_ssp-7.x-2.2-alpha9
+- Update to context-7.x-3.8
+- Update to features-7.x-2.11
+- Update to file_entity-7.x-2.25
+
 Version 1.0.14                                                       2018-11-26
 -------------------------------------------------------------------------------
 - Bug fix: generate correct metadata for custom domains even when DNS does not yet point to ACSF.

@@ -1,5 +1,5 @@
 # [ACSF Cardinal D7 Stack](https://github.com/SU-SWS/acsf-cardinald7)
-##### Version: 1.0.14
+##### Version: 1.0.15
 
 [Changelog.txt](CHANGELOG.md)
 
