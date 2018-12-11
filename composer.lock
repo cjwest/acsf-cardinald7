@@ -12652,16 +12652,16 @@
         },
         {
             "name": "su-sws/stanford_jumpstart_vpsa",
-            "version": "7.6.0",
+            "version": "7.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_jumpstart_vpsa.git",
-                "reference": "4dc0f5c803024b7378540ceea41a4662f194f2d4"
+                "reference": "61b8b7b990f017049aaf0e9e4f265a6f708cfc9d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_jumpstart_vpsa/zipball/4dc0f5c803024b7378540ceea41a4662f194f2d4",
-                "reference": "4dc0f5c803024b7378540ceea41a4662f194f2d4",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_jumpstart_vpsa/zipball/61b8b7b990f017049aaf0e9e4f265a6f708cfc9d",
+                "reference": "61b8b7b990f017049aaf0e9e4f265a6f708cfc9d",
                 "shasum": ""
             },
             "require": {
@@ -12673,10 +12673,10 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_jumpstart_vpsa/tree/7.6.0",
+                "source": "https://github.com/SU-SWS/stanford_jumpstart_vpsa/tree/7.6.1",
                 "issues": "https://github.com/SU-SWS/stanford_jumpstart_vpsa/issues"
             },
-            "time": "2018-06-27T06:47:57+00:00"
+            "time": "2018-12-10T16:41:41+00:00"
         },
         {
             "name": "su-sws/stanford_landing_page",
