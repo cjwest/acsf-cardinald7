@@ -61,6 +61,14 @@ DirectoryIndex index.php index.html index.htm
 <IfModule mod_rewrite.c>
   RewriteEngine on
 
+  # Ensure non-live sites prevent robots from crawling. This is similar to what
+  # Acquia Cloud does for the *.acquia-sites.com domains.
+  RewriteCond %{ENV:AH_SITE_ENVIRONMENT} (\d{2,})test [OR]
+  RewriteCond %{ENV:AH_SITE_ENVIRONMENT} (\d{2,})dev [OR]
+  RewriteCond %{HTTP_HOST} \.acsitefactory\.com$ [NC]
+  RewriteCond %{REQUEST_URI} /robots.txt [NC]
+  RewriteRule ^ no_robots.txt [L]
+
   # Rewrite URLs of the form foo.cardinalsites.acsitefactory.com to
   # https://foo.sites.stanford.edu
   # See https://stanfordits.atlassian.net/browse/SITES-129.
