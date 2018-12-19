@@ -1,18 +1,32 @@
 # [ACSF Helper Module](https://github.com/SU-SWS/acsf-cardinald7)
 ##### Version: 7.x-1.x
 
-Changelog: [Changelog.mc](CHANGELOG.md)
+Changelog: [Changelog.md](CHANGELOG.md)
 
 Description
 ---
 
 The ACSF Helper module adjusts items so that sites can run in the ACSF environment.
 
-Accessibility
+Functionality
 ---
-[![WCAG Conformance 2.0 AA Badge](https://www.w3.org/WAI/wcag2AA-blue.png)](https://www.w3.org/TR/WCAG20/)
-Evaluation Date: 201X-XX-XX  
-This module conforms to level AA WCAG 2.0 standards as required by the university's accessibility policy. For more information on the policy please visit: [https://ucomm.stanford.edu/policies/accessibility-policy.html](https://ucomm.stanford.edu/policies/accessibility-policy.html).
+
+This module provides the following functionality:
+
+1. Removes the circular dependency on `acsf_openid`. We don't need an ACSF authentication module; we brought our own.
+2. Unsets the form elements at `admin/modules` for a number of modules that we don't want end users enabling.
+3. Implements a redirect from `sites/default/files/*` to `sites/g/files/<acsf_site_id>/f/*`.
+4. Modifies the `hook_form_alter()` implementations so that Paranoia has the last word.
+5. Redirects to the UIT Stanford Sites service page for 404s on the sites.stanford.edu and people.stanford.edu sites.
+6. Forces a site to load through its canonical URL (if set).
+
+#### Force Loading through the Canonical URL
+
+1. Run `drush vset acsf_helper_force_canonical_url 1` to enable this functionality
+2. Run `drush vset acsf_helper_canonical_url <hostname.stanford.edu>`
+3. Clear Drupal and Varnish caches
+
+You can run `drush vset acsf_helper_force_canonical_url 0` and clear caches to disable this functionality.
 
 Installation
 ---
@@ -24,23 +38,6 @@ Configuration
 
 Nothing special needed.
 
-
-Troubleshooting
----
-
-If you are experiencing issues with this module try reverting the feature first. If you are still experiencing issues try posting an issue on the GitHub issues page.
-
-Developer
----
-
-If you wish to develop on this module you will most likely need to compile some new css. Please use the sass structure provided and compile with the sass compiler packaged in this module. To install:
-
-```
-npm install
-grunt watch
- or
-grunt devmode
-```
 
 Contribution / Collaboration
 ---

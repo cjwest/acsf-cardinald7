@@ -83,6 +83,8 @@ function acsf_sites_default_files_redirect($arg1) {
 
 /**
  * Implements hook_module_implements_alter().
+ *
+ * Run Paranoia's form alters last. Allow Paranoia to have the final word.
  */
 function acsf_helper_module_implements_alter(&$implementations, $hook) {
   if ($hook == 'form_alter' && module_exists('paranoia')) {
@@ -122,4 +124,38 @@ function acsf_helper_page_build(array &$page) {
     }
   }
 
+}
+
+/**
+ * Implements hook_init().
+ *
+ * Force loading through canonical URL.
+ */
+function acsf_helper_init() {
+
+  // If we are not on ACSF production, leave.
+  if (!isset($_ENV['AH_SITE_ENVIRONMENT']) || $_ENV['AH_SITE_ENVIRONMENT'] !== '02live') {
+    return;
+  }
+
+  // Get the canonical variable. NULL if nothing.
+  // Clean up the variable: strip leading http:// or https://, and strip trailing slash, if present, so that we get
+  // host.domain.tld
+  $acsf_helper_canonical_url = preg_replace('/(^https?:\/\/|\/$)/', '', variable_get('acsf_helper_canonical_url', FALSE));
+
+  // If we have already set the canonical URL or it's not set bail.
+  if (!isset($_SERVER['HTTP_HOST']) || !$acsf_helper_canonical_url || check_plain($_SERVER['HTTP_HOST']) == $acsf_helper_canonical_url) {
+    return;
+  }
+
+  // Skip for drush.
+  if (drupal_is_cli()) {
+    return;
+  }
+
+  // Redirect using the canonical url. Append the REQUEST_URI to the hostname.
+  header('HTTP/1.0 301 Moved Permanently');
+  $redirect_url = "https://" . $acsf_helper_canonical_url . check_plain($_SERVER['REQUEST_URI']);
+  header("Location: " . $redirect_url);
+  drupal_exit();
 }

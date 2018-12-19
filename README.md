@@ -120,6 +120,7 @@ Check out this article for more help: https://stackoverflow.com/questions/166410
 - Unlike other build systems, Acquia requires that all items be tracked in the repository and that is why you see both composer and have the items tracked.
 - Diseval is installed on ACSF and to be conscious of the repercussions of that on your development.
 - Libraries use the 'package' type and this has repercussions. Please see the highlighted notes at: [https://getcomposer.org/doc/05-repositories.md#package-2](https://getcomposer.org/doc/05-repositories.md#package-2)
+- There is a helper module, "ACSF Helper". [Read its README in full](docroot/sites/all/modules/custom/acsf_helper/README.md).
 
 # SimpleSAML PHP Metadata generation
 
