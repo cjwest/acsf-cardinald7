@@ -1,5 +1,12 @@
 ACSF CardinalD7
 
+Version 1.0.17                                                       2018-12-20
+-------------------------------------------------------------------------------
+- Automate populating site info from SNOW
+- Add no_robots.txt to prevent indexing of sites on test and dev
+- Update to stanford_paragraph_types-7.x-1.6
+- Force canonical URL on prod
+
 Version 1.0.16                                                       2018-12-11
 -------------------------------------------------------------------------------
 - Update to stanford_jumpstart_vpsa-7.x-6.1
