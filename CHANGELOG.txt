@@ -1,5 +1,9 @@
 ACSF CardinalD7
 
+Version 1.0.18                                                       2018-12-20
+-------------------------------------------------------------------------------
+- Revert: Automate populating site info from SNOW. Not fully baked.
+
 Version 1.0.17                                                       2018-12-20
 -------------------------------------------------------------------------------
 - Automate populating site info from SNOW
