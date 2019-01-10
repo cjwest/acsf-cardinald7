@@ -690,7 +690,6 @@ function stanford_ssp_authorizations_form_validate(&$form, &$form_state) {
  *   Form state array.
  */
 function stanford_ssp_add_sso_user_submit(array &$form, array &$form_state) {
-
   // Sunet.
   $sunet = strtolower(trim(check_plain($form_state['values']['sunetid'])));
   $authname = $sunet;
@@ -727,6 +726,7 @@ function stanford_ssp_add_sso_user_submit(array &$form, array &$form_state) {
 
   $account->roles = $roles;
   $account->timezone = variable_get('date_default_timezone', date_default_timezone_get());
+
   $account = user_save($account);
 
   // Account was not created.
