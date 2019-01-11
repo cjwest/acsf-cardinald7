@@ -57,6 +57,7 @@
 
     "drupal/drupal": "~7.60",
     "drupal/acsf": "~1.43",
+    "drupal/entityconnect": "~2.0@rc",
     "drupal/google_tag": "~1.4",
     "drupal/paranoia": "dev-1.x",
     "drupal/node_revision_delete": "~3.0@alpha",
