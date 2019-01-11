@@ -1,11 +1,19 @@
 diff --git a/docroot/.htaccess b/docroot/.htaccess
-index 37fce10d..c26389c1 100644
+index 37fce10..5a68307 100644
 --- a/docroot/.htaccess
 +++ b/docroot/.htaccess
-@@ -61,6 +61,24 @@ DirectoryIndex index.php index.html index.htm
+@@ -61,6 +61,32 @@ DirectoryIndex index.php index.html index.htm
  <IfModule mod_rewrite.c>
    RewriteEngine on
-
+ 
++  # Ensure non-live sites prevent robots from crawling. This is similar to what
++  # Acquia Cloud does for the *.acquia-sites.com domains.
++  RewriteCond %{ENV:AH_SITE_ENVIRONMENT} (\d{2,})test [OR]
++  RewriteCond %{ENV:AH_SITE_ENVIRONMENT} (\d{2,})dev [OR]
++  RewriteCond %{HTTP_HOST} \.acsitefactory\.com$ [NC]
++  RewriteCond %{REQUEST_URI} /robots.txt [NC]
++  RewriteRule ^ no_robots.txt [L]
++
 +  # Rewrite URLs of the form foo.cardinalsites.acsitefactory.com to
 +  # https://foo.sites.stanford.edu
 +  # See https://stanfordits.atlassian.net/browse/SITES-129.
@@ -27,8 +35,8 @@ index 37fce10d..c26389c1 100644
    # Set "protossl" to "s" if we were accessed via https://.  This is used later
    # if you enable "www." stripping or enforcement, in order to ensure that
    # you don't bounce between http and https.
-@@ -116,6 +134,8 @@ DirectoryIndex index.php index.html index.htm
-
+@@ -116,6 +142,8 @@ DirectoryIndex index.php index.html index.htm
+ 
    # Pass all requests not referring directly to files in the filesystem to
    # index.php. Clean URLs are handled in drupal_environment_initialize().
 +  # Allow access to simplesaml paths
@@ -36,7 +44,7 @@ index 37fce10d..c26389c1 100644
    RewriteCond %{REQUEST_FILENAME} !-f
    RewriteCond %{REQUEST_FILENAME} !-d
    RewriteCond %{REQUEST_URI} !=/favicon.ico
-@@ -152,3 +172,9 @@ DirectoryIndex index.php index.html index.htm
+@@ -152,3 +180,9 @@ DirectoryIndex index.php index.html index.htm
    # Disable content sniffing, since it's an attack vector.
    Header always set X-Content-Type-Options nosniff
  </IfModule>
