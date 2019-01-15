@@ -1,10 +1,8 @@
 <?php
 
-/**
- * @file
- * Contains AcsfConfigIncompleteException.
- */
-
 namespace Acquia\Acsf;
 
+/**
+ * AcsfConfigIncompleteException.
+ */
 class AcsfConfigIncompleteException extends \Exception {}

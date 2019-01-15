@@ -5,13 +5,21 @@
  * Provides PHPUnit tests for the Acsf Events system.
  */
 
+use PHPUnit\Framework\TestCase;
+
 /**
  * Defines the Drupal root directory as the acsf directory.
  */
 define('DRUPAL_ROOT', __DIR__ . '/..');
 
-class UnitTest extends PHPUnit_Framework_TestCase {
+/**
+ * UnitTest.
+ */
+class UnitTest extends TestCase {
 
+  /**
+   * Setup.
+   */
   public function setUp() {
     $files = array(
       __DIR__ . '/../vendor/autoload.php',
@@ -138,9 +146,8 @@ function acsf_get_registry($include_interrupt = FALSE, $handler = NULL) {
     $handlers[] = array(
       'type' => 'unit_test',
       'class' => $class,
-      'path' => 'tests'
+      'path' => 'tests',
     );
   }
   return array('events' => $handlers);
 }
-

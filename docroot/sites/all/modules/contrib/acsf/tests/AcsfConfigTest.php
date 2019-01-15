@@ -5,8 +5,16 @@
  * Provides PHPUnit tests for AcsfConfig.
  */
 
-class AcsfConfigTest extends PHPUnit_Framework_TestCase {
+use PHPUnit\Framework\TestCase;
 
+/**
+ * Provides PHPUnit tests for AcsfConfig.
+ */
+class AcsfConfigTest extends TestCase {
+
+  /**
+   * Setup.
+   */
   public function setUp() {
     $files = array(
       __DIR__ . '/../vendor/autoload.php',
@@ -30,7 +38,7 @@ class AcsfConfigTest extends PHPUnit_Framework_TestCase {
   /**
    * Tests that a PHP error is thrown when no constructor params are provided.
    *
-   * @expectedException PHPUnit_Framework_Error_Notice
+   * @expectedException PHPUnit\Framework\Error\Notice
    * @expectedExceptionMessage AH_SITE_GROUP
    */
   public function testAcsfConfigMissingParameters() {
@@ -42,7 +50,7 @@ class AcsfConfigTest extends PHPUnit_Framework_TestCase {
   /**
    * Tests that a PHP error is thrown when not enough params are provided.
    *
-   * @expectedException PHPUnit_Framework_Error_Notice
+   * @expectedException PHPUnit\Framework\Error\Notice
    * @expectedExceptionMessage AH_SITE_ENVIRONMENT
    */
   public function testAcsfConfigMissingEnvironment() {
@@ -52,11 +60,11 @@ class AcsfConfigTest extends PHPUnit_Framework_TestCase {
   /**
    * Tests that a PHP error is thrown when not enough params are provided.
    *
-   * @expectedException PHPUnit_Framework_Error_Notice
+   * @expectedException PHPUnit\Framework\Error\Notice
    * @expectedExceptionMessage AH_SITE_GROUP
    */
   public function testAcsfConfigMissingSiteGroup() {
-    new AcsfConfigUnitTest(null, 'ah_site_environment');
+    new AcsfConfigUnitTest(NULL, 'ah_site_environment');
   }
 
   /**
@@ -69,7 +77,7 @@ class AcsfConfigTest extends PHPUnit_Framework_TestCase {
       // triggered for missing environment variables.
       $config = new AcsfConfigUnitTest('ah_site_group', 'ah_site_environment');
     }
-    catch (PHPUnit_Framework_Error_Notice $e) {
+    catch (PHPUnit\Framework\Error\Notice $e) {
       $no_error = FALSE;
     }
     $this->assertTrue($no_error);
@@ -134,4 +142,3 @@ class AcsfConfigTest extends PHPUnit_Framework_TestCase {
 function variable_get($name, $default = NULL) {
   return FALSE;
 }
-

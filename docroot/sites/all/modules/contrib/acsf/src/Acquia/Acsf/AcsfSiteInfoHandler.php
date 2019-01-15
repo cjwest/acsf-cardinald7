@@ -1,12 +1,10 @@
 <?php
 
-/**
- * @file
- * This event handler populates the site information after the installation.
- */
-
 namespace Acquia\Acsf;
 
+/**
+ * This event handler populates the site information after the installation.
+ */
 class AcsfSiteInfoHandler extends AcsfEventHandler {
 
   /**

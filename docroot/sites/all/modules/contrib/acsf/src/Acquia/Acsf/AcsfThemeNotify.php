@@ -1,12 +1,10 @@
 <?php
 
-/**
- * @file
- * Contains \Acquia\Acsf\AcsfThemeNotify.
- */
-
 namespace Acquia\Acsf;
 
+/**
+ * AcsfThemeNotify.
+ */
 class AcsfThemeNotify {
 
   /**

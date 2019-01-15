@@ -1,9 +1,8 @@
 <?php
 
-/**
- * Contains AcsfMessageMissingCredsException.
- */
-
 namespace Acquia\Acsf;
 
+/**
+ * AcsfMessageMissingCredsException.
+ */
 class AcsfMessageMissingCredsException extends \Exception {}

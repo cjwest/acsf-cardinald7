@@ -1,12 +1,10 @@
 <?php
 
-/**
- * @file
- * Creates a config object using our custom INI file.
- */
-
 namespace Acquia\Acsf;
 
+/**
+ * Creates a config object using our custom INI file.
+ */
 class AcsfConfigDefault extends AcsfConfig {
 
   /**

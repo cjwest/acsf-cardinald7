@@ -22,5 +22,14 @@ uri=`/usr/bin/env php /mnt/www/html/$site.$target_env/hooks/acquia/uri.php $site
 # Print a statement to the cloud log.
 echo "$site.$target_env: Received copy of database from $uri ($source_env environment)."
 
-# Retrieve a variable called "site_name" - remember to use the --uri argument!
-drush6 @$site.$target_env --uri=$uri vget site_name
+# The websites' document root can be derived from the site/env:
+docroot="/var/www/html/$site.$target_env/docroot"
+
+# Acquia recommends the following two practices:
+# 1. Hardcode the drush version.
+# 2. When running drush, provide the docroot + url, rather than relying on
+#    aliases. This can prevent some hard to trace problems.
+DRUSH_CMD="drush8 --root=$docroot --uri=https://$uri"
+
+# Retrieve a variable called "site_name".
+$DRUSH_CMD vget site_name

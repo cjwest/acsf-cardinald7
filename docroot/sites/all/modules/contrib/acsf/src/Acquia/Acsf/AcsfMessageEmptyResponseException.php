@@ -1,9 +1,8 @@
 <?php
 
-/**
- * Contains AcsfMessageEmptyResponseException.
- */
-
 namespace Acquia\Acsf;
 
+/**
+ * AcsfMessageEmptyResponseException.
+ */
 class AcsfMessageEmptyResponseException extends \Exception {}

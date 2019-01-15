@@ -1,21 +1,25 @@
 <?php
 
-/**
- * @file
- * This simple interface defines the way that responses are constructed.
- */
-
 namespace Acquia\Acsf;
 
+/**
+ * AcsfMessageResponse.
+ */
 abstract class AcsfMessageResponse {
 
-  // The endpoint on the remote service.
+  /**
+   * The endpoint on the remote service.
+   */
   public $endpoint;
 
-  // The response code from the remote call.
+  /**
+   * The response code from the remote call.
+   */
   public $code;
 
-  // The body of the response.
+  /**
+   * The body of the response.
+   */
   public $body;
 
   /**
@@ -44,4 +48,5 @@ abstract class AcsfMessageResponse {
    * Client code needs to analyze the response and determine failure.
    */
   abstract public function failed();
+
 }

@@ -5,8 +5,16 @@
  * Provides PHPUnit tests for AcsfMessage.
  */
 
-class AcsfMessageTest extends PHPUnit_Framework_TestCase {
+use PHPUnit\Framework\TestCase;
 
+/**
+ * AcsfMessageTest.
+ */
+class AcsfMessageTest extends TestCase {
+
+  /**
+   * Setup.
+   */
   public function setUp() {
     $files = array(
       __DIR__ . '/../vendor/autoload.php',
@@ -117,4 +125,3 @@ class AcsfMessageTest extends PHPUnit_Framework_TestCase {
   }
 
 }
-

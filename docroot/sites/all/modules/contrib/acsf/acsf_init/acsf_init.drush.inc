@@ -237,7 +237,7 @@ function drush_acsf_init() {
 }
 
 /**
- * (Re-)creates the default settings.php file.
+ * Re-creates the default settings.php file.
  *
  * @param string $default_settings_php_path
  *   The path to the default settings.php file.
@@ -327,7 +327,6 @@ function drush_acsf_connect_factory() {
       '@uid' => $site_admin_mail_account->uid,
     )));
   }
-
 
   // The site owner's email address may have been changed on the factory (for
   // instance, if the user updated their email address on the factory and the
@@ -609,7 +608,6 @@ function acsf_init_get_required_files($repo_root) {
   //   must be chmod() compatible. e.g. 0755
   // - Use the 'test_executable' element to enforce testing executability of the
   //   file. "Executable" files are expected to be owner and group executable.
-
   return array(
     array(
       'filename' => 'README.md',

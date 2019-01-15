@@ -1,10 +1,5 @@
 <?php
 
-/**
- * @file
- * Contains AcsfDuplicationScrubInitializeHandler.
- */
-
 namespace Acquia\Acsf;
 
 /**

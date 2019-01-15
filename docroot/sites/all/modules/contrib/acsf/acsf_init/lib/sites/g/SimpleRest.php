@@ -33,6 +33,7 @@ class SimpleRestCreds {
     $this->password = $password;
     $this->url = $url;
   }
+
 }
 
 /**
@@ -181,4 +182,5 @@ class SimpleRestResponse {
     $this->code = $response_code;
     $this->body = $response_body;
   }
+
 }

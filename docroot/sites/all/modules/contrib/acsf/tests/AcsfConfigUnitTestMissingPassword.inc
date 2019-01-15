@@ -1,7 +1,8 @@
 <?php
 
-require_once __DIR__ . '/../vendor/autoload.php';
-
+/**
+ * AcsfConfigUnitTestMissingPassword.
+ */
 class AcsfConfigUnitTestMissingPassword extends \Acquia\Acsf\AcsfConfig {
 
   /**
@@ -13,4 +14,3 @@ class AcsfConfigUnitTestMissingPassword extends \Acquia\Acsf\AcsfConfig {
   }
 
 }
-

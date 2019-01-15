@@ -1,7 +1,8 @@
 <?php
 
-require_once __DIR__ . '/../vendor/autoload.php';
-
+/**
+ * AcsfConfigUnitTestMissingUsername.
+ */
 class AcsfConfigUnitTestMissingUsername extends \Acquia\Acsf\AcsfConfig {
 
   /**
@@ -13,4 +14,3 @@ class AcsfConfigUnitTestMissingUsername extends \Acquia\Acsf\AcsfConfig {
   }
 
 }
-

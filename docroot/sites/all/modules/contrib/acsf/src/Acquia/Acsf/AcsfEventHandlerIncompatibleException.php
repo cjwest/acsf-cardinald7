@@ -1,9 +1,8 @@
 <?php
 
-/**
- * Contains AcsfEventHandlerIncompatibleException.
- */
-
 namespace Acquia\Acsf;
 
+/**
+ * AcsfEventHandlerIncompatibleException.
+ */
 class AcsfEventHandlerIncompatibleException extends \Exception {}

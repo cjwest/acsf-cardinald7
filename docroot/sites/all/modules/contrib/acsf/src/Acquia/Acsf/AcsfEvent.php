@@ -1,27 +1,14 @@
 <?php
 
+namespace Acquia\Acsf;
+
 /**
- * @file
- * Contains AcsfEvent.
+ * ACSF Event.
  *
  * An event within the ACSF framework encapsulates a dispatcher and a list of
  * event handlers. The event will contain an internal context that is accessible
  * from the handlers.
- *
- * $type = 'site_duplication_scrub';
- * $registry = acsf_get_registry();
- * $context = array('key' => 'value');
- * $event = new AcsfEvent(
- *   new AcsfEventDispatcher(),
- *   new AcsfLog(),
- *   $type,
- *   $registry,
- *   $context);
- * $event->run();
  */
-
-namespace Acquia\Acsf;
-
 class AcsfEvent {
 
   protected $handlers;

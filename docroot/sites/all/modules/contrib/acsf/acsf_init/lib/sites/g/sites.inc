@@ -37,7 +37,6 @@ define('GARDENS_SITE_DATA_NOT_FOUND_TTL', 60);
 // sites be unreachable for too long.
 define('GARDENS_SITE_DATA_READ_FAILURE_TTL', 60);
 // Note: a nonexistent sites.json leads to no caching at all.
-
 // The path (template) to the lock file that should be checked when sites.json
 // is unreadable. Sitegroup + env need to be filled.
 define('GARDENS_SITE_JSON_ALERT_LOCK_TEMPLATE', '/mnt/tmp/%s.%s/.sites-json-alert');
@@ -381,7 +380,7 @@ function gardens_site_data_cache_get($domain) {
 }
 
 /**
- * (Re)checks for a fatal issue with the sites.json file.
+ * Re-checks for a fatal issue with the sites.json file.
  *
  * This function is not the only location where issues are determined; it's used
  * to doublecheck the exact type of issue / doublecheck for a race condition,
@@ -407,8 +406,10 @@ function gardens_site_data_sites_json_issue_type_get() {
       // we get back if it fails. There is a fail which we need to ignore: when
       // the sites.json is being rewritten for a short period of time the
       // following error will be returned:
-      //   head: cannot open `/mnt/files/balazs.01live/files-private/sites.json'
-      //   for reading: Structure needs cleaning
+      //
+      // head: cannot open `/mnt/files/balazs.01live/files-private/sites.json'
+      // for reading: Structure needs cleaning
+      //
       // To make sure we are only triggering an alert in case of a Gluster split
       // brain, redirect the stderr to stdout and look for the indicator
       // message: 'Input/output error'.

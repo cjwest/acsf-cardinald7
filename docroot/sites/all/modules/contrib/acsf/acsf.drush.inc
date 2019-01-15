@@ -67,14 +67,14 @@ function acsf_drush_command() {
         'drush @sitename curl /index.php' => dt('Use the URL from the alias and curl index.php.'),
       ),
       'aliases' => array('curl'),
-      'bootstrap' => DRUSH_BOOTSTRAP_DRUSH, // No bootstrap at all.
+      'bootstrap' => DRUSH_BOOTSTRAP_DRUSH,
     ),
     'acsf-version-get' => array(
       'description' => dt('Fetches the version of the acsf moduleset.'),
       'arguments' => array(
         'path' => dt('The path to the acsf moduleset.'),
       ),
-      'bootstrap' => DRUSH_BOOTSTRAP_DRUSH, // No bootstrap at all.
+      'bootstrap' => DRUSH_BOOTSTRAP_DRUSH,
     ),
     'acsf-low-level-cache-clear-all' => array(
       'description' => dt('Clears cache on the site without doing a full Drupal bootstrap.'),

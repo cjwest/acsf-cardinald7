@@ -13,9 +13,12 @@ if (empty($argv[3])) {
   exit(1);
 }
 
-$site    = $argv[1]; // AH site group.
-$env     = $argv[2]; // AH site env.
-$db_role = $argv[3]; // Database name.
+// AH site group.
+$site = $argv[1];
+// AH site env.
+$env = $argv[2];
+// Database name.
+$db_role = $argv[3];
 
 fwrite(STDERR, sprintf("Scrubbing site database: site: %s; env: %s; db_role: %s;\n", $site, $env, $db_role));
 
@@ -74,10 +77,9 @@ shell_exec(sprintf('mkdir -p %s', escapeshellarg($cache_directory)));
 
 // Clear all caches on the site without doing a full Drupal bootstrap.
 $command = sprintf(
-  'CACHE_PREFIX=%s \drush6 -r /var/www/html/%s.%s/docroot -i %s -l %s acsf-low-level-cache-clear-all',
+  'CACHE_PREFIX=%s \drush8 -r %s -i %s -l %s acsf-low-level-cache-clear-all',
   escapeshellarg($cache_directory),
-  escapeshellarg($site),
-  escapeshellarg($env),
+  escapeshellarg($docroot),
   escapeshellarg($acsf_location),
   escapeshellarg($new_domain)
 );
@@ -87,12 +89,9 @@ print $result;
 
 // Execute the scrub.
 $command = sprintf(
-  'CACHE_PREFIX=%s \drush6 @%s.%s -r /var/www/html/%s.%s/docroot -l %s -y acsf-site-scrub',
+  'CACHE_PREFIX=%s \drush8 -r %s -l %s -y acsf-site-scrub',
   escapeshellarg($cache_directory),
-  escapeshellarg($site),
-  escapeshellarg($env),
-  escapeshellarg($site),
-  escapeshellarg($env),
+  escapeshellarg($docroot),
   escapeshellarg($new_domain)
 );
 fwrite(STDERR, "Executing: $command;\n");

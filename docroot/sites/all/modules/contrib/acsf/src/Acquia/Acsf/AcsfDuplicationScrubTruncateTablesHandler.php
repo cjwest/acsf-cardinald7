@@ -1,10 +1,5 @@
 <?php
 
-/**
- * @file
- * Contains AcsfDuplicationScrubTruncateTablesHandler.
- */
-
 namespace Acquia\Acsf;
 
 /**

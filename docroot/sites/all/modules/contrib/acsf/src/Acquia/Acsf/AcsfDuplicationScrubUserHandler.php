@@ -1,10 +1,5 @@
 <?php
 
-/**
- * @file
- * Contains AcsfDuplicationScrubUserHandler.
- */
-
 namespace Acquia\Acsf;
 
 /**
@@ -99,9 +94,12 @@ class AcsfDuplicationScrubUserHandler extends AcsfEventHandler {
    *   An indexed array of user IDs to preserve.
    */
   public function getPreservedUsers() {
-    $preserved = array_merge(self::getOpenIdAdmins(), self::getSiteAdmins()); // Preserve Open ID and site admins.
-    $preserved[] = 0; // Preserve the anonymous user.
-    $preserved[] = 1; // Preserve UID 1.
+    // Preserve Open ID and site admins.
+    $preserved = array_merge(self::getOpenIdAdmins(), self::getSiteAdmins());
+    // Preserve the anonymous user.
+    $preserved[] = 0;
+    // Preserve UID 1.
+    $preserved[] = 1;
     drupal_alter('acsf_duplication_scrub_preserved_users', $preserved);
     return $preserved;
   }

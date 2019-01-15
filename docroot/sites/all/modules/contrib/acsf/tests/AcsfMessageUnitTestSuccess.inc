@@ -1,7 +1,8 @@
 <?php
 
-require_once __DIR__ . '/../vendor/autoload.php';
-
+/**
+ * AcsfMessageUnitTestSuccess.
+ */
 class AcsfMessageUnitTestSuccess extends \Acquia\Acsf\AcsfMessage {
 
   /**
@@ -20,4 +21,3 @@ class AcsfMessageUnitTestSuccess extends \Acquia\Acsf\AcsfMessage {
   }
 
 }
-

@@ -99,7 +99,7 @@ function url_to_connection_info($url) {
  *   If query was successful, retrieve all the rows into an array,
  *   otherwise return FALSE.
  */
-function execute_query($con, $query) {
+function execute_query(mysqli $con, $query) {
   $result = mysqli_query($con, $query);
   // If query failed, return FALSE.
   if ($result === FALSE) {

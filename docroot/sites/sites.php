@@ -6,6 +6,7 @@
  */
 
 if (!function_exists('acsf_hooks_includes')) {
+
   /**
    * Scans a factory-hooks sub-directory and returns PHP files to be included.
    *
@@ -20,6 +21,7 @@ if (!function_exists('acsf_hooks_includes')) {
     $hook_pattern = sprintf('%s/../factory-hooks/%s/*.php', getcwd(), $hook_name);
     return glob($hook_pattern);
   }
+
 }
 
 // Include custom sites.php code from factory-hooks/pre-sites-php.
@@ -28,6 +30,7 @@ foreach (acsf_hooks_includes('pre-sites-php') as $pre_hook) {
 }
 
 if (!function_exists('is_acquia_host')) {
+
   /**
    * Checks whether the site is on Acquia Hosting.
    *
@@ -37,6 +40,7 @@ if (!function_exists('is_acquia_host')) {
   function is_acquia_host() {
     return file_exists('/var/acquia');
   }
+
 }
 
 // HTTP_HOST can be empty during early drush bootstrap. Also, check that we're

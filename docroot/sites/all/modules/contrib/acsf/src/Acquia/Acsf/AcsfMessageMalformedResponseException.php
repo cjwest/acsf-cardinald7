@@ -1,9 +1,8 @@
 <?php
 
-/**
- * Contains AcsfMessageMalformedResponseException.
- */
-
 namespace Acquia\Acsf;
 
+/**
+ * AcsfMessageMalformedResponseException.
+ */
 class AcsfMessageMalformedResponseException extends \Exception {}

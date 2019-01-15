@@ -1,13 +1,12 @@
 <?php
 
+namespace Acquia\Acsf;
+
 /**
- * Contains AcsfLog.
+ * ACSF Log.
  *
  * Sends log messages to the Site Factory via REST API.
  */
-
-namespace Acquia\Acsf;
-
 class AcsfLog {
 
   /**

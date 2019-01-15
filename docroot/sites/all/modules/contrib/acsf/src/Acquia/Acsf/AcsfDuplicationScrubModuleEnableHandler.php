@@ -1,10 +1,5 @@
 <?php
 
-/**
- * @file
- * Contains AcsfDuplicationScrubModuleEnableHandler.
- */
-
 namespace Acquia\Acsf;
 
 /**
@@ -39,16 +34,16 @@ class AcsfDuplicationScrubModuleEnableHandler extends AcsfEventHandler {
         }
       }
 
-      // Get a list of disabled dependencies. These will get automatically enabled
-      // during module_enable(), but we want to be able to disable and uninstall
-      // them explicitly later.
+      // Get a list of disabled dependencies. These will get automatically
+      // enabled during module_enable(), but we want to be able to disable and
+      // uninstall them explicitly later.
       foreach ($enable_for_scrub as $dependent) {
         foreach (array_keys($modules[$dependent]->requires) as $dependency) {
-          // Use isset() to make sure the module is still in the filesystem before
-          // trying to enable it. (Historically there have been modules in Gardens
-          // which were disabled but then removed from the codebase without ever
-          // uninstalling them, and we don't want to try to enable those now,
-          // because it will fail.)
+          // Use isset() to make sure the module is still in the filesystem
+          // before trying to enable it. (Historically there have been modules
+          // in Gardens which were disabled but then removed from the codebase
+          // without ever uninstalling them, and we don't want to try to enable
+          // those now, because it will fail.)
           if (isset($modules[$dependency]) && empty($modules[$dependency]->status)) {
             $enable_for_scrub[] = $dependency;
           }

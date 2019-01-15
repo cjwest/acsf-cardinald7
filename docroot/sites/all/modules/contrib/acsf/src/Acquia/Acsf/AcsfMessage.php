@@ -1,8 +1,9 @@
 <?php
 
+namespace Acquia\Acsf;
+
 /**
- * @file
- * Contains AcsfMessage.
+ * AcsfMessage.
  *
  * AcsfMessage defines a basic message interface between a Drupal site and the
  * Site Factory. It is composed of a AcsfConfig compatible object which defines
@@ -18,32 +19,41 @@
  * may be provided to customize the behavior - namely locating a special config
  * file or providing an anonymous callback function.
  *
- * $m = new AcsfMessageRest('GET', 'site-api/v1/sync/', array('site_id' => 406));
+ * $m = new AcsfMessageRest('GET', 'site-api/v1/sync/', ['site_id' => 406]);
  * $m->send();
  * $m->getResponseCode();
  * $m->getResponseBody();
  */
-
-namespace Acquia\Acsf;
-
 abstract class AcsfMessage {
 
-  // The message endpoint on the remote server.
+  /**
+   * The message endpoint on the remote server.
+   */
   protected $endpoint;
 
-  // An unstructured list of parameters to send with the request.
+  /**
+   * An unstructured list of parameters to send with the request.
+   */
   protected $parameters;
 
-  // The AcsfMessageResponse object.
+  /**
+   * The AcsfMessageResponse object.
+   */
   protected $response;
 
-  // An optional Acquia Hosting sitegroup.
+  /**
+   * An optional Acquia Hosting sitegroup.
+   */
   protected $ahSite;
 
-  // An optional Acquia Hosting environment.
+  /**
+   * An optional Acquia Hosting environment.
+   */
   protected $ahEnv;
 
-  // An optional AcsfConfig object.
+  /**
+   * An optional AcsfConfig object.
+   */
   private $config;
 
   /**

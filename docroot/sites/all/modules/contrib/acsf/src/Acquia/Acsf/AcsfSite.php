@@ -1,12 +1,10 @@
 <?php
 
-/**
- * @file
- * Contains AcsfSite.
- */
-
 namespace Acquia\Acsf;
 
+/**
+ * AcsfSite.
+ */
 class AcsfSite {
 
   protected static $cache;

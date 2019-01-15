@@ -894,7 +894,7 @@ function acsf_openid_block_view($delta = '') {
       '@log-in-url' => url($login_path, array('query' => user_login_destination())),
     ));
 
-    // Show the 'Sign up' link only if user registration is allowed for visitors.
+    // Show the 'Sign up' link if user registration is allowed for visitors.
     $registration_allowed = variable_get('user_register', USER_REGISTER_VISITORS_ADMINISTRATIVE_APPROVAL) != USER_REGISTER_ADMINISTRATORS_ONLY;
     if ($registration_allowed) {
       $content .= t(' or <a href="@sign-up-url">Sign up</a>', array(

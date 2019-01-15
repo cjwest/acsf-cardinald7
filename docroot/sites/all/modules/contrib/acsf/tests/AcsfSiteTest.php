@@ -5,7 +5,12 @@
  * Provides PHPUnit tests for Acsf Site.
  */
 
-class AcsfSiteTest extends PHPUnit_Framework_TestCase {
+use PHPUnit\Framework\TestCase;
+
+/**
+ * AcsfSiteTest.
+ */
+class AcsfSiteTest extends TestCase {
 
   /**
    * The site ID issued by the factory.
@@ -14,17 +19,13 @@ class AcsfSiteTest extends PHPUnit_Framework_TestCase {
    */
   public $site_id = 12345678;
 
+  /**
+   * Setup.
+   */
   public function setUp() {
     // Simulate the sites.json configuration.
     $GLOBALS['gardens_site_settings']['conf']['acsf_site_id'] = $this->site_id;
-
-    $files = array(
-      __DIR__ . '/../vendor/autoload.php',
-      __DIR__ . '/../acsf_variables/acsf_variables_mock.php',
-    );
-    foreach ($files as $file) {
-      require_once $file;
-    }
+    require_once __DIR__ . '/../acsf_variables/acsf_variables_mock.php';
   }
 
   /**
@@ -53,7 +54,7 @@ class AcsfSiteTest extends PHPUnit_Framework_TestCase {
     $this->assertInstanceOf('\Acquia\Acsf\AcsfSite', $site);
 
     $cache = \Acquia\Acsf\AcsfSite::load();
-    $this->assertSame($site, $cache); 
+    $this->assertSame($site, $cache);
     $this->assertEquals($site->site_id, $cache->site_id);
   }
 
@@ -146,4 +147,3 @@ class AcsfSiteTest extends PHPUnit_Framework_TestCase {
   }
 
 }
-

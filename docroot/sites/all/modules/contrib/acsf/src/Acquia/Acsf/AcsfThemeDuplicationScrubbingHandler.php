@@ -1,10 +1,5 @@
 <?php
 
-/**
- * @file
- * Contains \Acquia\Acsf\AcsfThemeDuplicationScrubbingHandler.
- */
-
 namespace Acquia\Acsf;
 
 /**

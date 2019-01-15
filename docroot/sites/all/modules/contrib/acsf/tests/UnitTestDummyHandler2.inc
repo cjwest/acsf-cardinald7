@@ -1,8 +1,13 @@
 <?php
 
-require_once __DIR__ . '/../vendor/autoload.php';
-
+/**
+ * UnitTestDummyHandler3.
+ */
 class UnitTestDummyHandler2 extends \Acquia\Acsf\AcsfEventHandler {
-  public function handle() {}
-}
 
+  /**
+   * Dummy handler.
+   */
+  public function handle() {}
+
+}

@@ -1,33 +1,45 @@
 <?php
 
-/**
- * @file
- * Provides an interface to define how our message configuration should work.
- */
-
 namespace Acquia\Acsf;
 
+/**
+ * Provides an interface to define how our message configuration should work.
+ */
 abstract class AcsfConfig {
 
-  // The URL of the remote service (factory).
+  /**
+   * The URL of the remote service (factory).
+   */
   protected $url;
 
-  // The username of the remote service.
+  /**
+   * The username of the remote service.
+   */
   protected $username;
 
-  // The password of the remote service.
+  /**
+   * The password of the remote service.
+   */
   protected $password;
 
-  // The optional signup suffix of the Factory. See getUrlSuffix() for caveat.
+  /**
+   * The optional signup suffix of the Factory. See getUrlSuffix() for caveat.
+   */
   protected $urlSuffix;
 
-  // The optional source URL of the factory which our sites were staged from.
+  /**
+   * The optional source URL of the factory which our sites were staged from.
+   */
   protected $sourceUrl;
 
-  // An optional Acquia Hosting sitegroup.
+  /**
+   * An optional Acquia Hosting sitegroup.
+   */
   protected $ahSite;
 
-  // An optional Acquia Hosting environment.
+  /**
+   * An optional Acquia Hosting environment.
+   */
   protected $ahEnv;
 
   /**

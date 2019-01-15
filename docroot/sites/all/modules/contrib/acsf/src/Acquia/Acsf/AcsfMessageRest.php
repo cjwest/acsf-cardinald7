@@ -1,12 +1,10 @@
 <?php
 
-/**
- * @file
- * This class is an implementation of our XML-RPC service.
- */
-
 namespace Acquia\Acsf;
 
+/**
+ * This class is an implementation of our XML-RPC service.
+ */
 class AcsfMessageRest extends AcsfMessage {
   protected $retryMax = 3;
   protected $retryWait = 5;
