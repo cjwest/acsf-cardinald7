@@ -49,7 +49,7 @@ function switch_field_widget_form(&$form, &$form_state, $field, $instance, $lang
   $has_value = isset($items[0][$value_key]);
   $properties = _options_properties($type, $multiple, $required, $has_value);
   // Prepare the list of options.
-  $options = _options_get_options($field, $instance, $properties);
+  $options = _options_get_options($field, $instance, $properties, $element['entity_type'], $element['entity']);
   // Put current field values in shape.
   $default_value = _options_storage_to_form($items, $options, $value_key, $properties);
   $keys = array_keys($options);

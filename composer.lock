@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d5cad5eeea7dbb19024ab50d8392cc65",
+    "content-hash": "0181c322cb37c58d0f2fb6268a08c038",
     "packages": [
         {
             "name": "Stanford/WMD",
@@ -1379,7 +1379,7 @@
                 },
                 "drupal": {
                     "version": "7.x-1.50",
-                    "datestamp": "1539175681",
+                    "datestamp": "1544619185",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1450,7 +1450,7 @@
                 },
                 "drupal": {
                     "version": "7.x-1.50",
-                    "datestamp": "1539175681",
+                    "datestamp": "1544619185",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1515,7 +1515,7 @@
                 },
                 "drupal": {
                     "version": "7.x-1.50",
-                    "datestamp": "1539175681",
+                    "datestamp": "1544619185",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1580,7 +1580,7 @@
                 },
                 "drupal": {
                     "version": "7.x-1.50",
-                    "datestamp": "1539175681",
+                    "datestamp": "1544619185",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1645,7 +1645,7 @@
                 },
                 "drupal": {
                     "version": "7.x-1.50",
-                    "datestamp": "1539175681",
+                    "datestamp": "1544619185",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1710,7 +1710,7 @@
                 },
                 "drupal": {
                     "version": "7.x-1.50",
-                    "datestamp": "1539175681",
+                    "datestamp": "1544619185",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2084,7 +2084,7 @@
                 },
                 "drupal": {
                     "version": "7.x-3.5",
-                    "datestamp": "1517871480",
+                    "datestamp": "1544925484",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -9125,6 +9125,9 @@
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
+                },
+                "patches_applied": {
+                    "Fatal Error: Too few arguments for _options_get_options(): https://www.drupal.org/project/switch/issues/2000828": "https://www.drupal.org/files/issues/2019-01-14/too_few_arguments-2000828-13.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/7/downloads",
@@ -10282,7 +10285,7 @@
                 },
                 "drupal": {
                     "version": "7.x-4.18",
-                    "datestamp": "1538768077",
+                    "datestamp": "1546876980",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
