@@ -1,5 +1,19 @@
 ACSF CardinalD7
 
+Version 1.0.19                                                       2019-01-16
+-------------------------------------------------------------------------------
+Version 19 for '19
+- Automate populating site info from SNOW
+- Bug fix: Switch module causes fatal error on Boolean fields
+- Add entityconnect-7.x-2.0-rc2
+- Update to acsf-7.x-1.51
+- Update to backup_migrate-7.x-3.6
+- Update to context-7.x-3.9
+- Update to menu_block-7.x-2.8
+- Update to webform-7.x-4.19
+- Update to stanford_events_importer-7.x-3.10
+- Block search engine robots from crawling sites on dev and test environments
+
 Version 1.0.18                                                       2018-12-20
 -------------------------------------------------------------------------------
 - Revert: Automate populating site info from SNOW. Not fully baked.
