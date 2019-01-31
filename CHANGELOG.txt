@@ -1,5 +1,10 @@
 ACSF CardinalD7
 
+Version 1.0.21                                                       2019-01-31
+-------------------------------------------------------------------------------
+- Updated stanford_sites_jumpstart_engineering install profile
+- Added scripts/admin-shortcuts.php to allow for disabling "Top Reports" in Site Actions menu
+
 Version 1.0.20                                                       2019-01-17
 -------------------------------------------------------------------------------
 - Update core to drupal-7.62
