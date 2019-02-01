@@ -75,7 +75,7 @@ Check out this article for more help: https://stackoverflow.com/questions/166410
 ### SAML Configuration
  - `/simplesamlphp/config/*`
 ### SSL Certs
- - `/simplesamlphp/cert/*``
+ - `/simplesamlphp/cert/*`
 ### Patches For Core
  - `/patches`
 ### Drush plugins and aliases
@@ -87,7 +87,7 @@ Check out this article for more help: https://stackoverflow.com/questions/166410
 # How the heck?
 
 ## Do I update the composer packages
- - `composer update` should do the trick. Be patient. This take a while.
+ - `composer update` should do the trick. Be patient. This takes a while.
  - If prompted to re-install a package because of a missing .git repo answer yes
 ## Does composer figure out what is in the 'stack'
  - Each profile defines their own set of dependencies in a composer.json file. This project includes and merges all of those dependencies in to one big composer.json file and then executes the update or install.
