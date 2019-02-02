@@ -34,7 +34,7 @@ SOAP;
             $header = $doc->getElementsByTagNameNS(Constants::NS_SOAP, 'Header')->item(0);
 
             $response = new ECPResponse;
-            $response->AssertionConsumerServiceURL = $this->getDestination() ?: $message->getDestination();
+            $response->setAssertionConsumerServiceURL($this->getDestination() ?: $message->getDestination());
 
             $response->toXML($header);
 
@@ -68,7 +68,7 @@ SOAP;
         header('Content-Type: text/xml', true);
 
         $xml = $this->getOutputToSend($message);
-        SAML2_Utils::getContainer()->debugMessage($xml, 'out');
+        Utils::getContainer()->debugMessage($xml, 'out');
         echo $xml;
 
         exit(0);

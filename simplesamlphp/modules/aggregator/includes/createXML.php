@@ -89,7 +89,7 @@ class CreateXML {
 
     // Validate Aggregator ID.
     if (!in_array($id, $aggregators->getOptions())) {
-      throw new SimpleSAML_Error_NotFound('No aggregator with id ' . var_export($id, TRUE) . ' found.');
+      throw new SimpleSAML\Error\NotFound('No aggregator with id ' . var_export($id, TRUE) . ' found.');
     }
 
     // Set the Aggregator ID.
@@ -104,7 +104,7 @@ class CreateXML {
    */
   public function setMimeType($type) {
     if (empty($type)) {
-      throw new SimpleSAML_Error_Exception('Please provide a value for mimeType.');
+      throw new SimpleSAML\Error\Exception('Please provide a value for mimeType.');
     }
     $this->mimeType = $type;
   }
@@ -158,7 +158,7 @@ class CreateXML {
 
     // Special handling for plain text.
     if ($this->mimeType === 'text/plain') {
-      SimpleSAML_Utilities::formatDOMElement($xml);
+      \SimpleSAML\Utils\XML::formatDOMElement($xml);
     }
 
     // Create the XML document.
@@ -167,7 +167,7 @@ class CreateXML {
     // While this is writing lock the file.
     $bytes_written = file_put_contents($this->filePath, $metadata, LOCK_EX);
     if (!$bytes_written) {
-      throw new SimpleSAML_Error_Exception("Could not write XML Metadata file to: " . $this->filePath);
+      throw new SimpleSAML\Error\Exception("Could not write XML Metadata file to: " . $this->filePath);
     }
   }
 

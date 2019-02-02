@@ -85,7 +85,7 @@ class sspmod_aggregator_Aggregator{
    * $exclude 	May be string or array identifying a tag to exclude.
    */
   public function exclude($exclude) {
-    $this->excludeTags = array_merge($this->excludeTags, SimpleSAML_Utilities::arrayize($exclude));
+    $this->excludeTags = array_merge($this->excludeTags, \SimpleSAML\Utils\Arrays::arrayize($exclude));
   }
 
   /**
@@ -95,10 +95,10 @@ class sspmod_aggregator_Aggregator{
     $sourcesDef = $this->aConfig->getArray('sources');
 
     try {
-      $sources = SimpleSAML_Metadata_MetaDataStorageSource::parseSources($sourcesDef);
+      $sources = \SimpleSAML\Metadata\MetaDataStorageSource::parseSources($sourcesDef);
     }
     catch (Exception $e) {
-      throw new Exception('Invalid aggregator source configuration for aggregator ' . var_export($id, true) . ': ' . $e->getMessage());
+      throw new Exception('Invalid aggregator source configuration for aggregator: ' . $e->getMessage());
     }
 
     /* Find list of all available entities. */
@@ -206,13 +206,13 @@ class sspmod_aggregator_Aggregator{
     $maxDuration = $this->getMaxDuration();
     $reconstruct = $this->getReconstruct();
 
-    $entitiesDescriptor = new SAML2_XML_md_EntitiesDescriptor();
+    $entitiesDescriptor = new SAML2\XML\md\EntitiesDescriptor();
     $entitiesDescriptor->Name = $this->id;
     $entitiesDescriptor->validUntil = time() + $maxDuration;
 
     // Add RegistrationInfo extension if enabled.
     if ($this->gConfig->hasValue('RegistrationInfo')) {
-      $ri = new SAML2_XML_mdrpi_RegistrationInfo();
+      $ri = new SAML2\XML\mdrpi\RegistrationInfo();
       foreach ($this->gConfig->getArray('RegistrationInfo') as $riName => $riValues) {
         switch ($riName) {
           case 'authority':
@@ -220,7 +220,7 @@ class sspmod_aggregator_Aggregator{
             break;
 
           case 'instant':
-            $ri->registrationInstant = SAML2_Utils::xsDateTimeToTimestamp($riValues);
+            $ri->registrationInstant = SAML2\Utils::xsDateTimeToTimestamp($riValues);
             break;
 
           case 'policies':
@@ -259,10 +259,10 @@ class sspmod_aggregator_Aggregator{
         /* All metadata sets for the entity contain the same entity descriptor. Use that one. */
         $tmp = new DOMDocument();
         $tmp->loadXML(base64_decode($entityDescriptor));
-        $entitiesDescriptor->children[] = new SAML2_XML_md_EntityDescriptor($tmp->documentElement);
+        $entitiesDescriptor->children[] = new SAML2\XML\md\EntityDescriptor($tmp->documentElement);
       }
       else {
-        $tmp = new SimpleSAML_Metadata_SAMLBuilder($entity, $maxDuration, $maxDuration);
+        $tmp = new SimpleSAML\Metadata\SAMLBuilder($entity, $maxDuration, $maxDuration);
 
         $orgmeta = NULL;
         foreach ($sets as $set => $metadata) {
@@ -270,7 +270,7 @@ class sspmod_aggregator_Aggregator{
           $orgmeta = $metadata;
         }
         $tmp->addOrganizationInfo($orgmeta);
-        $entitiesDescriptor->children[] = new SAML2_XML_md_EntityDescriptor($tmp->getEntityDescriptor());
+        $entitiesDescriptor->children[] = new SAML2\XML\md\EntityDescriptor($tmp->getEntityDescriptor());
       }
     }
 
@@ -278,7 +278,7 @@ class sspmod_aggregator_Aggregator{
 
     // Sign the metadata if enabled.
     if ($this->shouldSign()) {
-      $signer = new SimpleSAML_XML_Signer($this->getSigningInfo());
+      $signer = new SimpleSAML\XML\Signer($this->getSigningInfo());
       $signer->sign($document, $document, $document->firstChild);
     }
 

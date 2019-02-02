@@ -2,7 +2,7 @@
 
 // If aggregator ID is not provided, show the list of available aggregates.
 if (!array_key_exists('id', $_GET)) {
-  $t = new SimpleSAML_XHTML_Template($config, 'aggregator:list.php');
+  $t = new SimpleSAML\XHTML\Template($config, 'aggregator:list.php');
   $t->data['sources'] = $aggregators->getOptions();
   $t->show();
   exit();
@@ -11,7 +11,7 @@ if (!array_key_exists('id', $_GET)) {
 // Get id from parameters.
 $id = htmlspecialchars($_GET['id']);
 if (!in_array($id, $aggregators->getOptions())) {
-  throw new SimpleSAML_Error_NotFound('No aggregator with id ' . var_export($id, TRUE) . ' found.');
+  throw new SimpleSAML\Error\NotFound('No aggregator with id ' . var_export($id, TRUE) . ' found.');
 }
 
 // Get aggregator configuration.
@@ -46,7 +46,7 @@ if (isset($_GET['mimetype']) && in_array($_GET['mimetype'], $allowedmimetypes)) 
 
 // Special handling for plain text.
 if ($mimetype === 'text/plain') {
-  SimpleSAML_Utilities::formatDOMElement($xml);
+  \SimpleSAML\Utils\XML::formatDOMElement($xml);
 }
 
 // Create the XML document.

@@ -27,7 +27,7 @@ abstract class Binding
      */
     public static function getBinding($urn)
     {
-        assert('is_string($urn)');
+        assert(is_string($urn));
 
         switch ($urn) {
             case Constants::BINDING_HTTP_POST:
@@ -44,7 +44,7 @@ abstract class Binding
             case Constants::BINDING_PAOS:
                 return new SOAP();
             default:
-                throw new \Exception('Unsupported binding: ' . var_export($urn, true));
+                throw new \Exception('Unsupported binding: '.var_export($urn, true));
         }
     }
 
@@ -90,15 +90,15 @@ abstract class Binding
 
         $logger = Utils::getContainer()->getLogger();
         $logger->warning('Unable to find the SAML 2 binding used for this request.');
-        $logger->warning('Request method: ' . var_export($_SERVER['REQUEST_METHOD'], true));
+        $logger->warning('Request method: '.var_export($_SERVER['REQUEST_METHOD'], true));
         if (!empty($_GET)) {
-            $logger->warning("GET parameters: '" . implode("', '", array_map('addslashes', array_keys($_GET))) . "'");
+            $logger->warning("GET parameters: '".implode("', '", array_map('addslashes', array_keys($_GET)))."'");
         }
         if (!empty($_POST)) {
-            $logger->warning("POST parameters: '" . implode("', '", array_map('addslashes', array_keys($_POST))) . "'");
+            $logger->warning("POST parameters: '".implode("', '", array_map('addslashes', array_keys($_POST)))."'");
         }
         if (isset($_SERVER['CONTENT_TYPE'])) {
-            $logger->warning('Content-Type: ' . var_export($_SERVER['CONTENT_TYPE'], true));
+            $logger->warning('Content-Type: '.var_export($_SERVER['CONTENT_TYPE'], true));
         }
 
         throw new \Exception('Unable to find the current binding.');
@@ -123,7 +123,7 @@ abstract class Binding
      */
     public function setDestination($destination)
     {
-        assert('is_string($destination) || is_null($destination)');
+        assert(is_string($destination) || is_null($destination));
 
         $this->destination = $destination;
     }

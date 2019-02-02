@@ -14,6 +14,7 @@ use SAML2\XML\samlp\Extensions;
  *
  *
  * @SuppressWarnings(PHPMD.ExcessiveClassComplexity)
+ * @SuppressWarnings(PHPMD.CouplingBetweenObjects)
  */
 abstract class Message implements SignedElement
 {
@@ -22,7 +23,7 @@ abstract class Message implements SignedElement
      *
      * @var array
      */
-    protected $extensions;
+    protected $extensions = [];
 
     /**
      * The name of the root element of the DOM tree for the message.
@@ -135,13 +136,13 @@ abstract class Message implements SignedElement
      */
     protected function __construct($tagName, \DOMElement $xml = null)
     {
-        assert('is_string($tagName)');
+        assert(is_string($tagName));
         $this->tagName = $tagName;
 
         $this->id = Utils::getContainer()->generateId();
         $this->issueInstant = Temporal::getTime();
-        $this->certificates = array();
-        $this->validators = array();
+        $this->certificates = [];
+        $this->validators = [];
 
         if ($xml === null) {
             return;
@@ -201,10 +202,10 @@ abstract class Message implements SignedElement
             if ($sig !== false) {
                 $this->messageContainedSignatureUponConstruction = true;
                 $this->certificates = $sig['Certificates'];
-                $this->validators[] = array(
-                    'Function' => array('\SAML2\Utils', 'validateSignature'),
+                $this->validators[] = [
+                    'Function' => ['\SAML2\Utils', 'validateSignature'],
                     'Data' => $sig,
-                );
+                ];
                 $this->signatureMethod = $signatureMethod[0]->value;
             }
         } catch (\Exception $e) {
@@ -224,12 +225,12 @@ abstract class Message implements SignedElement
      */
     public function addValidator($function, $data)
     {
-        assert('is_callable($function)');
+        assert(is_callable($function));
 
-        $this->validators[] = array(
+        $this->validators[] = [
             'Function' => $function,
             'Data' => $data,
-        );
+        ];
     }
 
     /**
@@ -251,7 +252,7 @@ abstract class Message implements SignedElement
             return false;
         }
 
-        $exceptions = array();
+        $exceptions = [];
 
         foreach ($this->validators as $validator) {
             $function = $validator['Function'];
@@ -288,7 +289,7 @@ abstract class Message implements SignedElement
      */
     public function setId($id)
     {
-        assert('is_string($id)');
+        assert(is_string($id));
 
         $this->id = $id;
     }
@@ -310,7 +311,7 @@ abstract class Message implements SignedElement
      */
     public function setIssueInstant($issueInstant)
     {
-        assert('is_int($issueInstant)');
+        assert(is_int($issueInstant));
 
         $this->issueInstant = $issueInstant;
     }
@@ -332,7 +333,7 @@ abstract class Message implements SignedElement
      */
     public function setDestination($destination)
     {
-        assert('is_string($destination) || is_null($destination)');
+        assert(is_string($destination) || is_null($destination));
 
         $this->destination = $destination;
     }
@@ -340,7 +341,7 @@ abstract class Message implements SignedElement
     /**
      * Set the given consent for this message.
      *
-     * Most likely (though not required) a value of rn:oasis:names:tc:SAML:2.0:consent.
+     * Most likely (though not required) a value of urn:oasis:names:tc:SAML:2.0:consent.
      *
      * @see \SAML2\Constants
      *
@@ -348,15 +349,15 @@ abstract class Message implements SignedElement
      */
     public function setConsent($consent)
     {
-        assert('is_string($consent)');
+        assert(is_string($consent));
 
         $this->consent = $consent;
     }
 
     /**
-     * Set the given consent for this message.
+     * Get the given consent for this message.
      *
-     * Most likely (though not required) a value of rn:oasis:names:tc:SAML:2.0:consent.
+     * Most likely (though not required) a value of urn:oasis:names:tc:SAML:2.0:consent.
      *
      * @see \SAML2\Constants
      *
@@ -388,7 +389,7 @@ abstract class Message implements SignedElement
      */
     public function setIssuer($issuer)
     {
-        assert('is_string($issuer) || $issuer instanceof \SAML2\XML\saml\Issuer || is_null($issuer)');
+        assert(is_string($issuer) || $issuer instanceof XML\saml\Issuer || is_null($issuer));
 
         $this->issuer = $issuer;
     }
@@ -420,7 +421,7 @@ abstract class Message implements SignedElement
      */
     public function setRelayState($relayState)
     {
-        assert('is_string($relayState) || is_null($relayState)');
+        assert(is_string($relayState) || is_null($relayState));
 
         $this->relayState = $relayState;
     }
@@ -588,7 +589,7 @@ abstract class Message implements SignedElement
     /**
      * Retrieve the Extensions.
      *
-     * @return \SAML2\XML\samlp\Extensions
+     * @return \SAML2\XML\samlp\Extensions[]
      */
     public function getExtensions()
     {
@@ -598,13 +599,21 @@ abstract class Message implements SignedElement
     /**
      * Set the Extensions.
      *
-     * @param array|null $extensions The Extensions
+     * @param array $extensions The Extensions
      */
-    public function setExtensions($extensions)
+    public function setExtensions(array $extensions)
     {
-        assert('is_array($extensions) || is_null($extensions)');
-
         $this->extensions = $extensions;
+    }
+
+    /**
+     * Add an Extension.
+     *
+     * @param \SAML2\XML\samlp\Extensions $extensions The Extensions
+     */
+    public function addExtension(Extensions $extension)
+    {
+        $this->extensions[] = $extension;
     }
 
     /**

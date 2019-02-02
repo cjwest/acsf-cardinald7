@@ -17,7 +17,7 @@
 
 // PHP 7.
 if (!is_array($config)) {
-  $config = array();
+  $config = [];
 }
 
 /**
@@ -44,16 +44,16 @@ $config['secretsalt'] = 'xn3jhrrw1sp1he6x4ao1ilwdacxgkdon';
 $config['auth.adminpassword'] = '6hwuzew6csdjwam';
 
 // Core settings.
-$config['authproc.sp'] = array(
-  10 => array(
-    'class'                 => 'core:AttributeMap',
+$config['authproc.sp'] = [
+  10 => [
+    'class' => 'core:AttributeMap',
     // Even though your linter may complain about this line
     // DO NOT TOUCH IT!!!!!!
     // If you provide this key your SAML config will FAIL!
     'oid2name',
-  ),
+  ],
   90 => 'core:LanguageAdaptor',
-);
+];
 
 /**
  * Cookies No Cache.

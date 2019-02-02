@@ -10,14 +10,14 @@
  *   - 'session_store': Define the session storage service to use in each
  *     Acquia environment ("memcache" or "database").
  */
-$ah_options = array(
+$ah_options = [
   'database_name' => $_ENV['AH_SITE_GROUP'],
-  'session_store' => array(
+  'session_store' => [
     '02live' => 'database',
     '02test' => 'database',
-    '02dev'  => 'database',
-  ),
-);
+    '02dev' => 'database',
+  ],
+];
 
 $ah_options['env'] = getenv('AH_SITE_ENVIRONMENT');
 
@@ -93,14 +93,14 @@ if (!function_exists('mc_info')) {
   function mc_info() {
     $creds_json = file_get_contents('/var/www/site-php/' . getenv('AH_SITE_NAME') . '/creds.json');
     $creds = json_decode($creds_json, TRUE);
-    $mc_server = array();
-    $mc_pool = array();
+    $mc_server = [];
+    $mc_pool = [];
     foreach ($creds['memcached_servers'] as $fqdn) {
       $mc_server['hostname'] = preg_replace('/:.*?$/', '', $fqdn);
       array_push($mc_pool, $mc_server);
     }
 
-    return array($mc_pool);
+    return [$mc_pool];
   }
 }
 
@@ -169,8 +169,7 @@ if (!function_exists('ah_db_current_host')) {
       ]);
       $response = $resolver->query("cluster-{$db_cluster_id}.mysql", 'CNAME');
       $cached_id = $response->answer[0]->cname;
-    }
-    catch (\Net_DNS2_Exception $e) {
+    } catch (\Net_DNS2_Exception $e) {
       $cached_id = '';
     }
 

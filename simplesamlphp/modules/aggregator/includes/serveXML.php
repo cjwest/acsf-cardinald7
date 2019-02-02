@@ -47,7 +47,7 @@ class ServeXML {
 
     // Throw up if something doesn't work.
     if (!is_file($filePath)) {
-      throw new SimpleSAML_Error_Exception("Could not find a file to serve up.");
+      throw new SimpleSAML\Error\Exception("Could not find a file to serve up.");
     }
   }
 
@@ -62,7 +62,7 @@ class ServeXML {
    */
   public function setMimeType($type) {
     if (empty($type)) {
-      throw new SimpleSAML_Error_Exception('Please provide a value for mimeType.');
+      throw new SimpleSAML\Error\Exception('Please provide a value for mimeType.');
     }
     $this->mimeType = $type;
   }
@@ -78,7 +78,7 @@ class ServeXML {
    */
   public function setMaxAge($age) {
     if (empty($age)) {
-      throw new SimpleSAML_Error_Exception('Please provide a value for maxAge.');
+      throw new SimpleSAML\Error\Exception('Please provide a value for maxAge.');
     }
     $this->maxAge = $age;
   }
@@ -98,7 +98,7 @@ class ServeXML {
 
     // If there is nothing in the file throw an error.
     if ($contentLength <= 0) {
-      throw new SimpleSAML_Error_Exception("Content length of file to serve was 0.");
+      throw new SimpleSAML\Error\Exception("Content length of file to serve was 0.");
     }
 
     // Set the content length.

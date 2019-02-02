@@ -16,20 +16,20 @@ switch ($env) {
   default:
     $idp = 'https://idp.stanford.edu/';
 }
-$config = array(
+$config = [
 
   // This is a authentication source which handles admin authentication.
-  'admin' => array(
+  'admin' => [
     // The default is to use core:AdminPassword, but it can be replaced with
     // any authentication source.
 
     'core:AdminPassword',
-  ),
+  ],
 
 
   // An authentication source which can authenticate against both SAML 2.0
   // and Shibboleth 1.3 IdPs.
-  'default-sp' => array(
+  'default-sp' => [
     'saml:SP',
 
     // The entity ID of this SP.
@@ -42,13 +42,13 @@ $config = array(
 
     // The URL to the discovery service.
     // Can be NULL/unset, in which case a builtin discovery service will be used.
-    'discoURL' => null,
+    'discoURL' => NULL,
 
     // These are the certs from `/cert` directory.
-    'privatekey'           => 'saml.pem',
-    'certificate'          => 'saml.crt',
+    'privatekey' => 'saml.pem',
+    'certificate' => 'saml.crt',
     // Defaults to SHA1 (http://www.w3.org/2000/09/xmldsig#rsa-sha1)
-    'signature.algorithm'  => 'http://www.w3.org/2001/04/xmldsig-more#rsa-sha256',
+    'signature.algorithm' => 'http://www.w3.org/2001/04/xmldsig-more#rsa-sha256',
     /*
      * WARNING: SHA-1 is disallowed starting January the 1st, 2014.
      *
@@ -82,11 +82,11 @@ $config = array(
     /*'attributes.required' => array (
         'urn:oid:x.x.x.x',
     ),*/
-  ),
+  ],
 
   // An authentication source which can authenticate against both SAML 2.0
   // and Shibboleth 1.3 IdPs.
-  'cardinald7' => array(
+  'cardinald7' => [
     'saml:SP',
 
     // The entity ID of this SP.
@@ -99,14 +99,14 @@ $config = array(
 
     // The URL to the discovery service.
     // Can be NULL/unset, in which case a builtin discovery service will be used.
-    'discoURL' => null,
+    'discoURL' => NULL,
 
     // These are the certs from `/cert` directory.
-    'privatekey'           => 'saml.pem',
-    'certificate'          => 'saml.crt',
+    'privatekey' => 'saml.pem',
+    'certificate' => 'saml.crt',
     // Defaults to SHA1 (http://www.w3.org/2000/09/xmldsig#rsa-sha1)
-    'signature.algorithm'  => 'http://www.w3.org/2001/04/xmldsig-more#rsa-sha256',
-  ),
+    'signature.algorithm' => 'http://www.w3.org/2001/04/xmldsig-more#rsa-sha256',
+  ],
 
 
   /*
@@ -434,4 +434,4 @@ $config = array(
   ),
   */
 
-);
+];

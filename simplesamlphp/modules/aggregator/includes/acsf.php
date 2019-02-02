@@ -97,12 +97,12 @@ function build_acsf_saml_metadata() {
 
   $sites_json = file_get_contents($sites_json_file);
   if (!$sites_json) {
-    throw new SimpleSAML_Error_Exception("Could not get contents of sites.json");
+    throw new SimpleSAML\Error\Exception("Could not get contents of sites.json");
   }
 
   $sites_info = json_decode($sites_json, TRUE);
   if ($sites_info === NULL) {
-    throw new SimpleSAML_Error_Exception("Could not decode the contents of sites.json");
+    throw new SimpleSAML\Error\Exception("Could not decode the contents of sites.json");
   }
 
   if (array_key_exists('sites', $sites_info)) {

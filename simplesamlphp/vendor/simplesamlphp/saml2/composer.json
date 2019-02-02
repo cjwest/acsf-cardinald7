@@ -18,11 +18,11 @@
         "psr/log": "~1.0"
     },
     "require-dev": {
-        "squizlabs/php_codesniffer": "~1.4",
-        "phpmd/phpmd": "~1.5",
-        "sensiolabs/security-checker": "~1.1",
-        "phpunit/phpunit": "~3.7",
-        "sebastian/phpcpd": "~1.4",
+        "squizlabs/php_codesniffer": "~3.2",
+        "phpmd/phpmd": "~2.6",
+        "sensiolabs/security-checker": "~4.1",
+        "phpunit/phpunit": "~4",
+        "sebastian/phpcpd": "~2.0",
         "mockery/mockery": "~0.9"
     },
     "autoload": {
@@ -38,7 +38,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "v3.0.x-dev"
+            "dev-master": "v3.1.x-dev"
         }
     }
 }

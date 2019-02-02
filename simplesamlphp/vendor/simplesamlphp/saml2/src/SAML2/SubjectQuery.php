@@ -54,7 +54,7 @@ abstract class SubjectQuery extends Request
             /* No Subject node. */
             throw new \Exception('Missing subject in subject query.');
         } elseif (count($subject) > 1) {
-            throw new \Exception('More than one <saml:Subject> in <saml:Assertion>.');
+            throw new \Exception('More than one <saml:Subject> in subject query.');
         }
         $subject = $subject[0];
 
@@ -87,7 +87,7 @@ abstract class SubjectQuery extends Request
      */
     public function setNameId($nameId)
     {
-        assert('is_array($nameId) || is_null($nameId) || is_a($nameId, "\SAML2\XML\saml\NameID")');
+        assert(is_array($nameId) || is_null($nameId) || $nameId instanceof XML\saml\NameID);
 
         if (is_array($nameId)) {
             $nameId = XML\saml\NameID::fromArray($nameId);

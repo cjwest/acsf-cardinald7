@@ -40,7 +40,7 @@ class AuthnRequest extends Request
     /**
      * Set to true if this request is passive.
      *
-     * @var bool.
+     * @var bool
      */
     private $isPassive;
 
@@ -49,7 +49,7 @@ class AuthnRequest extends Request
      *
      * @var array
      */
-    private $IDPList = array();
+    private $IDPList = [];
 
     /**
      * The ProxyCount in this request's scoping element
@@ -64,7 +64,7 @@ class AuthnRequest extends Request
      * @var array
      */
 
-    private $RequesterID = array();
+    private $RequesterID = [];
 
     /**
      * The URL of the asertion consumer service where the response should be delivered.
@@ -109,9 +109,16 @@ class AuthnRequest extends Request
     private $requestedAuthnContext;
 
     /**
+     * Audiences to send in the request.
+     *
+     * @var array
+     */
+    private $audiences = [];
+
+    /**
      * @var \SAML2\XML\saml\SubjectConfirmation[]
      */
-    private $subjectConfirmation = array();
+    private $subjectConfirmation = [];
 
     /**
      * @var string
@@ -133,7 +140,7 @@ class AuthnRequest extends Request
     {
         parent::__construct('AuthnRequest', $xml);
 
-        $this->nameIdPolicy = array();
+        $this->nameIdPolicy = [];
         $this->forceAuthn = false;
         $this->isPassive = false;
 
@@ -168,6 +175,7 @@ class AuthnRequest extends Request
         $this->parseNameIdPolicy($xml);
         $this->parseRequestedAuthnContext($xml);
         $this->parseScoping($xml);
+        $this->parseConditions($xml);
     }
 
     /**
@@ -246,10 +254,10 @@ class AuthnRequest extends Request
 
         $requestedAuthnContext = $requestedAuthnContext[0];
 
-        $rac = array(
-            'AuthnContextClassRef' => array(),
+        $rac = [
+            'AuthnContextClassRef' => [],
             'Comparison'           => Constants::COMPARISON_EXACT,
-        );
+        ];
 
         $accr = Utils::xpQuery($requestedAuthnContext, './saml_assertion:AuthnContextClassRef');
         foreach ($accr as $i) {
@@ -292,6 +300,30 @@ class AuthnRequest extends Request
         $requesterIDs = Utils::xpQuery($scoping, './saml_protocol:RequesterID');
         foreach ($requesterIDs as $requesterID) {
             $this->RequesterID[] = trim($requesterID->textContent);
+        }
+    }
+
+    /**
+     * @param \DOMElement $xml
+     */
+    protected function parseConditions(\DOMElement $xml)
+    {
+        $conditions = Utils::xpQuery($xml, './saml_assertion:Conditions');
+        if (empty($conditions)) {
+            return;
+        }
+        $conditions = $conditions[0];
+
+        $ar = Utils::xpQuery($conditions, './saml_assertion:AudienceRestriction');
+        if (empty($ar)) {
+            return;
+        }
+        $ar = $ar[0];
+
+        $audiences = Utils::xpQuery($ar, './saml_assertion:Audience');
+        $this->audiences = array();
+        foreach ($audiences as $a) {
+            $this->audiences[] = trim($a->textContent);
         }
     }
 
@@ -351,7 +383,7 @@ class AuthnRequest extends Request
      */
     public function setForceAuthn($forceAuthn)
     {
-        assert('is_bool($forceAuthn)');
+        assert(is_bool($forceAuthn));
 
         $this->forceAuthn = $forceAuthn;
     }
@@ -375,7 +407,7 @@ class AuthnRequest extends Request
      */
     public function setProviderName($ProviderName)
     {
-        assert('is_string($ProviderName)');
+        assert(is_string($ProviderName));
 
         $this->ProviderName = $ProviderName;
     }
@@ -399,9 +431,33 @@ class AuthnRequest extends Request
      */
     public function setIsPassive($isPassive)
     {
-        assert('is_bool($isPassive)');
+        assert(is_bool($isPassive));
 
         $this->isPassive = $isPassive;
+    }
+
+    /**
+     * Retrieve the audiences from the request.
+     *
+     * This may be null, in which case no audience is included.
+     *
+     * @return array The audiences.
+     */
+    public function getAudiences()
+    {
+        return $this->audiences;
+    }
+
+    /**
+     * Set the audiences to send in the request.
+     *
+     * This may be null, in which case no audience will be sent.
+     *
+     * @param array|null $audiences The audiences.
+     */
+    public function setAudiences(array $audiences)
+    {
+        $this->audiences = $audiences;
     }
 
 
@@ -417,10 +473,11 @@ class AuthnRequest extends Request
      * For backward compatibility, an idpEntries can also
      * be a string instead of an array, where each string
      * is mapped to the value of attribute ProviderID.
+     *
+     * @param array $IDPList List of idpEntries to scope the request to.
      */
-    public function setIDPList($IDPList)
+    public function setIDPList(array $IDPList)
     {
-        assert('is_array($IDPList)');
         $this->IDPList = $IDPList;
     }
 
@@ -440,12 +497,12 @@ class AuthnRequest extends Request
      */
     public function setProxyCount($ProxyCount)
     {
-        assert('is_int($ProxyCount)');
+        assert(is_int($ProxyCount));
         $this->ProxyCount = $ProxyCount;
     }
 
     /**
-     * @return int
+     * @return int|null
      */
     public function getProxyCount()
     {
@@ -485,7 +542,7 @@ class AuthnRequest extends Request
      */
     public function setAssertionConsumerServiceURL($assertionConsumerServiceURL)
     {
-        assert('is_string($assertionConsumerServiceURL) || is_null($assertionConsumerServiceURL)');
+        assert(is_string($assertionConsumerServiceURL) || is_null($assertionConsumerServiceURL));
 
         $this->assertionConsumerServiceURL = $assertionConsumerServiceURL;
     }
@@ -507,7 +564,7 @@ class AuthnRequest extends Request
      */
     public function setProtocolBinding($protocolBinding)
     {
-        assert('is_string($protocolBinding) || is_null($protocolBinding)');
+        assert(is_string($protocolBinding) || is_null($protocolBinding));
 
         $this->protocolBinding = $protocolBinding;
     }
@@ -529,7 +586,7 @@ class AuthnRequest extends Request
      */
     public function setAttributeConsumingServiceIndex($attributeConsumingServiceIndex)
     {
-        assert('is_int($attributeConsumingServiceIndex) || is_null($attributeConsumingServiceIndex)');
+        assert(is_int($attributeConsumingServiceIndex) || is_null($attributeConsumingServiceIndex));
 
         $this->attributeConsumingServiceIndex = $attributeConsumingServiceIndex;
     }
@@ -551,7 +608,7 @@ class AuthnRequest extends Request
      */
     public function setAssertionConsumerServiceIndex($assertionConsumerServiceIndex)
     {
-        assert('is_int($assertionConsumerServiceIndex) || is_null($assertionConsumerServiceIndex)');
+        assert(is_int($assertionConsumerServiceIndex) || is_null($assertionConsumerServiceIndex));
 
         $this->assertionConsumerServiceIndex = $assertionConsumerServiceIndex;
     }
@@ -569,11 +626,11 @@ class AuthnRequest extends Request
     /**
      * Set the RequestedAuthnContext.
      *
-     * @param array|null $requestedAuthnContext The RequestedAuthnContext.
+     * @param array $requestedAuthnContext The RequestedAuthnContext.
      */
     public function setRequestedAuthnContext($requestedAuthnContext)
     {
-        assert('is_array($requestedAuthnContext) || is_null($requestedAuthnContext)');
+        assert(is_array($requestedAuthnContext));
 
         $this->requestedAuthnContext = $requestedAuthnContext;
     }
@@ -600,7 +657,7 @@ class AuthnRequest extends Request
      */
     public function setNameId($nameId)
     {
-        assert('is_array($nameId) || is_null($nameId) || is_a($nameId, "\SAML2\XML\saml\NameID")');
+        assert(is_array($nameId) || is_null($nameId) || $nameId instanceof XML\saml\NameID);
 
         if (is_array($nameId)) {
             $nameId = XML\saml\NameID::fromArray($nameId);
@@ -645,7 +702,7 @@ class AuthnRequest extends Request
      * @param XMLSecurityKey $key       The decryption key.
      * @param array          $blacklist Blacklisted decryption algorithms.
      */
-    public function decryptNameId(XMLSecurityKey $key, array $blacklist = array())
+    public function decryptNameId(XMLSecurityKey $key, array $blacklist = [])
     {
         if ($this->encryptedNameId === null) {
             /* No NameID to decrypt. */
@@ -731,6 +788,8 @@ class AuthnRequest extends Request
             $root->appendChild($nameIdPolicy);
         }
 
+        $this->addConditions($root);
+
         $rac = $this->requestedAuthnContext;
         if (!empty($rac) && !empty($rac['AuthnContextClassRef'])) {
             $e = $this->document->createElementNS(Constants::NS_SAMLP, 'RequestedAuthnContext');
@@ -757,11 +816,11 @@ class AuthnRequest extends Request
                         $idpEntry->setAttribute('ProviderID', $provider);
                     } elseif (is_array($provider)) {
                         foreach ($provider as $attribute => $value) {
-                            if (in_array($attribute, array(
+                            if (in_array($attribute, [
                                 'ProviderID',
                                 'Loc',
                                 'Name'
-                            ))) {
+                            ], true)) {
                                 $idpEntry->setAttribute($attribute, $value);
                             }
                         }
@@ -803,6 +862,26 @@ class AuthnRequest extends Request
 
         foreach ($this->subjectConfirmation as $sc) {
             $sc->toXML($subject);
+        }
+    }
+
+    /**
+     * Add a Conditions-node to the request.
+     *
+     * @param \DOMElement $root The request element we should add the conditions to.
+     */
+    private function addConditions(\DOMElement $root)
+    {
+        if ($this->audiences !== []) {
+            $document = $root->ownerDocument;
+
+            $conditions = $document->createElementNS(Constants::NS_SAML, 'saml:Conditions');
+            $root->appendChild($conditions);
+
+            $ar = $document->createElementNS(Constants::NS_SAML, 'saml:AudienceRestriction');
+            $conditions->appendChild($ar);
+
+            Utils::addStrings($ar, Constants::NS_SAML, 'saml:Audience', false, $this->getAudiences());
         }
     }
 }

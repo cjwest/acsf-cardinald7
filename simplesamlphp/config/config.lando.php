@@ -17,14 +17,14 @@ $config['errorreporting'] = TRUE;
 // $config['logging.level'] = SimpleSAML\Logger::DEBUG;
 $config['enable.http_post'] = TRUE;
 // $config['debug.validatexml'] = TRUE;
-$config['trusted.url.domains'] = array(
+$config['trusted.url.domains'] = [
   'cardinald7.sws:443',
   'cardinald7.sws:80',
   'cardinald7.sws',
   'cardinald7.lndo.site:443',
   'cardinald7.lndo.site:80',
   'cardinald7.lndo.site',
-);
+];
 $config['database.dsn'] = 'mysql:host=' . $host . ';dbname=' . $database;
 $config['database.username'] = $username;
 $config['database.password'] = $password;
@@ -41,11 +41,11 @@ $config['session.state.timeout'] = (60 * 60); // 1 hour
 //$config['session.phpsession.savepath'] = null;
 //$config['session.phpsession.httponly'] = true;
 $config['session.authtoken.cookiename'] = 'SimpleSAMLAuthToken';
-$config['session.rememberme.enable'] = false;
-$config['session.rememberme.checked'] = false;
+$config['session.rememberme.enable'] = FALSE;
+$config['session.rememberme.checked'] = FALSE;
 $config['session.rememberme.lifetime'] = (14 * 86400);
-$config['store.type']          = 'sql';
-$config['store.sql.dsn']       = 'mysql:host=' . $host . ';dbname=' . $database;
-$config['store.sql.username']  = "drupal";
-$config['store.sql.password']  = "drupal";
-$config['store.sql.prefix']    = '';
+$config['store.type'] = 'sql';
+$config['store.sql.dsn'] = 'mysql:host=' . $host . ';dbname=' . $database;
+$config['store.sql.username'] = "drupal";
+$config['store.sql.password'] = "drupal";
+$config['store.sql.prefix'] = '';

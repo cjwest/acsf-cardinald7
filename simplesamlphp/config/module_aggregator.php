@@ -28,21 +28,21 @@ $cert = "metadata_signing." . $env . ".crt";
 $ah_tmp = "/mnt/gfs/" . $_ENV['AH_SITE_GROUP'] . $env . "/tmp";
 
 // Configuration for the aggregator module.
-$config = array(
+$config = [
   // List of aggregators.
-  'aggregators' => array(
-    $aggregated_metadata_name_attribute => array(
+  'aggregators' => [
+    $aggregated_metadata_name_attribute => [
       'sources' => $sources,
-    ),
-    'example' => array(
-      'sources' => array(
-        array(
+    ],
+    'example' => [
+      'sources' => [
+        [
           'type' => 'xml',
-          'url' => 'https://saml.sites.stanford.edu:443/simplesaml/module.php/saml/sp/metadata.php/default-sp'
-        ),
-      ),
-    ),
-  ),
+          'url' => 'https://saml.sites.stanford.edu:443/simplesaml/module.php/saml/sp/metadata.php/default-sp',
+        ],
+      ],
+    ],
+  ],
 
   // URL parameter to trigger XML generation.
   'genKey' => 'm1fCmGgUfpTOtfvTE7kDs6LUC58bBjltiOqShatXAI',
@@ -72,4 +72,4 @@ $config = array(
   // the private key.
   'sign.certificate' => $cert,
 
-);
+];

@@ -13,8 +13,8 @@ require_once dirname(__FILE__) . "/../includes/createXML.php";
 require_once dirname(__FILE__) . "/../includes/acsf.php";
 
 // Start up Simplesaml.
-$saml = SimpleSAML_Configuration::getInstance();
-$gConfig = SimpleSAML_Configuration::getConfig('module_aggregator.php');
+$saml = \SimpleSAML\Configuration::getInstance();
+$gConfig = \SimpleSAML\Configuration::getConfig('module_aggregator.php');
 
 // Check for the genKey URL parameter. If no parameter was sent then we should
 // just return the static XML document if available. If not available, generate
@@ -46,8 +46,8 @@ if (isset($_REQUEST['genKey']) && htmlspecialchars($_REQUEST['genKey']) == $genK
 
   // Add the sources to the metadata file.
   $_SESSION['build_with_sources'] = TRUE;
-  SimpleSAML_Configuration::clearInternalState();
-  $gConfig = SimpleSAML_Configuration::getConfig('module_aggregator.php');
+  \SimpleSAML\Configuration::clearInternalState();
+  $gConfig = \SimpleSAML\Configuration::getConfig('module_aggregator.php');
 
   // Get list of aggregators.
   $aggregators = $gConfig->getConfigItem('aggregators');
@@ -92,7 +92,7 @@ if (!isset($_REQUEST['genKey']) && file_exists($xmlFile)) {
 // If aggregator ID is not provided, show the list of available aggregates.
 // -----------------------------------------------------------------------------
 if (!array_key_exists('id', $_GET)) {
-  $t = new SimpleSAML_XHTML_Template($saml, 'aggregator:list.php');
+  $t = new SimpleSAML\XHTML\Template($saml, 'aggregator:list.php');
   $t->data['sources'] = $aggregators->getOptions();
   $t->show();
   exit();
@@ -100,4 +100,4 @@ if (!array_key_exists('id', $_GET)) {
 
 // If the file does not exist and no keys were provided, error out, and let the
 // user know.
-throw new SimpleSAML_Error_Exception("Could not serve metadata or metadata file doesn't exist.");
+throw new SimpleSAML\Error\Exception("Could not serve metadata or metadata file doesn't exist.");
