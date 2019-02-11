@@ -1,0 +1,207 @@
+
+/* isotope filter styles */
+.content .view-ilci-filter .view-header {
+    padding-bottom: 20px;
+}
+.content .isotope-options {
+    background: none;
+}
+.content .isotope-options ul {
+    list-style: none;
+}
+.content .isotope-options ul li {
+    list-style: none;
+    float: left;
+    margin: 0 10px;
+}
+.content .isotope-options ul li a {
+    list-style-type: none;
+    display: block;
+    font-family: "news-gothic-std",Verdana,Tahoma,"DejaVu Sans",sans-serif;
+    font-size: 12px;
+    line-height: 1.5em;
+    color: #585754;
+    font-weight: normal;
+    padding: 3px 7px;
+    text-decoration: none;
+}
+.content .isotope-options ul li a:hover {
+    text-decoration: none;
+}
+.content .isotope-options ul li a.selected {
+    color: #fff !important;
+    background: #8C1515 !important;
+}
+/* isotope styles */
+.content .isotope-element {
+    height: 380px;
+    font-family: "news-gothic-std",Verdana,Tahoma,"DejaVu Sans",sans-serif;
+    font-size: 10px;
+    line-height: 1.5em;
+    color: #585754;
+    background: transparent;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 1199px) {
+    .content .isotope-element {
+        height: 400px;
+    }
+}
+@media (max-width: 979px) {
+    .content .isotope-element {
+        height: 460px;
+    }
+}
+@media (max-width: 767px) {
+    .content .isotope-element {
+        height: 500px;
+    }
+}
+@media (max-width: 480px) {
+    .content .isotope-element.tile-closed .views-field-body {
+        display: none;
+    }
+    .content .isotope-element {
+        height: 360px;
+    }
+    .content .isotope-options ul li {
+        float: none;
+        display: block;
+        width: 100%;
+    }
+}
+
+.content .isotope-element.tile-closed {
+
+}
+.content .isotope-element.tile-closed .tile-expander {
+    position: absolute;
+    bottom: 80px;
+}
+.content .isotope-element.tile-open .tile-expander {
+    margin: 20px 0;
+}
+.content .isotope-element a {
+    color: #8c1515 !important;
+}
+.content .isotope-element.tile-open {
+    height: auto;
+    z-index: 9999;
+}
+
+/* inner container */
+.content .isotope-element .tile-content {
+    background: #fff;
+    height: 100%;
+    margin: 10px 10px 10px 0;
+    padding: 10px;
+    position: relative;
+    border: 1px solid #e3dfd5;
+}
+
+/* container to contain images */
+.page-labs-centers-institutes .views-field-field-s-image-image {
+    width: 100%;
+    height: 126px;
+    overflow: hidden;
+}
+.content .isotope-element img {
+    height: auto;
+    max-width: none;
+    min-height: 126px;
+    min-width: 100%;
+    width: auto;
+}
+
+/*.content .isotope-element .views-field-body,*/
+.content .isotope-element .views-field-field-s-ilci-program,
+.content .isotope-element .views-field-field-s-ilci-research,
+.content .isotope-element .views-field-field-s-ilci-education,
+.content .isotope-element .views-field-field-s-ilci-about,
+.content .isotope-element .area-focus {
+    display: none;
+}
+
+.content .isotope-element.tile-open .views-field-body,
+.content .isotope-element.tile-open .views-field-field-s-ilci-program,
+.content .isotope-element.tile-open .views-field-field-s-ilci-research,
+.content .isotope-element.tile-open .views-field-field-s-ilci-education,
+.content .isotope-element.tile-open .views-field-field-s-ilci-about,
+.content .isotope-element.tile-open .area-focus {
+    display: block;
+}
+.content .isotope-element .views-field-field-s-ilci-site-1 {
+    bottom: 30px;
+    height: 40px;
+    left: 0;
+    line-height: 40px;
+    position: absolute;
+    width: 100%;
+    background: transparent;
+}
+.content .isotope-element.tile-open .views-field-field-s-ilci-site-1 {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    bottom: 0;
+}
+.content .isotope-element .views-field-field-s-ilci-site-1 a {
+    height: 40px;
+    line-height: 40px;
+    display: block;
+    box-sizing: border-box;
+    padding: 0 10px;
+    background: #e3dfd5 url("https://sites.stanford.edu/jumpstart-indies/sites/default/files/indies-arrow-red.png") no-repeat scroll 96% center;
+}
+.content .isotope-element .views-field-field-s-ilci-site-1 a:hover,
+.content .isotope-element .views-field-field-s-ilci-site-1 a:focus {
+    color: #000000;
+    text-decoration: none;
+    background: #D1CCC0 url("https://sites.stanford.edu/jumpstart-indies/sites/default/files/indies-arrow-black.png") no-repeat scroll 96% center;
+}
+.content .isotope-element.tile-open .views-field-field-s-ilci-program,
+.content .isotope-element.tile-open .views-field-field-s-ilci-research,
+.content .isotope-element.tile-open .views-field-field-s-ilci-education,
+.content .isotope-element.tile-open .views-field-field-s-ilci-about {
+    width: 50%;
+}
+
+.content .isotope-element.tile-open .views-field-field-s-ilci-program,
+.content .isotope-element.tile-open .views-field-field-s-ilci-education {
+    float: left;
+    clear: both;
+    margin-bottom: 10px;
+}
+.content .isotope-element.tile-open .views-field-field-s-ilci-education,
+.content .isotope-element.tile-open .views-field-field-s-ilci-about {
+    margin-bottom: 20px;
+}
+.content .isotope-element.tile-open .views-field-field-s-ilci-research,
+.content .isotope-element.tile-open .views-field-field-s-ilci-about {
+    float: right;
+    margin-bottom: 10px;
+}
+.content .isotope-element .tile-expander {
+    background: transparent url("https://sites.stanford.edu/jumpstart-indies/sites/default/files/indies-open.png") no-repeat;
+    background-position: left center;
+    text-indent: 25px;
+    text-transform: uppercase;
+    cursor: pointer !important;
+    margin: 10px 0;
+    clear: both;
+    padding-top: 3px;
+    height: 20px;
+}
+.content .isotope-element .tile-expander.tile-less {
+    background: transparent url("https://sites.stanford.edu/jumpstart-indies/sites/default/files/indies-close.png") no-repeat;
+}
+.content .isotope-element .views-field-title {
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.4em;
+    margin: 10px 0;
+}

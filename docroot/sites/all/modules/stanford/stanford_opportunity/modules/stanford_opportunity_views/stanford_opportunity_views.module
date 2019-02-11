@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Stanford Opportunity Views feature.
+ */
+
+include_once 'stanford_opportunity_views.features.inc';

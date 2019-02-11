@@ -31,6 +31,10 @@
     {
       "type": "vcs",
       "url": "https://github.com/SU-SWS/linky_clicky"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/SU-SWS/stanford_opportunity"
     }
   ],
   "require": {
@@ -66,6 +70,7 @@
     "drupal/special_menu_items": "dev-2.x#46955e1b61243966e87f2d846bbb51a37440852a",
     "drupal/views_load_more": "~1.5",
 
+    "SU-SWS/stanford_opportunity": "~7.1@alpha",
     "SU-SWS/stanford_ssp": "~7.2@alpha",
     "Stanford/WMD": "dev-master",
     "Stanford/webauth_extras": "dev-master",

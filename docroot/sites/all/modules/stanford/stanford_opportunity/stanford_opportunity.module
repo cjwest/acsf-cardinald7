@@ -1,0 +1,33 @@
+<?php
+/**
+ * @file
+ * Code for the Stanford Opportunity feature.
+ */
+
+include_once 'stanford_opportunity.features.inc';
+
+
+/**
+ * Implements hook_views_pre_render
+ */
+
+function stanford_opportunity_views_pre_render(&$view) {
+
+  // Only pull in the css if views are in use.
+
+  // Add the css for the isotopes views
+  $valid = array(
+    'stanford_opportunity_isotope_filter',
+    'stanford_opportunity_isotope_grid',
+  );
+
+  if (in_array($view->name, $valid)) {
+    drupal_add_css(drupal_get_path("module", "stanford_opportunity") . "/css/stanford_opportunity_isotope_views.css");
+  }
+
+  // Add the css for the grid view
+  if ($view->name == 'stanford_opportunity_grid') {
+    drupal_add_css(drupal_get_path("module", "stanford_opportunity")
+      . "/css/stanford_opportunity_views.css");
+  }
+}

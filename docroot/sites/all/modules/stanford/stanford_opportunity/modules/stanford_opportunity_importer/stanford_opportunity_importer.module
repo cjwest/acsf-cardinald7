@@ -1,0 +1,31 @@
+<?php
+/**
+ * @file
+ * Code for the Stanford Opportunity Importer feature.
+ */
+
+include_once 'stanford_opportunity_importer.features.inc';
+
+/**
+ * Implements hook_permission()()
+ */
+function stanford_opportunity_importer_permission() {
+  return array(
+    'clear stanford_opportunity_helper feeds' => array(
+      'title' => t('Clear Stanford Opportunity Feed'),
+      'description' => t('Users with this role can clear a feed'),
+    ),
+    'import stanford_opportunity_helper feeds' => array(
+      'title' => t('Import Stanford Opportunity Feed'),
+      'description' => t('Users with this role can import a feed'),
+    ),
+    'tamper stanford_opportunity_helper' => array(
+      'title' => t('Tamper Stanford Opportunity Feed'),
+      'description' => t('Users with this role can tamper a feed importer'),
+    ),
+    'unlock stanford_opportunity_helper feeds' => array(
+      'title' => t('Unlock Stanford Opportunity Feed'),
+      'description' => t('Users with this role can unlock a feed importer'),
+    ),
+  );
+}
