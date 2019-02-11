@@ -1,5 +1,16 @@
 ACSF CardinalD7
 
+Version 1.0.22                                                       2019-02-11
+-------------------------------------------------------------------------------
+- Update core to drupal-7.63
+- Update to stanford_capx-7.x-3.0-beta12
+- Add stanford_opportunity
+- Update to biblio-7.x-1.0-rc8
+- Patch Biblio to allow imports on load-balanced web servers
+- Update to services-7.x-3.21
+- Patch encrypt module: PHP 7.1 Support, new openSSL plugin
+- Update simplesamlphp to 1.17-rc3
+
 Version 1.0.21                                                       2019-01-31
 -------------------------------------------------------------------------------
 - Updated stanford_sites_jumpstart_engineering install profile
