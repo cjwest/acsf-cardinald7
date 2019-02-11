@@ -158,6 +158,10 @@
         "Call the preserve paths hooks":
         "https://github.com/SebCorbin/composer-patches/commit/1cb9bacba51f8bba0c5f3f322c3bb61e4ceae974.patch"
       },
+      "drupal/biblio": {
+        "https://www.drupal.org/project/biblio/issues/2114519":
+        "https://www.drupal.org/files/biblio-import_dir-2114519-1.patch"
+      },
       "drupal/filefield_paths": {
         "https://www.drupal.org/project/filefield_paths/issues/2946648":
         "https://www.drupal.org/files/issues/filefield_paths-support_php_72-2946648-3.patch"

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6fa8f9df242241d96dc5f8109eb990ff",
+    "content-hash": "07c5d739e37ddbe1a7d3bc43e4870730",
     "packages": [
         {
             "name": "Stanford/WMD",
@@ -2390,17 +2390,17 @@
         },
         {
             "name": "drupal/biblio",
-            "version": "1.0.0-rc7",
+            "version": "1.0.0-rc8",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/biblio",
-                "reference": "7.x-1.0-rc7"
+                "reference": "7.x-1.0-rc8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/biblio-7.x-1.0-rc7.zip",
-                "reference": "7.x-1.0-rc7",
-                "shasum": "53455d9e1ecb98c76001b49296d27ab043100891"
+                "url": "https://ftp.drupal.org/files/projects/biblio-7.x-1.0-rc8.zip",
+                "reference": "7.x-1.0-rc8",
+                "shasum": "d9507f3ecbf310c1a15a48503784f6e8e68ff91f"
             },
             "require": {
                 "drupal/drupal": "*"
@@ -2411,12 +2411,15 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "7.x-1.0-rc7",
-                    "datestamp": "1374290470",
+                    "version": "7.x-1.0-rc8",
+                    "datestamp": "1549053539",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
                     }
+                },
+                "patches_applied": {
+                    "https://www.drupal.org/project/biblio/issues/2114519": "https://www.drupal.org/files/biblio-import_dir-2114519-1.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/7/downloads",
@@ -2424,6 +2427,10 @@
                 "GPL-2.0-or-later"
             ],
             "authors": [
+                {
+                    "name": "Liam Morland",
+                    "homepage": "https://www.drupal.org/user/493050"
+                },
                 {
                     "name": "rjerome",
                     "homepage": "https://www.drupal.org/user/54997"
