@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6ad84a0de75c2b55730f84484fb0e556",
+    "content-hash": "83f5ca2676e37524fe820e7a299e4d98",
     "packages": [
         {
             "name": "Stanford/WMD",
@@ -1425,7 +1425,7 @@
                 },
                 "drupal": {
                     "version": "7.x-1.51",
-                    "datestamp": "1544619185",
+                    "datestamp": "1548245280",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1870,8 +1870,7 @@
             "homepage": "https://www.drupal.org/project/admin_menu",
             "support": {
                 "source": "http://cgit.drupalcode.org/admin_menu"
-            },
-            "time": "2018-10-02T13:13:39+00:00"
+            }
         },
         {
             "name": "drupal/admin_views",
@@ -2052,8 +2051,7 @@
             "homepage": "https://www.drupal.org/project/always_visible",
             "support": {
                 "source": "http://cgit.drupalcode.org/always_visible"
-            },
-            "time": "2013-11-24T01:49:17+00:00"
+            }
         },
         {
             "name": "drupal/auto_nodetitle",
@@ -2073,7 +2071,7 @@
                 },
                 "drupal": {
                     "version": "7.x-1.x-dev",
-                    "datestamp": "1548160081",
+                    "datestamp": "1548160680",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -2106,8 +2104,7 @@
             "homepage": "https://www.drupal.org/project/auto_nodetitle",
             "support": {
                 "source": "http://cgit.drupalcode.org/auto_nodetitle"
-            },
-            "time": "2011-09-08T16:07:46+00:00"
+            }
         },
         {
             "name": "drupal/backup_migrate",
@@ -3476,8 +3473,7 @@
             "homepage": "https://www.drupal.org/project/context_list",
             "support": {
                 "source": "http://cgit.drupalcode.org/context_list"
-            },
-            "time": "2014-07-08T19:51:59+00:00"
+            }
         },
         {
             "name": "drupal/context_list_active",
@@ -3729,8 +3725,7 @@
             "homepage": "https://www.drupal.org/project/context_useragent",
             "support": {
                 "source": "http://cgit.drupalcode.org/context_useragent"
-            },
-            "time": "2017-05-05T20:11:18+00:00"
+            }
         },
         {
             "name": "drupal/contextual_view_modes",
@@ -3843,8 +3838,7 @@
             "homepage": "https://www.drupal.org/project/css_injector",
             "support": {
                 "source": "http://cgit.drupalcode.org/css_injector"
-            },
-            "time": "2016-08-02T18:01:48+00:00"
+            }
         },
         {
             "name": "drupal/ctools",
@@ -3876,7 +3870,7 @@
                 },
                 "drupal": {
                     "version": "7.x-1.14",
-                    "datestamp": "1519455784",
+                    "datestamp": "1549603684",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4185,16 +4179,16 @@
                     "homepage": "https://www.drupal.org/user/242659"
                 },
                 {
+                    "name": "cafuego",
+                    "homepage": "https://www.drupal.org/user/218525"
+                },
+                {
                     "name": "developer-x",
                     "homepage": "https://www.drupal.org/user/399625"
                 },
                 {
                     "name": "dww",
                     "homepage": "https://www.drupal.org/user/46549"
-                },
-                {
-                    "name": "gisle",
-                    "homepage": "https://www.drupal.org/user/409554"
                 },
                 {
                     "name": "podarok",
@@ -4332,16 +4326,16 @@
                     "homepage": "https://www.drupal.org/user/242659"
                 },
                 {
+                    "name": "cafuego",
+                    "homepage": "https://www.drupal.org/user/218525"
+                },
+                {
                     "name": "developer-x",
                     "homepage": "https://www.drupal.org/user/399625"
                 },
                 {
                     "name": "dww",
                     "homepage": "https://www.drupal.org/user/46549"
-                },
-                {
-                    "name": "gisle",
-                    "homepage": "https://www.drupal.org/user/409554"
                 },
                 {
                     "name": "podarok",
@@ -4411,16 +4405,16 @@
                     "homepage": "https://www.drupal.org/user/242659"
                 },
                 {
+                    "name": "cafuego",
+                    "homepage": "https://www.drupal.org/user/218525"
+                },
+                {
                     "name": "developer-x",
                     "homepage": "https://www.drupal.org/user/399625"
                 },
                 {
                     "name": "dww",
                     "homepage": "https://www.drupal.org/user/46549"
-                },
-                {
-                    "name": "gisle",
-                    "homepage": "https://www.drupal.org/user/409554"
                 },
                 {
                     "name": "podarok",
@@ -4619,8 +4613,7 @@
             "homepage": "https://www.drupal.org/project/diff",
             "support": {
                 "source": "http://cgit.drupalcode.org/diff"
-            },
-            "time": "2017-04-23T12:14:31+00:00"
+            }
         },
         {
             "name": "drupal/drafty",
@@ -4775,7 +4768,7 @@
                 },
                 "drupal": {
                     "version": "7.63",
-                    "datestamp": "1547681580",
+                    "datestamp": "1549480981",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5757,7 +5750,7 @@
                 },
                 "drupal": {
                     "version": "7.x-1.0-beta12",
-                    "datestamp": "1479402842",
+                    "datestamp": "1548457080",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -6154,8 +6147,7 @@
             "homepage": "https://www.drupal.org/project/filefield_paths",
             "support": {
                 "source": "http://cgit.drupalcode.org/filefield_paths"
-            },
-            "time": "2016-01-04T09:05:19+00:00"
+            }
         },
         {
             "name": "drupal/flag",
@@ -6469,7 +6461,7 @@
                 },
                 "drupal": {
                     "version": "7.x-2.5",
-                    "datestamp": "1531469021",
+                    "datestamp": "1548968580",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -7126,8 +7118,7 @@
             "homepage": "https://www.drupal.org/project/match_redirect",
             "support": {
                 "source": "http://cgit.drupalcode.org/match_redirect"
-            },
-            "time": "2014-03-21T16:54:50+00:00"
+            }
         },
         {
             "name": "drupal/menu_attributes",
@@ -8038,8 +8029,7 @@
             "homepage": "https://www.drupal.org/project/paranoia",
             "support": {
                 "source": "http://cgit.drupalcode.org/paranoia"
-            },
-            "time": "2018-06-06T15:45:43+00:00"
+            }
         },
         {
             "name": "drupal/path_redirect_import",
@@ -8609,7 +8599,7 @@
                 },
                 "drupal": {
                     "version": "7.x-2.11",
-                    "datestamp": "1526653384",
+                    "datestamp": "1548305581",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -9013,8 +9003,7 @@
             "homepage": "https://www.drupal.org/project/special_menu_items",
             "support": {
                 "source": "http://cgit.drupalcode.org/special_menu_items"
-            },
-            "time": "2015-05-12T12:28:59+00:00"
+            }
         },
         {
             "name": "drupal/stanford_date_timepicker",
@@ -9057,8 +9046,7 @@
             "homepage": "https://www.drupal.org/project/stanford_date_timepicker",
             "support": {
                 "source": "http://cgit.drupalcode.org/stanford_date_timepicker"
-            },
-            "time": "2014-12-18T22:04:19+00:00"
+            }
         },
         {
             "name": "drupal/strongarm",
@@ -9462,8 +9450,7 @@
             "homepage": "https://www.drupal.org/project/token_tweaks",
             "support": {
                 "source": "http://cgit.drupalcode.org/token_tweaks"
-            },
-            "time": "2014-01-27T20:41:49+00:00"
+            }
         },
         {
             "name": "drupal/transliteration",
@@ -13185,16 +13172,16 @@
         },
         {
             "name": "su-sws/stanford_private_page",
-            "version": "7.2.0-alpha4",
+            "version": "7.2.0-alpha.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_private_page.git",
-                "reference": "51e3a7e3cdb71cc584ab624ffebc8c86a0efa96a"
+                "reference": "0e16e490a1deffcb4d1f69e3c1a867b71f37b2ca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_private_page/zipball/51e3a7e3cdb71cc584ab624ffebc8c86a0efa96a",
-                "reference": "51e3a7e3cdb71cc584ab624ffebc8c86a0efa96a",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_private_page/zipball/0e16e490a1deffcb4d1f69e3c1a867b71f37b2ca",
+                "reference": "0e16e490a1deffcb4d1f69e3c1a867b71f37b2ca",
                 "shasum": ""
             },
             "require": {
@@ -13206,10 +13193,10 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_private_page/tree/7.2.0-alpha4",
+                "source": "https://github.com/SU-SWS/stanford_private_page/tree/7.2.0-alpha.5",
                 "issues": "https://github.com/SU-SWS/stanford_private_page/issues"
             },
-            "time": "2018-06-27T22:30:25+00:00"
+            "time": "2019-02-12T23:20:00+00:00"
         },
         {
             "name": "su-sws/stanford_publication",
