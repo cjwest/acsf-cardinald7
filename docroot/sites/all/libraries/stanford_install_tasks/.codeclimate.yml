@@ -8,11 +8,18 @@ engines:
     checks:
       Drupal Commenting DocComment ShortNotCapital:
         enabled: false
+      Drupal NamingConventions ValidFunctionName NotCamelCaps:
+        enabled: false
+      Drupal NamingConventions ValidFunctionName ScopeNotCamelCaps:
+        enabled: false
     config:
       file_extensions: "php,inc,install,module,profile"
       standard: "Drupal"
   phpmd:
     enabled: true
+    checks:
+      Controversial/CamelCaseParameterName:
+        enabled: false
     config:
       file_extensions:
       - inc

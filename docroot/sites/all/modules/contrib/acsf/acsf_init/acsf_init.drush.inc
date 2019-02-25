@@ -78,11 +78,20 @@ function acsf_init_drush_command() {
  * Command callback: executes the required changes to this repository.
  */
 function drush_acsf_init() {
-  // Retrieve the path to the acsf module relative to this file.
-  $path = dirname(dirname(dirname(__FILE__)));
-  $relative_path = str_replace(realpath(DRUPAL_ROOT) . '/', '', realpath($path));
-  $repo_root = str_replace('/docroot', '', realpath(DRUPAL_ROOT));
-  $lib_path = sprintf('%s/%s/acsf/acsf_init/lib', realpath(DRUPAL_ROOT), $relative_path);
+  $drupal_root = realpath(DRUPAL_ROOT);
+  if (basename($drupal_root) !== 'docroot') {
+    // If for some reason we wanted to enable this command to run on directory
+    // structures where no /docroot exists, that's possible in theory... but we
+    // need to to audit / change the code in this file to
+    // - derive the repo root in a good way;
+    // - properly distinguish the repo root from the drupal root;
+    // - figure out what to do with remaining instances of "docroot", if any;
+    // - figure out what to do when drupal root and repo root are equal... like
+    //   not copy hook files?
+    drush_set_error('INCORRECT DIRECTORY STRUCTURE', dt("Drupal must be installed in a subdirectory of your code repository, named 'docroot'."));
+    return;
+  }
+  $repo_root = dirname($drupal_root);
   $skip_default_settings = drush_get_option('skip-default-settings');
 
   drush_print(dt('Installing ACSF requirements.'));
@@ -112,6 +121,7 @@ function drush_acsf_init() {
   }
 
   // Copy the required files.
+  $lib_path = sprintf('%s/lib', dirname(__FILE__));
   foreach (acsf_init_get_required_files($repo_root) as $location) {
     $file = $location['filename'];
 
@@ -296,7 +306,10 @@ function acsf_init_default_settings_php_include_get() {
   $delimiter_end = ACSF_INIT_CODE_DELIMITER_END;
   return <<<INCLUDE
 ${delimiter_start}
-include dirname(__FILE__) . '/acsf.settings.php';
+\$_acsf_infrastructure = include dirname(__FILE__) . '/acsf.settings.php';
+if (\$_acsf_infrastructure === 'acsf-infrastructure') {
+  return;
+}
 ${delimiter_end}
 INCLUDE;
 }
@@ -440,14 +453,16 @@ function drush_acsf_connect_factory() {
  * Command callback: Verify that acsf-init was run against the current version.
  */
 function drush_acsf_init_verify() {
-  $drupal_root = rtrim(DRUPAL_ROOT, '/.');
-  // Retrieve the path to the acsf module relative to this file.
-  $path = dirname(dirname(dirname(__FILE__)));
-  $relative_path = str_replace($drupal_root . '/', '', $path);
-  $repo_root = str_replace('/docroot', '', $drupal_root);
-  $lib_path = sprintf('%s/%s/acsf/acsf_init/lib', $drupal_root, $relative_path);
+  $drupal_root = realpath(DRUPAL_ROOT);
+  if (basename($drupal_root) !== 'docroot') {
+    // Don't check the rest, since drush acsf-init cannot reliably determine
+    // file locations to begin with.
+    return drush_set_error('INCORRECT DIRECTORY STRUCTURE', dt("Drupal must be installed in a subdirectory of your code repository, named 'docroot'."));
+  }
+  $repo_root = dirname($drupal_root);
   $skip_default_settings = drush_get_option('skip-default-settings');
 
+  $lib_path = sprintf('%s/lib', dirname(__FILE__));
   $error = FALSE;
   foreach (acsf_init_get_required_files($repo_root) as $location) {
     $file = $location['filename'];
@@ -551,7 +566,14 @@ function drush_acsf_init_verify() {
 function drush_acsf_uninstall() {
   drush_print('Removing ACSF requirements.');
 
-  $repo_root = str_replace('/docroot', '', DRUPAL_ROOT);
+  $drupal_root = realpath(DRUPAL_ROOT);
+  $repo_root = dirname($drupal_root);
+  if (basename($drupal_root) !== 'docroot') {
+    // We're not failing if Drupal is not installed in 'docroot' (as in
+    // acsf-init), so that files can still be removed from strange installs.
+    // hooks/ will be checked inside the docroot.
+    $repo_root = $drupal_root;
+  }
   foreach (acsf_init_get_required_files($repo_root) as $location) {
     $file = $location['filename'];
     $dest = sprintf('%s/%s', $location['dest'], $file);
@@ -597,9 +619,6 @@ function acsf_init_get_required_dirs($repo_root) {
  * Lists all required files to create/delete.
  */
 function acsf_init_get_required_files($repo_root) {
-  // Path to the ACSF module file.
-  $acsf_path = dirname(__DIR__);
-
   // Array elements should use the following guidelines:
   // - Use the 'source' element to indicate where the file should be copied
   //   from. Note: Some files do not have a source as they are already in place.

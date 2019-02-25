@@ -29,7 +29,7 @@ class ImportJSEBeans extends AbstractInstallTask {
     $loader->execute();
 
     // @todo: Make this an option on the install form.
-    $endpoint = variable_get("stanford_content_server", "https://sites.stanford.edu/jsa-content/jsainstall");
+    $endpoint = variable_get("stanford_content_server", "https://jsa-content.stanford.edu/jsainstall");
 
     $uuids = array(
       '04cef32d-aa4b-477c-850e-e9efd331fa4c',

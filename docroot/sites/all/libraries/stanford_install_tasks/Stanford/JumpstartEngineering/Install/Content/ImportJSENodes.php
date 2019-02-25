@@ -32,7 +32,7 @@ class ImportJSENodes extends AbstractInstallTask {
     drupal_set_time_limit(600);
 
     // @todo: Make this an option on the install form.
-    $endpoint = variable_get("stanford_content_server", "https://sites.stanford.edu/jsa-content/jsainstall");
+    $endpoint = variable_get("stanford_content_server", "https://jsa-content.stanford.edu/jsainstall");
     $filters = array('tid_raw' => array('55'));
 
     $view_importer = new \SitesContentImporterViews();

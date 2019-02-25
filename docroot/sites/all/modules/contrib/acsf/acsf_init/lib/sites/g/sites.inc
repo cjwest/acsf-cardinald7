@@ -73,6 +73,84 @@ function gardens_site_data_load_file() {
 }
 
 /**
+ * Checks for a registered ACSF site based on Apache server variables.
+ *
+ * Prerequisite: $_SERVER and $_ENV are both populated as per Acquia practices.
+ *
+ * @return array|int|null
+ *   0 if no site was found for the given domain; NULL if a sites.json read
+ *   failure was encountered; otherwise, an array of site data as constructed
+ *   by gardens_site_data_build_data() - with an added key 'dir_key' containing
+ *   the key where sites.php would expect to set this site's directory in its
+ *   '$sites' variable.
+ *
+ * @see gardens_site_data_build_data()
+ */
+function gardens_site_data_get_site_from_server_info() {
+  $data = NULL;
+  // First derive the 'site uri' (the base domain with possibly a sub path).
+  // Drush site-install gets confused about the uri when we specify the
+  // --sites-subdir option. The HTTP_HOST is set incorrectly and we can't find
+  // it in the sites.json. By specifying the --acsf-install-uri option with the
+  // value of the standard domain, we can catch that here and correct the uri
+  // argument for drush site installs.
+  if (drupal_is_cli() && function_exists('drush_get_option') && ($acsf_uri = drush_get_option('acsf-install-uri', FALSE))) {
+    // The acsf-install-uri argument contains a pure domain string, one without
+    // a leading http:// string - but we make no assumptions about that.
+    if (!preg_match('|https?://|', $acsf_uri)) {
+      $acsf_uri = 'http://' . $acsf_uri;
+    }
+    $host = $_SERVER['HTTP_HOST'] = parse_url($acsf_uri, PHP_URL_HOST);
+    // PHP_URL_PATH may or may not have a trailing slash. Make sure it's gone,
+    // so it's either empty or a path with a leading slash.
+    $path = rtrim(parse_url($acsf_uri, PHP_URL_PATH), '/');
+  }
+  else {
+    $host = rtrim($_SERVER['HTTP_HOST'], '.');
+    $path = $_SERVER['SCRIPT_NAME'] ? $_SERVER['SCRIPT_NAME'] : $_SERVER['SCRIPT_FILENAME'];
+    // In order to support path based domains here (which are almost always
+    // implemented by symlinking docroot/subpath/ to docroot/), we in theory
+    // need to derive which part of $path is the domain sub path, and which is
+    // a URL path inside the website. However, but we make the assumption that
+    // - for web requests the only file including this index.php in the docroot;
+    // - Drush sets the SCRIPT_(FILE)NAME environment variable too, ending in
+    //   "/index.php";
+    // - no other scripts include sites.php;
+    // ...because doing otherwise is hard, and we have no examples to test with
+    // (and no indication that anyone wants to use sites.php in another way).
+    // This means anything preceding "/index.php" is the full domain sub path.
+    if (substr($path, -10) !== '/index.php') {
+      // This isn't supported at the moment; return 'domain not found'.
+      $data = 0;
+    }
+    // $path gets a leading slash; no trailing slash.
+    $path = substr($path, 0, strlen($path) - 10);
+  }
+
+  // Get data for the 'site uri' from APC or sites.json.
+  if ($data !== 0) {
+    if (!GARDENS_SITE_DATA_USE_APC) {
+      $data = gardens_site_data_refresh_one($host . $path);
+    }
+    else {
+      // Check for data in APC: FALSE means no; 0 means "not found" cached in
+      // APC; NULL means "sites.json read failure" cached in APC.
+      $data = gardens_site_data_cache_get($host . $path);
+      if ($data === FALSE) {
+        $data = gardens_site_data_refresh_one($host . $path);
+      }
+    }
+
+    if (is_array($data)) {
+      // Generate the expected drupal sites.php key for this domain.
+      $data['dir_key'] = str_replace('/', '.', $host . $path);
+    }
+  }
+
+  return $data;
+}
+
+/**
  * Returns the location of the sites data json file.
  *
  * We rely on the existence of the files-private directory that's created in

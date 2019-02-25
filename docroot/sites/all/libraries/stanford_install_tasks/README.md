@@ -1,5 +1,5 @@
 # [Stanford Installation Tasks](https://github.com/SU-SWS/stanford_install_tasks)
-##### Version: 7.x-1.5
+##### Version: 7.x-1.6
 
 # iTasks Installation Tasks  
 _A collection of small chunks of code._

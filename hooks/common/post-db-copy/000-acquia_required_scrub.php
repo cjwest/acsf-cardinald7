@@ -81,7 +81,7 @@ $command = sprintf(
   escapeshellarg($cache_directory),
   escapeshellarg($docroot),
   escapeshellarg($acsf_location),
-  escapeshellarg($new_domain)
+  escapeshellarg('https://' . $new_domain)
 );
 fwrite(STDERR, "Executing: $command;\n");
 $result = shell_exec($command);
@@ -92,7 +92,7 @@ $command = sprintf(
   'CACHE_PREFIX=%s \drush8 -r %s -l %s -y acsf-site-scrub',
   escapeshellarg($cache_directory),
   escapeshellarg($docroot),
-  escapeshellarg($new_domain)
+  escapeshellarg('https://' . $new_domain)
 );
 fwrite(STDERR, "Executing: $command;\n");
 $result = shell_exec($command);

@@ -28,7 +28,7 @@ class ImportJSECustomBeans extends AbstractInstallTask {
     $loader = new LoadImporterLibrary();
     $loader->execute();
 
-    $endpoint = variable_get("stanford_content_server", "https://sites.stanford.edu/jsa-content/jsainstall");
+    $endpoint = variable_get("stanford_content_server", "https://jsa-content.stanford.edu/jsainstall");
 
     $uuids = array(
       // Jumpstart Small Custom Block.

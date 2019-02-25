@@ -165,7 +165,7 @@
       },
       "drupal/biblio": {
         "https://www.drupal.org/project/biblio/issues/2114519":
-        "https://www.drupal.org/files/biblio-import_dir-2114519-1.patch"
+        "https://www.drupal.org/files/issues/2019-02-21/biblio-import_dir-2114519-3.patch"
       },
       "drupal/filefield_paths": {
         "https://www.drupal.org/project/filefield_paths/issues/2946648":

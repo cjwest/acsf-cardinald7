@@ -114,13 +114,12 @@ $conf['404_fast_html'] = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
  * Acquia Cloud Site Factory specific settings.
  */
 if (file_exists('/var/www/site-php')) {
-  // The DB role will be the same as the gardens site directory name.
-  $role = basename(conf_path());
   // This global is set in sites.php. It's used to reference the
   // live environment DB setting even when running on the update env.
-  $site_settings = !empty($GLOBALS['gardens_site_settings']) ? $GLOBALS['gardens_site_settings'] : array('site' => '', 'env' => '');
+  $site_settings = !empty($GLOBALS['gardens_site_settings']) ? $GLOBALS['gardens_site_settings'] : array('site' => '', 'env' => '', 'conf' => array('acsf_db_name' => ''));
   $site = $site_settings['site'];
   $env = $site_settings['env'];
+  $role = $site_settings['conf']['acsf_db_name'];
 
   $settings_inc = "/var/www/site-php/{$site}.{$env}/D7-{$env}-{$role}-settings.inc";
   if (file_exists($settings_inc)) {

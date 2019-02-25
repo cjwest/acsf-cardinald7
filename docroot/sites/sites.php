@@ -77,63 +77,13 @@ if (empty($_ENV['AH_SITE_GROUP']) || empty($_ENV['AH_SITE_ENVIRONMENT']) || !fun
   return;
 }
 
-// Drush site-install gets confused about the uri when we specify the
-// --sites-subdir option. The HTTP_HOST is set incorrectly and we can't
-// find it in the sites.json. By specifying the --acsf-install-uri option
-// with the value of the standard domain, we can catch that here and
-// correct the uri argument for drush site installs.
-if (drupal_is_cli() && function_exists('drush_get_option') && ($http_host = drush_get_option('acsf-install-uri', FALSE))) {
-  // The acsf-install-uri argument contains a pure domain string, one without a
-  // leading http:// string. To make sure that the parse_url properly identifies
-  // the host portion, add a http:// string.
-  $host = $_SERVER['HTTP_HOST'] = parse_url('http://' . $http_host, PHP_URL_HOST);
-  $acsf_uri_path = parse_url('http://' . $http_host, PHP_URL_PATH);
-  $acsf_uri_path .= '/index.php';
-}
-else {
-  $host = rtrim($_SERVER['HTTP_HOST'], '.');
-  $acsf_uri_path = $_SERVER['SCRIPT_NAME'] ? $_SERVER['SCRIPT_NAME'] : $_SERVER['SCRIPT_FILENAME'];
-}
-
-$acsf_host = implode('.', array_reverse(explode(':', $host)));
-// Build an array with maximum one path fragment. Since the paths always start
-// with a '/' and we are splitting them by the '/', the array will always start
-// with an empty string.
-$acsf_uri_path_fragments = explode('/', $acsf_uri_path);
-$acsf_uri_path_fragments = array_diff($acsf_uri_path_fragments, array('index.php'));
-// Only check the first path fragment, then the base domain.
-$acsf_uri_path_fragments = array_slice($acsf_uri_path_fragments, 0, 2);
-// Check whether we can find site data for the hostname suffixed by one
-// fragment, or for only the hostname.
-$data = NULL;
-for ($i = count($acsf_uri_path_fragments); $i > 0; $i--) {
-  $dir = $acsf_host . implode('.', array_slice($acsf_uri_path_fragments, 0, $i));
-  $acsf_uri = $acsf_host . implode('/', array_slice($acsf_uri_path_fragments, 0, $i));
-  if (!GARDENS_SITE_DATA_USE_APC) {
-    // gardens_site_data_refresh_one() will do a full parse if the domain is in
-    // the file at all and a single line parse fails.
-    $data = gardens_site_data_refresh_one($acsf_uri);
-  }
-  else {
-    // Check for data in APC: FALSE means no; 0 means "not found" cached in APC;
-    // NULL means "sites.json read failure" cached in APC.
-    $data = gardens_site_data_cache_get($acsf_uri);
-    if ($data === FALSE) {
-      $data = gardens_site_data_refresh_one($acsf_uri);
-    }
-  }
-  // Check again for a hostname with less fragments if we got a "not found";
-  // stop if we got a read failure or found data.
-  if ($data || $data === NULL) {
-    break;
-  }
-}
+$_tmp = gardens_site_data_get_site_from_server_info();
 
 // If either "not found" or "read failure" (from either the cache or the
 // sites.json file): don't set $sites and fall through (to, probably, reading
 // sites/default/settings.php for settings).
-if (empty($data)) {
-  if ($data === NULL) {
+if (empty($_tmp)) {
+  if ($_tmp === NULL) {
     // If we encountered a read error, indicate that we want the same (short)
     // cache time for the page, as we have for the data in APC.
     $GLOBALS['gardens_site_settings']['page_ttl'] = GARDENS_SITE_DATA_READ_FAILURE_TTL;
@@ -141,8 +91,14 @@ if (empty($data)) {
   return;
 }
 
-$GLOBALS['gardens_site_settings'] = $data['gardens_site_settings'];
-$sites[$dir] = $data['dir'];
+// We found a site, so add the corresponding 'configuration directory' to
+// $sites, as per the regular sites.php spec. (For most Drupal sites this is
+// a single-layer directory equal to a domain name; for us, it is typically
+// g/files/SITE-ID.)
+$sites[$_tmp['dir_key']] = $_tmp['dir'];
+// Also set 'gardens_site_settings' for other code further on. (Mainly
+// settings.php.)
+$GLOBALS['gardens_site_settings'] = $_tmp['gardens_site_settings'];
 
 // Include custom sites.php code from factory-hooks/post-sites-php, only when
 // a domain was found.

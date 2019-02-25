@@ -19,7 +19,7 @@ class PathologicSettings extends AbstractInstallTask {
    */
   public function execute(&$args = array()) {
     $paths = array(
-      'https://sites.stanford.edu/jsa-content/',
+      'https://jsa-content.stanford.edu/',
       '/jsa-content',
     );
     foreach (filter_formats() as $key => $format) {

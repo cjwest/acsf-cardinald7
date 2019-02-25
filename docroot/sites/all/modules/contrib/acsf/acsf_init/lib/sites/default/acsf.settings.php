@@ -19,7 +19,7 @@ if (!empty($_ENV['AH_SITE_GROUP']) && !empty($_ENV['AH_SITE_ENVIRONMENT']) && fu
     if (!function_exists('drush_main')) {
       header($_SERVER['SERVER_PROTOCOL'] . ' 404 Not Found');
     }
-    return;
+    return 'acsf-infrastructure';
   }
 
   // Print a 404 response and a small HTML page.

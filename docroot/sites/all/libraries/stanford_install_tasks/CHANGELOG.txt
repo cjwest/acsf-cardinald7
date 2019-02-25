@@ -1,6 +1,10 @@
 Stanford Installation Tasks
 --------------------------------------
 
+7.x-1.6                            2019-01-11
+---------------------------------------------
+- Changed sites.stanford.edu/jsa-content to jsa-content.stanford.edu to avoid redirects and issues with importing content.
+
 7.x-1.5                            2018-12-03
 ---------------------------------------------
 - Set the default timezone to America/Los Angeles.
