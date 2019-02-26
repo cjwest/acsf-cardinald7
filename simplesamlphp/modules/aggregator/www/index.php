@@ -8,9 +8,9 @@
  * it serves up.
  */
 
-require_once dirname(__FILE__) . "/../includes/serveXML.php";
-require_once dirname(__FILE__) . "/../includes/createXML.php";
-require_once dirname(__FILE__) . "/../includes/acsf.php";
+require_once dirname(dirname(__FILE__)) . "/includes/serveXML.php";
+require_once dirname(dirname(__FILE__)) . "/includes/createXML.php";
+require_once dirname(dirname(__FILE__)) . "/includes/acsf.php";
 
 // Start up Simplesaml.
 $saml = \SimpleSAML\Configuration::getInstance();

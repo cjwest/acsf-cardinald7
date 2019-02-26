@@ -1,25 +1,9 @@
 <?php
 
-/**
- * @file
- * SimpleSamlPhp Acquia Configuration.
- *
- * This file was last modified on Nov 4, 2015.
- *
- * All custom changes below. Modify as needed.
- */
-
-/**
- ****************************************
- * GLOBAL CONFIGURATION
- * *****************************************
- */
-
 // PHP 7.
 if (!is_array($config)) {
   $config = [];
 }
-
 /**
  * HTTPS vs HTTP Handling.
  */
@@ -31,8 +15,6 @@ if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROT
   $protocol = 'https://';
   $port = ':' . $_SERVER['SERVER_PORT'];
 }
-
-$config['baseurlpath'] = $protocol . $_SERVER['HTTP_HOST'] . $port . '/simplesaml/';
 
 // Set some security and other configs that are set above, however we
 // overwrite them here to keep all changes in one area.
@@ -56,23 +38,29 @@ $config['authproc.sp'] = [
 ];
 
 /**
+ * Support multi-site and single site installations at different base URLs.
+ *
+ * Overide $config['baseurlpath'] = "https://{yourdomain}/simplesaml/"
+ * to customize the default Acquia configuration.
+ */
+$config['baseurlpath'] = $protocol . $_SERVER['HTTP_HOST'] . $port . '/simplesaml/';
+
+/**
  * Cookies No Cache.
  *
  * Allow users to be automatically logged in if they signed in via the same
- * SAML provider on another site.
+ * SAML provider on another site by uncommenting the setcookie line below.
  *
  * Warning: This has performance implications for anonymous users.
  *
- * @link https://docs.acquia.com/articles/using-simplesamlphp-acquia-cloud-site
+ * @link https://docs.acquia.com/resource/using-simplesamlphp-acquia-cloud-site
  */
-# setcookie('NO_CACHE', '1');
-
+// setcookie('NO_CACHE', '1');.
 
 // ACQUIA ENVIRONMENT CONFIGURATION.
 if (getenv('AH_SITE_ENVIRONMENT')) {
-  include_once "config.acquia.php";
+  include_once dirname(__FILE__ ) . "/config.acquia.php";
 }
-
 /**
  * LANDO LOCAL CONFIGURATION.
  */

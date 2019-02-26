@@ -11,6 +11,22 @@ if (empty($_ENV['AH_SITE_ENVIRONMENT'])) {
 
 // E.g., 02dev, 02test, 02live.
 $env = $_ENV['AH_SITE_ENVIRONMENT'];
+switch ($env) {
+  case '02dev':
+  case '02devup':
+    $env = "02dev";
+    break;
+
+  case '02test':
+  case '02testup':
+    $env = "02test";
+    break;
+
+  case '02update':
+  default:
+    $env = "02live";
+    break;
+}
 
 // Only populate this var if we need to. The sources build out causes a curl
 // call to every site on the stack.
@@ -25,7 +41,7 @@ $key = "metadata_signing." . $env . ".pem";
 $cert = "metadata_signing." . $env . ".crt";
 
 // Generate a path to a shared tmp directory.
-$ah_tmp = "/mnt/gfs/" . $_ENV['AH_SITE_GROUP'] . $env . "/tmp";
+$ah_tmp = "/mnt/gfs/" . $_ENV['AH_SITE_NAME'] . "/tmp";
 
 // Configuration for the aggregator module.
 $config = [

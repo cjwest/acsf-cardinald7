@@ -65,6 +65,8 @@ DirectoryIndex index.php index.html index.htm
   # Acquia Cloud does for the *.acquia-sites.com domains.
   RewriteCond %{ENV:AH_SITE_ENVIRONMENT} (\d{2,})test [OR]
   RewriteCond %{ENV:AH_SITE_ENVIRONMENT} (\d{2,})dev [OR]
+  RewriteCond %{ENV:AH_SITE_ENVIRONMENT} (\d{2,})testup [OR]
+  RewriteCond %{ENV:AH_SITE_ENVIRONMENT} (\d{2,})devup [OR]
   RewriteCond %{HTTP_HOST} \.acsitefactory\.com$ [NC]
   RewriteCond %{REQUEST_URI} /robots.txt [NC]
   RewriteRule ^ no_robots.txt [L]

@@ -4,12 +4,14 @@
 
 switch ($_ENV['AH_SITE_ENVIRONMENT']) {
   case "02test":
+  case "02testup":
     $conf['stanford_snow_api_user'] = 'acquiaWS';
     $conf['stanford_snow_api_pass'] = 'Servicenow!23';
     $conf['stanford_snow_api_endpoint'] = "https://stanfordtest.service-now.com/api/stu/su_acsf_site_requester_information/requestor";
     break;
 
   case "02dev":
+  case "02devup":
     $conf['stanford_snow_api_user'] = 'acquiaWS';
     $conf['stanford_snow_api_pass'] = 'Servicenow!23';
     $conf['stanford_snow_api_endpoint'] = "https://stanforddev.service-now.com/api/stu/su_acsf_site_requester_information/requestor";

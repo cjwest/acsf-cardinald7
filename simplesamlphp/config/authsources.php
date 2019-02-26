@@ -1,21 +1,27 @@
 <?php
 
 $env = !empty($_ENV['AH_SITE_ENVIRONMENT']) ? $_ENV['AH_SITE_ENVIRONMENT'] : '';
-// E.g., $url = https://acsf.stanford.edu/saml/02live/eao.stanford.edu
-$url = 'https://acsf.stanford.edu/saml/' . $env . '/' . filter_var($_SERVER['HTTP_HOST'], FILTER_SANITIZE_URL);
 switch ($env) {
   case '02dev':
+  case '02devup':
+    $normalizedenv = "02dev";
     $idp = 'https://idp-uat.stanford.edu/';
     break;
   case '02test':
+  case '02testup':
+    $normalizedenv = "02test";
     $idp = 'https://idp-uat.stanford.edu/';
     break;
   case '02live':
-    $idp = 'https://idp.stanford.edu/';
-    break;
+  case '02update':
   default:
+    $normalizedenv = "02live";
     $idp = 'https://idp.stanford.edu/';
 }
+
+// E.g., $url = https://acsf.stanford.edu/saml/02live/eao.stanford.edu
+$url = 'https://acsf.stanford.edu/saml/' . $normalizedenv . '/' . filter_var($_SERVER['HTTP_HOST'], FILTER_SANITIZE_URL);
+
 $config = [
 
   // This is a authentication source which handles admin authentication.
