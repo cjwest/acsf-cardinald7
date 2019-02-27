@@ -1,5 +1,23 @@
 ACSF CardinalD7
 
+Version 1.0.25                                                       2019-02-27
+-------------------------------------------------------------------------------
+- Update to context-7.x-1.10
+- Update to services-7.x-3.23
+- Update core to drupal-7.64
+- Bug fix: downgrade chosen library to 1.70
+- Update stanford_install_tasks library to 7.x-1.6
+- Update to acsf-7.x-1.52
+- Update to biblio-7.x-1.0-rc9
+- Patch Biblio to allow imports on load-balanced web servers
+- Update to ctools-7.x-1.15
+- Update to field_collection-7.x-1.0-beta13
+- Update to google_analytics-7.x-2.6
+- Update to rules-7.x-2.12
+- Update to views_datasource-7.x-1.0-alpha3
+- Update to workbench_access-7.x-1.6
+- Bug fix: aggregated simpleSAMLphp metadata was incorrectly generated during ACSF updates
+
 Version 1.0.24                                                       2019-02-20
 -------------------------------------------------------------------------------
 - Security update to link-7.x-1.6
