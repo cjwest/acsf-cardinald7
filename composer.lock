@@ -1824,8 +1824,8 @@
                     "dev-3.x": "3.x-dev"
                 },
                 "drupal": {
-                    "version": "7.x-3.0-rc6+7-dev",
-                    "datestamp": "1545336480",
+                    "version": "7.x-3.0-rc6+12-dev",
+                    "datestamp": "1550858284",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -1854,6 +1854,10 @@
                     "homepage": "https://www.drupal.org/user/54136"
                 },
                 {
+                    "name": "thalles",
+                    "homepage": "https://www.drupal.org/user/3589086"
+                },
+                {
                     "name": "truls1502",
                     "homepage": "https://www.drupal.org/user/325866"
                 }
@@ -1862,7 +1866,8 @@
             "homepage": "https://www.drupal.org/project/admin_menu",
             "support": {
                 "source": "http://cgit.drupalcode.org/admin_menu"
-            }
+            },
+            "time": "2018-10-02T13:13:39+00:00"
         },
         {
             "name": "drupal/admin_views",
@@ -2096,7 +2101,8 @@
             "homepage": "https://www.drupal.org/project/auto_nodetitle",
             "support": {
                 "source": "http://cgit.drupalcode.org/auto_nodetitle"
-            }
+            },
+            "time": "2011-09-08T16:07:46+00:00"
         },
         {
             "name": "drupal/backup_migrate",
@@ -3194,17 +3200,17 @@
         },
         {
             "name": "drupal/context",
-            "version": "3.9.0",
+            "version": "3.10.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/context",
-                "reference": "7.x-3.9"
+                "reference": "7.x-3.10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/context-7.x-3.9.zip",
-                "reference": "7.x-3.9",
-                "shasum": "8c09155dc43a4cf09cfef10e931bcbd62ebbf17d"
+                "url": "https://ftp.drupal.org/files/projects/context-7.x-3.10.zip",
+                "reference": "7.x-3.10",
+                "shasum": "87699be2ce130c5d332ed4e4d1d54b0e2edde127"
             },
             "require": {
                 "drupal/ctools": "*",
@@ -3216,8 +3222,8 @@
                     "dev-3.x": "3.x-dev"
                 },
                 "drupal": {
-                    "version": "7.x-3.9",
-                    "datestamp": "1543594684",
+                    "version": "7.x-3.10",
+                    "datestamp": "1551291108",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3465,7 +3471,8 @@
             "homepage": "https://www.drupal.org/project/context_list",
             "support": {
                 "source": "http://cgit.drupalcode.org/context_list"
-            }
+            },
+            "time": "2014-07-08T19:51:59+00:00"
         },
         {
             "name": "drupal/context_list_active",
@@ -3583,7 +3590,7 @@
         },
         {
             "name": "drupal/context_ui",
-            "version": "3.9.0",
+            "version": "3.10.0",
             "require": {
                 "drupal/context": "self.version",
                 "drupal/drupal": "~7.0"
@@ -3594,8 +3601,8 @@
                     "dev-3.x": "3.x-dev"
                 },
                 "drupal": {
-                    "version": "7.x-3.9",
-                    "datestamp": "1543594684",
+                    "version": "7.x-3.10",
+                    "datestamp": "1551291108",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3830,7 +3837,8 @@
             "homepage": "https://www.drupal.org/project/css_injector",
             "support": {
                 "source": "http://cgit.drupalcode.org/css_injector"
-            }
+            },
+            "time": "2016-08-02T18:01:48+00:00"
         },
         {
             "name": "drupal/ctools",
@@ -4605,7 +4613,8 @@
             "homepage": "https://www.drupal.org/project/diff",
             "support": {
                 "source": "http://cgit.drupalcode.org/diff"
-            }
+            },
+            "time": "2017-04-23T12:14:31+00:00"
         },
         {
             "name": "drupal/drafty",
@@ -6139,7 +6148,8 @@
             "homepage": "https://www.drupal.org/project/filefield_paths",
             "support": {
                 "source": "http://cgit.drupalcode.org/filefield_paths"
-            }
+            },
+            "time": "2016-01-04T09:05:19+00:00"
         },
         {
             "name": "drupal/flag",
@@ -8624,17 +8634,17 @@
         },
         {
             "name": "drupal/services",
-            "version": "3.21.0",
+            "version": "3.23.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/services",
-                "reference": "7.x-3.21"
+                "reference": "7.x-3.23"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/services-7.x-3.21.zip",
-                "reference": "7.x-3.21",
-                "shasum": "43b4e83da6dfd92b7f5f71dc8e22e74a35bf7f50"
+                "url": "https://ftp.drupal.org/files/projects/services-7.x-3.23.zip",
+                "reference": "7.x-3.23",
+                "shasum": "7fd870691b76fa2488c34f436dd9f3057ccc6847"
             },
             "require": {
                 "drupal/ctools": "*",
@@ -8650,8 +8660,8 @@
                     "dev-3.x": "3.x-dev"
                 },
                 "drupal": {
-                    "version": "7.x-3.21",
-                    "datestamp": "1547922780",
+                    "version": "7.x-3.23",
+                    "datestamp": "1551302285",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
