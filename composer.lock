@@ -1866,8 +1866,7 @@
             "homepage": "https://www.drupal.org/project/admin_menu",
             "support": {
                 "source": "http://cgit.drupalcode.org/admin_menu"
-            },
-            "time": "2018-10-02T13:13:39+00:00"
+            }
         },
         {
             "name": "drupal/admin_views",
@@ -2101,8 +2100,7 @@
             "homepage": "https://www.drupal.org/project/auto_nodetitle",
             "support": {
                 "source": "http://cgit.drupalcode.org/auto_nodetitle"
-            },
-            "time": "2011-09-08T16:07:46+00:00"
+            }
         },
         {
             "name": "drupal/backup_migrate",
@@ -3471,8 +3469,7 @@
             "homepage": "https://www.drupal.org/project/context_list",
             "support": {
                 "source": "http://cgit.drupalcode.org/context_list"
-            },
-            "time": "2014-07-08T19:51:59+00:00"
+            }
         },
         {
             "name": "drupal/context_list_active",
@@ -3837,8 +3834,7 @@
             "homepage": "https://www.drupal.org/project/css_injector",
             "support": {
                 "source": "http://cgit.drupalcode.org/css_injector"
-            },
-            "time": "2016-08-02T18:01:48+00:00"
+            }
         },
         {
             "name": "drupal/ctools",
@@ -4613,8 +4609,7 @@
             "homepage": "https://www.drupal.org/project/diff",
             "support": {
                 "source": "http://cgit.drupalcode.org/diff"
-            },
-            "time": "2017-04-23T12:14:31+00:00"
+            }
         },
         {
             "name": "drupal/drafty",
@@ -4769,7 +4764,7 @@
                 },
                 "drupal": {
                     "version": "7.64",
-                    "datestamp": "1549480981",
+                    "datestamp": "1549882081",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -6148,8 +6143,7 @@
             "homepage": "https://www.drupal.org/project/filefield_paths",
             "support": {
                 "source": "http://cgit.drupalcode.org/filefield_paths"
-            },
-            "time": "2016-01-04T09:05:19+00:00"
+            }
         },
         {
             "name": "drupal/flag",
@@ -13290,16 +13284,16 @@
         },
         {
             "name": "su-sws/stanford_sites_content_importer",
-            "version": "7.2.1",
+            "version": "7.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SU-SWS/stanford_sites_content_importer.git",
-                "reference": "d85ed6f98e8d714878391bf8769473bd27aa1343"
+                "reference": "08dd771673c77242aca1e2274bdb19cda60b07d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SU-SWS/stanford_sites_content_importer/zipball/d85ed6f98e8d714878391bf8769473bd27aa1343",
-                "reference": "d85ed6f98e8d714878391bf8769473bd27aa1343",
+                "url": "https://api.github.com/repos/SU-SWS/stanford_sites_content_importer/zipball/08dd771673c77242aca1e2274bdb19cda60b07d2",
+                "reference": "08dd771673c77242aca1e2274bdb19cda60b07d2",
                 "shasum": ""
             },
             "require": {
@@ -13311,10 +13305,10 @@
             ],
             "description": "A Drupal feature.",
             "support": {
-                "source": "https://github.com/SU-SWS/stanford_sites_content_importer/tree/7.2.1",
+                "source": "https://github.com/SU-SWS/stanford_sites_content_importer/tree/7.2.2",
                 "issues": "https://github.com/SU-SWS/stanford_sites_content_importer/issues"
             },
-            "time": "2018-06-28T17:47:44+00:00"
+            "time": "2019-03-05T20:37:03+00:00"
         },
         {
             "name": "su-sws/stanford_sites_helper",
