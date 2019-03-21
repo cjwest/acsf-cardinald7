@@ -13,3 +13,4 @@ default:
           # Full path because %paths.base% did not work.
           screenshot_directory: /app/tests/behat/jsa/screenshots
           clear_screenshot_directory: true
+
